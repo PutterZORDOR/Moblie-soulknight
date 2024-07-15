@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4063657295768679421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160447033041099162}
+  - component: {fileID: 7587808161090597149}
+  - component: {fileID: 4852814803757111906}
+  m_Layer: 0
+  m_Name: Dungeon_Core
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160447033041099162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063657295768679421}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7587808161090597149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063657295768679421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ebf305a09588547841cc798638450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomSize: {x: 5, y: 5}
+  roomDistance: 1.5
+  bridge: {fileID: 4161499813596758999, guid: 2aad02a7331fee14b84b83d6d6a0c14b, type: 3}
+  bridgebox: {fileID: 7336235304180003737, guid: 5ddc588aff3234d45b1d9c5cf9946885, type: 3}
+  roomCount: 10
+  RandomDeleteAmount: 0
+  Delay: 500
+  lastRoom: {fileID: 0}
+  CanShop: 0
+  CanChest: 0
+  RoomsPrefab:
+  - {fileID: 2788485273439823139, guid: eab4b409b1af50c488ce583526c0448f, type: 3}
+  - {fileID: 1569982191465233365, guid: 3c3d397d1c9f63145ac55b6ea201615e, type: 3}
+  - {fileID: 3027059359452174470, guid: 3e38a970ae2521c4f8b915b4a2c85586, type: 3}
+  Grid: {fileID: 6975615180185140942, guid: 3940793656f655d4f88337c50536135e, type: 3}
+  StartRoomPrefab: {fileID: 5306476830339895600, guid: 49923d54a80db89478a3d095a19d3390, type: 3}
+  EndRoomPrefab: {fileID: 8780591490807787194, guid: 038714c40b1a4ef4f91dd3bb7131a0a6, type: 3}
+  MiniBossRoomPrefab: {fileID: 11974156570368856, guid: 87272efcfd2956940a1a77f2ef0d1e57, type: 3}
+  BossRoomrefab: {fileID: 7219000762629349580, guid: 3de3c54aba9c68b408fff794364898bf, type: 3}
+  RangeCentertoWall: 0.4256
+  DectectZonePrefab: {fileID: 4770478089518859473, guid: 382c2ada402dff149b6f35ca4acd06bf, type: 3}
+  SpawnEnermyAreaPrefab: {fileID: 5587005696771998416, guid: f31629312e7354240ae228a3bca30cad, type: 3}
+  doorPrefab: {fileID: 2314151245435574732, guid: 47e86ce83d8ea044dbc1ac0199ea08fa, type: 3}
+  wallPrefab: {fileID: 1325567738123145002, guid: 474d70a2296bc6b4f8a48efcd5b6135c, type: 3}
+  DungeonRoom: []
+  bridgeFirst: []
+  bridgeCreated: []
+  AllGride: []
+--- !u!114 &4852814803757111906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063657295768679421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e54c5b0ef1e97b419fdff7405a21c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radiusSpawn: 0.45
+  AllEnermyInRoom: 0
+  Level: 1
