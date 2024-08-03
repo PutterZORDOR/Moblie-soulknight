@@ -1,44 +1,27 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class ChestRandom : MonoBehaviour
+public class DropItem : MonoBehaviour
 {
-    public WeightedRandomList<GameObject> lootTable;
-
-    public Transform itemHolder;
-    public bool CanOpen = true;
     public float detectionRadius = 5.0f;
     public LayerMask playerLayer;
     public GameObject GetButton;
     public GameObject Hand_player;
-    public GameObject This_Item;
-
-    private void Start()
+    public WeaponSlot weaponSlot;
+    void Start()
     {
-        playerLayer = LayerMask.GetMask("Player");
-        itemHolder = transform.Find("Item_Holder");
-        Hand_player = GameObject.Find("Handle_Item");
-        GetButton = transform.Find("Get_Button").gameObject;
-        GetButton.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (CanOpen)
+        if (gameObject.name == "Pistol(Clone)")
         {
-            IsPlayerInRange();
-        }
-    }
-
-    public void OpenChest()
-    {
-        if (CanOpen)
-        {
-            Debug.Log("open");
-            CanOpen = false;
-            GetButton.SetActive(false);
-            ShowItem();
             this.enabled = false;
         }
+        playerLayer = LayerMask.GetMask("Player");
+        Hand_player = GameObject.Find("Handle_Item");
+        GetButton = transform.Find("Get_Button_Item").gameObject;
+        weaponSlot = FindAnyObjectByType<WeaponSlot>();
+        GetButton.SetActive(false);
+    }
+    void Update()
+    {
+            IsPlayerInRange();
     }
     bool IsPlayerInRange()
     {
@@ -55,18 +38,18 @@ public class ChestRandom : MonoBehaviour
         GetButton.SetActive(false);
         return false;
     }
-    void ShowItem()
+    public void MoveItemToHand()
     {
-        itemHolder.localScale = Vector3.one;
-        GameObject item = lootTable.GetRandom();
-        This_Item = Instantiate(item, itemHolder);
+            GetButton.SetActive(false);
+            weaponSlot.AddWeapon(gameObject);
+            gameObject.transform.SetParent(Hand_player.transform);
+            gameObject.transform.localPosition = Vector3.zero;
+            this.enabled = false;
+        
     }
-
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 }
-
-

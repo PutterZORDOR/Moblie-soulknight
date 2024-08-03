@@ -112,11 +112,10 @@ MonoBehaviour:
       weight: 50
   itemHolder: {fileID: 0}
   CanOpen: 1
-  CanGetItem: 0
   detectionRadius: 0.55
   playerLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   GetButton: {fileID: 0}
   Hand_player: {fileID: 0}
   This_Item: {fileID: 0}
