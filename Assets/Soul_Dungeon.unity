@@ -132,7 +132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 160447033041099162, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.13928473
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 160447033041099162, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
       propertyPath: m_LocalPosition.z
@@ -178,6 +178,22 @@ PrefabInstance:
       propertyPath: PortalPrefab
       value: 
       objectReference: {fileID: 4080475496823185882, guid: 5b2dd75f7112e4d438b1e085b03c9934, type: 3}
+    - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
+      propertyPath: BossRoomrefab
+      value: 
+      objectReference: {fileID: 7219000762629349580, guid: 3de3c54aba9c68b408fff794364898bf, type: 3}
+    - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
+      propertyPath: EndRoomPrefab
+      value: 
+      objectReference: {fileID: 8780591490807787194, guid: 038714c40b1a4ef4f91dd3bb7131a0a6, type: 3}
+    - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
+      propertyPath: StartRoomPrefab
+      value: 
+      objectReference: {fileID: 5306476830339895600, guid: 49923d54a80db89478a3d095a19d3390, type: 3}
+    - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
+      propertyPath: MiniBossRoomPrefab
+      value: 
+      objectReference: {fileID: 11974156570368856, guid: 87272efcfd2956940a1a77f2ef0d1e57, type: 3}
     - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
       propertyPath: DectectZoneBossPrefab
       value: 
@@ -336,7 +352,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.76, y: 5.02, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.7507, y: 3.7507, z: 3.7507}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
