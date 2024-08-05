@@ -1,0 +1,760 @@
+fileFormatVersion: 2
+guid: dea421872ff24a248bd7445fbfecc204
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6846448667280779603
+    second: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+      - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_0"
+  - first:
+      213: 1166137513679110766
+    second: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+      - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_1"
+  - first:
+      213: 9153198527342169067
+    second: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+      - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_2"
+  - first:
+      213: 3092925108443953382
+    second: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+      - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_3"
+  - first:
+      213: -4877555531194790710
+    second: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+      - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_4"
+  - first:
+      213: -3442574090013823910
+    second: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+      - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_5"
+  - first:
+      213: -4348275737699781124
+    second: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+      - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_6"
+  - first:
+      213: -9172874837122627020
+    second: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+      - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_7"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_0"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 232
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359a732f9c8730f50800000000000000
+      internalID: 6846448667280779603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_1"
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 214
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62c916e3e3fe2010800000000000000
+      internalID: 1166137513679110766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_2"
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 141
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebcbdc9091b60f70800000000000000
+      internalID: 9153198527342169067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_3"
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 188
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e830b5cff64cea20800000000000000
+      internalID: 3092925108443953382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_4"
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 188
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc84e636117f4cb0800000000000000
+      internalID: -4877555531194790710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_5"
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 143
+        width: 32
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c23cbca158930d0800000000000000
+      internalID: -3442574090013823910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_6"
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 96
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf574f43142d7a3c0800000000000000
+      internalID: -4348275737699781124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_7"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 96
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43acf248fe663b080800000000000000
+      internalID: -9172874837122627020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_8"
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 140
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8a2337bf83dc647be4614edbbf3dc7
+      internalID: 502603325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_9"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 236
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ddcd680a00983e4aa121852c8dacdea
+      internalID: -1741515872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_10"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 209
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4007e365eabd5b14fae7e948b9561ed4
+      internalID: -823438526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_11"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 180
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa27306ea27594444b4343bc3dc47c07
+      internalID: -1066639745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_12"
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 140
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9796176d74cf2e94cb9a09bcec735201
+      internalID: -1678197312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_13"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 123
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7947f8cdf77b54f889b00979abce56
+      internalID: 1727434622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_14"
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 122
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e2a6ec4cc244e40b14681b4d6e514d
+      internalID: 471117364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_15"
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 123
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9019350ec6bf0304f92599be4deb4d2a
+      internalID: 1581069510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_16"
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 123
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae81a1e40661804d8c0b734c7a5c26d
+      internalID: 37394586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_17"
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 122
+        width: 39
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2d31195155e7d458eee9a499762778
+      internalID: 2135191329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_18"
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 231
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ac728a266cad9419ca0efde6951383
+      internalID: 453559304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_19"
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 163
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b6a59919326b849932eaaa5b8cf800
+      internalID: 1772384751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_20"
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 138
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553973f3f4d1d9d4dbc944fb6f5e8458
+      internalID: 957593609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_21"
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 192
+        width: 15
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fff8810206aa546be94be7a2e66aa0
+      internalID: 1478089625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_22"
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 224
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbce035dd27a7c4a9e484673e6ee893
+      internalID: 230867836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_23"
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 223
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478d37aa846a1d448a918a3b1c388169
+      internalID: -323894587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered
+        - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_24"
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 222
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd677eb8b94b33488095f437d7e18dc
+      internalID: 2089013313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ef1c401ac46edab4bb6286c6571dd4bc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_0": 6846448667280779603
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_1": 1166137513679110766
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_10": -823438526
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_11": -1066639745
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_12": -1678197312
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_13": 1727434622
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_14": 471117364
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_15": 1581069510
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_16": 37394586
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_17": 2135191329
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_18": 453559304
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_19": 1772384751
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_2": 9153198527342169067
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_20": 957593609
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_21": 1478089625
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_22": 230867836
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_23": -323894587
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_24": 2089013313
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_3": 3092925108443953382
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_4": -4877555531194790710
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_5": -3442574090013823910
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_6": -4348275737699781124
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_7": -9172874837122627020
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_8": 502603325
+      "map 3 no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered - \u0E2A\u0E33\u0E40\u0E19\u0E32 (3)_9": -1741515872
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
