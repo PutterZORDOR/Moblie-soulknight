@@ -9,14 +9,12 @@ public class ChestRandom : MonoBehaviour
     public float detectionRadius = 5.0f;
     public LayerMask playerLayer;
     public GameObject GetButton;
-    public GameObject Hand_player;
     public GameObject This_Item;
 
     private void Start()
     {
         playerLayer = LayerMask.GetMask("Player");
         itemHolder = transform.Find("Item_Holder");
-        Hand_player = GameObject.Find("Handle_Item");
         GetButton = transform.Find("Get_Button").gameObject;
         GetButton.SetActive(false);
     }
