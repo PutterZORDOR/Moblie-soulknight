@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class WeightedRandomList
+public class WeightPotion
 {
     [System.Serializable]
     public struct Pair
     {
-        public Weapon_Item itemData;
+        public All_Potion itemData;
         public float weight;
 
-        public Pair(float weight, Weapon_Item itemData)
+        public Pair(float weight, All_Potion itemData)
         {
             this.weight = weight;
             this.itemData = itemData;
@@ -24,12 +24,12 @@ public class WeightedRandomList
         get => list.Count;
     }
 
-    public void Add(float weight, Weapon_Item itemData)
+    public void Add(float weight, All_Potion itemData)
     {
         list.Add(new Pair(weight, itemData));
     }
 
-    public Weapon_Item GetRandom()
+    public All_Potion GetRandom()
     {
         float totalWeight = 0;
 

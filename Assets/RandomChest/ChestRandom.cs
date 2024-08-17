@@ -2,7 +2,7 @@
 
 public class ChestRandom : MonoBehaviour
 {
-    public WeightedRandomList<GameObject> lootTable;
+    public WeightedRandomList lootTable;
 
     public Transform itemHolder;
     public bool CanOpen = true;
@@ -10,15 +10,18 @@ public class ChestRandom : MonoBehaviour
     public LayerMask playerLayer;
     public GameObject GetButton;
     public GameObject This_Item;
+    public GameObject UI_Getitem;
+    private Vector3 sizeItem;
 
     private void Start()
     {
         playerLayer = LayerMask.GetMask("Player");
         itemHolder = transform.Find("Item_Holder");
         GetButton = transform.Find("Get_Button").gameObject;
+        UI_Getitem = transform.Find("UI_GetItem").gameObject;
+        UI_Getitem.SetActive(false);
         GetButton.SetActive(false);
     }
-
     private void Update()
     {
         if (CanOpen)
@@ -33,6 +36,7 @@ public class ChestRandom : MonoBehaviour
         {
             Debug.Log("open");
             CanOpen = false;
+            UI_Getitem.SetActive(false);
             GetButton.SetActive(false);
             ShowItem();
             this.enabled = false;
@@ -47,17 +51,23 @@ public class ChestRandom : MonoBehaviour
             {
                 Debug.Log("Found");
                 GetButton.SetActive(true);
+                UI_Getitem.SetActive(true);
                 return true;
             }
         }
+        UI_Getitem.SetActive(false);
         GetButton.SetActive(false);
         return false;
     }
     void ShowItem()
     {
         itemHolder.localScale = Vector3.one;
-        GameObject item = lootTable.GetRandom();
-        This_Item = Instantiate(item, itemHolder);
+        Weapon_Item item = lootTable.GetRandom();
+        This_Item = Instantiate(item.gamePrefab, itemHolder);
+
+        sizeItem = item.gamePrefab.transform.localScale;
+        This_Item.transform.localScale = sizeItem * 2f;
+
     }
 
     void OnDrawGizmosSelected()

@@ -53,6 +53,7 @@ MonoBehaviour:
   RandomDeleteAmount: 0
   Delay: 500
   lastRoom: {fileID: 0}
+  startRoom: {fileID: 0}
   CanShop: 0
   CanChest: 0
   RoomsPrefab:
@@ -64,8 +65,10 @@ MonoBehaviour:
   EndRoomPrefab: {fileID: 8780591490807787194, guid: 038714c40b1a4ef4f91dd3bb7131a0a6, type: 3}
   MiniBossRoomPrefab: {fileID: 11974156570368856, guid: 87272efcfd2956940a1a77f2ef0d1e57, type: 3}
   BossRoomrefab: {fileID: 7219000762629349580, guid: 3de3c54aba9c68b408fff794364898bf, type: 3}
-  RangeCentertoWall: 0.4256
+  PortalPrefab: {fileID: 0}
   DectectZonePrefab: {fileID: 4770478089518859473, guid: 382c2ada402dff149b6f35ca4acd06bf, type: 3}
+  DectectZoneMiniPrefab: {fileID: 0}
+  DectectZoneBossPrefab: {fileID: 0}
   SpawnEnermyAreaPrefab: {fileID: 5587005696771998416, guid: f31629312e7354240ae228a3bca30cad, type: 3}
   doorPrefab: {fileID: 2314151245435574732, guid: 47e86ce83d8ea044dbc1ac0199ea08fa, type: 3}
   wallPrefab: {fileID: 1325567738123145002, guid: 474d70a2296bc6b4f8a48efcd5b6135c, type: 3}
@@ -85,6 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e54c5b0ef1e97b419fdff7405a21c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RangeCentertoWall: 0
   radiusSpawn: 0.45
   AllEnermyInRoom: 0
   Level: 1
+  detectionRadius: 5
+  AllBossStatus: 0

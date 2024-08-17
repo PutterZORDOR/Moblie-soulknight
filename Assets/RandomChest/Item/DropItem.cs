@@ -7,6 +7,7 @@ public class DropItem : MonoBehaviour
     public GameObject GetButton;
     public GameObject Hand_player;
     public WeaponSlot weaponSlot;
+    public GameObject UI_Getitem;
     void Start()
     {
         if (gameObject.name == "Pistol(Clone)")
@@ -17,6 +18,8 @@ public class DropItem : MonoBehaviour
         Hand_player = GameObject.Find("Handle_Item");
         GetButton = transform.Find("Get_Button_Item").gameObject;
         weaponSlot = FindAnyObjectByType<WeaponSlot>();
+        UI_Getitem = transform.Find("UI_GetItem").gameObject;
+        UI_Getitem.SetActive(false);
         GetButton.SetActive(false);
     }
     void Update()
@@ -32,14 +35,17 @@ public class DropItem : MonoBehaviour
             {
                 Debug.Log("Found");
                 GetButton.SetActive(true);
+                UI_Getitem.SetActive(true);
                 return true;
             }
         }
         GetButton.SetActive(false);
+        UI_Getitem.SetActive(false);
         return false;
     }
     public void MoveItemToHand()
     {
+            UI_Getitem.SetActive(false);
             GetButton.SetActive(false);
             weaponSlot.AddWeapon(gameObject);
             gameObject.transform.SetParent(Hand_player.transform);
