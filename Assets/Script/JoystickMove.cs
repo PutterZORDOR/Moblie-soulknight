@@ -10,6 +10,8 @@ public class JoystickMove : MonoBehaviour
     public Transform weaponTransform;
     public float detectionRange = 5f;  // Range to detect enemies
 
+    private bool enemyDetected = false; // Track whether an enemy is detected
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,10 +19,19 @@ public class JoystickMove : MonoBehaviour
 
     private void Update()
     {
+        // Check if an enemy is detected
+        enemyDetected = DetectEnemy();
+
         // รับค่าจากจอยสติ๊ก
         Vector2 moveDirection = movementJoystick.Direction;
         MoveCharacter(moveDirection);
-        FlipCharacter(moveDirection);
+
+        // Only flip character if no enemy is detected
+        if (!enemyDetected)
+        {
+            FlipCharacter(moveDirection);
+        }
+
         RotateWeapon(moveDirection);
     }
 
@@ -53,20 +64,6 @@ public class JoystickMove : MonoBehaviour
 
     private void RotateWeapon(Vector2 direction)
     {
-        // หาenemyจากแท็กของobj
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        bool enemyDetected = false;
-
-        foreach (GameObject enemy in enemies)
-        {
-            float distance = Vector2.Distance(transform.position, enemy.transform.position);
-            if (distance <= detectionRange)
-            {
-                enemyDetected = true;
-                break;
-            }
-        }
-
         // ถ้าไม่มีศัตรูในระยะ ให้ควบคุมทิศทางของอาวุธด้วยจอยสติ๊ก
         if (!enemyDetected && direction != Vector2.zero)
         {
@@ -74,6 +71,21 @@ public class JoystickMove : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         }
+    }
+
+    private bool DetectEnemy()
+    {
+        // หาenemyจากแท็กของobj
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector2.Distance(transform.position, enemy.transform.position);
+            if (distance <= detectionRange)
+            {
+                return true; // Enemy detected within range
+            }
+        }
+        return false; // No enemy detected
     }
 
     private void OnDrawGizmosSelected()
