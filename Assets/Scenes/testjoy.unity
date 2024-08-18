@@ -507,9 +507,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1733633904}
-        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
-        m_MethodName: shoot
+      - m_Target: {fileID: 1733633905}
+        m_TargetAssemblyTypeName: Pistol, Assembly-CSharp
+        m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -569,6 +569,7 @@ GameObject:
   - component: {fileID: 842705745}
   - component: {fileID: 842705744}
   - component: {fileID: 842705743}
+  - component: {fileID: 842705747}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Enemy
@@ -719,6 +720,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &842705747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842705742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ce2fd65870bf8409565b329477c23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  speed: 2
+  moveDistance: 2
+--- !u!1 &940328738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940328740}
+  - component: {fileID: 940328739}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &940328739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940328738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53242f6bccacd74bb5bf6777bcae0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: 0
+  weapon: {fileID: 0}
+  rotationSpeed: 5
+  Bullet: {fileID: 0}
+  ShootPoint: {fileID: 0}
+  Force: 0
+  characterTransform: {fileID: 0}
+--- !u!4 &940328740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940328738}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6494987, y: -1.4346108, z: -0.045705352}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &972127549
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +798,7 @@ GameObject:
   - component: {fileID: 972127550}
   - component: {fileID: 972127553}
   - component: {fileID: 972127552}
+  - component: {fileID: 972127554}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -881,6 +949,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &972127554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972127549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ce2fd65870bf8409565b329477c23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  speed: 2
+  moveDistance: 2
 --- !u!1 &1114003527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1312,7 @@ GameObject:
   - component: {fileID: 1733633901}
   - component: {fileID: 1733633903}
   - component: {fileID: 1733633904}
+  - component: {fileID: 1733633905}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -1313,13 +1397,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733633900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16be5bd0930aac24d882fe94f5d8629d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Range: 0
+  weapon: {fileID: 0}
+  rotationSpeed: 5
+  Bullet: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
+  ShootPoint: {fileID: 1452834365}
+  Force: 1000
+  characterTransform: {fileID: 2091746415}
+--- !u!114 &1733633905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733633900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593d2fbd61cc28145b0e84fb4d110809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Range: 3
-  gun: {fileID: 1733633900}
+  weapon: {fileID: 1733633900}
   rotationSpeed: 5
   Bullet: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
   ShootPoint: {fileID: 1452834365}
@@ -1338,6 +1441,7 @@ GameObject:
   - component: {fileID: 2091746413}
   - component: {fileID: 2091746412}
   - component: {fileID: 2091746411}
+  - component: {fileID: 2091746416}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1360,7 +1464,7 @@ MonoBehaviour:
   movementJoystick: {fileID: 6492927475583004985}
   playerSpeed: 5
   weaponTransform: {fileID: 1733633901}
-  detectionRange: 4
+  detectionRange: 5
 --- !u!50 &2091746412
 Rigidbody2D:
   serializedVersion: 4
@@ -1506,6 +1610,25 @@ Transform:
   - {fileID: 1452834365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2091746416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091746410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53242f6bccacd74bb5bf6777bcae0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: 0
+  weapon: {fileID: 0}
+  rotationSpeed: 5
+  Bullet: {fileID: 0}
+  ShootPoint: {fileID: 0}
+  Force: 0
+  characterTransform: {fileID: 0}
 --- !u!224 &6492927474757759694
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1708,3 +1831,4 @@ SceneRoots:
   - {fileID: 628268803}
   - {fileID: 604535728}
   - {fileID: 170631631}
+  - {fileID: 940328740}
