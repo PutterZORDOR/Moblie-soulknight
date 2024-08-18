@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
     public float Range;
-
     bool Detected = false;
     Vector2 Direction;
     public GameObject gun;
@@ -16,8 +13,7 @@ public class Gun : MonoBehaviour
     public float Force;
 
     private bool flipped = false;
-    public Transform characterTransform; // เพิ่มนี้เพื่อให้สามารถเข้าถึงการเปลี่ยนแปลงของตัวละคร
-
+    public Transform characterTransform;
 
     void Update()
     {
@@ -65,19 +61,15 @@ public class Gun : MonoBehaviour
 
         if (Detected)
         {
+            // Rotate gun towards the closest enemy
             Vector3 direction = closestEnemy.transform.position - gun.transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             gun.transform.rotation = Quaternion.Slerp(gun.transform.rotation, rotation, rotationSpeed * Time.deltaTime);
-            
 
-            // Check if gun rotation is over 180 degrees
+            // Adjust character flip based on gun rotation
             float currentAngle = gun.transform.eulerAngles.z;
-            Debug.Log(currentAngle);
-            if (currentAngle > 180)
-            {
-                currentAngle -= 360;
-            }
+            if (currentAngle > 180) currentAngle -= 360;
 
             if (Mathf.Abs(currentAngle) > 90 && !flipped)
             {
@@ -89,13 +81,11 @@ public class Gun : MonoBehaviour
                 flipped = false;
                 UnflipCharacter();
             }
-            Debug.Log(Mathf.Abs(currentAngle));
         }
     }
 
     void FlipCharacter()
     {
-        // Flip the character's scale on the x-axis
         if (characterTransform != null)
         {
             Vector3 scale = characterTransform.localScale;
