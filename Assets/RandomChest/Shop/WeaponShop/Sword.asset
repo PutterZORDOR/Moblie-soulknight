@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac824eed0957734484eb6819c98d656, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  itemName: 
-  Damgae: 0
-  Mana: 0
-  rarity: 0
-  gamePrefab: {fileID: 0}
+  itemName: Sword
+  Damgae: 5
+  Mana: 5
+  rarity: 3
+  gamePrefab: {fileID: 6926048048372400313, guid: 6000ad805edcaba43b6ca156967b7b22, type: 3}

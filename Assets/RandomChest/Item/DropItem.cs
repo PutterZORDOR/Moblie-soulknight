@@ -10,17 +10,17 @@ public class DropItem : MonoBehaviour
     public GameObject UI_Getitem;
     void Start()
     {
+        GetButton = transform.Find("Get_Button_Item").gameObject;
+        UI_Getitem = transform.Find("UI_GetItem").gameObject;
+        UI_Getitem.SetActive(false);
+        GetButton.SetActive(false);
         if (gameObject.name == "Pistol(Clone)")
         {
             this.enabled = false;
         }
         playerLayer = LayerMask.GetMask("Player");
         Hand_player = GameObject.Find("Handle_Item");
-        GetButton = transform.Find("Get_Button_Item").gameObject;
         weaponSlot = FindAnyObjectByType<WeaponSlot>();
-        UI_Getitem = transform.Find("UI_GetItem").gameObject;
-        UI_Getitem.SetActive(false);
-        GetButton.SetActive(false);
     }
     void Update()
     {

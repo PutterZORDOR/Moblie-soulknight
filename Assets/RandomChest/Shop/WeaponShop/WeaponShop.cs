@@ -1,9 +1,11 @@
+using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class PotionRandom : MonoBehaviour
+public class WeaponShop : MonoBehaviour
 {
-    public WeightPotion lootTable;
+    public WeightedRandomList lootTable;
 
     [Header("Price")]
     public int price;
@@ -16,7 +18,8 @@ public class PotionRandom : MonoBehaviour
     public GameObject UI_Buy;
     private Vector3 sizeItem;
     [SerializeField] int current_price;
-    [SerializeField]All_Potion item;
+    [SerializeField] Weapon_Item item;
+    [SerializeField] DropItem drop;
 
     [Header("UI")]
     public TextMeshProUGUI text;
@@ -27,7 +30,6 @@ public class PotionRandom : MonoBehaviour
         GetButton = transform.Find("Get_Button").gameObject;
         UI_Buy = transform.Find("UI_Buy").gameObject;
         text = UI_Buy.GetComponentInChildren<TextMeshProUGUI>();
-        text.text = "Price: " + current_price.ToString();
         UI_Buy.SetActive(false);
         GetButton.SetActive(false);
         ShowItem();
@@ -45,22 +47,11 @@ public class PotionRandom : MonoBehaviour
         if (CanBuy && CoinManager.instance.Coins >= current_price)
         {
             Debug.Log("Buy");
+            drop.enabled = true;
             CoinManager.instance.SpendCoins(current_price);
             CanBuy = false;
             UI_Buy.SetActive(false);
             GetButton.SetActive(false);
-            if (item != null)
-            {
-                if (item.Type == Type_Potion.Heal)
-                {
-                    PlayerManager.instance.Heal(1);
-                }
-                else if (item.Type == Type_Potion.Mana)
-                {
-                    PlayerManager.instance.RecoverMana(100);
-                }
-            }
-            This_Item.SetActive(false);
             this.enabled = false;
         }
         else
@@ -88,9 +79,37 @@ public class PotionRandom : MonoBehaviour
     void ShowItem()
     {
         item = lootTable.GetRandom();
-        This_Item = Instantiate(item.gamePrefab, gameObject.transform);
+        This_Item = Instantiate(item.gamePrefab, transform);
         sizeItem = item.gamePrefab.transform.localScale;
         This_Item.transform.localScale = sizeItem * 2f;
+        switch (item.rarity)
+        {
+            case Rarity.Common:
+                text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} {item.itemName}";
+                break;
+            case Rarity.Uncommon:
+                text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#7CFC00>{item.itemName}</color>";
+                break;
+            case Rarity.Rare:
+                text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#48C9B0>{item.itemName}</color>";
+                break;
+            case Rarity.Epic:
+                text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#BA55D3>{item.itemName}</color>";
+                break;
+            case Rarity.Legendary:
+                text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#F7DC6F>{item.itemName}</color>";
+                break;
+            default:
+                text.text = "Unknow";
+                break;
+        }
+            drop = This_Item.GetComponent<DropItem>();
+            StartCoroutine(CloseUI());
+    }
+    IEnumerator CloseUI()
+    {
+        yield return new WaitForSeconds(0.5f);
+        drop.enabled = false;
     }
 
     void OnDrawGizmosSelected()
