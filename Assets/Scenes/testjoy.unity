@@ -237,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 170631627}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000029385367, y: 0.0000000023892404, z: 1.1306806e-10, w: 1}
-  m_LocalPosition: {x: -0.05, y: 2.4959998, z: -10}
+  m_LocalPosition: {x: 3.31, y: -4.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -735,57 +735,6 @@ MonoBehaviour:
   health: 100
   speed: 2
   moveDistance: 2
---- !u!1 &940328738
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 940328740}
-  - component: {fileID: 940328739}
-  m_Layer: 0
-  m_Name: Weapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &940328739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940328738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f53242f6bccacd74bb5bf6777bcae0d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Range: 0
-  weapon: {fileID: 0}
-  rotationSpeed: 5
-  Bullet: {fileID: 0}
-  ShootPoint: {fileID: 0}
-  Force: 0
-  characterTransform: {fileID: 0}
---- !u!4 &940328740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940328738}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6494987, y: -1.4346108, z: -0.045705352}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &972127549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1001,7 @@ Transform:
   m_GameObject: {fileID: 1114003527}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000029385367, y: 0.0000000023892404, z: -7.020871e-18, w: 1}
-  m_LocalPosition: {x: -0.05, y: 2.4959998, z: -10}
+  m_LocalPosition: {x: 3.31, y: -4.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1313,8 +1262,9 @@ GameObject:
   - component: {fileID: 1733633903}
   - component: {fileID: 1733633904}
   - component: {fileID: 1733633905}
+  - component: {fileID: 1733633906}
   m_Layer: 0
-  m_Name: gun
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,7 +1279,7 @@ Transform:
   m_GameObject: {fileID: 1733633900}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.9999943, w: -0.003385851}
-  m_LocalPosition: {x: -0.97, y: 0.03, z: 0}
+  m_LocalPosition: {x: -0.86, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 0.54712063, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1409,7 +1359,28 @@ MonoBehaviour:
   ShootPoint: {fileID: 1452834365}
   Force: 1000
   characterTransform: {fileID: 2091746415}
+  joystickMove: {fileID: 0}
 --- !u!114 &1733633905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733633900}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593d2fbd61cc28145b0e84fb4d110809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: 5
+  weapon: {fileID: 1733633900}
+  rotationSpeed: 5
+  Bullet: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
+  ShootPoint: {fileID: 1452834365}
+  Force: 1000
+  characterTransform: {fileID: 2091746415}
+  joystickMove: {fileID: 0}
+--- !u!114 &1733633906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1418,16 +1389,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1733633900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 593d2fbd61cc28145b0e84fb4d110809, type: 3}
+  m_Script: {fileID: 11500000, guid: f53242f6bccacd74bb5bf6777bcae0d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 3
-  weapon: {fileID: 1733633900}
+  Range: 5
+  weapon: {fileID: 7100285609948759686, guid: ceb8e301ee486b44c9008b4b84b95872, type: 3}
   rotationSpeed: 5
   Bullet: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
   ShootPoint: {fileID: 1452834365}
   Force: 1000
   characterTransform: {fileID: 2091746415}
+  joystickMove: {fileID: 0}
 --- !u!1 &2091746410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1413,6 @@ GameObject:
   - component: {fileID: 2091746413}
   - component: {fileID: 2091746412}
   - component: {fileID: 2091746411}
-  - component: {fileID: 2091746416}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1602,7 +1573,7 @@ Transform:
   m_GameObject: {fileID: 2091746410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 2.4959998, z: 0}
+  m_LocalPosition: {x: 3.31, y: -4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1610,25 +1581,6 @@ Transform:
   - {fileID: 1452834365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2091746416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091746410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f53242f6bccacd74bb5bf6777bcae0d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Range: 0
-  weapon: {fileID: 0}
-  rotationSpeed: 5
-  Bullet: {fileID: 0}
-  ShootPoint: {fileID: 0}
-  Force: 0
-  characterTransform: {fileID: 0}
 --- !u!224 &6492927474757759694
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1825,10 +1777,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1114003530}
+  - {fileID: 2091746415}
   - {fileID: 972127551}
   - {fileID: 842705746}
-  - {fileID: 2091746415}
   - {fileID: 628268803}
   - {fileID: 604535728}
   - {fileID: 170631631}
-  - {fileID: 940328740}

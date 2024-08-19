@@ -15,8 +15,7 @@ public class Weapon : MonoBehaviour
     private bool flipped = false;
     public Transform characterTransform;
 
-    // Reference to JoystickMove script
-    public JoystickMove joystickMoveScript;
+    public JoystickMove joystickMove;
 
     void Update()
     {
@@ -24,11 +23,11 @@ public class Weapon : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
         {
-            // No enemies detected, enable flip in JoystickMove
-            joystickMoveScript.EnableFlip();
+            Detected = false; // ไม่มีศัตรูอยู่ในฉาก
+            joystickMove.RotateWeapon(joystickMove.movementJoystick.Direction);
             return;
         }
-
+        
         GameObject closestEnemy = enemies[0];
         float closestDistance = Vector2.Distance(transform.position, closestEnemy.transform.position);
 
@@ -55,7 +54,6 @@ public class Weapon : MonoBehaviour
                 {
                     Detected = true;
                     Debug.Log("Detected Enemy");
-                    joystickMoveScript.DisableFlip(); // Disable flip in JoystickMove
                 }
             }
         }
@@ -65,7 +63,6 @@ public class Weapon : MonoBehaviour
             {
                 Detected = false;
                 Debug.Log("Not Detected Enemy");
-                joystickMoveScript.EnableFlip(); // Enable flip in JoystickMove
             }
         }
 
@@ -92,6 +89,7 @@ public class Weapon : MonoBehaviour
                 UnflipCharacter();
             }
         }
+ 
     }
 
     void FlipCharacter()
@@ -115,6 +113,7 @@ public class Weapon : MonoBehaviour
         }
         Debug.Log("Character Unflipped");
     }
+
 
     void OnDrawGizmosSelected()
     {

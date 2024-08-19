@@ -11,7 +11,6 @@ public class JoystickMove : MonoBehaviour
     public float detectionRange = 5f;  // Range to detect enemies
 
     private bool enemyDetected = false; // Track whether an enemy is detected
-    private bool flipEnabled = true;    // Control flip state
 
     private void Start()
     {
@@ -27,8 +26,8 @@ public class JoystickMove : MonoBehaviour
         Vector2 moveDirection = movementJoystick.Direction;
         MoveCharacter(moveDirection);
 
-        // Only flip character if no enemy is detected and flip is enabled
-        if (!enemyDetected && flipEnabled)
+        // Only flip character if no enemy is detected
+        if (!enemyDetected)
         {
             FlipCharacter(moveDirection);
         }
@@ -63,7 +62,7 @@ public class JoystickMove : MonoBehaviour
         transform.localScale = scale;
     }
 
-    private void RotateWeapon(Vector2 direction)
+    public void RotateWeapon(Vector2 direction)
     {
         // ถ้าไม่มีศัตรูในระยะ ให้ควบคุมทิศทางของอาวุธด้วยจอยสติ๊ก
         if (!enemyDetected && direction != Vector2.zero)
@@ -87,16 +86,6 @@ public class JoystickMove : MonoBehaviour
             }
         }
         return false; // No enemy detected
-    }
-
-    public void DisableFlip()
-    {
-        flipEnabled = false;
-    }
-
-    public void EnableFlip()
-    {
-        flipEnabled = true;
     }
 
     private void OnDrawGizmosSelected()
