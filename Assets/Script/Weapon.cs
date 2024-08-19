@@ -68,12 +68,12 @@ public class Weapon : MonoBehaviour
             float currentAngle = weapon.transform.eulerAngles.z;
             if (currentAngle > 180) currentAngle -= 360;
 
-            if ( Mathf.Abs(currentAngle) <= 90 && !flipped)
+            if ( Mathf.Abs(currentAngle) > 90 && !flipped)
             {
                 flipped = true;
                 FlipCharacter();
             }
-            else if (Mathf.Abs(currentAngle) > 90 && flipped)
+            else if (Mathf.Abs(currentAngle) <= 90 && flipped)
             {
                 flipped = false;
                 UnflipCharacter();
@@ -87,9 +87,9 @@ public class Weapon : MonoBehaviour
         {
             Vector3 scale = characterTransform.localScale;
             // Flip to the left by setting x to -1 if it is currently 1
-            if (scale.x > 0)
+            if (scale.x < 0)
             {
-                scale.x = -1;
+                scale.x = 1;
                 characterTransform.localScale = scale;
             }
         }
@@ -101,9 +101,9 @@ public class Weapon : MonoBehaviour
         {
             Vector3 scale = characterTransform.localScale;
             // Unflip back to the right by setting x to 1 if it is currently -1
-            if (scale.x < 0)
+            if (scale.x > 0)
             {
-                scale.x = 1;
+                scale.x = -1;
                 characterTransform.localScale = scale;
             }
         }
