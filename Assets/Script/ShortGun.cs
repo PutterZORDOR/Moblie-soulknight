@@ -12,9 +12,9 @@ public class ShortGun : Gun
             // Randomly calculate spread angle
             float angle = Random.Range(-spreadAngle, spreadAngle);
             Quaternion pelletRotation = Quaternion.Euler(0, 0, angle);
-            GameObject pellet = Instantiate(Bullet, ShootPoint.position, pelletRotation);
-            Vector2 shootDirection = pellet.transform.right;
-            pellet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
+            //GameObject pellet = Instantiate(Bullet, ShootPoint.position, pelletRotation);
+            //Vector2 shootDirection = pellet.transform.right;
+            //pellet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
         }
         Debug.Log("Shotgun shooting!");
     }
