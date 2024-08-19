@@ -15,7 +15,8 @@ public class Weapon : MonoBehaviour
     private bool flipped = false;
     public Transform characterTransform;
 
-    public JoystickMove joystickMove;
+    // Reference to JoystickMove script
+    public JoystickMove joystickMoveScript;
 
     void Update()
     {
@@ -23,11 +24,11 @@ public class Weapon : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
         {
-            Detected = false; // ไม่มีศัตรูอยู่ในฉาก
-            joystickMove.RotateWeapon(joystickMove.movementJoystick.Direction);
+            // No enemies detected, enable flip in JoystickMove
+            joystickMoveScript.Flip();
             return;
         }
-        
+
         GameObject closestEnemy = enemies[0];
         float closestDistance = Vector2.Distance(transform.position, closestEnemy.transform.position);
 

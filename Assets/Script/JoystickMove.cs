@@ -53,7 +53,7 @@ public class JoystickMove : MonoBehaviour
         }
     }
 
-    private void Flip()
+    public void Flip()
     {
         // พลิกหน้าตัวละคร
         isRight = !isRight;
