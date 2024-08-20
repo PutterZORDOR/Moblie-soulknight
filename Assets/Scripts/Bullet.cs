@@ -2,42 +2,34 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 10f;
-    public float lifetime = 5f; // Time before the bullet is destroyed
-    private Transform player;
+    public float speed = 10f; // Speed of the bullet
+    public float lifetime = 2f; // Lifetime of the bullet
+    private Vector3 direction; // Direction of the bullet
 
-    void Start()
+    private void Start()
     {
-        // Destroy the bullet after a certain time to avoid memory leaks
-        Destroy(gameObject, lifetime);
-
-        // Find the player
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        // Calculate the direction to the player
-        if (player != null)
-        {
-            Vector2 direction = (player.position - transform.position).normalized;
-            GetComponent<Rigidbody2D>().velocity = direction * speed;
-        }
+        Destroy(gameObject, lifetime); // Destroy the bullet after its lifetime expires
     }
 
-    void Update()
+    public void SetDirection(Vector3 dir)
     {
-        // Remove the translation logic from Update as we now use Rigidbody2D for movement
+        direction = dir;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        // Add your collision logic here
-        if (collision.CompareTag("Player"))
-        {
-            // Damage the player (implement your own damage logic)
-            Debug.Log("Player hit!");
+        // Move the bullet in the set direction
+        transform.position += direction * speed * Time.deltaTime;
+    }
 
-            // Destroy the bullet
-            Destroy(gameObject);
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Implement damage logic here
+            Debug.Log("Bullet hit the player!");
+            Destroy(gameObject); // Destroy the bullet upon hitting the player
         }
+        
     }
 }
-
