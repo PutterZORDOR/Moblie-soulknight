@@ -15,7 +15,7 @@ public class ShortGun : Gun
             //GameObject pellet = Instantiate(Bullet, ShootPoint.position, pelletRotation);
             //Vector2 shootDirection = pellet.transform.right;
             //pellet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
-        }
+        } 
         Debug.Log("Shotgun shooting!");
     }
 }

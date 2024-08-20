@@ -1,19 +1,20 @@
 ﻿using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class Weapon : MonoBehaviour 
 {
+    public float damage;
+
     public float Range;
     [SerializeField] private bool Detected = false;
     private Vector3 Direction;
     public GameObject weapon;
     public float rotationSpeed = 5f;
 
-    public Transform ShootPoint;
-    public float Force;
+    [SerializeField] public Transform ShootPoint;
+    [SerializeField] public float Force;
 
     [SerializeField] private bool flipped = false;
     public Transform characterTransform;
-
     public JoystickMove joystickMoveScript;
 
     void Update()
@@ -68,7 +69,7 @@ public class Weapon : MonoBehaviour
             float currentAngle = weapon.transform.eulerAngles.z;
             if (currentAngle > 180) currentAngle -= 360;
 
-            if ( Mathf.Abs(currentAngle) > 90 && !flipped)
+            if (Mathf.Abs(currentAngle) > 90 && !flipped)
             {
                 flipped = true;
                 FlipCharacter();

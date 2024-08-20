@@ -507,8 +507,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1733633905}
-        m_TargetAssemblyTypeName: Pistol, Assembly-CSharp
+      - m_Target: {fileID: 1733633906}
+        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:
@@ -1082,9 +1082,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1733633901}
   - component: {fileID: 1733633903}
-  - component: {fileID: 1733633905}
+  - component: {fileID: 1733633906}
   m_Layer: 0
-  m_Name: gun
+  m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,7 +1160,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1733633905
+--- !u!114 &1733633906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1169,18 +1169,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1733633900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 593d2fbd61cc28145b0e84fb4d110809, type: 3}
+  m_Script: {fileID: 11500000, guid: 16be5bd0930aac24d882fe94f5d8629d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 7
+  damage: 50
+  Range: 5
   Detected: 0
   weapon: {fileID: 1733633900}
   rotationSpeed: 5
   ShootPoint: {fileID: 1452834365}
-  Force: 1000
+  Force: 1500
   flipped: 0
   characterTransform: {fileID: 2091746415}
   joystickMoveScript: {fileID: 2091746411}
+  Bullet: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
 --- !u!1 &2091746410
 GameObject:
   m_ObjectHideFlags: 0
