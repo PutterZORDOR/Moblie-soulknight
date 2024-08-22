@@ -1,0 +1,2197 @@
+fileFormatVersion: 2
+guid: 7724da02c0d90a34592e84c7d9e8ac19
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8248868531667342379
+    second: sage_attack_0
+  - first:
+      213: 1054654110442423927
+    second: sage_attack_1
+  - first:
+      213: 4820611309686033410
+    second: sage_attack_2
+  - first:
+      213: -7839704638030449727
+    second: sage_attack_3
+  - first:
+      213: -6698589555013505601
+    second: sage_attack_4
+  - first:
+      213: 6893038665398062857
+    second: sage_attack_5
+  - first:
+      213: 7389272854412628490
+    second: sage_attack_6
+  - first:
+      213: -7822519580557972477
+    second: sage_attack_7
+  - first:
+      213: 1705599775436336565
+    second: sage_attack_8
+  - first:
+      213: -9116861829422900307
+    second: sage_attack_9
+  - first:
+      213: 6220395970112542033
+    second: sage_attack_10
+  - first:
+      213: 1336453805281155735
+    second: sage_attack_11
+  - first:
+      213: 5850300470434700646
+    second: sage_attack_12
+  - first:
+      213: 6114811580668195204
+    second: sage_attack_13
+  - first:
+      213: 3589808791471593980
+    second: sage_attack_14
+  - first:
+      213: -8765111798711512163
+    second: sage_attack_15
+  - first:
+      213: 5799639251952004708
+    second: sage_attack_16
+  - first:
+      213: -4778655901929837869
+    second: sage_attack_17
+  - first:
+      213: 737028370872853772
+    second: sage_attack_18
+  - first:
+      213: 1505508660234106762
+    second: sage_attack_19
+  - first:
+      213: -737115342858333924
+    second: sage_attack_20
+  - first:
+      213: -1846925385390429402
+    second: sage_attack_21
+  - first:
+      213: 7345697346512817314
+    second: sage_attack_22
+  - first:
+      213: 6648107414731261917
+    second: sage_attack_23
+  - first:
+      213: 36672553603519182
+    second: sage_attack_24
+  - first:
+      213: 1409477643117785829
+    second: sage_attack_25
+  - first:
+      213: -3197045026651828586
+    second: sage_attack_26
+  - first:
+      213: -544165734602937091
+    second: sage_attack_27
+  - first:
+      213: 6674589700285335854
+    second: sage_attack_28
+  - first:
+      213: 2612492186367443344
+    second: sage_attack_29
+  - first:
+      213: 1031313727591301186
+    second: sage_attack_30
+  - first:
+      213: -7984494746865673664
+    second: sage_attack_31
+  - first:
+      213: -787619852138369227
+    second: sage_attack_32
+  - first:
+      213: 8578824627410267287
+    second: sage_attack_33
+  - first:
+      213: 2527394480706495428
+    second: sage_attack_34
+  - first:
+      213: 1598631471585352314
+    second: sage_attack_35
+  - first:
+      213: -1301036851810341626
+    second: sage_attack_36
+  - first:
+      213: -4248216647411761209
+    second: sage_attack_37
+  - first:
+      213: -8348327487272377863
+    second: sage_attack_38
+  - first:
+      213: -4519656287949464112
+    second: sage_attack_39
+  - first:
+      213: 5932757370589711869
+    second: sage_attack_40
+  - first:
+      213: 1247226063310375819
+    second: sage_attack_41
+  - first:
+      213: -1660213726747176235
+    second: sage_attack_42
+  - first:
+      213: 4538887885372915282
+    second: sage_attack_43
+  - first:
+      213: -3947661836939823715
+    second: sage_attack_44
+  - first:
+      213: 3119314093919910912
+    second: sage_attack_45
+  - first:
+      213: 4814134664950660096
+    second: sage_attack_46
+  - first:
+      213: -7694721019734524864
+    second: sage_attack_47
+  - first:
+      213: -7503356776584193359
+    second: sage_attack_48
+  - first:
+      213: -2428580134438189367
+    second: sage_attack_49
+  - first:
+      213: 642980189313876905
+    second: sage_attack_50
+  - first:
+      213: 7913198984771267314
+    second: sage_attack_51
+  - first:
+      213: -524455432404516371
+    second: sage_attack_52
+  - first:
+      213: 1737872701950446273
+    second: sage_attack_53
+  - first:
+      213: 3794965767186109117
+    second: sage_attack_54
+  - first:
+      213: 3331449712894223037
+    second: sage_attack_55
+  - first:
+      213: 6889692158575647646
+    second: sage_attack_56
+  - first:
+      213: 8342279239554695809
+    second: sage_attack_57
+  - first:
+      213: -5492522628509381021
+    second: sage_attack_58
+  - first:
+      213: -4940108507009788203
+    second: sage_attack_59
+  - first:
+      213: 7732585334488487074
+    second: sage_attack_60
+  - first:
+      213: 3149407112071657313
+    second: sage_attack_61
+  - first:
+      213: -4298642077956103162
+    second: sage_attack_62
+  - first:
+      213: -1253708171825978015
+    second: sage_attack_63
+  - first:
+      213: 3544880005377433358
+    second: sage_attack_64
+  - first:
+      213: -3618588094831630156
+    second: sage_attack_65
+  - first:
+      213: -1657534791324840633
+    second: sage_attack_66
+  - first:
+      213: -8194249811864381924
+    second: sage_attack_67
+  - first:
+      213: 6428592808751432106
+    second: sage_attack_68
+  - first:
+      213: 1632737492952555665
+    second: sage_attack_69
+  - first:
+      213: 1988461076867948444
+    second: sage_attack_70
+  - first:
+      213: -2271868379856409972
+    second: sage_attack_71
+  - first:
+      213: 6990354459528128714
+    second: sage_attack_72
+  - first:
+      213: -5185470925606154306
+    second: sage_attack_73
+  - first:
+      213: -2473639953815642398
+    second: sage_attack_74
+  - first:
+      213: -7677532777270701438
+    second: sage_attack_75
+  - first:
+      213: -477350017310522291
+    second: sage_attack_76
+  - first:
+      213: 2885652422715849861
+    second: sage_attack_77
+  - first:
+      213: -7636346473191303190
+    second: sage_attack_78
+  - first:
+      213: 6091599412695029226
+    second: sage_attack_79
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sage_attack_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1917
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b241ee4a93ed97270800000000000000
+      internalID: 8248868531667342379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1995
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77683dd5352e2ae00800000000000000
+      internalID: 1054654110442423927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_2
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1917
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c011a027046e240800000000000000
+      internalID: 4820611309686033410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_3
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1995
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c376321b26c33390800000000000000
+      internalID: -7839704638030449727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_4
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1917
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd27455a44d903a0800000000000000
+      internalID: -6698589555013505601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_5
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1994
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f8512352ef8af50800000000000000
+      internalID: 6893038665398062857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_6
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1917
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0293b3d288fb8660800000000000000
+      internalID: 7389272854412628490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_7
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1994
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ced4013e3d07390800000000000000
+      internalID: -7822519580557972477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_8
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1917
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd6ed785f18ba710800000000000000
+      internalID: 1705599775436336565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_9
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 1994
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab1ee628766a7180800000000000000
+      internalID: -9116861829422900307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_10
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1917
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15554d08d29435650800000000000000
+      internalID: 6220395970112542033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_11
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1994
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a9082b7a90c8210800000000000000
+      internalID: 1336453805281155735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_12
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 1917
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d9f891841703150800000000000000
+      internalID: 5850300470434700646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_13
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 1994
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4813c262cbc2cd450800000000000000
+      internalID: 6114811580668195204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_14
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 1917
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf91d33831091d130800000000000000
+      internalID: 3589808791471593980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_15
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1994
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93173532411c5680800000000000000
+      internalID: -8765111798711512163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_16
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1660
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ee20efb257c7050800000000000000
+      internalID: 5799639251952004708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_17
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1737
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dae5ad86cdceadb0800000000000000
+      internalID: -4778655901929837869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_18
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1660
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05e24bf5637a3a00800000000000000
+      internalID: 737028370872853772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_19
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1737
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8737836624a4e410800000000000000
+      internalID: 1505508660234106762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_20
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1660
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c115076408d35c5f0800000000000000
+      internalID: -737115342858333924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_21
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1737
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62be62db5276e56e0800000000000000
+      internalID: -1846925385390429402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_22
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1660
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac0d6641d821f560800000000000000
+      internalID: 7345697346512817314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_23
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1737
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd782b37872d24c50800000000000000
+      internalID: 6648107414731261917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_24
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1660
+        width: 83
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec25b824e79428000800000000000000
+      internalID: 36672553603519182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_25
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1660
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2f3ecd2787f8310800000000000000
+      internalID: 1409477643117785829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_26
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 1660
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e0d77ac70d1a3d0800000000000000
+      internalID: -3197045026651828586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_27
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 1660
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc6d02c52cb278f0800000000000000
+      internalID: -544165734602937091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_28
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1404
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e290dfa08f7e0ac50800000000000000
+      internalID: 6674589700285335854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_29
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1404
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0914aea4dcf614420800000000000000
+      internalID: 2612492186367443344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_30
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1403
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24040110f56ff4e00800000000000000
+      internalID: 1031313727591301186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_31
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1403
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a5916d450613190800000000000000
+      internalID: -7984494746865673664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_32
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1403
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f2f3fdaefc115f0800000000000000
+      internalID: -787619852138369227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_33
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1404
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c692bcb8b1e0770800000000000000
+      internalID: 8578824627410267287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_34
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 1404
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c32bc5b3eb131320800000000000000
+      internalID: 2527394480706495428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_35
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 1404
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ada9e7ada7f2610800000000000000
+      internalID: 1598631471585352314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_36
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1148
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60de62060e9c1fde0800000000000000
+      internalID: -1301036851810341626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_37
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1148
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cffe1a977d4b05c0800000000000000
+      internalID: -4248216647411761209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_38
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1148
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f12084b168c42c80800000000000000
+      internalID: -8348327487272377863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_39
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1148
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd59e16d84f641c0800000000000000
+      internalID: -4519656287949464112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_40
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1148
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd849c3563655250800000000000000
+      internalID: 5932757370589711869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_41
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1148
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b493a1f790f4110800000000000000
+      internalID: 1247226063310375819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_42
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 1148
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2d106696cb5f8e0800000000000000
+      internalID: -1660213726747176235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_43
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 1149
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ef9f2db7e5dfe30800000000000000
+      internalID: 4538887885372915282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_44
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 893
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95f5d399761739c0800000000000000
+      internalID: -3947661836939823715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_45
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 893
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c37fe34a70a4b20800000000000000
+      internalID: 3119314093919910912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_46
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 893
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c374da8fd3fc240800000000000000
+      internalID: 4814134664950660096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_47
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 893
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cfdfc300cd63590800000000000000
+      internalID: -7694721019734524864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_48
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 893
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1badda424c8bed790800000000000000
+      internalID: -7503356776584193359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_49
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 893
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6cd322c33fb4ed0800000000000000
+      internalID: -2428580134438189367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_50
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 893
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3caa553135ce800800000000000000
+      internalID: 642980189313876905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_51
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 893
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fae54cfc8451dd60800000000000000
+      internalID: 7913198984771267314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_52
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 637
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1410b1092c8b8f0800000000000000
+      internalID: -524455432404516371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_53
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 638
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1caca98c30a2e1810800000000000000
+      internalID: 1737872701950446273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_54
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 638
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db255e7324d6aa430800000000000000
+      internalID: 3794965767186109117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_55
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 638
+        width: 83
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db22324fcdfab3e20800000000000000
+      internalID: 3331449712894223037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_56
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 713
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b12bbd38a1d9f50800000000000000
+      internalID: 6889692158575647646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_57
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 638
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18206c2e4cab5c370800000000000000
+      internalID: 8342279239554695809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_58
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 638
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e47ee15c3a6c3b0800000000000000
+      internalID: -5492522628509381021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_59
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 638
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6dbc79c75317bb0800000000000000
+      internalID: -4940108507009788203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_60
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 638
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4d4998469af4b60800000000000000
+      internalID: 7732585334488487074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_61
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 382
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167be180511f4bb20800000000000000
+      internalID: 3149407112071657313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_62
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 382
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60421e62ec72854c0800000000000000
+      internalID: -4298642077956103162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_63
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 457
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165ee466f0fe99ee0800000000000000
+      internalID: -1253708171825978015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_64
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 382
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f18e35591f13130800000000000000
+      internalID: 3544880005377433358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_65
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 383
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b86a13cc4138cdc0800000000000000
+      internalID: -3618588094831630156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_66
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 383
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d4b38a3e04ff8e0800000000000000
+      internalID: -1657534791324840633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_67
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 458
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16130b063d284e80800000000000000
+      internalID: -8194249811864381924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_68
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 383
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa182437913f63950800000000000000
+      internalID: 6428592808751432106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_69
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 383
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19026e66916a8a610800000000000000
+      internalID: 1632737492952555665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_70
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 383
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f976860de689b10800000000000000
+      internalID: 1988461076867948444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_71
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 127
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a6732deb3b870e0800000000000000
+      internalID: -2271868379856409972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_72
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 127
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8ed3e285ab20160800000000000000
+      internalID: 6990354459528128714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_73
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 202
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf012ebaa18908b0800000000000000
+      internalID: -5185470925606154306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_74
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 127
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eeda92619ddbadd0800000000000000
+      internalID: -2473639953815642398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_75
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 127
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2829c5bcd9ce37590800000000000000
+      internalID: -7677532777270701438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_76
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 127
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d440ea830bc1069f0800000000000000
+      internalID: -477350017310522291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_77
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 126
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c3931f695eb0820800000000000000
+      internalID: 2885652422715849861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_78
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 126
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae710ab775f360690800000000000000
+      internalID: -7636346473191303190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sage_attack_79
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 126
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae55aa32465b98450800000000000000
+      internalID: 6091599412695029226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sage_attack_0: 8248868531667342379
+      sage_attack_1: 1054654110442423927
+      sage_attack_10: 6220395970112542033
+      sage_attack_11: 1336453805281155735
+      sage_attack_12: 5850300470434700646
+      sage_attack_13: 6114811580668195204
+      sage_attack_14: 3589808791471593980
+      sage_attack_15: -8765111798711512163
+      sage_attack_16: 5799639251952004708
+      sage_attack_17: -4778655901929837869
+      sage_attack_18: 737028370872853772
+      sage_attack_19: 1505508660234106762
+      sage_attack_2: 4820611309686033410
+      sage_attack_20: -737115342858333924
+      sage_attack_21: -1846925385390429402
+      sage_attack_22: 7345697346512817314
+      sage_attack_23: 6648107414731261917
+      sage_attack_24: 36672553603519182
+      sage_attack_25: 1409477643117785829
+      sage_attack_26: -3197045026651828586
+      sage_attack_27: -544165734602937091
+      sage_attack_28: 6674589700285335854
+      sage_attack_29: 2612492186367443344
+      sage_attack_3: -7839704638030449727
+      sage_attack_30: 1031313727591301186
+      sage_attack_31: -7984494746865673664
+      sage_attack_32: -787619852138369227
+      sage_attack_33: 8578824627410267287
+      sage_attack_34: 2527394480706495428
+      sage_attack_35: 1598631471585352314
+      sage_attack_36: -1301036851810341626
+      sage_attack_37: -4248216647411761209
+      sage_attack_38: -8348327487272377863
+      sage_attack_39: -4519656287949464112
+      sage_attack_4: -6698589555013505601
+      sage_attack_40: 5932757370589711869
+      sage_attack_41: 1247226063310375819
+      sage_attack_42: -1660213726747176235
+      sage_attack_43: 4538887885372915282
+      sage_attack_44: -3947661836939823715
+      sage_attack_45: 3119314093919910912
+      sage_attack_46: 4814134664950660096
+      sage_attack_47: -7694721019734524864
+      sage_attack_48: -7503356776584193359
+      sage_attack_49: -2428580134438189367
+      sage_attack_5: 6893038665398062857
+      sage_attack_50: 642980189313876905
+      sage_attack_51: 7913198984771267314
+      sage_attack_52: -524455432404516371
+      sage_attack_53: 1737872701950446273
+      sage_attack_54: 3794965767186109117
+      sage_attack_55: 3331449712894223037
+      sage_attack_56: 6889692158575647646
+      sage_attack_57: 8342279239554695809
+      sage_attack_58: -5492522628509381021
+      sage_attack_59: -4940108507009788203
+      sage_attack_6: 7389272854412628490
+      sage_attack_60: 7732585334488487074
+      sage_attack_61: 3149407112071657313
+      sage_attack_62: -4298642077956103162
+      sage_attack_63: -1253708171825978015
+      sage_attack_64: 3544880005377433358
+      sage_attack_65: -3618588094831630156
+      sage_attack_66: -1657534791324840633
+      sage_attack_67: -8194249811864381924
+      sage_attack_68: 6428592808751432106
+      sage_attack_69: 1632737492952555665
+      sage_attack_7: -7822519580557972477
+      sage_attack_70: 1988461076867948444
+      sage_attack_71: -2271868379856409972
+      sage_attack_72: 6990354459528128714
+      sage_attack_73: -5185470925606154306
+      sage_attack_74: -2473639953815642398
+      sage_attack_75: -7677532777270701438
+      sage_attack_76: -477350017310522291
+      sage_attack_77: 2885652422715849861
+      sage_attack_78: -7636346473191303190
+      sage_attack_79: 6091599412695029226
+      sage_attack_8: 1705599775436336565
+      sage_attack_9: -9116861829422900307
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
