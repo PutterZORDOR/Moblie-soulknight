@@ -6,6 +6,7 @@ public class All_Potion : ScriptableObject
 {
     public string potionName;
     public Type_Potion Type;
+    public int potionEff;
 
     [Header("Game Prefab")]
     public GameObject gamePrefab;

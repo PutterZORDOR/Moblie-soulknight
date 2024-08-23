@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ChestRandom : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class ChestRandom : MonoBehaviour
     public GameObject This_Item;
     public GameObject UI_Getitem;
     private Vector3 sizeItem;
+    Weapon_Item item;
+    DropItem drop;
 
     private void Start()
     {
@@ -62,14 +65,25 @@ public class ChestRandom : MonoBehaviour
     void ShowItem()
     {
         itemHolder.localScale = Vector3.one;
-        Weapon_Item item = lootTable.GetRandom();
+        item = lootTable.GetRandom();
         This_Item = Instantiate(item.gamePrefab, itemHolder);
+        drop = This_Item.GetComponent<DropItem>();
+        SetItemData();
+        
 
         sizeItem = item.gamePrefab.transform.localScale;
-        This_Item.transform.localScale = sizeItem * 2f;
+        This_Item.transform.localScale = sizeItem * 2.5f;
 
     }
-
+    private void SetItemData()
+    {
+        drop.weaponName = item.itemName;
+        drop.Dmg = item.Damgae;
+        drop.Cost = item.Mana;
+        drop.AtkSpeed = item.AtkSpeed;
+        drop.raritys = item.rarity;
+        drop.type_weapon = item.weaponType;
+    }
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

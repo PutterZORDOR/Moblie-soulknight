@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: Mana Potion
   Type: 1
+  potionEff: 100
   gamePrefab: {fileID: 6344479665438767654, guid: fa48bf0e1f610a24e83f326e6d82de47, type: 3}

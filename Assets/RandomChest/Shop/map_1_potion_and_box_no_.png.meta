@@ -395,7 +395,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      map_1_potion_and_box_no__0: -8309276116552623808
+      map_1_potion_and_box_no__1: 184143491404126463
+      map_1_potion_and_box_no__10: 3202272205087802048
+      map_1_potion_and_box_no__2: 7674025010962958322
+      map_1_potion_and_box_no__3: -4033406980493160521
+      map_1_potion_and_box_no__4: -6780362423936205105
+      map_1_potion_and_box_no__5: 1787482088602284379
+      map_1_potion_and_box_no__6: 3378676907741471514
+      map_1_potion_and_box_no__7: 9201110602388326761
+      map_1_potion_and_box_no__8: 395701766470627886
+      map_1_potion_and_box_no__9: 3009696295766358617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

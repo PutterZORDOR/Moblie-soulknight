@@ -6,7 +6,8 @@ public class PotionRandom : MonoBehaviour
     public WeightPotion lootTable;
 
     [Header("Price")]
-    public int price;
+    public int minPrice;
+    public int maxPrice;
 
     public bool CanBuy = true;
     public float detectionRadius = 5.0f;
@@ -20,15 +21,22 @@ public class PotionRandom : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI text;
+
+    [Header("UI Description")]
+    public GameObject Description;
+    public TextMeshProUGUI textPotion;
     private void Start()
     {
         item = lootTable.GetRandom();
-        current_price = price * DungeonSystem.instance.Level;
+        current_price = Random.Range(minPrice, maxPrice) * DungeonSystem.instance.Level;
         playerLayer = LayerMask.GetMask("Player");
         GetButton = transform.Find("Get_Button").gameObject;
+        Description = transform.Find("Description_Potion").gameObject;
+        textPotion = Description.GetComponentInChildren<TextMeshProUGUI>();
         UI_Buy = transform.Find("UI_Buy").gameObject;
         text = UI_Buy.GetComponentInChildren<TextMeshProUGUI>();
         UI_Buy.SetActive(false);
+        Description.SetActive(false);
         GetButton.SetActive(false);
         ShowItem();
     }
@@ -48,16 +56,17 @@ public class PotionRandom : MonoBehaviour
             CoinManager.instance.SpendCoins(current_price);
             CanBuy = false;
             UI_Buy.SetActive(false);
+            Description.SetActive(false);
             GetButton.SetActive(false);
             if (item != null)
             {
                 if (item.Type == Type_Potion.Heal)
                 {
-                    PlayerManager.instance.Heal(1);
+                    PlayerManager.instance.Heal(item.potionEff);
                 }
                 else if (item.Type == Type_Potion.Mana)
                 {
-                    PlayerManager.instance.RecoverMana(100);
+                    PlayerManager.instance.RecoverMana(item.potionEff);
                 }
             }
             This_Item.SetActive(false);
@@ -77,11 +86,13 @@ public class PotionRandom : MonoBehaviour
             {
                 Debug.Log("Found");
                 GetButton.SetActive(true);
+                Description.SetActive(true);
                 UI_Buy.SetActive(true);
                 return true;
             }
         }
         UI_Buy.SetActive(false);
+        Description.SetActive(false);
         GetButton.SetActive(false);
         return false;
     }
@@ -92,10 +103,12 @@ public class PotionRandom : MonoBehaviour
             if (item.Type == Type_Potion.Heal)
             {
                 text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#7CFC00>{item.potionName}</color>";
+                textPotion.text = $"<sprite name=\"Coin\"> {item.potionEff}";
             }
             else if (item.Type == Type_Potion.Mana)
             {
                 text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#76D7C4>{item.potionName}</color>";
+                textPotion.text = $"<sprite name=\"Coin\"> {item.potionEff}";
             }
         }
         This_Item = Instantiate(item.gamePrefab, transform);

@@ -107,10 +107,6 @@ MonoBehaviour:
     list:
     - itemData: {fileID: 0}
       weight: 10
-    - itemData: {fileID: 0}
-      weight: 40
-    - itemData: {fileID: 0}
-      weight: 50
   itemHolder: {fileID: 0}
   CanOpen: 1
   detectionRadius: 0.55

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -8,7 +7,8 @@ public class WeaponShop : MonoBehaviour
     public WeightedRandomList lootTable;
 
     [Header("Price")]
-    public int price;
+    public int minPrice;
+    public int maxPrice;
 
     public bool CanBuy = true;
     public float detectionRadius = 5.0f;
@@ -23,17 +23,33 @@ public class WeaponShop : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI text;
+
+    [Header("UI Description")]
+    public GameObject Description;
+    public TextMeshProUGUI textDmg;
+    public TextMeshProUGUI textAtkSpeed;
+    public TextMeshProUGUI textCost;
+
     private void Start()
     {
-        current_price = price * DungeonSystem.instance.Level;
+        current_price = Random.Range(minPrice, maxPrice) * DungeonSystem.instance.Level;
         playerLayer = LayerMask.GetMask("Player");
-        GetButton = transform.Find("Get_Button").gameObject;
-        UI_Buy = transform.Find("UI_Buy").gameObject;
+        GetButton = transform.Find("Get_Button")?.gameObject;
+        UI_Buy = transform.Find("UI_Buy")?.gameObject;
         text = UI_Buy.GetComponentInChildren<TextMeshProUGUI>();
         UI_Buy.SetActive(false);
+        Description.SetActive(false);
         GetButton.SetActive(false);
         ShowItem();
     }
+
+    private void SetDescription(Weapon_Item weapon)
+    {
+        textDmg.text = weapon.Damgae.ToString();
+        textAtkSpeed.text = weapon.AtkSpeed.ToString();
+        textCost.text = weapon.Mana.ToString();
+    }
+
     private void Update()
     {
         if (CanBuy)
@@ -51,6 +67,7 @@ public class WeaponShop : MonoBehaviour
             CoinManager.instance.SpendCoins(current_price);
             CanBuy = false;
             UI_Buy.SetActive(false);
+            Description.SetActive(false);
             GetButton.SetActive(false);
             this.enabled = false;
         }
@@ -68,11 +85,13 @@ public class WeaponShop : MonoBehaviour
             {
                 Debug.Log("Found");
                 GetButton.SetActive(true);
+                Description.SetActive(true);
                 UI_Buy.SetActive(true);
                 return true;
             }
         }
         UI_Buy.SetActive(false);
+        Description.SetActive(false);
         GetButton.SetActive(false);
         return false;
     }
@@ -80,8 +99,7 @@ public class WeaponShop : MonoBehaviour
     {
         item = lootTable.GetRandom();
         This_Item = Instantiate(item.gamePrefab, transform);
-        sizeItem = item.gamePrefab.transform.localScale;
-        This_Item.transform.localScale = sizeItem * 2f;
+        SetDescription(item);
         switch (item.rarity)
         {
             case Rarity.Common:
@@ -104,8 +122,20 @@ public class WeaponShop : MonoBehaviour
                 break;
         }
             drop = This_Item.GetComponent<DropItem>();
+            SetItemData();
             StartCoroutine(CloseUI());
     }
+
+    private void SetItemData()
+    {
+        drop.weaponName = item.itemName;
+        drop.Dmg = item.Damgae;
+        drop.Cost = item.Mana;
+        drop.AtkSpeed = item.AtkSpeed;
+        drop.raritys = item.rarity;
+        drop.type_weapon = item.weaponType;
+    }
+
     IEnumerator CloseUI()
     {
         yield return new WaitForSeconds(0.5f);

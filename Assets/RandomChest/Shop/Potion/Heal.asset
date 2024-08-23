@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: Heal Potion
   Type: 0
+  potionEff: 1
   gamePrefab: {fileID: 1747586743482436182, guid: 66902fcbe03b79e4aa25f73fb141805f, type: 3}
