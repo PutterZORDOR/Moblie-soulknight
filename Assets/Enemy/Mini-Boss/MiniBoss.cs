@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Boss : MonoBehaviour
+public abstract class MiniBoss : MonoBehaviour
 {
     public Transform player;
     public float moveSpeed = 1f;
-    public float attackRange = 1f;
+    public float Range = 1f;
     public float attackCooldown = 3f;
     public float shootingRange = 50f;
     public GameObject bulletPrefab;
@@ -13,8 +13,6 @@ public abstract class Boss : MonoBehaviour
     public float bulletLifetime = 5f;
     public float fireRate = 3f;
     public float health = 200f;
-    public float waveIncrementHealth = 500 * 1.2f;
-    public float damageMultiplier = 1.2f;
     public float damage;
     public GameObject healthBarPrefab; // Assign this in the Inspector
     private GameObject healthBarInstance;
@@ -25,9 +23,9 @@ public abstract class Boss : MonoBehaviour
 
     protected virtual void Start()
     {
-        player = GameObject.FindGameObjectWithTag("_player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        // Instantiate the health bar prefab and set it as a child of the boss
+        // Instantiate the health bar prefab and set it as a child of the miniboss
         healthBarInstance = Instantiate(healthBarPrefab, transform.position, Quaternion.identity);
         healthBarInstance.transform.SetParent(transform, false);
         healthSlider = healthBarInstance.GetComponentInChildren<Slider>();
@@ -39,22 +37,24 @@ public abstract class Boss : MonoBehaviour
             healthSlider.value = health;
         }
 
-        // Adjust the position of the health bar relative to the boss
+        // Adjust the position of the health bar relative to the miniboss
         RectTransform healthBarRect = healthBarInstance.GetComponent<RectTransform>();
-        healthBarRect.anchoredPosition = new Vector2(0, 1.5f); // Adjust this value to place it above the boss
+        healthBarRect.anchoredPosition = new Vector2(0, 1.5f); // Adjust this value to place it above the miniboss
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("_player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             AttackPlayer();
         }
     }
+
     protected virtual void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer > attackRange)
+        if (distanceToPlayer > Range)
         {
             MoveTowardsPlayer();
         }
@@ -70,17 +70,16 @@ public abstract class Boss : MonoBehaviour
             lastFireTime = Time.time;
         }
 
-        // Update the health bar position above the boss
+        // Update the health bar position above the miniboss
         if (healthBarInstance != null)
         {
             Vector3 healthBarPosition = transform.position + new Vector3(0, 2f, 0); // Adjust Y offset if needed
             healthBarInstance.transform.position = healthBarPosition;
 
-            // Reset the rotation to avoid it following the boss's rotation
+            // Reset the rotation to avoid it following the miniboss's rotation
             healthBarInstance.transform.rotation = Quaternion.identity;
         }
     }
-
 
     protected void MoveTowardsPlayer()
     {
@@ -90,21 +89,14 @@ public abstract class Boss : MonoBehaviour
 
     protected virtual void AttackPlayer()
     {
-        
+        // Implement attack logic here if needed
     }
 
     protected abstract void ShootPlayer();
 
-    public void IncreaseDifficulty(int waveNumber)
-    {
-        float additionalHealth = 500 * 2.5f * waveNumber;
-        health += (int)additionalHealth; // Cast after calculation
-        damageMultiplier += waveNumber * 2f;
-    }
-
     public void TakeDamage(float damage)
     {
-        Debug.Log("Boss took damage: " + damage);
+        Debug.Log("MiniBoss took damage: " + damage);
         health -= damage;
         if (healthSlider != null)
         {
@@ -117,12 +109,10 @@ public abstract class Boss : MonoBehaviour
         }
     }
 
-
     void Die()
     {
-        
         Destroy(gameObject);
-        Debug.Log("Boss has been defeated!");
-        EnemySpawner.Instance.BossDefeated();
+        Debug.Log("MiniBoss has been defeated!");
+        // You can add any additional logic here for when the MiniBoss is defeated
     }
 }

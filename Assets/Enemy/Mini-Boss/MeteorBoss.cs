@@ -1,17 +1,30 @@
 ﻿using UnityEngine;
+using System.Collections;
 
-public class MeteorBoss : Boss
+public class MeteorBoss : MiniBoss
 {
     public GameObject meteorPrefab;
-    public float meteorSpread = 5f; // Distance between the meteors
+    public GameObject magmaFloorPrefab;
+    public float meteorSpread = 7f; // Distance between the meteors
+    public float magmaRadius = 15f; // Radius of the magma floor area
+    public float meteorShowerRadius = 8f; // Radius for the MeteorShower AOE
+    public float patternSwitchMinDuration = 5f; // Min duration for each pattern
+    public float patternSwitchMaxDuration = 10f; // Max duration for each pattern
+    public float attackRange = 60f; // Range within which the boss will attack
+
+    private int currentPattern = 0;
+    private bool isAttacking = false; // Track whether the boss is attacking
 
     protected override void Start()
     {
         base.Start();
-        fireRate = 8f;
+        fireRate = 5f;
         damage = 50;
         bulletLifetime = 10f;
         bulletSpeed = 12f;
+
+        // Start the first attack pattern
+        StartCoroutine(SwitchPattern());
     }
 
     protected override void Update()
@@ -19,16 +32,37 @@ public class MeteorBoss : Boss
         base.Update();
 
         // Check if the boss should flip based on the player's position
+        FlipTowardsPlayer();
+
+        // Check distance to player and start attacking if within range
+        if (player != null)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            if (distanceToPlayer <= attackRange)
+            {
+                if (!isAttacking)
+                {
+                    StartCoroutine(AttackPatterns());
+                    isAttacking = true;
+                }
+            }
+            else
+            {
+                isAttacking = false;
+            }
+        }
+    }
+
+    private void FlipTowardsPlayer()
+    {
         if (player != null)
         {
             Vector3 scale = transform.localScale;
 
-            // If the player is to the right of the boss and the boss is not already facing right
             if (transform.position.x < player.position.x && scale.x < 0)
             {
                 scale.x = Mathf.Abs(scale.x); // Flip to face right
             }
-            // If the player is to the left of the boss and the boss is not already facing left
             else if (transform.position.x > player.position.x && scale.x > 0)
             {
                 scale.x = -Mathf.Abs(scale.x); // Flip to face left
@@ -43,28 +77,100 @@ public class MeteorBoss : Boss
         base.AttackPlayer();
     }
 
+    private IEnumerator AttackPatterns()
+    {
+        while (isAttacking)
+        {
+            ShootPlayer();
+            yield return new WaitForSeconds(fireRate); // Adjust the delay between attacks
+        }
+    }
+
     protected override void ShootPlayer()
     {
-        if (meteorPrefab != null)
+        switch (currentPattern)
         {
-            float spawnHeightAbovePlayer = 10f; // ปรับค่าเพื่อควบคุมความสูงของการสร้างดาวตก
+            case 0:
+                StartCoroutine(SummonMeteorsAtPlayer());
+                break;
+            case 1:
+                MeteorShower();
+                break;
+            case 2:
+                SummonMagmaFloor();
+                break;
+        }
+    }
 
-            for (int i = -1; i <= 1; i++) // ลูปเพื่อสร้างดาวตก 3 ลูก
+    private IEnumerator SummonMeteorsAtPlayer()
+    {
+        int meteorCount = Random.Range(3, 10); // Random number of meteors
+        for (int i = 0; i < meteorCount; i++)
+        {
+            yield return new WaitForSeconds(1f); // 1-second delay
+
+            if (meteorPrefab != null)
             {
-                // สุ่มระยะการกระจายดาวตก
-                float randomSpread = meteorSpread + Random.Range(-5f, 5f); // ปรับขอบเขตของการสุ่ม
-
-                Vector2 spawnPosition = new Vector2(player.position.x + i * randomSpread, player.position.y + spawnHeightAbovePlayer);
+                Vector2 spawnPosition = new Vector2(player.position.x, player.position.y + 10f);
                 GameObject meteor = Instantiate(meteorPrefab, spawnPosition, Quaternion.identity);
                 Rigidbody2D rb = meteor.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
-                    rb.linearVelocity = Vector2.down * bulletSpeed; // ใช้ bulletSpeed ที่ลดลง
+                    rb.velocity = Vector2.down * bulletSpeed;
                 }
-
                 Destroy(meteor, bulletLifetime);
             }
         }
     }
 
+    private void MeteorShower()
+    {
+        int meteorCount = Random.Range(7, 20); // Random number of meteors in the area
+        for (int i = 0; i < meteorCount; i++)
+        {
+            if (meteorPrefab != null)
+            {
+                // Generate a random position within the AOE radius
+                float angle = Random.Range(0f, 360f);
+                float radius = Random.Range(0f, meteorShowerRadius);
+
+                Vector2 offset = new Vector2(
+                    Mathf.Cos(angle * Mathf.Deg2Rad) * radius,
+                    Mathf.Sin(angle * Mathf.Deg2Rad) * radius
+                );
+
+                Vector2 spawnPosition = (Vector2)transform.position + offset;
+                spawnPosition.y += 10f; // Ensure meteors fall from above
+
+                GameObject meteor = Instantiate(meteorPrefab, spawnPosition, Quaternion.identity);
+                Rigidbody2D rb = meteor.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.velocity = Vector2.down * bulletSpeed;
+                }
+                Destroy(meteor, bulletLifetime);
+            }
+        }
+    }
+
+    private void SummonMagmaFloor()
+    {
+        if (magmaFloorPrefab != null)
+        {
+            GameObject magmaFloor = Instantiate(magmaFloorPrefab, transform.position, Quaternion.identity);
+            // Set the scale of the magma floor to match the desired radius
+            magmaFloor.transform.localScale = new Vector3(magmaRadius, magmaRadius, 5f);
+
+            Destroy(magmaFloor, bulletLifetime); // Magma floor lasts for the duration of bulletLifetime
+        }
+    }
+
+    private IEnumerator SwitchPattern()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(patternSwitchMinDuration, patternSwitchMaxDuration));
+            currentPattern = (currentPattern + 1) % 3; // Cycle through the three patterns
+        }
+    }
 }
