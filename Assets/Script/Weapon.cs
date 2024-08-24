@@ -2,7 +2,7 @@
 
 public class Weapon : MonoBehaviour 
 {
-    public float damage;
+    //public float damage;
 
     public float Range;
     [SerializeField] private bool Detected = false;
