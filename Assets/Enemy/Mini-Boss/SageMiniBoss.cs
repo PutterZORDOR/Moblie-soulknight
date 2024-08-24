@@ -3,19 +3,28 @@ using System.Collections;
 
 public class SageBoss : MiniBoss
 {
-    public int spiralBulletCount = 1000;
+    public int spiralBulletCount = 50;
     public float spiralRotationSpeed = 200f;
     public float spiralOffset = 175f;
     public float vortexSpeed = 50f;
-    public float cooldownDuration = 4f; // Cooldown before switching patterns
+    public float cooldownDuration = 5f; // Cooldown before switching patterns
 
     public float minPatternDuration = 5f;
     public float maxPatternDuration = 10f;
 
     // Firing rates for each pattern
-    public float spiralFireRate = 3f;
-    public float surroundFireRate = 3f;
-    public float spinningFireRate = 0.1f;
+    public float spiralFireRate = 4f;
+    public float surroundFireRate = 4f;
+    public float spinningFireRate = 0.4f;
+
+    // Bullet limits and cooldowns for each pattern
+    public int spiralBulletLimit = 100;
+    public int surroundBulletLimit = 100;
+    public int spinningBulletLimit = 50;
+
+    public float spiralPatternCooldown = 2f;
+    public float surroundPatternCooldown = 2f;
+    public float spinningPatternCooldown = 1f;
 
     private float currentAngle1 = 0f;
     private float currentAngle2 = 90f;
@@ -72,7 +81,8 @@ public class SageBoss : MiniBoss
 
     private IEnumerator ShootSpiral()
     {
-        while (currentPattern == 0)
+        int bulletsShot = 0;
+        while (currentPattern == 0 && bulletsShot < spiralBulletLimit)
         {
             currentAngle1 += vortexSpeed * Time.deltaTime;
             currentAngle2 -= vortexSpeed * Time.deltaTime;
@@ -80,13 +90,18 @@ public class SageBoss : MiniBoss
             ShootSpiralBullets(currentAngle1);
             ShootSpiralBullets(currentAngle2 + spiralOffset);
 
+            bulletsShot += 2 * spiralBulletCount; // Account for two sets of spiral bullets
+
             yield return new WaitForSeconds(spiralFireRate);
         }
+
+        yield return new WaitForSeconds(spiralPatternCooldown);
     }
 
     private IEnumerator ShootSurround()
     {
-        while (currentPattern == 1)
+        int bulletsShot = 0;
+        while (currentPattern == 1 && bulletsShot < surroundBulletLimit)
         {
             for (int i = 0; i < spiralBulletCount; i++)
             {
@@ -97,15 +112,19 @@ public class SageBoss : MiniBoss
                 );
 
                 ShootBullet(bulletDirection);
+                bulletsShot++;
             }
 
             yield return new WaitForSeconds(surroundFireRate);
         }
+
+        yield return new WaitForSeconds(surroundPatternCooldown);
     }
 
     private IEnumerator ShootSpinning()
     {
-        while (currentPattern == 2)
+        int bulletsShot = 0;
+        while (currentPattern == 2 && bulletsShot < spinningBulletLimit)
         {
             // Shoot in two directions
             float angle1 = Time.time * spiralRotationSpeed;
@@ -114,9 +133,13 @@ public class SageBoss : MiniBoss
             ShootBulletInDirection(angle1);
             ShootBulletInDirection(angle2);
 
+            bulletsShot += 2; // Account for two bullets per shot
+
             // Wait for the next shot
             yield return new WaitForSeconds(spinningFireRate);
         }
+
+        yield return new WaitForSeconds(spinningPatternCooldown);
     }
 
     private void ShootSpiralBullets(float angle)

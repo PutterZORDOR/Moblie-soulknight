@@ -192,9 +192,15 @@ MonoBehaviour:
   cooldownDuration: 7
   minPatternDuration: 5
   maxPatternDuration: 15
-  spiralFireRate: 0.5
-  surroundFireRate: 0.2
+  spiralFireRate: 0.8
+  surroundFireRate: 0.5
   spinningFireRate: 0.1
+  spiralBulletLimit: 70
+  surroundBulletLimit: 70
+  spinningBulletLimit: 70
+  spiralPatternCooldown: 2
+  surroundPatternCooldown: 2
+  spinningPatternCooldown: 1
 --- !u!95 &524742420166578086
 Animator:
   serializedVersion: 7

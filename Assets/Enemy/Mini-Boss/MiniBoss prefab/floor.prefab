@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 138127414673133774}
   - component: {fileID: 3285649691867148373}
   - component: {fileID: 4680176222080280586}
+  - component: {fileID: 7305269539621902306}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -119,7 +120,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -152,3 +153,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7305269539621902306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164572578676341068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b493199cead381c47b0597401d19a6b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerTick: 20
+  burnDamage: 2
+  burnTicks: 10
+  damageInterval: 1.5
+  burnInterval: 1

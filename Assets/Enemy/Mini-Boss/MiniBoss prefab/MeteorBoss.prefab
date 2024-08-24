@@ -101,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 4352222853611927089}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 010868ac0bb329e4780fc8e293e8e390, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2c23cc48833284a4d8df93f63bbfa6dd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -209,9 +209,14 @@ MonoBehaviour:
   healthBarPrefab: {fileID: 5775287755028678762, guid: 775f8110fcd9d5340b9f7726494df121, type: 3}
   meteorPrefab: {fileID: 8255638182774965551, guid: a61fa854b4265904d82ce95a513bc401, type: 3}
   magmaFloorPrefab: {fileID: 1164572578676341068, guid: 1fc4fe52164bb2940a0adcafd87fae59, type: 3}
+  enemyPrefabs:
+  - {fileID: 5547985172521817706, guid: ec99e3c7fbb1c314f9f6b3dc2a0523c2, type: 3}
+  - {fileID: 3705290102035354588, guid: 670cebd069ace0848bd70c4df09cb5a5, type: 3}
+  - {fileID: 4458826238739980880, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
   meteorSpread: 5
-  magmaRadius: 5
+  magmaRadius: 10
   meteorShowerRadius: 8
   patternSwitchMinDuration: 5
   patternSwitchMaxDuration: 10
   attackRange: 1
+  summonInterval: 15

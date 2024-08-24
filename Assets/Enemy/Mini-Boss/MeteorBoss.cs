@@ -5,12 +5,14 @@ public class MeteorBoss : MiniBoss
 {
     public GameObject meteorPrefab;
     public GameObject magmaFloorPrefab;
+    public GameObject[] enemyPrefabs; // Array of enemy prefabs to summon
     public float meteorSpread = 7f; // Distance between the meteors
     public float magmaRadius = 15f; // Radius of the magma floor area
     public float meteorShowerRadius = 8f; // Radius for the MeteorShower AOE
     public float patternSwitchMinDuration = 5f; // Min duration for each pattern
     public float patternSwitchMaxDuration = 10f; // Max duration for each pattern
     public float attackRange = 60f; // Range within which the boss will attack
+    public float summonInterval = 15f; // Interval to summon random enemies
 
     private int currentPattern = 0;
     private bool isAttacking = false; // Track whether the boss is attacking
@@ -25,6 +27,9 @@ public class MeteorBoss : MiniBoss
 
         // Start the first attack pattern
         StartCoroutine(SwitchPattern());
+
+        // Start the enemy summoning coroutine
+        StartCoroutine(SummonRandomEnemies());
     }
 
     protected override void Update()
@@ -171,6 +176,27 @@ public class MeteorBoss : MiniBoss
         {
             yield return new WaitForSeconds(Random.Range(patternSwitchMinDuration, patternSwitchMaxDuration));
             currentPattern = (currentPattern + 1) % 3; // Cycle through the three patterns
+        }
+    }
+
+    private IEnumerator SummonRandomEnemies()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(summonInterval); // Wait 15 seconds
+
+            for (int i = 0; i < 3; i++) // Summon 3 random enemies
+            {
+                if (enemyPrefabs.Length > 0)
+                {
+                    GameObject randomEnemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+                    Vector2 spawnPosition = new Vector2(
+                        transform.position.x + Random.Range(-10f, 10f),
+                        transform.position.y + Random.Range(-10f, 10f)
+                    );
+                    Instantiate(randomEnemy, spawnPosition, Quaternion.identity);
+                }
+            }
         }
     }
 }

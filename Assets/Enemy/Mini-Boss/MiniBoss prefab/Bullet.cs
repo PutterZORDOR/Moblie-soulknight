@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
     public float speed = 10f; // Speed of the bullet
     public float lifetime = 2f; // Lifetime of the bullet
     private Vector3 direction; // Direction of the bullet
+    private int damage; // Damage value for this bullet
 
     private void Start()
     {
@@ -14,6 +15,11 @@ public class Bullet : MonoBehaviour
     public void SetDirection(Vector3 dir)
     {
         direction = dir;
+    }
+
+    public void SetDamage(int dmg)
+    {
+        damage = dmg;
     }
 
     private void Update()
@@ -26,10 +32,15 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Implement damage logic here
+            // Find the PlayerHealth component and apply damage
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage); // Use the damage value from the bullet
+            }
+
             Debug.Log("Bullet hit the player!");
             Destroy(gameObject); // Destroy the bullet upon hitting the player
         }
-        
     }
 }

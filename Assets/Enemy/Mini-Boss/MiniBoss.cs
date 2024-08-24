@@ -25,22 +25,43 @@ public abstract class MiniBoss : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        // Instantiate the health bar prefab and set it as a child of the miniboss
-        healthBarInstance = Instantiate(healthBarPrefab, transform.position, Quaternion.identity);
-        healthBarInstance.transform.SetParent(transform, false);
-        healthSlider = healthBarInstance.GetComponentInChildren<Slider>();
-
-        // Set the max value of the health slider
-        if (healthSlider != null)
+        // Find the Canvas in the scene
+        Canvas canvas = FindObjectOfType<Canvas>();
+        if (canvas == null)
         {
-            healthSlider.maxValue = health;
-            healthSlider.value = health;
+            Debug.LogError("No Canvas found in the scene!");
+            return;
         }
 
-        // Adjust the position of the health bar relative to the miniboss
+        // Instantiate the health bar prefab in the canvas
+        healthBarInstance = Instantiate(healthBarPrefab, canvas.transform);
+        if (healthBarInstance == null)
+        {
+            Debug.LogError("Health bar prefab could not be instantiated!");
+            return;
+        }
+
+        healthSlider = healthBarInstance.GetComponentInChildren<Slider>();
+        if (healthSlider == null)
+        {
+            Debug.LogError("Slider component not found in health bar prefab!");
+            return;
+        }
+
+        // Set the max value of the health slider
+        healthSlider.maxValue = health;
+        healthSlider.value = health;
+
+        // Position the health bar at the top center of the screen
         RectTransform healthBarRect = healthBarInstance.GetComponent<RectTransform>();
-        healthBarRect.anchoredPosition = new Vector2(0, 1.5f); // Adjust this value to place it above the miniboss
+        healthBarRect.anchorMin = new Vector2(0.5f, 1f); // Top center anchor
+        healthBarRect.anchorMax = new Vector2(0.5f, 1f); // Top center anchor
+        healthBarRect.pivot = new Vector2(0.5f, 1f); // Pivot at the top center
+        healthBarRect.anchoredPosition = new Vector2(0, -30f); // Adjust Y position to be slightly below the top
+
+        Debug.Log("Health bar instantiated and positioned successfully.");
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -70,14 +91,10 @@ public abstract class MiniBoss : MonoBehaviour
             lastFireTime = Time.time;
         }
 
-        // Update the health bar position above the miniboss
-        if (healthBarInstance != null)
+        // Update the health bar value based on the current health
+        if (healthSlider != null)
         {
-            Vector3 healthBarPosition = transform.position + new Vector3(0, 2f, 0); // Adjust Y offset if needed
-            healthBarInstance.transform.position = healthBarPosition;
-
-            // Reset the rotation to avoid it following the miniboss's rotation
-            healthBarInstance.transform.rotation = Quaternion.identity;
+            healthSlider.value = Mathf.Clamp(health, 0, healthSlider.maxValue);
         }
     }
 
