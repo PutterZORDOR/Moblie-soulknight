@@ -2,28 +2,28 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "Attack",
+            "name": "Gameplay",
             "id": "dbae1041-f16f-4989-a213-2fa89435a5b1",
             "actions": [
                 {
-                    "name": "Shoot",
-                    "type": "Button",
+                    "name": "Attack",
+                    "type": "Value",
                     "id": "27e0c82d-d090-4ac6-b824-3476ae6eb7ec",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "6ef0eed4-24bc-4d70-9005-4dcf26b30b7d",
-                    "path": "",
+                    "id": "0ffc1413-7e92-4ddd-bbeb-73128918c08e",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

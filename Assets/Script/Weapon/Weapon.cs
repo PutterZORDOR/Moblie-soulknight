@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-
-public class Weapon : MonoBehaviour 
+using UnityEngine.InputSystem;
+public abstract class Weapon : MonoBehaviour
 {
     //public float damage;
 
@@ -17,6 +17,19 @@ public class Weapon : MonoBehaviour
     public Transform characterTransform;
     public JoystickMove joystickMoveScript;
 
+    public InputAction attackAction;
+    public float attackRate = 0.2f;
+    public float nextAttackTime = 0f;
+
+    private void OnEnable()
+    {
+        attackAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        attackAction.Disable();
+    }
     void Update()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -80,7 +93,17 @@ public class Weapon : MonoBehaviour
                 UnflipCharacter();
             }
         }
+        if (attackAction.ReadValue<float>() > 0)
+        {
+            if (Time.time >= nextAttackTime)
+            {
+                Attack();
+                nextAttackTime = Time.time + attackRate;
+            }
+        }
     }
+
+    protected abstract void Attack();
 
     private void FlipCharacter()
     {

@@ -507,18 +507,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1733633907}
-        m_TargetAssemblyTypeName: ShortGun, Assembly-CSharp
-        m_MethodName: Shoot
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Gun, Assembly-CSharp
         m_MethodName: 
@@ -1163,7 +1151,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.31446534, g: 0.3085438, b: 0.24821006, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6492158, b: 0.16874322, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -1180,7 +1168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733633900}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16be5bd0930aac24d882fe94f5d8629d, type: 3}
   m_Name: 
@@ -1194,6 +1182,25 @@ MonoBehaviour:
   flipped: 0
   characterTransform: {fileID: 2091746415}
   joystickMoveScript: {fileID: 2091746411}
+  attackAction:
+    m_Name: Attack
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1575fa5d-8bb9-4b97-86ae-9e9db16c17b1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 369feb75-fc09-4472-b529-d14acdb73c64
+      m_Path: <Touchscreen>/Press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Attack
+      m_Flags: 0
+    m_Flags: 0
+  attackRate: 0.2
+  nextAttackTime: 0
   Bullet: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
 --- !u!114 &1733633907
 MonoBehaviour:
@@ -1202,7 +1209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733633900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7964b8a395410ac488e3f14a7f5c3336, type: 3}
   m_Name: 
@@ -1216,6 +1223,25 @@ MonoBehaviour:
   flipped: 0
   characterTransform: {fileID: 2091746415}
   joystickMoveScript: {fileID: 2091746411}
+  attackAction:
+    m_Name: Attack
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 53be5072-6289-4837-b69c-32a83a84c1c1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 38b32cd1-bd82-40c2-aea1-e91e282ac4f1
+      m_Path: <Touchscreen>/Press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Attack
+      m_Flags: 0
+    m_Flags: 0
+  attackRate: 0.2
+  nextAttackTime: 0
   pelletCount: 5
   spreadAngle: 15
   Bullet: {fileID: 6339998769515747643, guid: faad9c407b3669b4490101e4d44a84e4, type: 3}
