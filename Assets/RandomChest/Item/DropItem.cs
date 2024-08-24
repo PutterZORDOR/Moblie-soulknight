@@ -36,7 +36,7 @@ public class DropItem : MonoBehaviour
         GetButton = transform.Find("Get_Button_Item").gameObject;
         UI_Getitem = transform.Find("UI_GetItem").gameObject;
         Description_pannel = transform.Find("Description_Weapon").gameObject;
-        Pannel = Description_pannel.transform.Find("Pannel").gameObject;
+        Pannel = Description_pannel.transform.Find("Pannel")?.gameObject;
         textDmg = Pannel.transform.Find("textDmg_Weapon")?.GetComponentInChildren<TextMeshProUGUI>();
         textCost = Pannel.transform.Find("textCost_Weapon")?.GetComponentInChildren<TextMeshProUGUI>();
         textAtkSpeed = Pannel.transform.Find("textAtkSpeed_Weapon")?.GetComponentInChildren<TextMeshProUGUI>();
