@@ -20,6 +20,11 @@ public class PlayerManager : MonoBehaviour
     public Image ArmorBar;
     public Image ManaBar;
 
+    [Header("Text Stat")]
+    public TextMeshProUGUI textHp;
+    public TextMeshProUGUI textArmor;
+    public TextMeshProUGUI textMana;
+
     [Header("Armor Regeneration")]
     public int ArmorRegenAmount = 1;
     public float TimeToRegen = 5f;
@@ -49,6 +54,14 @@ public class PlayerManager : MonoBehaviour
         {
             TakeDamgeAll(1);
         }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            UseMana(10);
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            RecoverMana(10);
+        }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -59,6 +72,18 @@ public class PlayerManager : MonoBehaviour
         {
             regenCoroutine = StartCoroutine(RegenerateArmor());
         }
+    }
+    void UpdateUIHp()
+    {
+        textHp.text = $"{Health}/{MaxHealth}";
+    }
+    void UpdateUIMana()
+    {
+        textMana.text = $"{Mana}/{MaxMana}";
+    }
+    void UpdateUIArmor()
+    {
+        textArmor.text = $"{Armor}/{MaxArmor}";
     }
 
     private void InitializeStats()
@@ -85,6 +110,7 @@ public class PlayerManager : MonoBehaviour
         Health -= damage;
         Health = Mathf.Max(Health, 0);
         HpBar.fillAmount = (float)Health / MaxHealth;
+        UpdateUIHp();
 
         if (Health <= 0)
         {
@@ -99,6 +125,7 @@ public class PlayerManager : MonoBehaviour
         Armor -= damage;
         Armor = Mathf.Max(Armor, 0);
         ArmorBar.fillAmount = (float)Armor / MaxArmor;
+        UpdateUIArmor();
     }
 
     public void UseMana(int amount)
@@ -106,12 +133,15 @@ public class PlayerManager : MonoBehaviour
         Mana -= amount;
         Mana = Mathf.Max(Mana, 0);
         ManaBar.fillAmount = (float)Mana / MaxMana;
+        UpdateUIMana();
     }
 
     public void RecoverMana(int amount)
     {
         Mana += amount;
         Mana = Mathf.Min(Mana, MaxMana);
+        ManaBar.fillAmount = (float)Mana / MaxMana;
+        UpdateUIMana();
     }
 
     public void Heal(int amount)
@@ -119,6 +149,7 @@ public class PlayerManager : MonoBehaviour
         Health += amount;
         Health = Mathf.Min(Health, MaxHealth);
         HpBar.fillAmount = (float)Health / MaxHealth;
+        UpdateUIHp();
     }
 
     private IEnumerator RegenerateArmor()
@@ -128,6 +159,7 @@ public class PlayerManager : MonoBehaviour
             Armor += ArmorRegenAmount;
             Armor = Mathf.Min(Armor, MaxArmor);
             ArmorBar.fillAmount = (float)Armor / MaxArmor;
+            UpdateUIArmor();
             yield return new WaitForSeconds(RegenInterval);
         }
         regenCoroutine = null;

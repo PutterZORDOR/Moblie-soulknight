@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class CoinManager : MonoBehaviour
 {
@@ -7,8 +8,8 @@ public class CoinManager : MonoBehaviour
     public int Coins; 
     public int StartCoin;
 
-    /*[Header("Coin Text")]
-    public TextMeshProUGUI coinText;*/
+    [Header("Coin Text")]
+    public TextMeshProUGUI coinText;
     private void Awake()
     {
         if (instance == null)
@@ -23,7 +24,7 @@ public class CoinManager : MonoBehaviour
     private void Start()
     {
         InitializeStats();
-        //UpdateCoinUI();
+        UpdateCoinUI();
     }
     private void InitializeStats()
     {
@@ -32,16 +33,16 @@ public class CoinManager : MonoBehaviour
     public void AddCoins(int amount)
     {
         Coins += amount;
-        //UpdateCoinUI();
+        UpdateCoinUI();
     }
     public void SpendCoins(int amount)
     {
         Coins -= amount;
-        //UpdateCoinUI();
+        UpdateCoinUI();
 
     }
-    /*public void UpdateCoinUI()
+    public void UpdateCoinUI()
     {
-        coinText.text = Coins.ToString();
-    }*/
+        coinText.text = $"<sprite name=\"Coin\"> {Coins}";
+    }
 }
