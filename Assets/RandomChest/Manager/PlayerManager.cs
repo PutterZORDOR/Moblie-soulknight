@@ -32,6 +32,10 @@ public class PlayerManager : MonoBehaviour
     private float lastDamageTime;
     private Coroutine regenCoroutine;
 
+    [Header("Invulnerability")]
+    public float invulnerabilityDuration;  
+    private bool isInvulnerable = false;
+
     private void Awake()
     {
         if (instance == null)
@@ -43,6 +47,7 @@ public class PlayerManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
         InitializeStats();
@@ -62,7 +67,6 @@ public class PlayerManager : MonoBehaviour
         {
             RecoverMana(10);
         }
-
         if (Input.GetKeyDown(KeyCode.G))
         {
             Heal(1);
@@ -73,18 +77,6 @@ public class PlayerManager : MonoBehaviour
             regenCoroutine = StartCoroutine(RegenerateArmor());
         }
     }
-    void UpdateUIHp()
-    {
-        textHp.text = $"{Health}/{MaxHealth}";
-    }
-    void UpdateUIMana()
-    {
-        textMana.text = $"{Mana}/{MaxMana}";
-    }
-    void UpdateUIArmor()
-    {
-        textArmor.text = $"{Armor}/{MaxArmor}";
-    }
 
     private void InitializeStats()
     {
@@ -92,17 +84,30 @@ public class PlayerManager : MonoBehaviour
         Armor = MaxArmor;
         Mana = MaxMana;
     }
-    public void TakeDamgeAll(int damgae)
+
+    public void TakeDamgeAll(int damage)
     {
-        if(Armor > 0)
+        if (isInvulnerable) return;  
+
+        if (Armor > 0)
         {
-            TakeArmorDamage(damgae);
+            TakeArmorDamage(damage);
         }
-        else if(Armor <= 0)
+        else
         {
-            TakeDamageHp(damgae);
+            TakeDamageHp(damage);
         }
+
+        StartCoroutine(InvulnerabilityTimer());
     }
+
+    private IEnumerator InvulnerabilityTimer()
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerabilityDuration);
+        isInvulnerable = false;
+    }
+
     public void TakeDamageHp(int damage)
     {
         lastDamageTime = Time.time;
@@ -177,5 +182,20 @@ public class PlayerManager : MonoBehaviour
     private void Die()
     {
         Debug.Log("Die");
+    }
+
+    private void UpdateUIHp()
+    {
+        textHp.text = $"{Health}/{MaxHealth}";
+    }
+
+    private void UpdateUIArmor()
+    {
+        textArmor.text = $"{Armor}/{MaxArmor}";
+    }
+
+    private void UpdateUIMana()
+    {
+        textMana.text = $"{Mana}/{MaxMana}";
     }
 }

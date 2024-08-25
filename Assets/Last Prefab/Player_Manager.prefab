@@ -53,6 +53,10 @@ MonoBehaviour:
   HpBar: {fileID: 0}
   ArmorBar: {fileID: 0}
   ManaBar: {fileID: 0}
+  textHp: {fileID: 0}
+  textArmor: {fileID: 0}
+  textMana: {fileID: 0}
   ArmorRegenAmount: 1
   TimeToRegen: 5
   RegenInterval: 1
+  invulnerabilityDuration: 1
