@@ -9,7 +9,7 @@
                     "name": "Attack",
                     "type": "Value",
                     "id": "27e0c82d-d090-4ac6-b824-3476ae6eb7ec",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -19,8 +19,8 @@
                 {
                     "name": "",
                     "id": "0ffc1413-7e92-4ddd-bbeb-73128918c08e",
-                    "path": "<Touchscreen>/Press",
-                    "interactions": "",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "",
                     "action": "Attack",

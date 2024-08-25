@@ -5,7 +5,7 @@ public class ShortGun : Weapon
     public int pelletCount = 10;
     public float spreadAngle = 15f;
     public GameObject Bullet;
-
+    public float SetBulletLifeTime;
     void Start()
     {
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Bullet"), LayerMask.NameToLayer("Bullet"));
@@ -22,10 +22,11 @@ public class ShortGun : Weapon
             Vector2 shootDirection = pelletRotation * weapon.transform.right;
             pellet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
 
-            pellet.GetComponent<ShortGun_Bullet>().maxDistance = 4f;
+            pellet.GetComponent<Bullet>().BulletLifeTime = SetBulletLifeTime;
         }
         Debug.Log("Shortgun shooting!");
     }
+
     /*public void Shoot()
     {
         for (int i = 0; i < pelletCount; i++)
@@ -37,7 +38,7 @@ public class ShortGun : Weapon
             Vector2 shootDirection = pelletRotation * weapon.transform.right;
             pellet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
 
-            pellet.GetComponent<ShortGun_Bullet>().maxDistance = 4f;
+            pellet.GetComponent<ShortGun_Bullet>().maxDistance = 15f;
         } 
         Debug.Log("Shortgun shooting!");
     }*/
