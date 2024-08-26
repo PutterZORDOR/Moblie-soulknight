@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8384280062934583550}
   - component: {fileID: 1413622724499684813}
+  - component: {fileID: 3005952266283881231}
   m_Layer: 0
   m_Name: ChestRoom
   m_TagString: Untagged
@@ -87,3 +88,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3005952266283881231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2788485273439823139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 356c3d6e0f13a23439e4246448462800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChestPrefab: {fileID: 1329706999431372983, guid: 3722a9bc19096d64daa3d96406ece345, type: 3}

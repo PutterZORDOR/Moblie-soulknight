@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LoadingText : MonoBehaviour
 {
     public TextMeshProUGUI loadingText;
-    public float changeInterval = 0.5f;
+    public float changeInterval = 0.8f;
 
     public void Start()
     {
