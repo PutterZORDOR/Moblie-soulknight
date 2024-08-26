@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -19,6 +20,10 @@ public class DungeonMaker : MonoBehaviour
     public Room startRoom;
     [SerializeField] bool CanShop;
     [SerializeField] bool CanChest;
+
+    [Header("UI GIF")]
+    public GameObject GIF;
+    public LoadingText _LoadingText;
 
     [Header("AllRoom")]
     public GameObject[] RoomsPrefab;
@@ -55,6 +60,8 @@ public class DungeonMaker : MonoBehaviour
     {
         RangeFromWall = DungeonSystem.instance.RangeCentertoWall;
     _player = GameObject.FindGameObjectWithTag("Player");
+        GIF.SetActive(true);
+        _LoadingText.Start();
         Level = DungeonSystem.instance.Level;
         initialRoomCount = roomCount;
         rooms = new Room[roomSize.x + 1,roomSize.y + 1];
@@ -100,8 +107,13 @@ public class DungeonMaker : MonoBehaviour
             RoomConnectBridge();
             StartCoroutine(DestroyNearBossRoom());
             Invoke("CreateDoorForAllRoom", 2);
-            
+            Invoke("CloseUI", 2.5f);
         }       
+    }
+    public void CloseUI()
+    {
+        _LoadingText.StopLoading();
+        GIF.SetActive(false);
     }
     public void CheckRoom(Room _room)
     {

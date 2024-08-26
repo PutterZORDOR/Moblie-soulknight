@@ -1,7 +1,5 @@
 ﻿using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
-
 public class CoinManager : MonoBehaviour
 {
     public static CoinManager instance;

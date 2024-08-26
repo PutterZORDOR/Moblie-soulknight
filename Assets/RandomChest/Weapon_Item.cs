@@ -1,4 +1,3 @@
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Weapon_Item", menuName = "Scriptable Objects/Weapon_Item")]

@@ -1,8 +1,5 @@
-﻿using System.Data;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
-using static UnityEngine.Rendering.DebugUI;
 
 public class DropItem : MonoBehaviour
 {
