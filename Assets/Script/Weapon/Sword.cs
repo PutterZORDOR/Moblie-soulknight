@@ -1,32 +1,25 @@
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class Sword : Weapon
 {
-    public LayerMask IsEnemy;  // Layer mask to identify enemies
-    public int SwordDamage;
-    public bool isInWeaponSlot = false;
+    private Animator SwordAnim;
+
     private void Start()
     {
-        Damage = SwordDamage;
+        SwordAnim = GetComponent<Animator>();
     }
     protected override void Attack()
     {
-        // Detect enemies within the attack range
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, Range, IsEnemy);
-
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            // Assuming the enemy has a method called TakeDamage
-            enemy.GetComponent<Enemy>().TakeDamage(Damage);
-        }
+        SwordAnim.SetBool("isAttacking",true);
+        StartCoroutine(ResetAttackBool());
     }
-
-    // Visualize the attack range in the editor
-    private void OnDrawGizmosSelected()
+    private IEnumerator ResetAttackBool()
     {
-        if (AttackPoint == null)
-            return;
-
-        Gizmos.DrawWireSphere(AttackPoint.position, Range);
+        yield return new WaitForSeconds(attackRate); // รอจนกว่าเวลาการโจมตีจะสิ้นสุด
+        if (SwordAnim != null)
+        {
+            SwordAnim.SetBool("isAttacking", false);
+        }
     }
 }
