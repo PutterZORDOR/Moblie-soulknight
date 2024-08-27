@@ -2,7 +2,7 @@
 using UnityEngine.InputSystem;
 public abstract class Weapon : MonoBehaviour
 {
-    //public float damage;
+    public int Damage = 10;
 
     public float Range;
     [SerializeField] private bool Detected = false;
@@ -10,7 +10,7 @@ public abstract class Weapon : MonoBehaviour
     public GameObject weapon;
     public float rotationSpeed = 5f;
 
-    [SerializeField] public Transform ShootPoint;
+    [SerializeField] public Transform AttackPoint;
     [SerializeField] public float Force;
 
     [SerializeField] private bool flipped = false;
