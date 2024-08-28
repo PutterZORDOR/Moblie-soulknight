@@ -1266,8 +1266,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1452834365}
   - {fileID: 6370196331543648567}
+  - {fileID: 1452834365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1592163864864449318
@@ -1325,47 +1325,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2513660736535843805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2725110382806670810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba149fd1072db2142bacc7a9df0ea6c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 10
-  Range: 5
-  Detected: 1
-  weapon: {fileID: 2725110382806670810}
-  rotationSpeed: 5
-  AttackPoint: {fileID: 1452834365}
-  Force: 1000
-  flipped: 0
-  characterTransform: {fileID: 2091746415}
-  joystickMoveScript: {fileID: 2091746411}
-  attackAction:
-    m_Name: Attack
-    m_Type: 2
-    m_ExpectedControlType: Button
-    m_Id: 5cf6ae36-9f7c-44d0-9aa1-707eb3beffbe
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 78bdaf6e-bfcb-4721-aaa7-98b2bd7065c1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Attack
-      m_Flags: 0
-    m_Flags: 0
-  attackRate: 0.2
-  nextAttackTime: 0
 --- !u!1 &2725110382806670810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,10 +1336,10 @@ GameObject:
   - component: {fileID: 6370196331543648567}
   - component: {fileID: 1592163864864449318}
   - component: {fileID: 4225439905249031901}
-  - component: {fileID: 2513660736535843805}
   - component: {fileID: 4549410760806098487}
+  - component: {fileID: 6370196331543648568}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Wand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1442,7 +1401,7 @@ Animator:
   m_GameObject: {fileID: 2725110382806670810}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 95e3825492dc71f46a83ba828e4bdec2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 67b15fc043830a041932d0062dff5ccf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1469,6 +1428,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2091746415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!114 &6370196331543648568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2725110382806670810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d50f30af6543d345a7767881c8f4f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 10
+  Range: 0
+  Detected: 0
+  weapon: {fileID: 0}
+  rotationSpeed: 5
+  AttackPoint: {fileID: 0}
+  Force: 0
+  flipped: 0
+  characterTransform: {fileID: 0}
+  joystickMoveScript: {fileID: 0}
+  attackAction:
+    m_Name: Attack
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a95cc4c3-9a37-4451-a026-a5874878ac84
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  attackRate: 0.2
+  nextAttackTime: 0
+  Bullet: {fileID: 0}
+  SetBulletLifeTime: 0
+  isInWeaponSlot: 0
 --- !u!224 &6492927474757759694
 RectTransform:
   m_ObjectHideFlags: 0
