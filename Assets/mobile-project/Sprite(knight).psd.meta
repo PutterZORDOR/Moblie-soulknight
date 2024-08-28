@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sprite(knight)_0: -2586928325385239028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

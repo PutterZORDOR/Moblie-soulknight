@@ -195,7 +195,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spriteknight_0: -1608570161420676159
+      Spriteknight_1: -7882610671874398657
+      Spriteknight_2: 4349456210872209369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

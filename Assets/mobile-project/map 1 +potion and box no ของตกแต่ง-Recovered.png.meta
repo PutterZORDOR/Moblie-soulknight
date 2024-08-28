@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "map 1 +potion and box no \u0E02\u0E2D\u0E07\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07-Recovered_0": -8874503556506517860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

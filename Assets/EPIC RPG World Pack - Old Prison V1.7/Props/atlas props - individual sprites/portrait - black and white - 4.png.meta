@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portrait - black and white - 4_0: -7638202181110957981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

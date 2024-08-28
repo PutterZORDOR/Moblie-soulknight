@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      trap - spinning blades - rail - left_0: 861156379327399114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

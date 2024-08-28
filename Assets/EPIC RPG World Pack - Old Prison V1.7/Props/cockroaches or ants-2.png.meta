@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cockroaches or ants-2_0: -2191241219518158806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

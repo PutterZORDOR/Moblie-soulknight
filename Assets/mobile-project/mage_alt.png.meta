@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mage_alt_0: 8799918204568847488
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

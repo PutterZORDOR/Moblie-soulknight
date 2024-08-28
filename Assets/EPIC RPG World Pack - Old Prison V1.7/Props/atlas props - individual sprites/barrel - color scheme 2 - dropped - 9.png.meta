@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      barrel - color scheme 2 - dropped - 9_0: -2179240878533415892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

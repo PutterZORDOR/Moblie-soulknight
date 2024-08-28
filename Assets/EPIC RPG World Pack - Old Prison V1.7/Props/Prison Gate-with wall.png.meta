@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Prison Gate-with wall_0: -7029028933710892773
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

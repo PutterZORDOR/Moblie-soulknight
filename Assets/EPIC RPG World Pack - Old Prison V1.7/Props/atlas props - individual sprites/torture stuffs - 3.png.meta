@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      torture stuffs - 3_0: 1318624310203497942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

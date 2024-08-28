@@ -220,7 +220,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      full gear animation_0: -3815301883835073308
+      full gear animation_1: 4680184650918364565
+      full gear animation_2: 3789936755764173188
+      full gear animation_3: -4826358541401551834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mockup-2 - mage skeleton with shield_0: -1446913547365827302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

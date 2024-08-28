@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      magic flame-particles-must be above the light fx-96x96-8 frames_0: -4653219002034232450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      suspended cage - 1_0: -2761836154175941847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

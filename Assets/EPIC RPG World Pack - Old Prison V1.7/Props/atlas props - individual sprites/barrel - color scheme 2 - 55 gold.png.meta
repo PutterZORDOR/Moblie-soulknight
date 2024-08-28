@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      barrel - color scheme 2 - 55 gold_0: 4181818493904012252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

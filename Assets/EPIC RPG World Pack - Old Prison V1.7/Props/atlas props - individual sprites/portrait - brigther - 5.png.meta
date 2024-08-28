@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portrait - brigther - 5_0: 5294021169862867992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

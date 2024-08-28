@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stones - color scheme 1 - 1_0: 1699997177464591973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

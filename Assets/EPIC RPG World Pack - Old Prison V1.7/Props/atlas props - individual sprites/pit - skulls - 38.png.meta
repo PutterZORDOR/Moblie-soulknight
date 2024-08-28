@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pit - skulls - 38_0: -6964169221366961010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

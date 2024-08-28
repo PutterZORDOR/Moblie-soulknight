@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pit - spikes - 7_0: 5359987751668894483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

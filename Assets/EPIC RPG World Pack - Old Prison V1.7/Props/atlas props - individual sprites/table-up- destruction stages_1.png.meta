@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      table-up- destruction stages_1_0: -7941785384570202732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

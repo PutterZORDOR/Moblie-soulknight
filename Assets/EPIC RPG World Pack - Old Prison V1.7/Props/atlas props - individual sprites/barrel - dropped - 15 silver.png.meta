@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      barrel - dropped - 15 silver_0: -6261477727812875313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

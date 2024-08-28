@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      particles for the pit-gif_0: 4687182252489048753
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

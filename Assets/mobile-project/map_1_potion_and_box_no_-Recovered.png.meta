@@ -270,7 +270,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      map_1_potion_and_box_no_-Recovered_0: -2073839329179628255
+      map_1_potion_and_box_no_-Recovered_1: -6168823067780466996
+      map_1_potion_and_box_no_-Recovered_2: -2840927906843932151
+      map_1_potion_and_box_no_-Recovered_3: 1877255125953953594
+      map_1_potion_and_box_no_-Recovered_4: -5292545572164984104
+      map_1_potion_and_box_no_-Recovered_5: 5610852726302919616
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

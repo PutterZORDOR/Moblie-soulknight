@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sage_alt_0: -2325499026652062814
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

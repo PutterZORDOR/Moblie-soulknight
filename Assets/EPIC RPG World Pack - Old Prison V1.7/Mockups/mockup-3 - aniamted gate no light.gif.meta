@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mockup-3 - aniamted gate no light_0: 5206260885632179505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

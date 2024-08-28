@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      metal ball with spikes - color scheme 3 - 4_0: 7405220748445987344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

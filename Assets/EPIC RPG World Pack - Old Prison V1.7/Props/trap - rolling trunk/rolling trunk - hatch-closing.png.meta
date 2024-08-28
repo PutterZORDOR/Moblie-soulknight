@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rolling trunk - hatch-closing_0: -3114503341124559287
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
