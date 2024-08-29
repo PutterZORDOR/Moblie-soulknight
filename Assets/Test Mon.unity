@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243fd15d4997ec445af1655bfdc9af50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 400
 --- !u!1001 &216915559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -279,63 +279,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 111619616}
   m_SourcePrefab: {fileID: 100100000, guid: c51071b3096700b42b578311372da6ca, type: 3}
---- !u!1001 &1066623353
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8122604826291875688, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_Name
-      value: MaguGenki
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
 --- !u!1 &1446905913
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +460,67 @@ MonoBehaviour:
   player: {fileID: 111619615}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: -10}
+--- !u!1001 &1704484738
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122604826291875688, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_Name
+      value: MaguGenki
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028222503980018470, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
 --- !u!1 &1919183681
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,4 +630,4 @@ SceneRoots:
   - {fileID: 216915559}
   - {fileID: 1919183685}
   - {fileID: 36832538}
-  - {fileID: 1066623353}
+  - {fileID: 1704484738}

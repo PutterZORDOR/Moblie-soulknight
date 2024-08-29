@@ -5,15 +5,15 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100;
     private float currentHealth;
 
-    void Start()
+    private void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(float damageAmount)
+    public void TakeDamage(float amount)
     {
-        currentHealth -= damageAmount;
-        Debug.Log("Player took damage! Current health: " + currentHealth);
+        currentHealth -= amount;
+        Debug.Log("Player took " + amount + " damage. Current health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -21,11 +21,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void Die()
+    private void Die()
     {
         Debug.Log("Player died!");
-        // Destroy the player object
         Destroy(gameObject);
-        // Implement any additional death logic, such as game over screen, respawn, etc.
     }
 }

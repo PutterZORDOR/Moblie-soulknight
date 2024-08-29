@@ -2,24 +2,18 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 10f; // Speed of the bullet
-    public float lifetime = 2f; // Lifetime of the bullet
     private Vector3 direction; // Direction of the bullet
     private int damage; // Damage value for this bullet
+    private float speed; // Speed of the bullet
+    private float lifetime; // Lifetime of the bullet
 
-    private void Start()
-    {
-        Destroy(gameObject, lifetime); // Destroy the bullet after its lifetime expires
-    }
-
-    public void SetDirection(Vector3 dir)
+    public void Initialize(Vector3 dir, int dmg, float spd, float life)
     {
         direction = dir;
-    }
-
-    public void SetDamage(int dmg)
-    {
         damage = dmg;
+        speed = spd;
+        lifetime = life;
+        Destroy(gameObject, lifetime); // Destroy the bullet after its lifetime expires
     }
 
     private void Update()

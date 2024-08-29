@@ -21,7 +21,7 @@ public class MeteorBoss : MiniBoss
     {
         base.Start();
         fireRate = 5f;
-        damage = 50;
+        damage = 0;
         bulletLifetime = 10f;
         bulletSpeed = 12f;
 

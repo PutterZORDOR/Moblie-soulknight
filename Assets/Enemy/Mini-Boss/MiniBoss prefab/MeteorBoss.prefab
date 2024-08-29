@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -80594732924034281}
   m_Layer: 0
   m_Name: MeteorBoss
-  m_TagString: Boss
+  m_TagString: MiniBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -9,6 +9,10 @@ public class ShotgunMon : EnemyBase
     public Transform shootPoint; // Point from where bullets are shot
     public int numberOfBullets = 5; // Number of bullets per shot
     public float spreadAngle = 15f; // Spread angle for shotgun effect
+    public float meleeDamage = 20f; // Damage dealt during a melee attack
+    public float bulletSpeed = 10f; // Speed of the bullets
+    public float bulletLifetime = 2f; // Lifetime of the bullets
+    public int bulletDamage = 10; // Damage dealt by each bullet
 
     private float lastAttackTime;
     private bool playerInRange = false;
@@ -32,7 +36,11 @@ public class ShotgunMon : EnemyBase
         {
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-            if (distanceToPlayer <= shootRange)
+            if (distanceToPlayer <= attackRange)
+            {
+                AttackPlayer(); // Perform melee attack
+            }
+            else if (distanceToPlayer <= shootRange)
             {
                 playerInShootRange = true;
                 ShootPlayer();
@@ -69,7 +77,7 @@ public class ShotgunMon : EnemyBase
 
                 if (bulletScript != null)
                 {
-                    bulletScript.SetDirection(direction); // Set the bullet's direction
+                    bulletScript.Initialize(direction, bulletDamage, bulletSpeed, bulletLifetime); // Use Initialize method
                 }
             }
 
@@ -96,6 +104,25 @@ public class ShotgunMon : EnemyBase
         {
             playerInRange = false;
             playerInShootRange = false;
+        }
+    }
+
+    // Method to deal melee damage to the player
+    private void AttackPlayer()
+    {
+        if (Time.time >= lastAttackTime + attackCooldown)
+        {
+            // Get the player's health component
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+
+            if (playerHealth != null)
+            {
+                // Deal damage to the player
+                playerHealth.TakeDamage(meleeDamage);
+                Debug.Log("ShotgunMon dealt " + meleeDamage + " damage to the player.");
+            }
+
+            lastAttackTime = Time.time;
         }
     }
 }

@@ -37,7 +37,7 @@ public class SageBoss : MiniBoss
     {
         base.Start();
         fireRate = 2f;
-        damage = 10;
+        damage = 20f;
         bulletSpeed = 9f;
         bulletLifetime = 15f;
 
@@ -56,6 +56,11 @@ public class SageBoss : MiniBoss
         {
             StartShootingPattern();
         }
+    }
+
+    protected override void AttackPlayer()
+    {
+        
     }
 
     private void StartShootingPattern()

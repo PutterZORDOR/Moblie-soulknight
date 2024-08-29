@@ -63,14 +63,6 @@ public abstract class MiniBoss : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            AttackPlayer();
-        }
-    }
-
     protected virtual void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
@@ -106,8 +98,19 @@ public abstract class MiniBoss : MonoBehaviour
 
     protected virtual void AttackPlayer()
     {
-        // Implement attack logic here if needed
+        Debug.Log($"{gameObject.name} is attempting to attack the player.");
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(damage);
+            Debug.Log($"{gameObject.name} dealt {damage} damage to the player.");
+        }
+        else
+        {
+            Debug.LogWarning("PlayerHealth component not found on player!");
+        }
     }
+
 
     protected abstract void ShootPlayer();
 
@@ -125,6 +128,15 @@ public abstract class MiniBoss : MonoBehaviour
             Die();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            AttackPlayer(); // This should call the method that deals damage
+        }
+    }
+
 
     void Die()
     {
