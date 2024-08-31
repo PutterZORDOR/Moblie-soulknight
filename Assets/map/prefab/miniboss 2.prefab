@@ -30,6 +30,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6618745377810288352}
+  - {fileID: 1074947675843310636}
+  - {fileID: 7292341625552637406}
   - {fileID: 7792388640904462707}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75,10 +78,7 @@ Transform:
   m_LocalPosition: {x: -30.3, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6618745377810288352}
-  - {fileID: 1074947675843310636}
-  - {fileID: 7292341625552637406}
+  m_Children: []
   m_Father: {fileID: 2920190957937975948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &3130546322776653430
@@ -408,11 +408,11 @@ Transform:
   m_GameObject: {fileID: 6144340212629287502}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -30.3, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7792388640904462707}
+  m_Father: {fileID: 2920190957937975948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &160447601687112949
 Tilemap:
@@ -3519,11 +3519,11 @@ Transform:
   m_GameObject: {fileID: 6742321070214966793}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -30.3, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7792388640904462707}
+  m_Father: {fileID: 2920190957937975948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &1391540710163882401
 Tilemap:
@@ -4328,11 +4328,11 @@ Transform:
   m_GameObject: {fileID: 8063647129459768611}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -30.3, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7792388640904462707}
+  m_Father: {fileID: 2920190957937975948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &4199652413287005905
 Tilemap:

@@ -30,8 +30,7 @@ Transform:
   m_LocalPosition: {x: -25, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 719020914904571562}
+  m_Children: []
   m_Father: {fileID: 5759271950531350477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &6413472838961535972
@@ -1068,13 +1067,13 @@ Transform:
   m_GameObject: {fileID: 2679563972191302214}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -25, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 453010434526650019}
   - {fileID: 3913382193504983697}
-  m_Father: {fileID: 9165080605901651928}
+  m_Father: {fileID: 5759271950531350477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &3623194902655491868
 Tilemap:
@@ -5366,6 +5365,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 719020914904571562}
   - {fileID: 9165080605901651928}
   - {fileID: 827008790475479067}
   m_Father: {fileID: 0}
