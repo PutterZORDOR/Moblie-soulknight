@@ -181,6 +181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dungeon_Core
       objectReference: {fileID: 0}
+    - target: {fileID: 4852814803757111906, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
+      propertyPath: RangeCentertoWall
+      value: 9.55
+      objectReference: {fileID: 0}
     - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
       propertyPath: GIF
       value: 
