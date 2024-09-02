@@ -5826,7 +5826,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 16
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5856,7 +5856,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5886,7 +5886,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5926,7 +5926,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 25
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5996,7 +5996,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6006,7 +6006,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 24
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6016,7 +6016,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 14
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6091,6 +6091,22 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 3
+    m_Data: {fileID: -6721241778773071830, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -2903667272528190853, guid: 38027b42c7463b3438754013b5106757, type: 3}
   - m_RefCount: 1
@@ -6099,34 +6115,18 @@ Tilemap:
     m_Data: {fileID: -5463576162189102387, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -4161259438889227503, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
-  - m_RefCount: 3
-    m_Data: {fileID: -6721241778773071830, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -6466307129917214789, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -1414705879798801316, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -1907190048649225623, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -603133439301556985, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: 4987942632201498172, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1414705879798801316, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: 6138269695780940018, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1907190048649225623, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 8267455936596828809, guid: a02aaea7df04bde48a6a0f76a9928be0, type: 3}
   m_TileMatrixArray:

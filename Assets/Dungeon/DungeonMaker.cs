@@ -12,7 +12,6 @@ public class DungeonMaker : MonoBehaviour
     public Room[,] rooms;
     public float roomDistance;
     public GameObject bridge;
-    public GameObject bridgebox;
     public int roomCount;
     public int RandomDeleteAmount;
     public int Delay;
