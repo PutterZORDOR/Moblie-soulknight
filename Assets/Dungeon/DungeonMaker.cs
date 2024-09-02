@@ -42,7 +42,8 @@ public class DungeonMaker : MonoBehaviour
     public GameObject DectectZoneBossPrefab;
     public GameObject SpawnEnermyAreaPrefab;
     public GameObject doorPrefab;
-    public GameObject wallPrefab;
+    public GameObject wallPrefab1;
+    public GameObject wallPrefab2;
 
     private delegate void CustomAction(Room _room);
     public List<Room> DungeonRoom;
@@ -587,27 +588,27 @@ public class DungeonMaker : MonoBehaviour
     }
     private void CreateWallTop(Room Wall)
     {
-        Wall.WallTop = Instantiate(wallPrefab, Wall.transform.position + new Vector3(0f, RangeFromWall, 0f), Quaternion.identity);
+        Wall.WallTop = Instantiate(wallPrefab2, Wall.transform.position + new Vector3(0f, RangeFromWall, 0f), Quaternion.identity);
         Wall.WallTop.transform.rotation = Quaternion.Euler(0, 0, 90);
         Wall.WallTop.transform.SetParent(Wall.transform);
     }
 
     private void CreateWallBottom(Room Wall)
     {
-        Wall.WallBottom = Instantiate(wallPrefab, Wall.transform.position + new Vector3(0f, -RangeFromWall, 0f), Quaternion.identity);
+        Wall.WallBottom = Instantiate(wallPrefab1, Wall.transform.position + new Vector3(0f, -RangeFromWall, 0f), Quaternion.identity);
         Wall.WallBottom.transform.rotation = Quaternion.Euler(0, 0, 90);
         Wall.WallBottom.transform.SetParent(Wall.transform);
     }
 
     private void CreateWallRight(Room Wall)
     {
-        Wall.WallRight = Instantiate(wallPrefab, Wall.transform.position + new Vector3(RangeFromWall, 0f, 0f), Quaternion.identity);
+        Wall.WallRight = Instantiate(wallPrefab1, Wall.transform.position + new Vector3(RangeFromWall, 0f, 0f), Quaternion.identity);
         Wall.WallRight.transform.SetParent(Wall.transform);
     }
 
     private void CreateWallLeft(Room Wall)
     {
-        Wall.WallLeft = Instantiate(wallPrefab, Wall.transform.position + new Vector3(-RangeFromWall, 0f, 0f), Quaternion.identity);
+        Wall.WallLeft = Instantiate(wallPrefab1, Wall.transform.position + new Vector3(-RangeFromWall, 0f, 0f), Quaternion.identity);
         Wall.WallLeft.transform.SetParent(Wall.transform);
     }
     public void DestroyDungeon()
