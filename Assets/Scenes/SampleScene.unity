@@ -507,7 +507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
       propertyPath: layerNotSpawn.m_Bits
-      value: 200
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9172321802012276611, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
       propertyPath: m_LocalPosition.x
