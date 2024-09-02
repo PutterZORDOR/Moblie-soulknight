@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomSize: {x: 5, y: 4}
   roomDistance: 35
-  bridge: {fileID: 3461808221796568258, guid: 91504e2c66b231242b9f909509ada519, type: 3}
+  bridge: {fileID: 1877817518304648402, guid: 91504e2c66b231242b9f909509ada519, type: 3}
   roomCount: 10
   RandomDeleteAmount: 0
   Delay: 500
@@ -59,13 +59,13 @@ MonoBehaviour:
   GIF: {fileID: 0}
   _LoadingText: {fileID: 8779495993673651821}
   RoomsPrefab:
-  - {fileID: 6859842172360372937, guid: 5a0b747db5955784298ce7a9fd9e8798, type: 3}
-  - {fileID: 3855216110336758479, guid: 7df66e3aa7bc03040bac75cc6426c55b, type: 3}
-  - {fileID: 7907767293539734118, guid: 45f8fbe5d7d8a574985c948a57d1bcd0, type: 3}
+  - {fileID: 6936993273737349359, guid: 5a0b747db5955784298ce7a9fd9e8798, type: 3}
+  - {fileID: 5256745077197628912, guid: 7df66e3aa7bc03040bac75cc6426c55b, type: 3}
+  - {fileID: 2021294000998783684, guid: 45f8fbe5d7d8a574985c948a57d1bcd0, type: 3}
   Grid: {fileID: 6975615180185140942, guid: 3940793656f655d4f88337c50536135e, type: 3}
-  StartRoomPrefab: {fileID: 6005229978017529100, guid: 68d85e335560498428fd56963c5dcac4, type: 3}
-  EndRoomPrefab: {fileID: 9108601025368845107, guid: f45dd85833e4f1944a69576e491cc606, type: 3}
-  MiniBossRoomPrefab: {fileID: 8160351157003210571, guid: c324407ef8287eb47a697e6f23b12838, type: 3}
+  StartRoomPrefab: {fileID: 6254142899166777580, guid: 68d85e335560498428fd56963c5dcac4, type: 3}
+  EndRoomPrefab: {fileID: 3077470203174987587, guid: f45dd85833e4f1944a69576e491cc606, type: 3}
+  MiniBossRoomPrefab: {fileID: 4774431136716744502, guid: c324407ef8287eb47a697e6f23b12838, type: 3}
   BossRoomrefab: {fileID: 3600294517980211382, guid: 33ae16f9de475e44d91f853bb502fe0f, type: 3}
   PortalPrefab: {fileID: 4080475496823185882, guid: 5b2dd75f7112e4d438b1e085b03c9934, type: 3}
   DectectZonePrefab: {fileID: 4770478089518859473, guid: 382c2ada402dff149b6f35ca4acd06bf, type: 3}
@@ -73,7 +73,7 @@ MonoBehaviour:
   DectectZoneBossPrefab: {fileID: 9170063745815255169, guid: cd379aa66410fa247ba9d1201f3608ab, type: 3}
   SpawnEnermyAreaPrefab: {fileID: 5587005696771998416, guid: f31629312e7354240ae228a3bca30cad, type: 3}
   doorPrefab: {fileID: 2314151245435574732, guid: 47e86ce83d8ea044dbc1ac0199ea08fa, type: 3}
-  wallPrefab: {fileID: 5011773883301749588, guid: e38b159bec9bb1148a3aa82328e47ac9, type: 3}
+  wallPrefab: {fileID: 6095969353790858425, guid: 87439e944bd2ea54fbef50ffd10f584d, type: 3}
   DungeonRoom: []
   bridgeFirst: []
   bridgeCreated: []
