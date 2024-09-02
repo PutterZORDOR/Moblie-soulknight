@@ -73,7 +73,8 @@ MonoBehaviour:
   DectectZoneBossPrefab: {fileID: 9170063745815255169, guid: cd379aa66410fa247ba9d1201f3608ab, type: 3}
   SpawnEnermyAreaPrefab: {fileID: 5587005696771998416, guid: f31629312e7354240ae228a3bca30cad, type: 3}
   doorPrefab: {fileID: 2314151245435574732, guid: 47e86ce83d8ea044dbc1ac0199ea08fa, type: 3}
-  wallPrefab: {fileID: 6095969353790858425, guid: 87439e944bd2ea54fbef50ffd10f584d, type: 3}
+  wallPrefab1: {fileID: 6095969353790858425, guid: 87439e944bd2ea54fbef50ffd10f584d, type: 3}
+  wallPrefab2: {fileID: 4040638599532313899, guid: e38b159bec9bb1148a3aa82328e47ac9, type: 3}
   DungeonRoom: []
   bridgeFirst: []
   bridgeCreated: []
@@ -104,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e54c5b0ef1e97b419fdff7405a21c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RangeCentertoWall: 9
+  RangeCentertoWall: 9.4
   radiusSpawn: 0.45
   AllEnermyInRoom: 0
   Level: 1

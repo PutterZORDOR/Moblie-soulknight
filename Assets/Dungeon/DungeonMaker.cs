@@ -588,7 +588,7 @@ public class DungeonMaker : MonoBehaviour
     }
     private void CreateWallTop(Room Wall)
     {
-        Wall.WallTop = Instantiate(wallPrefab2, Wall.transform.position + new Vector3(0f, RangeFromWall, 0f), Quaternion.identity);
+        Wall.WallTop = Instantiate(wallPrefab2, Wall.transform.position + new Vector3(0f, RangeFromWall + 0.25f, 0f), Quaternion.identity);
         Wall.WallTop.transform.rotation = Quaternion.Euler(0, 0, 90);
         Wall.WallTop.transform.SetParent(Wall.transform);
     }
