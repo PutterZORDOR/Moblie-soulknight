@@ -515,7 +515,6 @@ public class DungeonMaker : MonoBehaviour
         Door.doorLeft = Instantiate(doorPrefab, Door.transform.position + new Vector3(-RangeFromWall, 0f, 0f), Quaternion.identity);
         Door.doorLeft.transform.SetParent(Door.transform);
         Door.door.Add(Door.doorLeft);
-        Door.doorLeft.SetActive(false);
     }
 
     private void CreateDoorRight(Room Door)
@@ -523,7 +522,6 @@ public class DungeonMaker : MonoBehaviour
         Door.doorRight = Instantiate(doorPrefab, Door.transform.position + new Vector3(RangeFromWall, 0f, 0f), Quaternion.identity);
         Door.doorRight.transform.SetParent(Door.transform);
         Door.door.Add(Door.doorRight);
-        Door.doorRight.SetActive(false);
     }
 
     private void CreateDoorBottom(Room Door)
@@ -532,7 +530,6 @@ public class DungeonMaker : MonoBehaviour
         Door.doorBottom.transform.rotation = Quaternion.Euler(0, 0, 90);
         Door.doorBottom.transform.SetParent(Door.transform);
         Door.door.Add(Door.doorBottom);
-        Door.doorBottom.SetActive(false);
     }
 
     private void CreateDoorTop(Room Door)
@@ -541,7 +538,6 @@ public class DungeonMaker : MonoBehaviour
         Door.doorTop.transform.rotation = Quaternion.Euler(0, 0, 90);
         Door.doorTop.transform.SetParent(Door.transform);
         Door.door.Add(Door.doorTop);
-        Door.doorTop.SetActive(false);
     }
 
     public void CheckAroundlastRoom(Room NearlastRoom)
@@ -608,7 +604,7 @@ public class DungeonMaker : MonoBehaviour
 
     private void CreateWallLeft(Room Wall)
     {
-        Wall.WallLeft = Instantiate(wallPrefab1, Wall.transform.position + new Vector3(-RangeFromWall, 0f, 0f), Quaternion.identity);
+        Wall.WallLeft = Instantiate(wallPrefab1, Wall.transform.position + new Vector3(-RangeFromWall , 0f, 0f), Quaternion.identity);
         Wall.WallLeft.transform.SetParent(Wall.transform);
     }
     public void DestroyDungeon()
