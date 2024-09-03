@@ -14,14 +14,18 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            // ตรวจจับวัตถุที่มีแท็ก enemy
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy != null)
             {
                 enemy.TakeDamage(Damage);
+                Debug.Log("Enemy take damage");
+                Destroy(gameObject);
             }
+        }
 
-            // ทำลายกระสุน
+        if (other.CompareTag("Wall"))
+        {
+            Debug.Log("Smash");
             Destroy(gameObject);
         }
     }
