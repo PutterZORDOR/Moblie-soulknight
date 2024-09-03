@@ -21,6 +21,7 @@ public abstract class Weapon : MonoBehaviour
     public float attackRate = 0.2f;
     public float nextAttackTime = 0f;
 
+
     private void OnEnable()
     {
         attackAction.Enable();

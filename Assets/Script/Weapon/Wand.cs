@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class Wand : Weapon
 {
-    public GameObject Bullet;
+    public GameObject Thunder;
     public float SetBulletLifeTime;
     public bool isInWeaponSlot = false;
+    
     protected override void Attack()
     {
-        Debug.Log("Attack method called");
-        GameObject BulletIns = Instantiate(Bullet, AttackPoint.position, weapon.transform.rotation);
-        Vector2 shootDirection = weapon.transform.right;
-        BulletIns.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
-        BulletIns.GetComponent<Bullet>().BulletLifeTime = SetBulletLifeTime;
+        Instantiate(Thunder, AttackPoint.position, Quaternion.identity);
+        Debug.Log("Attacked");
     }
 }
