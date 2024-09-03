@@ -17,8 +17,14 @@ public class DetectZoneAllBoss : MonoBehaviour
     [Header("EndPortal")]
     public GameObject EndPortal;
 
+    [Header("Animator")]
+    public Animator doorAnim1;
+    public Animator doorAnim2;
+    public Animator doorAnim3;
+    public Animator doorAnim4;
+
     private int Level;
-    private Room _currentRoom;
+    public Room _currentRoom;
     public bool CanSpawnEnermy = true;
     public bool CanDestroy;
 
@@ -29,8 +35,9 @@ public class DetectZoneAllBoss : MonoBehaviour
         Level = DungeonSystem.instance.Level;
         GameObject FindRoom = GameObject.Find($"Room {gameObject.name}");
         if (FindRoom != null)
+        {
             _currentRoom = FindRoom.GetComponent<Room>();
-
+        }
     }
     private void OnTriggerStay2D(Collider2D player)
     {
@@ -46,13 +53,33 @@ public class DetectZoneAllBoss : MonoBehaviour
                 for (int i = 0; i < _currentRoom.door.Count; i++)
                 {
                     if (_currentRoom.door[i] != null)
-                        _currentRoom.door[i].gameObject.SetActive(true);
+                    {
+                        Animator doorAnim = _currentRoom.door[i].GetComponentInChildren<Animator>();
+
+                        switch (i)
+                        {
+                            case 0:
+                                doorAnim1 = doorAnim;
+                                break;
+                            case 1:
+                                doorAnim2 = doorAnim;
+                                break;
+                            case 2:
+                                doorAnim3 = doorAnim;
+                                break;
+                            case 3:
+                                doorAnim4 = doorAnim;
+                                break;
+                        }
+                    }
                 }
-                if(Level == 5 || Level == 10)
+
+                if (Level == 5 || Level == 10)
                 {
                     DungeonSystem.instance.AllBossStatus = true;
-                    GameObject Boss = Instantiate(MiniBossPrefab,gameObject.transform.position, Quaternion.identity);
-                }else if(Level == 15)
+                    GameObject Boss = Instantiate(MiniBossPrefab, gameObject.transform.position, Quaternion.identity);
+                }
+                else if (Level == 15)
                 {
                     DungeonSystem.instance.AllBossStatus = true;
                     GameObject Boss = Instantiate(BossPrefab, gameObject.transform.position, Quaternion.identity);
@@ -66,23 +93,42 @@ public class DetectZoneAllBoss : MonoBehaviour
     {
         if (DungeonSystem.instance.AllBossStatus == false && CanDestroy)
         {
-            if(Level == 5 || Level == 10)
+            if (Level == 5 || Level == 10)
             {
                 portal = Portal;
-            }else if(Level == 15)
+            }
+            else if (Level == 15)
             {
                 portal = EndPortal;
             }
             for (int i = 0; i < _currentRoom.door.Count; i++)
             {
                 if (_currentRoom.door[i] != null)
-                    _currentRoom.door[i].gameObject.SetActive(false);
+                {
+                    Animator doorAnim = _currentRoom.door[i].GetComponentInChildren<Animator>();
+
+                    switch (i)
+                    {
+                        case 0:
+                            doorAnim1 = doorAnim;
+                            break;
+                        case 1:
+                            doorAnim2 = doorAnim;
+                            break;
+                        case 2:
+                            doorAnim3 = doorAnim;
+                            break;
+                        case 3:
+                            doorAnim4 = doorAnim;
+                            break;
+                    }
+                }
+                _currentRoom.Portal = Instantiate(portal, _currentRoom.transform.position, Quaternion.identity);
+                _currentRoom.Portal.transform.SetParent(_currentRoom.transform);
+                _currentRoom.Box = Instantiate(BoxPrefab, new Vector3(_currentRoom.transform.position.x, _currentRoom.transform.position.y - DungeonSystem.instance.RangeCentertoWall / 2, 0), Quaternion.identity);
+                _currentRoom.Box.transform.SetParent(_currentRoom.transform);
+                Destroy(this.gameObject);
             }
-            _currentRoom.Portal = Instantiate(portal,_currentRoom.transform.position, Quaternion.identity);
-            _currentRoom.Portal.transform.SetParent(_currentRoom.transform); 
-            _currentRoom.Box = Instantiate(BoxPrefab,new Vector3(_currentRoom.transform.position.x,_currentRoom.transform.position.y - DungeonSystem.instance.RangeCentertoWall / 2,0), Quaternion.identity);
-            _currentRoom.Box.transform.SetParent(_currentRoom.transform);
-            Destroy(this.gameObject);
         }
     }
 }

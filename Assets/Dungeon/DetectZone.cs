@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class DetectZone : MonoBehaviour
@@ -9,7 +8,13 @@ public class DetectZone : MonoBehaviour
     [Header("BoxPrefab")]
     public GameObject BoxPrefab;
 
-    private Room _currentRoom;
+    [Header("Animator")]
+    public Animator doorAnim1;
+    public Animator doorAnim2;
+    public Animator doorAnim3;
+    public Animator doorAnim4;
+
+    public Room _currentRoom;
     public bool CanSpawnEnermy = true;
     public bool CanDestroy;
 
@@ -19,9 +24,10 @@ public class DetectZone : MonoBehaviour
         if (SpawnAreaName != null)
             _currentRoomSpawnAble = SpawnAreaName.GetComponent<Collider2D>();
         GameObject FindRoom = GameObject.Find($"Room {gameObject.name}");
-        if( FindRoom != null )
+        if( FindRoom != null)
+        {
             _currentRoom = FindRoom.GetComponent<Room>();
-     
+        }
     }
     private void OnTriggerStay2D(Collider2D player)
     {
@@ -37,10 +43,28 @@ public class DetectZone : MonoBehaviour
                 for (int i = 0; i < _currentRoom.door.Count; i++)
                 {
                     if (_currentRoom.door[i] != null)
-                        _currentRoom.door[i].gameObject.SetActive(true);
+                    {
+                        Animator doorAnim = _currentRoom.door[i].GetComponentInChildren<Animator>();
+
+                        switch (i)
+                        {
+                            case 0:
+                                doorAnim1 = doorAnim;
+                                break;
+                            case 1:
+                                doorAnim2 = doorAnim;
+                                break;
+                            case 2:
+                                doorAnim3 = doorAnim;
+                                break;
+                            case 3:
+                                doorAnim4 = doorAnim;
+                                break;
+                        }
+                    }
+                    EnermySpawnManager.instance.SpawnEnermy(_currentRoomSpawnAble, _enermyToSpawnIn);
+                    CanSpawnEnermy = false;
                 }
-                EnermySpawnManager.instance.SpawnEnermy(_currentRoomSpawnAble, _enermyToSpawnIn);
-                CanSpawnEnermy = false;
             }
         }
     }
@@ -51,7 +75,25 @@ public class DetectZone : MonoBehaviour
             for (int i = 0; i < _currentRoom.door.Count; i++)
             {
                 if (_currentRoom.door[i] != null)
-                    _currentRoom.door[i].gameObject.SetActive(false);
+                {
+                    Animator doorAnim = _currentRoom.door[i].GetComponentInChildren<Animator>();
+
+                    switch (i)
+                    {
+                        case 0:
+                            doorAnim1 = doorAnim;
+                            break;
+                        case 1:
+                            doorAnim2 = doorAnim;
+                            break;
+                        case 2:
+                            doorAnim3 = doorAnim;
+                            break;
+                        case 3:
+                            doorAnim4 = doorAnim;
+                            break;
+                    }
+                }
             }
             _currentRoom.Box = Instantiate(BoxPrefab, _currentRoom.transform.position, Quaternion.identity);
             _currentRoom.Box.transform.SetParent(_currentRoom.transform);

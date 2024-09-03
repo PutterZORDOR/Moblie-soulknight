@@ -41,7 +41,9 @@ public class DungeonMaker : MonoBehaviour
     public GameObject DectectZoneMiniPrefab;
     public GameObject DectectZoneBossPrefab;
     public GameObject SpawnEnermyAreaPrefab;
-    public GameObject doorPrefab;
+    public GameObject doorTopBottom;
+    public GameObject doorLeft;
+    public GameObject doorRight;
     public GameObject wallPrefab1;
     public GameObject wallPrefab2;
 
@@ -512,30 +514,29 @@ public class DungeonMaker : MonoBehaviour
 
     private void CreateDoorLeft(Room Door)
     {
-        Door.doorLeft = Instantiate(doorPrefab, Door.transform.position + new Vector3(-RangeFromWall, 0f, 0f), Quaternion.identity);
+        Door.doorLeft = Instantiate(doorLeft, Door.transform.position + new Vector3(-RangeFromWall, 0f, 0f), Quaternion.identity);
         Door.doorLeft.transform.SetParent(Door.transform);
         Door.door.Add(Door.doorLeft);
+
     }
 
     private void CreateDoorRight(Room Door)
     {
-        Door.doorRight = Instantiate(doorPrefab, Door.transform.position + new Vector3(RangeFromWall, 0f, 0f), Quaternion.identity);
+        Door.doorRight = Instantiate(doorRight, Door.transform.position + new Vector3(RangeFromWall, 0f, 0f), Quaternion.identity);
         Door.doorRight.transform.SetParent(Door.transform);
         Door.door.Add(Door.doorRight);
     }
 
     private void CreateDoorBottom(Room Door)
     {
-        Door.doorBottom = Instantiate(doorPrefab, Door.transform.position + new Vector3(0f, -RangeFromWall, 0f), Quaternion.identity);
-        Door.doorBottom.transform.rotation = Quaternion.Euler(0, 0, 90);
+        Door.doorBottom = Instantiate(doorTopBottom, Door.transform.position + new Vector3(0f, -RangeFromWall, 0f), Quaternion.identity);
         Door.doorBottom.transform.SetParent(Door.transform);
         Door.door.Add(Door.doorBottom);
     }
 
     private void CreateDoorTop(Room Door)
     {
-        Door.doorTop = Instantiate(doorPrefab, Door.transform.position + new Vector3(0f, RangeFromWall, 0f), Quaternion.identity);
-        Door.doorTop.transform.rotation = Quaternion.Euler(0, 0, 90);
+        Door.doorTop = Instantiate(doorTopBottom, Door.transform.position + new Vector3(0f, RangeFromWall, 0f), Quaternion.identity);
         Door.doorTop.transform.SetParent(Door.transform);
         Door.door.Add(Door.doorTop);
     }

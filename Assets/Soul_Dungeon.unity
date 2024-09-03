@@ -190,6 +190,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 921315185}
     - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
+      propertyPath: doorLeft
+      value: 
+      objectReference: {fileID: 222323607867657480, guid: 06ce5e6e3fff6ef4e991537b1734030f, type: 3}
+    - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
+      propertyPath: doorRight
+      value: 
+      objectReference: {fileID: 2121451150254851975, guid: d70a35ebd570d4d479679938d39b5f19, type: 3}
+    - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
       propertyPath: wallPrefab1
       value: 
       objectReference: {fileID: 6095969353790858425, guid: 87439e944bd2ea54fbef50ffd10f584d, type: 3}
@@ -197,6 +205,10 @@ PrefabInstance:
       propertyPath: wallPrefab2
       value: 
       objectReference: {fileID: 4040638599532313899, guid: e38b159bec9bb1148a3aa82328e47ac9, type: 3}
+    - target: {fileID: 7587808161090597149, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
+      propertyPath: doorTopBottom
+      value: 
+      objectReference: {fileID: 5856384175708651670, guid: 943035519d52f1a47a1cae9302fd4d6f, type: 3}
     - target: {fileID: 8779495993673651821, guid: 5e95a9568e6984649a88fa9300eaf421, type: 3}
       propertyPath: loadingText
       value: 
