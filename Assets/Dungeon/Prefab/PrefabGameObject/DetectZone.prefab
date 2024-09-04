@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7095444, z: 0.70078456}
+  m_LocalScale: {x: 18, y: 18, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -153,5 +153,10 @@ MonoBehaviour:
   - {fileID: 4894220053568378127, guid: d8021fc27291c9a4d98e677fc1d0f0e7, type: 3}
   _currentRoomSpawnAble: {fileID: 0}
   BoxPrefab: {fileID: 7060751290797234485, guid: cddf212f896cb174b9e6c1e9c9e15e16, type: 3}
+  doorAnim1: {fileID: 0}
+  doorAnim2: {fileID: 0}
+  doorAnim3: {fileID: 0}
+  doorAnim4: {fileID: 0}
+  _currentRoom: {fileID: 0}
   CanSpawnEnermy: 1
   CanDestroy: 0

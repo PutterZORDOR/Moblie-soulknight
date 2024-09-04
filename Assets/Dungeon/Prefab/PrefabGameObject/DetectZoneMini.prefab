@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7095444, z: 0.70078456}
+  m_LocalScale: {x: 18, y: 18, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -152,5 +152,10 @@ MonoBehaviour:
   BossPrefab: {fileID: 100991997351817957, guid: bd9bf8af77a1ca04b841daa17fc19f54, type: 3}
   Portal: {fileID: 4080475496823185882, guid: 5b2dd75f7112e4d438b1e085b03c9934, type: 3}
   EndPortal: {fileID: 5701824130104534751, guid: b8626e796962375419bdf630dd133743, type: 3}
+  doorAnim1: {fileID: 0}
+  doorAnim2: {fileID: 0}
+  doorAnim3: {fileID: 0}
+  doorAnim4: {fileID: 0}
+  _currentRoom: {fileID: 0}
   CanSpawnEnermy: 1
   CanDestroy: 0

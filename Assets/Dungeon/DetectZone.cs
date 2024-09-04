@@ -62,9 +62,9 @@ public class DetectZone : MonoBehaviour
                                 break;
                         }
                     }
-                    EnermySpawnManager.instance.SpawnEnermy(_currentRoomSpawnAble, _enermyToSpawnIn);
-                    CanSpawnEnermy = false;
                 }
+                EnermySpawnManager.instance.SpawnEnermy(_currentRoomSpawnAble, _enermyToSpawnIn);
+                CanSpawnEnermy = false;
             }
         }
     }
