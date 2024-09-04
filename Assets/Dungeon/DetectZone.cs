@@ -50,15 +50,19 @@ public class DetectZone : MonoBehaviour
                         {
                             case 0:
                                 doorAnim1 = doorAnim;
+                                doorAnim1.Play("DoorClose");
                                 break;
                             case 1:
                                 doorAnim2 = doorAnim;
+                                doorAnim2.Play("DoorClose");
                                 break;
                             case 2:
                                 doorAnim3 = doorAnim;
+                                doorAnim3.Play("DoorClose");
                                 break;
                             case 3:
                                 doorAnim4 = doorAnim;
+                                doorAnim4.Play("DoorClose");
                                 break;
                         }
                     }
@@ -82,23 +86,27 @@ public class DetectZone : MonoBehaviour
                     {
                         case 0:
                             doorAnim1 = doorAnim;
+                            doorAnim1.Play("DoorOpen");
                             break;
                         case 1:
                             doorAnim2 = doorAnim;
+                            doorAnim2.Play("DoorOpen");
                             break;
                         case 2:
                             doorAnim3 = doorAnim;
+                            doorAnim3.Play("DoorOpen");
                             break;
                         case 3:
                             doorAnim4 = doorAnim;
+                            doorAnim4.Play("DoorOpen");
                             break;
                     }
                 }
             }
             _currentRoom.Box = Instantiate(BoxPrefab, _currentRoom.transform.position, Quaternion.identity);
             _currentRoom.Box.transform.SetParent(_currentRoom.transform);
-            Destroy(_currentRoomSpawnAble.gameObject);
-            Destroy(this.gameObject);
+            _currentRoomSpawnAble.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 }
