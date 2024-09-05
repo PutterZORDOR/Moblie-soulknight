@@ -1,10 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class DungeonMaker : MonoBehaviour
 {
@@ -111,6 +109,36 @@ public class DungeonMaker : MonoBehaviour
             Invoke("CreateDoorForAllRoom", 2);
             Invoke("CloseUI", 2.5f);
         }       
+    }
+    void DeactivateDuplicateBridges(List<GameObject> bridgeFirst)
+    {
+        // สร้าง Dictionary เพื่อเก็บชื่อของ GameObject และ List ของ GameObject ที่ชื่อซ้ำกัน
+        Dictionary<string, List<GameObject>> bridgeGroups = new Dictionary<string, List<GameObject>>();
+
+        // แยกกลุ่ม GameObject ตามชื่อ
+        foreach (GameObject bridge in bridgeFirst)
+        {
+            if (bridge == null) continue; // ถ้า GameObject ไม่มีอยู่ให้ข้ามไป
+            string bridgeName = bridge.name;
+            if (!bridgeGroups.ContainsKey(bridgeName))
+            {
+                bridgeGroups[bridgeName] = new List<GameObject>();
+            }
+            bridgeGroups[bridgeName].Add(bridge);
+        }
+
+        // ทำการตรวจสอบในแต่ละกลุ่ม ถ้ามีมากกว่า 1 ตัว ให้ SetActive(false) ตัวที่ซ้ำกันหมด เหลือไว้ตัวเดียว
+        foreach (var group in bridgeGroups)
+        {
+            List<GameObject> bridges = group.Value;
+            if (bridges.Count > 1) // ถ้ามี GameObject ชื่อซ้ำกันมากกว่า 1
+            {
+                for (int i = 1; i < bridges.Count; i++) // เริ่มจาก index 1 เพราะต้องการให้เหลือตัวแรกไว้
+                {
+                    bridges[i].SetActive(false);
+                }
+            }
+        }
     }
     public void CloseUI()
     {
@@ -341,15 +369,7 @@ public class DungeonMaker : MonoBehaviour
                     bridgeCreated.Add(CreateBridge(bridgeInfo.Item1, bridgeInfo.Item2));
             }
         }
-        while (RandomDeleteAmount > 0 && bridgeCreated.Count > 0)
-        {
-            int ranIndex = Random.Range(0,bridgeCreated.Count);
-            Debug.Log($"{ranIndex}");
-            Debug.Log($"{bridgeCreated[ranIndex].name}");
-            Destroy(bridgeCreated[ranIndex]);
-            bridgeCreated.RemoveAt(ranIndex);
-            RandomDeleteAmount--;
-        }
+        DeactivateDuplicateBridges(bridgeFirst);
 
     }
     public bool isBridgeValid(Room oldPos, Vector2Int curPos)
