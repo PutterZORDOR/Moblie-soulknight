@@ -516,6 +516,8 @@ public class DungeonMaker : MonoBehaviour
     {
         Door.doorLeft = Instantiate(doorLeft, Door.transform.position + new Vector3(-RangeFromWall, 0f, 0f), Quaternion.identity);
         Door.doorLeft.transform.SetParent(Door.transform);
+        Collider2D colDoor = Door.doorLeft.GetComponent<Collider2D>();
+        colDoor.enabled = false;
         Door.door.Add(Door.doorLeft);
 
     }
@@ -524,6 +526,8 @@ public class DungeonMaker : MonoBehaviour
     {
         Door.doorRight = Instantiate(doorRight, Door.transform.position + new Vector3(RangeFromWall, 0f, 0f), Quaternion.identity);
         Door.doorRight.transform.SetParent(Door.transform);
+        Collider2D colDoor = Door.doorRight.GetComponent<Collider2D>();
+        colDoor.enabled = false;
         Door.door.Add(Door.doorRight);
     }
 
@@ -531,6 +535,8 @@ public class DungeonMaker : MonoBehaviour
     {
         Door.doorBottom = Instantiate(doorTopBottom, Door.transform.position + new Vector3(0f, -RangeFromWall, 0f), Quaternion.identity);
         Door.doorBottom.transform.SetParent(Door.transform);
+        Collider2D colDoor = Door.doorBottom.GetComponentInChildren<Collider2D>();
+        colDoor.enabled = false;
         Door.door.Add(Door.doorBottom);
     }
 
@@ -538,6 +544,8 @@ public class DungeonMaker : MonoBehaviour
     {
         Door.doorTop = Instantiate(doorTopBottom, Door.transform.position + new Vector3(0f, RangeFromWall, 0f), Quaternion.identity);
         Door.doorTop.transform.SetParent(Door.transform);
+        Collider2D colDoor = Door.doorTop.GetComponentInChildren<Collider2D>();
+        colDoor.enabled = false;
         Door.door.Add(Door.doorTop);
     }
 

@@ -1,3 +1,4 @@
+using System.Drawing;
 using UnityEngine;
 
 public class DetectZoneAllBoss : MonoBehaviour
@@ -27,6 +28,7 @@ public class DetectZoneAllBoss : MonoBehaviour
     public Room _currentRoom;
     public bool CanSpawnEnermy = true;
     public bool CanDestroy;
+    public Collider2D colDoor;
 
     GameObject portal;
 
@@ -55,24 +57,29 @@ public class DetectZoneAllBoss : MonoBehaviour
                     if (_currentRoom.door[i] != null)
                     {
                         Animator doorAnim = _currentRoom.door[i].GetComponentInChildren<Animator>();
+                        colDoor = _currentRoom.door[i].GetComponentInChildren<Collider2D>();
 
                         switch (i)
                         {
                             case 0:
                                 doorAnim1 = doorAnim;
                                 doorAnim1.Play("DoorClose");
+                                colDoor.enabled = true;
                                 break;
                             case 1:
                                 doorAnim2 = doorAnim;
                                 doorAnim2.Play("DoorClose");
+                                colDoor.enabled = true;
                                 break;
                             case 2:
                                 doorAnim3 = doorAnim;
                                 doorAnim3.Play("DoorClose");
+                                colDoor.enabled = true;
                                 break;
                             case 3:
                                 doorAnim4 = doorAnim;
                                 doorAnim4.Play("DoorClose");
+                                colDoor.enabled = true;
                                 break;
                         }
                     }
@@ -116,18 +123,22 @@ public class DetectZoneAllBoss : MonoBehaviour
                         case 0:
                             doorAnim1 = doorAnim;
                             doorAnim1.Play("DoorOpen");
+                            colDoor.enabled = false;
                             break;
                         case 1:
                             doorAnim2 = doorAnim;
                             doorAnim2.Play("DoorOpen");
+                            colDoor.enabled = false;
                             break;
                         case 2:
                             doorAnim3 = doorAnim;
                             doorAnim3.Play("DoorOpen");
+                            colDoor.enabled = false;
                             break;
                         case 3:
                             doorAnim4 = doorAnim;
                             doorAnim4.Play("DoorOpen");
+                            colDoor.enabled = false;
                             break;
                     }
                 }
