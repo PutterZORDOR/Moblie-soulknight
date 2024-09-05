@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3231061184966960619}
   - component: {fileID: 1606003254632227187}
   - component: {fileID: 7562107592297667906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: enemy room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3512296837782614078}
+  m_Father: {fileID: 4727519725618749248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &4812641866953204699
 Tilemap:
@@ -788,7 +788,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1325,7 +1325,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3670462784036207432, guid: 2fcfe46aed7c4ba408db30d74fd7b169, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1750,7 +1750,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 4
   m_Sprite: {fileID: 3670462784036207432, guid: 2fcfe46aed7c4ba408db30d74fd7b169, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1838,7 +1838,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3670462784036207432, guid: 2fcfe46aed7c4ba408db30d74fd7b169, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2287,7 +2287,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3670462784036207432, guid: 2fcfe46aed7c4ba408db30d74fd7b169, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2375,7 +2375,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3670462784036207432, guid: 2fcfe46aed7c4ba408db30d74fd7b169, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2419,6 +2419,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1588787298335800695}
+  - {fileID: 1587115918084705670}
   - {fileID: 3512296837782614078}
   m_Father: {fileID: 2833521939527042168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6105,7 +6106,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -6190,7 +6191,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3670462784036207432, guid: 2fcfe46aed7c4ba408db30d74fd7b169, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6300,7 +6301,7 @@ GameObject:
   - component: {fileID: 1582893462912840003}
   - component: {fileID: 3594465899249255966}
   - component: {fileID: 4888248652667949648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: layer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6830,7 +6831,7 @@ GameObject:
   - component: {fileID: 3512296837782614078}
   - component: {fileID: 4109462972227560376}
   - component: {fileID: 2646916488658463596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furrniture base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6852,7 +6853,6 @@ Transform:
   m_Children:
   - {fileID: 3277518412344855721}
   - {fileID: 9208933403085594873}
-  - {fileID: 1587115918084705670}
   - {fileID: 732124041959841573}
   - {fileID: 7988286511001813981}
   - {fileID: 334956061782241323}

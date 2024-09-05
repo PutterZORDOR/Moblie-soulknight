@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 841574177960097169}
   - component: {fileID: 2520137205556843659}
   - component: {fileID: 5711832424544811607}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6188,7 +6188,7 @@ GameObject:
   - component: {fileID: 5468152504863944712}
   - component: {fileID: 718369576573806539}
   - component: {fileID: 4081382538401140583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furniture floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6956,7 +6956,7 @@ GameObject:
   - component: {fileID: 7688325103860259380}
   - component: {fileID: 8279468126386458122}
   - component: {fileID: 284586935909366463}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furniture background 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8411,7 +8411,7 @@ GameObject:
   - component: {fileID: 5078188352598430634}
   - component: {fileID: 2942305911265360979}
   - component: {fileID: 2971852303516114914}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furniture floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8998,7 +8998,7 @@ GameObject:
   - component: {fileID: 1440692190529875260}
   - component: {fileID: 6683040245181965258}
   - component: {fileID: 4090926641355563442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furniture floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9345,7 +9345,7 @@ GameObject:
   - component: {fileID: 6319061698081405497}
   - component: {fileID: 1946842117537388545}
   - component: {fileID: 645188819559440901}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furniture floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9732,7 +9732,7 @@ GameObject:
   - component: {fileID: 3351748420758551907}
   - component: {fileID: 1990639364854747496}
   - component: {fileID: 3047767038636381942}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furniture background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50255,7 +50255,7 @@ GameObject:
   - component: {fileID: 4065354115660307610}
   - component: {fileID: 669928185386180975}
   - component: {fileID: 8803476263230162647}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furniture other
   m_TagString: Untagged
   m_Icon: {fileID: 0}
