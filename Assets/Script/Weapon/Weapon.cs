@@ -114,7 +114,7 @@ public abstract class Weapon : MonoBehaviour
             // Flip to the left by setting x to -1 if it is currently 1
             if (scale.x < 0)
             {
-                scale.x = 1;
+                scale.x = -1;
                 characterTransform.localScale = scale;
             }
         }
@@ -128,7 +128,7 @@ public abstract class Weapon : MonoBehaviour
             // Unflip back to the right by setting x to 1 if it is currently -1
             if (scale.x > 0)
             {
-                scale.x = -1;
+                scale.x = 1;
                 characterTransform.localScale = scale;
             }
         }
