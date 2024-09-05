@@ -3763,7 +3763,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3783,7 +3783,7 @@ GameObject:
   - component: {fileID: 101201943034889799}
   - component: {fileID: 6182274580056560719}
   - component: {fileID: 413613643789161252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fureniture base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4145,7 +4145,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.71875, y: 0.15625, z: 0}
   m_MaxChunkCount: 16
@@ -4165,7 +4165,7 @@ GameObject:
   - component: {fileID: 2573780490565637913}
   - component: {fileID: 5804080612740106436}
   - component: {fileID: 9119148334114734031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: layer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4498,7 +4498,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.015625, y: 0.21875, z: 0}
   m_MaxChunkCount: 16
@@ -4610,7 +4610,7 @@ GameObject:
   - component: {fileID: 4398802556621364700}
   - component: {fileID: 2603480980791603047}
   - component: {fileID: 2235624163555407765}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: enemy room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5397,7 +5397,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

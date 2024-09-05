@@ -3650,7 +3650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5341473277995434161}
   - component: {fileID: 7992804625922806199}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: awd (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4098,6 +4098,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d143b356730b76949a28b9e6f4e6f6de, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 5b9a620440309454fa750b5b2d760519, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 3
     m_Data: {fileID: -1304790476, guid: 879fadb3c654bd748b2fb693f26f984f, type: 3}
@@ -4109,6 +4113,10 @@ Tilemap:
     m_Data: {fileID: -218745021, guid: 879fadb3c654bd748b2fb693f26f984f, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -1627554852, guid: 879fadb3c654bd748b2fb693f26f984f, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 23
     m_Data:
@@ -4189,7 +4197,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -79, y: -10, z: 0}
-  m_Size: {x: 79, y: 16, z: 1}
+  m_Size: {x: 126, y: 35, z: 1}
   m_TileAnchor: {x: 31.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -4357,7 +4365,7 @@ GameObject:
   - component: {fileID: 4745407128822957249}
   - component: {fileID: 2117686055185982892}
   - component: {fileID: 5836612474433878413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: furniture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4771,7 +4779,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.515625, y: 0.9375, z: 0}
   m_MaxChunkCount: 16
@@ -4799,7 +4807,7 @@ GameObject:
   - component: {fileID: 4850055262584951850}
   - component: {fileID: 8717332150684140441}
   - component: {fileID: 2538086808243030600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: enemy room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4815,7 +4823,7 @@ Transform:
   m_GameObject: {fileID: 8607360380302397155}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.03, y: 1.1481619, z: 0}
+  m_LocalPosition: {x: 27.946423, y: 1.1481619, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
