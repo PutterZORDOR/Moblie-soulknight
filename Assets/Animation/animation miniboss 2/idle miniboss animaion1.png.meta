@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5d61c2a3446d0fd4f8c78c68355b208d
+guid: d2a625c558c9b4248bf606ac50256595
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5283976787207582691
-    second: idle_miniboss_animaion1_0
+      213: 3319147422932987288
+    second: idle miniboss animaion1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_miniboss_animaion1_0
+      name: idle miniboss animaion1_0
       rect:
         serializedVersion: 2
         x: 34
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e3faea64e4745940800000000000000
-      internalID: 5283976787207582691
+      spriteID: 89de21ddefaff0e20800000000000000
+      internalID: 3319147422932987288
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      idle_miniboss_animaion1_0: 5283976787207582691
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

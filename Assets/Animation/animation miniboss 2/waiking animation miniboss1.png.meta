@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5d61c2a3446d0fd4f8c78c68355b208d
+guid: 0942338d3fc63204c81f02d52f8ea761
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5283976787207582691
-    second: idle_miniboss_animaion1_0
+      213: -8176373374323990048
+    second: waiking animation miniboss1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_miniboss_animaion1_0
+      name: waiking animation miniboss1_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 4
-        width: 100
+        x: 19
+        y: 1
+        width: 98
         height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e3faea64e4745940800000000000000
-      internalID: 5283976787207582691
+      spriteID: 0e1e4708cbfa78e80800000000000000
+      internalID: -8176373374323990048
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      idle_miniboss_animaion1_0: 5283976787207582691
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
