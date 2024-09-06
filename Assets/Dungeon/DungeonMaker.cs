@@ -265,22 +265,36 @@ public class DungeonMaker : MonoBehaviour
     private int GetRandomForRoom()
     {
         int randomRoom;
-            randomRoom = Random.Range(0, RoomsPrefab.Length);
 
-            if ((randomRoom == 0 && CanChest) || (randomRoom == 1 && CanShop))
-            {
-                randomRoom = Random.Range(2, RoomsPrefab.Length);
-            }
-            if (randomRoom == 0 && !CanChest)
-            {
-                CanChest = true;
-            }
-            if (randomRoom == 1 && !CanShop)
-            {
-                CanShop = true;
-            }
-            return randomRoom;
+        if (roomCount == 3)
+        {
+            randomRoom = 0;
+        }
+        else if (roomCount == 5)
+        {
+            randomRoom = 1;
+        }
+        else
+        {
+            randomRoom = Random.Range(0, RoomsPrefab.Length);
+        }
+
+        if ((randomRoom == 0 && CanChest) || (randomRoom == 1 && CanShop))
+        {
+            randomRoom = Random.Range(2, RoomsPrefab.Length);
+        }
+        if (randomRoom == 0 && !CanChest)
+        {
+            CanChest = true;
+        }
+        if (randomRoom == 1 && !CanShop)
+        {
+            CanShop = true;
+        }
+
+        return randomRoom;
     }
+
     private void CreateDetectionZone(Room Detect,GameObject obj)
     {
         Detect.DetectZone = Instantiate(obj, Detect.transform);

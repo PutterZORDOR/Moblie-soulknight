@@ -1589,7 +1589,7 @@ Transform:
   m_GameObject: {fileID: 5525145367540252550}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 4, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   minPrice: 9
   maxPrice: 15
   CanBuy: 1
-  detectionRadius: 0.6
+  detectionRadius: 1.5
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -3008,7 +3008,7 @@ Transform:
   m_GameObject: {fileID: 7741774550714682689}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3036,7 +3036,7 @@ MonoBehaviour:
   minPrice: 6
   maxPrice: 9
   CanBuy: 1
-  detectionRadius: 0.6
+  detectionRadius: 1.5
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -3584,7 +3584,7 @@ Transform:
   m_GameObject: {fileID: 8914270217235718940}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: -4, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3614,7 +3614,7 @@ MonoBehaviour:
   minPrice: 5
   maxPrice: 8
   CanBuy: 1
-  detectionRadius: 0.6
+  detectionRadius: 1.5
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
