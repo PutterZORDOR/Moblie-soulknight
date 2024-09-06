@@ -1,8 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class SageBoss : MiniBoss
+public class SageMiniBoss : MiniBoss
 {
+    public SageBulletPool bulletPool; // Reference to the bullet pool
+
+
     public int spiralBulletCount = 50;
     public float spiralRotationSpeed = 200f;
     public float spiralOffset = 175f;
@@ -13,9 +16,9 @@ public class SageBoss : MiniBoss
     public float maxPatternDuration = 10f;
 
     // Firing rates for each pattern
-    public float spiralFireRate = 4f;
-    public float surroundFireRate = 4f;
-    public float spinningFireRate = 0.4f;
+    public float spiralFireRate = 3f;
+    public float surroundFireRate = 3f;
+    public float spinningFireRate = 0.1f;
 
     // Bullet limits and cooldowns for each pattern
     public int spiralBulletLimit = 100;
@@ -171,17 +174,39 @@ public class SageBoss : MiniBoss
         ShootBullet(bulletDirection);
     }
 
-    private void ShootBullet(Vector2 direction)
+    private IEnumerator DisableBulletAfterTime(GameObject bullet, float time)
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = direction * bulletSpeed;
-
-        float randomSpin = Random.Range(-360f, 360f);
-        rb.angularVelocity = randomSpin;
-
-        Destroy(bullet, bulletLifetime);
+        yield return new WaitForSeconds(time);
+        bullet.SetActive(false);  // Ensure bullets are deactivated, not destroyed
     }
+
+
+    public void ShootBullet(Vector2 direction)
+    {
+        GameObject bullet = bulletPool.GetBullet();
+
+        if (bullet != null)
+        {
+            bullet.SetActive(true); // Reactivate bullet
+            bullet.transform.position = transform.position;
+            bullet.transform.rotation = Quaternion.identity;
+
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = direction * bulletSpeed;
+
+            float randomSpin = Random.Range(-360f, 360f);
+            rb.angularVelocity = randomSpin;
+
+            StartCoroutine(DisableBulletAfterTime(bullet, bulletLifetime));
+        }
+        else
+        {
+            Debug.LogWarning("Attempted to use a null or inactive bullet from the pool.");
+        }
+    }
+
+
+
 
     private IEnumerator SwitchAttackPatterns()
     {

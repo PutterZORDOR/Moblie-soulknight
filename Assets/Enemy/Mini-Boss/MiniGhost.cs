@@ -1,15 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class Ghost : MiniBoss
+public class MiniGhost : MiniBoss
 {
-    public GameObject[] enemyPrefabs; // Array of enemy prefabs to summon
     public float minPatternDuration = 3f; // Minimum duration for a pattern
     public float maxPatternDuration = 8f; // Maximum duration for a pattern
     public float invisibilityDuration = 3f; // Duration for invisibility
-    public float summonInterval = 10f; // Interval to summon random enemies
-    public float minSummonCount = 4; // Minimum number of enemies to summon
-    public float maxSummonCount = 7; // Maximum number of enemies to summon
     public float scratchRange = 5f; // Scratch attack range
 
     private bool isAttacking = false;
@@ -19,13 +15,10 @@ public class Ghost : MiniBoss
     protected override void Start()
     {
         base.Start();
-        moveSpeed = 2f; // Set a unique move speed for the Ghost
+        moveSpeed = 2f; // Set a unique move speed for the MiniGhost
 
         // Start the first pattern
         StartCoroutine(SwitchPattern());
-
-        // Start summoning enemies
-        StartCoroutine(SummonRandomEnemies());
     }
 
     protected override void Update()
@@ -64,7 +57,7 @@ public class Ghost : MiniBoss
             else
             {
                 isInvisible = false;
-                gameObject.GetComponent<SpriteRenderer>().enabled = true; // Make the Ghost visible
+                gameObject.GetComponent<SpriteRenderer>().enabled = true; // Make the MiniGhost visible
             }
         }
     }
@@ -72,38 +65,15 @@ public class Ghost : MiniBoss
     private IEnumerator BecomeInvisible()
     {
         isInvisible = true;
-        gameObject.GetComponent<SpriteRenderer>().enabled = false; // Make the Ghost invisible
+        gameObject.GetComponent<SpriteRenderer>().enabled = false; // Make the MiniGhost invisible
         yield return new WaitForSeconds(invisibilityDuration);
-        gameObject.GetComponent<SpriteRenderer>().enabled = true; // Make the Ghost visible again
+        gameObject.GetComponent<SpriteRenderer>().enabled = true; // Make the MiniGhost visible again
         isInvisible = false;
-    }
-
-    private IEnumerator SummonRandomEnemies()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(summonInterval);
-
-            int summonCount = Random.Range((int)minSummonCount, (int)maxSummonCount + 1);
-
-            for (int i = 0; i < summonCount; i++)
-            {
-                if (enemyPrefabs.Length > 0)
-                {
-                    GameObject randomEnemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-                    Vector2 spawnPosition = new Vector2(
-                        transform.position.x + Random.Range(-10f, 10f),
-                        transform.position.y + Random.Range(-10f, 10f)
-                    );
-                    Instantiate(randomEnemy, spawnPosition, Quaternion.identity);
-                }
-            }
-        }
     }
 
     protected override void ShootPlayer()
     {
-        // The Ghost doesn't shoot, so this method can be left empty or used for another attack type if needed
+        // The MiniGhost doesn't shoot, so this method can be left empty or used for another attack type if needed
     }
 
     protected override void AttackPlayer()
@@ -111,7 +81,7 @@ public class Ghost : MiniBoss
         if (!isInvisible)
         {
             base.AttackPlayer();
-            Debug.Log("Ghost scratches the player!");
+            Debug.Log("MiniGhost scratches the player!");
         }
     }
 }

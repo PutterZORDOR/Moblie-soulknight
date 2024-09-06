@@ -16,7 +16,7 @@ public class Meteor : MonoBehaviour
             }
 
             // Destroy the meteor after it hits the player
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

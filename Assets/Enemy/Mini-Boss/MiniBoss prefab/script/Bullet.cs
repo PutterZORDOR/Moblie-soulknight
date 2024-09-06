@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Vector3 direction; // Direction of the bullet
-    private int damage; // Damage value for this bullet
-    private float speed; // Speed of the bullet
-    private float lifetime; // Lifetime of the bullet
+    public Vector3 direction; // Direction of the bullet
+    public int damage; // Damage value for this bullet
+    public float speed; // Speed of the bullet
+    public float lifetime; // Lifetime of the bullet
 
     public void Initialize(Vector3 dir, int dmg, float spd, float life)
     {

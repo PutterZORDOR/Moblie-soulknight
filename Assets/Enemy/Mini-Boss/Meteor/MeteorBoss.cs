@@ -13,6 +13,9 @@ public class MeteorBoss : MiniBoss
     public float patternSwitchMaxDuration = 10f; // Max duration for each pattern
     public float attackRange = 60f; // Range within which the boss will attack
     public float summonInterval = 15f; // Interval to summon random enemies
+    public MeteorPool meteorPool;
+    
+    
 
     private int currentPattern = 0;
     private bool isAttacking = false; // Track whether the boss is attacking
@@ -114,16 +117,15 @@ public class MeteorBoss : MiniBoss
         {
             yield return new WaitForSeconds(1f); // 1-second delay
 
-            if (meteorPrefab != null)
+            GameObject meteor = meteorPool.GetObject();
+            if (meteor != null)
             {
-                Vector2 spawnPosition = new Vector2(player.position.x, player.position.y + 10f);
-                GameObject meteor = Instantiate(meteorPrefab, spawnPosition, Quaternion.identity);
+                meteor.transform.position = new Vector2(player.position.x, player.position.y + 10f);
                 Rigidbody2D rb = meteor.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
                     rb.velocity = Vector2.down * bulletSpeed;
                 }
-                Destroy(meteor, bulletLifetime);
             }
         }
     }
@@ -133,9 +135,9 @@ public class MeteorBoss : MiniBoss
         int meteorCount = Random.Range(7, 20); // Random number of meteors in the area
         for (int i = 0; i < meteorCount; i++)
         {
-            if (meteorPrefab != null)
+            GameObject meteor = meteorPool.GetObject();
+            if (meteor != null)
             {
-                // Generate a random position within the AOE radius
                 float angle = Random.Range(0f, 360f);
                 float radius = Random.Range(0f, meteorShowerRadius);
 
@@ -144,16 +146,14 @@ public class MeteorBoss : MiniBoss
                     Mathf.Sin(angle * Mathf.Deg2Rad) * radius
                 );
 
-                Vector2 spawnPosition = (Vector2)transform.position + offset;
-                spawnPosition.y += 10f; // Ensure meteors fall from above
+                meteor.transform.position = (Vector2)transform.position + offset;
+                meteor.transform.position = new Vector2(meteor.transform.position.x, meteor.transform.position.y + 10f);
 
-                GameObject meteor = Instantiate(meteorPrefab, spawnPosition, Quaternion.identity);
                 Rigidbody2D rb = meteor.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
                     rb.velocity = Vector2.down * bulletSpeed;
                 }
-                Destroy(meteor, bulletLifetime);
             }
         }
     }
@@ -170,14 +170,6 @@ public class MeteorBoss : MiniBoss
         }
     }
 
-    private IEnumerator SwitchPattern()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(Random.Range(patternSwitchMinDuration, patternSwitchMaxDuration));
-            currentPattern = (currentPattern + 1) % 3; // Cycle through the three patterns
-        }
-    }
 
     private IEnumerator SummonRandomEnemies()
     {
@@ -199,4 +191,17 @@ public class MeteorBoss : MiniBoss
             }
         }
     }
+
+
+
+private IEnumerator SwitchPattern()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(patternSwitchMinDuration, patternSwitchMaxDuration));
+            currentPattern = (currentPattern + 1) % 3; // Cycle through the three patterns
+        }
+    }
+
+    
 }

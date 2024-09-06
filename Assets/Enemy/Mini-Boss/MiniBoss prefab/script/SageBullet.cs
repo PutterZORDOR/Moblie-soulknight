@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SageBullet : MonoBehaviour
 {
-    public int damage = 5; 
+    public int damage = 5;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,8 +15,9 @@ public class SageBullet : MonoBehaviour
                 Debug.Log("Sage hit the player and dealt " + damage + " damage.");
             }
 
-            
-            Destroy(gameObject);
+            // Instead of destroying the bullet, deactivate it
+            gameObject.SetActive(false);
         }
     }
+
 }

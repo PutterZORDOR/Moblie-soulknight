@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Boss
   - MiniBoss
+  - BulletPool
   layers:
   - Default
   - TransparentFX
