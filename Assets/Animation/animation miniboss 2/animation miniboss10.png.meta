@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      animation miniboss10_0: 5577597354162831875
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

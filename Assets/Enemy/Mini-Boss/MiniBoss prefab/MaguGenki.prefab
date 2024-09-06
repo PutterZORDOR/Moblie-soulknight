@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6711505672761894480}
   - component: {fileID: 1663288412640735700}
   - component: {fileID: 5717024527617770328}
+  - component: {fileID: 2008532605058882909}
   m_Layer: 0
   m_Name: MaguGenki
   m_TagString: MiniBoss
@@ -195,3 +196,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &2008532605058882909
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8122604826291875688}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -7332568187581535591, guid: c8e3359783e5cc04786ad3d97af8b467, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

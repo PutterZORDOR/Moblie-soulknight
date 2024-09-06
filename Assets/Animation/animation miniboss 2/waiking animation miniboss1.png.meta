@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      waiking animation miniboss1_0: -8176373374323990048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

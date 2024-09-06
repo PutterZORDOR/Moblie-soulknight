@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      idle miniboss animaion5_0: -108104577070803839
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
