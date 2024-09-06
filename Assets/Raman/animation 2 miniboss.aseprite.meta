@@ -1,0 +1,974 @@
+fileFormatVersion: 2
+guid: b2baa523ed7e95b4ea9360a733039152
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638612528897054732
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: animation 2 miniboss_Frame_0
+    originalName: 
+    pivot: {x: 0.30927834, y: -0.046728976}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 483
+      width: 97
+      height: 107
+    spriteID: 10839cfdb27ead5469f638956bba8bcf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 483}
+  - name: animation 2 miniboss_Frame_1
+    originalName: 
+    pivot: {x: 0.4339623, y: -0.03478261}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 876
+      width: 106
+      height: 115
+    spriteID: 5e214a4895a0f0d4ba72327317d4ab19
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -25, y: 872}
+  - name: animation 2 miniboss_Frame_2
+    originalName: 
+    pivot: {x: 0.41441444, y: -0.044247787}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 626
+      width: 111
+      height: 113
+    spriteID: ccc9398ecbcc2114c9c1d91a1ad816d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 268, y: 621}
+  - name: animation 2 miniboss_Frame_3
+    originalName: 
+    pivot: {x: 0.39252338, y: -0.044247787}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 362
+      width: 107
+      height: 113
+    spriteID: 739037453a2455141abacd483e20621e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 357}
+  - name: animation 2 miniboss_Frame_4
+    originalName: 
+    pivot: {x: 0.3853211, y: -0.03508772}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 153
+      width: 109
+      height: 114
+    spriteID: 9bcca133a63216745add5de59ed99407
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -29, y: 149}
+  - name: animation 2 miniboss_Frame_5
+    originalName: 
+    pivot: {x: 0.3853211, y: -0.03508772}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 275
+      width: 109
+      height: 114
+    spriteID: c2f1a79a0bcab074381bfb1f2103e531
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -29, y: 271}
+  - name: animation 2 miniboss_Frame_6
+    originalName: 
+    pivot: {x: 0.3853211, y: -0.03539823}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 516
+      width: 109
+      height: 113
+    spriteID: bf2a3926ed9b50c458423d216e648e84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -29, y: 512}
+  - name: animation 2 miniboss_Frame_7
+    originalName: 
+    pivot: {x: 0.40178573, y: -0.045045048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 865
+      width: 112
+      height: 111
+    spriteID: c5e72f63227397d459fc063559e28e47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 865}
+  - name: animation 2 miniboss_Frame_8
+    originalName: 
+    pivot: {x: 0.39639643, y: -0.054054055}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 397
+      width: 111
+      height: 111
+    spriteID: 3bbe07fa127888e47a052d5f387b48de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -27, y: 391}
+  - name: animation 2 miniboss_Frame_9
+    originalName: 
+    pivot: {x: 0.39639643, y: -0.0733945}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 245
+      width: 111
+      height: 109
+    spriteID: 803d350d6b45bf74fb7d15fcf0bfc845
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 237}
+  - name: animation 2 miniboss_Frame_10
+    originalName: 
+    pivot: {x: 0.39639643, y: -0.06363636}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 637
+      width: 111
+      height: 110
+    spriteID: a6dbfc10b744dd04393255421e157d70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -27, y: 630}
+  - name: animation 2 miniboss_Frame_11
+    originalName: 
+    pivot: {x: 0.37272725, y: -0.054545455}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 127
+      width: 110
+      height: 110
+    spriteID: edc9c220b2de1d64aa7af3b22db05e66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 127}
+  - name: animation 2 miniboss_Frame_12
+    originalName: 
+    pivot: {x: 0.36111107, y: -0.05309734}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 755
+      width: 108
+      height: 113
+    spriteID: 8fae37769dd495949a7b8b0785b35762
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 755}
+  - name: animation 2 miniboss_Frame_13
+    originalName: 
+    pivot: {x: 0.3760684, y: -0.05309734}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 387
+      width: 117
+      height: 113
+    spriteID: 2292c52e767bcd84991f6934974cc812
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 387}
+  - name: animation 2 miniboss_Frame_14
+    originalName: 
+    pivot: {x: 0.38596493, y: -0.054545455}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 747
+      width: 114
+      height: 110
+    spriteID: 7d9b7b2558ee6bc4c8f586798f0b09b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 747}
+  - name: animation 2 miniboss_Frame_15
+    originalName: 
+    pivot: {x: 0.38793105, y: -0.054545455}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 508
+      width: 116
+      height: 110
+    spriteID: 36ef5bd5265533440b927094e47c9feb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 508}
+  - name: animation 2 miniboss_Frame_16
+    originalName: 
+    pivot: {x: 0.4545454, y: -9.333333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 411
+      y: 1005
+      width: 33
+      height: 6
+    spriteID: 47772a692d13dc649acb3881d9ce950d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 411, y: 1005}
+  - name: animation 2 miniboss_Frame_17
+    originalName: 
+    pivot: {x: 0.44927537, y: -3.5384617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 411
+      y: 984
+      width: 69
+      height: 13
+    spriteID: e8b65a672fc59ae46a23107a5e164090
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 411, y: 984}
+  - name: animation 2 miniboss_Frame_18
+    originalName: 
+    pivot: {x: 0.46226415, y: -1.2142857}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 659
+      width: 106
+      height: 28
+    spriteID: 589b45b54a4b5b14781adad40f3fbeb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 659}
+  - name: animation 2 miniboss_Frame_19
+    originalName: 
+    pivot: {x: 0.46226415, y: -0.86111104}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 984
+      width: 106
+      height: 36
+    spriteID: 0cd68774fadab424296f74f8663b8d86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 984}
+  - name: animation 2 miniboss_Frame_20
+    originalName: 
+    pivot: {x: 0.45081967, y: -0.5283019}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 598
+      width: 122
+      height: 53
+    spriteID: a44b770278720ef42bd3ad51453306ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 598}
+  - name: animation 2 miniboss_Frame_21
+    originalName: 
+    pivot: {x: 0.22680414, y: -0.022900762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 407
+      y: 238
+      width: 97
+      height: 131
+    spriteID: 1d7f959129fdaf84c8ff697bfd29e53d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 407, y: 238}
+  - name: animation 2 miniboss_Frame_22
+    originalName: 
+    pivot: {x: 0.2647059, y: -0.021276595}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 238
+      width: 102
+      height: 141
+    spriteID: d1c8c1865537f054994efaf89a346851
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 238}
+  - name: animation 2 miniboss_Frame_23
+    originalName: 
+    pivot: {x: 0.4485294, y: -0.021276595}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 136
+      height: 141
+    spriteID: e87ca208c2f610346b3f99c7763f0cec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: animation 2 miniboss_Frame_24
+    originalName: 
+    pivot: {x: 0.48630136, y: -0.03738318}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 123
+      width: 146
+      height: 107
+    spriteID: 4a37b6618c5530f48a47a0f736a1b962
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 123}
+  - name: animation 2 miniboss_Frame_25
+    originalName: 
+    pivot: {x: 0.4827586, y: -0.027027028}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 4
+      width: 145
+      height: 111
+    spriteID: 2d39336fd39026046ac4222d1476204a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 4}
+  - name: animation 2 miniboss_Frame_26
+    originalName: 
+    pivot: {x: 0.4822695, y: -0.008695653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 4
+      width: 141
+      height: 115
+    spriteID: c523320454bda494cbef3f44520250ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -683337456
+    name: animation 2 miniboss
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: animation 2 miniboss_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 5
+        width: 97
+        height: 107
+      spriteId: 10839cfdb27ead5469f638956bba8bcf
+    - name: animation 2 miniboss_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: 5e214a4895a0f0d4ba72327317d4ab19
+    - name: animation 2 miniboss_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: ccc9398ecbcc2114c9c1d91a1ad816d8
+    - name: animation 2 miniboss_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: 739037453a2455141abacd483e20621e
+    - name: animation 2 miniboss_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: 9bcca133a63216745add5de59ed99407
+    - name: animation 2 miniboss_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: c2f1a79a0bcab074381bfb1f2103e531
+    - name: animation 2 miniboss_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: bf2a3926ed9b50c458423d216e648e84
+    - name: animation 2 miniboss_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 30
+        y: 5
+        width: 112
+        height: 111
+      spriteId: c5e72f63227397d459fc063559e28e47
+    - name: animation 2 miniboss_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: 3bbe07fa127888e47a052d5f387b48de
+    - name: animation 2 miniboss_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: 803d350d6b45bf74fb7d15fcf0bfc845
+    - name: animation 2 miniboss_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      spriteId: a6dbfc10b744dd04393255421e157d70
+    - name: animation 2 miniboss_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 34
+        y: 6
+        width: 110
+        height: 110
+      spriteId: edc9c220b2de1d64aa7af3b22db05e66
+    - name: animation 2 miniboss_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 36
+        y: 6
+        width: 108
+        height: 113
+      spriteId: 8fae37769dd495949a7b8b0785b35762
+    - name: animation 2 miniboss_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 31
+        y: 6
+        width: 117
+        height: 113
+      spriteId: 2292c52e767bcd84991f6934974cc812
+    - name: animation 2 miniboss_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 31
+        y: 6
+        width: 114
+        height: 110
+      spriteId: 7d9b7b2558ee6bc4c8f586798f0b09b6
+    - name: animation 2 miniboss_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 30
+        y: 6
+        width: 116
+        height: 110
+      spriteId: 36ef5bd5265533440b927094e47c9feb
+    - name: animation 2 miniboss_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 60
+        y: 56
+        width: 33
+        height: 6
+      spriteId: 47772a692d13dc649acb3881d9ce950d
+    - name: animation 2 miniboss_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 44
+        y: 46
+        width: 69
+        height: 13
+      spriteId: e8b65a672fc59ae46a23107a5e164090
+    - name: animation 2 miniboss_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 34
+        width: 106
+        height: 28
+      spriteId: 589b45b54a4b5b14781adad40f3fbeb8
+    - name: animation 2 miniboss_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 31
+        width: 106
+        height: 36
+      spriteId: 0cd68774fadab424296f74f8663b8d86
+    - name: animation 2 miniboss_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 28
+        width: 122
+        height: 53
+      spriteId: a44b770278720ef42bd3ad51453306ea
+    - name: animation 2 miniboss_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 53
+        y: 3
+        width: 97
+        height: 131
+      spriteId: 1d7f959129fdaf84c8ff697bfd29e53d
+    - name: animation 2 miniboss_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 48
+        y: 3
+        width: 102
+        height: 141
+      spriteId: d1c8c1865537f054994efaf89a346851
+    - name: animation 2 miniboss_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 14
+        y: 3
+        width: 136
+        height: 141
+      spriteId: e87ca208c2f610346b3f99c7763f0cec
+    - name: animation 2 miniboss_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 4
+        width: 146
+        height: 107
+      spriteId: 4a37b6618c5530f48a47a0f736a1b962
+    - name: animation 2 miniboss_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 3
+        width: 145
+        height: 111
+      spriteId: 2d39336fd39026046ac4222d1476204a
+    - name: animation 2 miniboss_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 1
+        width: 141
+        height: 115
+      spriteId: c523320454bda494cbef3f44520250ff
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 150, y: 150}
