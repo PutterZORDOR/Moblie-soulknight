@@ -105,8 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootTable:
     list:
-    - itemData: {fileID: 0}
-      weight: 10
+    - itemData: {fileID: 11400000, guid: 624ba89551c6850429eacf7231fcc7ae, type: 2}
+      weight: 100
   itemHolder: {fileID: 0}
   CanOpen: 1
   detectionRadius: 0.55
