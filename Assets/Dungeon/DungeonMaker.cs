@@ -22,6 +22,9 @@ public class DungeonMaker : MonoBehaviour
     public GameObject GIF;
     public LoadingText _LoadingText;
 
+    [Header("Detect Drop Weapon")]
+    public DetectDropWeapon Detect_Drop_Weapon;
+
     [Header("AllRoom")]
     public GameObject[] RoomsPrefab;
 
@@ -262,22 +265,36 @@ public class DungeonMaker : MonoBehaviour
     private int GetRandomForRoom()
     {
         int randomRoom;
-            randomRoom = Random.Range(0, RoomsPrefab.Length);
 
-            if ((randomRoom == 0 && CanChest) || (randomRoom == 1 && CanShop))
-            {
-                randomRoom = Random.Range(2, RoomsPrefab.Length);
-            }
-            if (randomRoom == 0 && !CanChest)
-            {
-                CanChest = true;
-            }
-            if (randomRoom == 1 && !CanShop)
-            {
-                CanShop = true;
-            }
-            return randomRoom;
+        if (roomCount == 3)
+        {
+            randomRoom = 0;
+        }
+        else if (roomCount == 5)
+        {
+            randomRoom = 1;
+        }
+        else
+        {
+            randomRoom = Random.Range(0, RoomsPrefab.Length);
+        }
+
+        if ((randomRoom == 0 && CanChest) || (randomRoom == 1 && CanShop))
+        {
+            randomRoom = Random.Range(2, RoomsPrefab.Length);
+        }
+        if (randomRoom == 0 && !CanChest)
+        {
+            CanChest = true;
+        }
+        if (randomRoom == 1 && !CanShop)
+        {
+            CanShop = true;
+        }
+
+        return randomRoom;
     }
+
     private void CreateDetectionZone(Room Detect,GameObject obj)
     {
         Detect.DetectZone = Instantiate(obj, Detect.transform);
@@ -638,6 +655,7 @@ public class DungeonMaker : MonoBehaviour
     }
     public void DestroyDungeon()
     {
+        Detect_Drop_Weapon.DetectDrop();
         foreach(GameObject grid in AllGride)
         {
             if(grid != null)

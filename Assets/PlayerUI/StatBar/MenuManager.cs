@@ -43,7 +43,7 @@ public class MenuManager : MonoBehaviour
     }
     public void LoadFirstScene()
     {
-        /*Time.timeScale = 1f; 
-        SceneManager.LoadScene(0);*/
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene(0);
     }
 }

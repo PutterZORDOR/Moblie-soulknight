@@ -36,6 +36,9 @@ public class PlayerManager : MonoBehaviour
     public float invulnerabilityDuration;  
     private bool isInvulnerable = false;
 
+    [Header("UI GameOver")]
+    public GameObject UI_GameOver;
+
     private void Awake()
     {
         if (instance == null)
@@ -181,7 +184,9 @@ public class PlayerManager : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Die");
+        Time.timeScale = 0f;
+        GameOverManager.instance.UpdateText();
+        UI_GameOver.SetActive(true);
     }
 
     private void UpdateUIHp()
