@@ -5,6 +5,7 @@ public class CoinManager : MonoBehaviour
     public static CoinManager instance;
     public int Coins; 
     public int StartCoin;
+    public int SumCoin;
 
     [Header("Coin Text")]
     public TextMeshProUGUI coinText;
@@ -31,6 +32,7 @@ public class CoinManager : MonoBehaviour
     public void AddCoins(int amount)
     {
         Coins += amount;
+        SumCoin += amount;
         UpdateCoinUI();
     }
     public void SpendCoins(int amount)

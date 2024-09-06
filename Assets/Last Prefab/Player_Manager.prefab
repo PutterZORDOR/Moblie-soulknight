@@ -60,3 +60,4 @@ MonoBehaviour:
   TimeToRegen: 5
   RegenInterval: 1
   invulnerabilityDuration: 1
+  UI_GameOver: {fileID: 0}
