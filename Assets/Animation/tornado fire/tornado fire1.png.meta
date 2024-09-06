@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tornado fire1_0: 8674189726321959450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
