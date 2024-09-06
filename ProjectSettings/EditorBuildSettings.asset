@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Last Prefab/FirstScene.unity
+    guid: 8f428ce0c2d92c446b565a2069bfced4
+  - enabled: 1
     path: Assets/Last Prefab/Soul_Dungeon.unity
     guid: 220830ceb24077c43a4ed16b180fad2c
   m_configObjects:
