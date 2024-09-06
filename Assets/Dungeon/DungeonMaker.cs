@@ -22,6 +22,9 @@ public class DungeonMaker : MonoBehaviour
     public GameObject GIF;
     public LoadingText _LoadingText;
 
+    [Header("Detect Drop Weapon")]
+    public DetectDropWeapon Detect_Drop_Weapon;
+
     [Header("AllRoom")]
     public GameObject[] RoomsPrefab;
 
@@ -638,6 +641,7 @@ public class DungeonMaker : MonoBehaviour
     }
     public void DestroyDungeon()
     {
+        Detect_Drop_Weapon.DetectDrop();
         foreach(GameObject grid in AllGride)
         {
             if(grid != null)
