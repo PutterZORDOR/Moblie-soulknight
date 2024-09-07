@@ -13,7 +13,7 @@ public class Sword : Weapon
 
     protected override void Attack()
     {
-        if (!isAttacking) 
+        if (!isAttacking && isInWeaponSlot) 
         {
             isAttacking = true;
             SwordAnim.SetBool("isAttacking", true);

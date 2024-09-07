@@ -1250,16 +1250,25 @@ MonoBehaviour:
   joystickMoveScript: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
   attackAction:
     m_Name: Attack
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 2
+    m_ExpectedControlType: Button
     m_Id: 68688aa4-9f90-494e-91cd-2c9a45a55d5d
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0e354d0f-8d19-44b7-be9d-34445b2d8ddd
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Attack
+      m_Flags: 0
     m_Flags: 0
   attackRate: 0.6
   nextAttackTime: 0
   flipCooldown: 0.5
+  isInWeaponSlot: 0
   Bullet: {fileID: 8364218688031570338, guid: e9013285eecbabe4f86d25cab0885555, type: 3}
   fireRate: 0.1
   bulletsPerRound: 3

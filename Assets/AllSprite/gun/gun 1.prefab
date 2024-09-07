@@ -508,9 +508,9 @@ MonoBehaviour:
   attackRate: 0.8
   nextAttackTime: 0
   flipCooldown: 0.5
+  isInWeaponSlot: 0
   Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
   SetBulletLifeTime: 5
-  isInWeaponSlot: 0
 --- !u!114 &4929959506993799648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,11 +537,11 @@ MonoBehaviour:
   textDmg: {fileID: 0}
   textCost: {fileID: 0}
   textAtkSpeed: {fileID: 0}
-  weaponName: 
-  Dmg: 0
+  weaponName: Pistol
+  Dmg: 20
   Cost: 0
-  AtkSpeed: 0
-  type_weapon: 0
+  AtkSpeed: 0.8
+  type_weapon: 6
   raritys: 0
 --- !u!1 &3732401989222607107
 GameObject:

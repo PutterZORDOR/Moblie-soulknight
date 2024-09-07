@@ -26,6 +26,8 @@ public abstract class Weapon : MonoBehaviour
     public float flipCooldown = 0.5f;  // Time between flips in seconds
     private float lastFlipTime = 0f;    // Tracks when the last flip happened
 
+    public bool isInWeaponSlot = false;
+
     protected virtual void Awake()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -51,85 +53,88 @@ public abstract class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if (Detected)
+        if (isInWeaponSlot)
         {
-            joystickMoveScript.DisableFlip();  // Disable character flipping from JoystickMove
-        }
-        else
-        {
-            joystickMoveScript.EnableFlip();   // Re-enable character flipping from JoystickMove if no enemy detected
-        }
-
-        if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
-        {
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            if (enemies.Length == 0)
+            if (Detected)
             {
-                Detected = false;
-                CorrectCharacterFlip();
-                return;
-            }
-
-            GameObject closestEnemy = null;
-            float closestDistance = float.MaxValue;
-
-            foreach (GameObject enemy in enemies)
-            {
-                float distance = Vector2.Distance(joystickMoveScript.transform.position, enemy.transform.position);
-                if (distance < closestDistance)
-                {
-                    closestEnemy = enemy;
-                    closestDistance = distance;
-                }
-            }
-
-            if (closestDistance <= Range)
-            {
-                Direction = closestEnemy.transform.position - (Vector3)transform.position;
-                Detected = true;
+                joystickMoveScript.DisableFlip();
             }
             else
             {
-                Detected = false;
-                CorrectCharacterFlip();
+                joystickMoveScript.EnableFlip();
             }
 
-            if (Detected)
+            if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
             {
-                Vector3 direction = closestEnemy.transform.position - weapon.transform.position;
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-                Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-                weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-                float currentAngle = weapon.transform.eulerAngles.z;
-                if (currentAngle > 180) currentAngle -= 360;  // Normalize the angle
-
-                // Flip only if cooldown has passed
-                if (Time.time - lastFlipTime > flipCooldown)
+                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                if (enemies.Length == 0)
                 {
-                    if (Mathf.Abs(currentAngle) > 90 && !flipped)
+                    Detected = false;
+                    CorrectCharacterFlip();
+                    return;
+                }
+
+                GameObject closestEnemy = null;
+                float closestDistance = float.MaxValue;
+
+                foreach (GameObject enemy in enemies)
+                {
+                    float distance = Vector2.Distance(joystickMoveScript.transform.position, enemy.transform.position);
+                    if (distance < closestDistance)
                     {
-                        flipped = true;
-                        FlipCharacter();
-                        lastFlipTime = Time.time;  // Update last flip time
+                        closestEnemy = enemy;
+                        closestDistance = distance;
                     }
-                    else if (Mathf.Abs(currentAngle) <= 90 && flipped)
+                }
+
+                if (closestDistance <= Range)
+                {
+                    Direction = closestEnemy.transform.position - (Vector3)transform.position;
+                    Detected = true;
+                }
+                else
+                {
+                    Detected = false;
+                    CorrectCharacterFlip();
+                }
+
+                if (Detected)
+                {
+                    Vector3 direction = closestEnemy.transform.position - weapon.transform.position;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+                    Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                    weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+                    float currentAngle = weapon.transform.eulerAngles.z;
+                    if (currentAngle > 180) currentAngle -= 360;  // Normalize the angle
+
+                    // Flip only if cooldown has passed
+                    if (Time.time - lastFlipTime > flipCooldown)
                     {
-                        flipped = false;
-                        UnflipCharacter();
-                        lastFlipTime = Time.time;  // Update last flip time
+                        if (Mathf.Abs(currentAngle) > 90 && !flipped)
+                        {
+                            flipped = true;
+                            FlipCharacter();
+                            lastFlipTime = Time.time;  // Update last flip time
+                        }
+                        else if (Mathf.Abs(currentAngle) <= 90 && flipped)
+                        {
+                            flipped = false;
+                            UnflipCharacter();
+                            lastFlipTime = Time.time;  // Update last flip time
+                        }
                     }
                 }
             }
-        }
 
-        if (attackAction.ReadValue<float>() > 0)
-        {
-            if (Time.time >= nextAttackTime)
+            if (attackAction.ReadValue<float>() > 0)
             {
-                Attack();
-                nextAttackTime = Time.time + attackRate;
+                if (Time.time >= nextAttackTime)
+                {
+                    Attack();
+                    nextAttackTime = Time.time + attackRate;
+                }
             }
         }
     }

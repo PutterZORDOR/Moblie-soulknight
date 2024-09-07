@@ -9,7 +9,7 @@ public class DetectDropWeapon : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("Unequip"))
+            if (collider.CompareTag("UnEquipped"))
             {
                 collider.gameObject.SetActive(false);
             }

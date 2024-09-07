@@ -668,19 +668,27 @@ MonoBehaviour:
   joystickMoveScript: {fileID: 0}
   attackAction:
     m_Name: Attack
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 2
+    m_ExpectedControlType: Button
     m_Id: a106dd60-0d8d-4ad0-990a-a8a90182ca33
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2447af37-7a28-439d-b7a7-ff6d84174c70
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Attack
+      m_Flags: 0
     m_Flags: 0
   attackRate: 0.2
   nextAttackTime: 0
   flipCooldown: 0.5
+  isInWeaponSlot: 0
   Bullet: {fileID: 0}
   SetBulletLifeTime: 0
-  isInWeaponSlot: 0
 --- !u!61 &5896996993000095481
 BoxCollider2D:
   m_ObjectHideFlags: 0
