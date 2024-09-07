@@ -117,9 +117,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 25
+        y: 7
         width: 96
-        height: 93
+        height: 111
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,9 +138,361 @@ TextureImporter:
       name: Prison Gate-with wall-18 frames-no-background_1
       rect:
         serializedVersion: 2
-        x: 1535
+        x: 1536
         y: 8
-        width: 97
+        width: 96
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7897170ad32a4624e8eb5d231238de35
+      internalID: -605247743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169baca4fd8c6c044ad8eb441f365bcd
+      internalID: 254515239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e90be931f7c4b8489d214f8a05acfb0
+      internalID: -663714655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f4dfd8eea15a04cb3608641f8f5a98
+      internalID: 880533390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c2611a89c9d154098b03b19aa10cfd
+      internalID: -1714450304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9a44582828a0d48b2e91a601463523
+      internalID: 959474731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_7
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adca07d99431e0428d24cc353a118c6
+      internalID: -1214315980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_8
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812e775d197373349b0d4fe2fdf0384a
+      internalID: -330899613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1badd20429ac4b42a1da03ca1b4a4b3
+      internalID: -2119972785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_10
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88cebc8e9bee1742ac2e27de3570995
+      internalID: -148422037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c10eb93b2a4c448842cd7138af692c
+      internalID: 1685793405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_12
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf8c64b09d4c044f96cc03aaf3c4fdd
+      internalID: -84355779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_13
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80571849408aef644abf583bb897b178
+      internalID: 2032634995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_14
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d54777a8100a9d499570c922e6c60d4
+      internalID: -1871070590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_15
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc066667129b454cb4b55a0579a692d
+      internalID: -1293631718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_16
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 7
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13749cd77f132e3418a4383f41a27cd3
+      internalID: -689447245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prison Gate-with wall-18 frames-no-background_17
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 8
+        width: 96
         height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,8 +502,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7897170ad32a4624e8eb5d231238de35
-      internalID: -605247743
+      spriteID: 05cd6ec29b09d5046bb06dcda94bde66
+      internalID: -1426589347
       vertices: []
       indices: 
       edges: []
@@ -169,6 +521,22 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Prison Gate-with wall-18 frames-no-background_1: -605247743
+      Prison Gate-with wall-18 frames-no-background_10: -148422037
+      Prison Gate-with wall-18 frames-no-background_11: 1685793405
+      Prison Gate-with wall-18 frames-no-background_12: -84355779
+      Prison Gate-with wall-18 frames-no-background_13: 2032634995
+      Prison Gate-with wall-18 frames-no-background_14: -1871070590
+      Prison Gate-with wall-18 frames-no-background_15: -1293631718
+      Prison Gate-with wall-18 frames-no-background_16: -689447245
+      Prison Gate-with wall-18 frames-no-background_17: -1426589347
+      Prison Gate-with wall-18 frames-no-background_2: 254515239
+      Prison Gate-with wall-18 frames-no-background_3: -663714655
+      Prison Gate-with wall-18 frames-no-background_4: 880533390
+      Prison Gate-with wall-18 frames-no-background_5: -1714450304
+      Prison Gate-with wall-18 frames-no-background_6: 959474731
+      Prison Gate-with wall-18 frames-no-background_7: -1214315980
+      Prison Gate-with wall-18 frames-no-background_8: -330899613
+      Prison Gate-with wall-18 frames-no-background_9: -2119972785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

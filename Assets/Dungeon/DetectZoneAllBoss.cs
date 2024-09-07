@@ -92,8 +92,12 @@ public class DetectZoneAllBoss : MonoBehaviour
                 }
             }else if(distance <= DungeonSystem.instance.detectionRadius && CanSpawnEnermy && Level == 15)
             {
-
+                Animator doorAnim = BossDoor.GetComponentInChildren<Animator>();
+                Collider2D colDoor = BossDoor.GetComponent<Collider2D>();
+                colDoor.enabled = true;
+                doorAnim.Play("DoorClose");
             }
+
             if (Level == 5 || Level == 10)
             {
                 DungeonSystem.instance.AllBossStatus = true;
