@@ -713,6 +713,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6711505672761894480, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 111619615}
+    - target: {fileID: 6711505672761894480, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
+      propertyPath: moveSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8122604826291875688, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
       propertyPath: m_Name
       value: MaguGenki
@@ -732,11 +740,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2378912381428712909, guid: 4b8f164783e898a4cbd182a6df9c3f6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0481291
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 2378912381428712909, guid: 4b8f164783e898a4cbd182a6df9c3f6f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18677932
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 2378912381428712909, guid: 4b8f164783e898a4cbd182a6df9c3f6f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -791,10 +799,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5549271126016155422, guid: 271db927c959c9241b57e0e34d91685d, type: 3}
-      propertyPath: poolSize
-      value: 600
-      objectReference: {fileID: 0}
     - target: {fileID: 6047382974645485888, guid: 271db927c959c9241b57e0e34d91685d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0481291
@@ -838,6 +842,10 @@ PrefabInstance:
     - target: {fileID: 8532744669036452733, guid: 271db927c959c9241b57e0e34d91685d, type: 3}
       propertyPath: m_Name
       value: SageBulletPool
+      objectReference: {fileID: 0}
+    - target: {fileID: 8532744669036452733, guid: 271db927c959c9241b57e0e34d91685d, type: 3}
+      propertyPath: m_TagString
+      value: BulletPool
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
