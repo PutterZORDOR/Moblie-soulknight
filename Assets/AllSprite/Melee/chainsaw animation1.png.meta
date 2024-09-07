@@ -145,7 +145,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chainsaw animation1_0: 496439655958886477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
