@@ -220,4 +220,4 @@ MonoBehaviour:
   patternSwitchMaxDuration: 10
   attackRange: 1
   summonInterval: 15
-  meteorPool: {fileID: 0}
+  meteorPool: {fileID: 1618731384201343382, guid: 4b8f164783e898a4cbd182a6df9c3f6f, type: 3}

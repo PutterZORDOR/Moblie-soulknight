@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6415503593783218235}
   - component: {fileID: 7525820705651637788}
   - component: {fileID: 939855229981366878}
+  - component: {fileID: 763759807307662534}
   m_Layer: 0
   m_Name: MagicOrb
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 13
-  m_Sprite: {fileID: 4239604052765588023, guid: 433dcd8a7f241d840889f6862357d032, type: 3}
+  m_Sprite: {fileID: 822735027703761384, guid: 2c287647d3725d644bf34a630f59dcaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -165,3 +166,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebee3c3fa97458449a8a67def4dbae46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &763759807307662534
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690261343936255321}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1fa5362864cb8744a8f1b4f776c88277, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

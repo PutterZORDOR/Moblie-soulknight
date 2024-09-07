@@ -185,7 +185,7 @@ MonoBehaviour:
   health: 200
   damage: 0
   healthBarPrefab: {fileID: 5775287755028678762, guid: 775f8110fcd9d5340b9f7726494df121, type: 3}
-  bulletPool: {fileID: 0}
+  bulletPool: {fileID: 5549271126016155422, guid: 271db927c959c9241b57e0e34d91685d, type: 3}
   spiralBulletCount: 50
   spiralRotationSpeed: 200
   spiralOffset: 175

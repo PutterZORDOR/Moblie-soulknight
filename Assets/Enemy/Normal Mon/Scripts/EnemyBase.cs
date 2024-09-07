@@ -5,6 +5,7 @@ public abstract class EnemyBase : MonoBehaviour
     protected Transform player;
     public float detectionRange = 10f;
     public float moveSpeed;
+    public bool playerDetected;
 
     public int maxHealth = 100; // Maximum health for the enemy
     protected int currentHealth; // Current health of the enemy
@@ -27,6 +28,11 @@ public abstract class EnemyBase : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) <= detectionRange)
         {
             OnPlayerDetected();
+            playerDetected = true;
+        }
+        else
+        {
+            playerDetected = false;
         }
     }
 

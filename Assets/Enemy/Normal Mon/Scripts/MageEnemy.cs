@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MageEnemy : EnemyBase
 {
@@ -8,12 +8,14 @@ public class MageEnemy : EnemyBase
     public float orbSpeed = 5f; // Speed of the homing orb
     public float orbLifetime = 10f; // Lifetime of the orb
     public int orbDamage = 30;
+    public Animator anim;
 
     private float lastSummonTime;
 
     protected override void Start()
     {
         base.Start();
+        anim = GetComponent<Animator>();
         moveSpeed = 1.5f; // Mage moves slower but has powerful magic attacks
     }
 
@@ -29,11 +31,19 @@ public class MageEnemy : EnemyBase
 
     protected override void OnPlayerDetected()
     {
-        MoveTowardsPlayer(); // Optionally move towards the player if needed
+        if (playerDetected)
+        {
+            MoveTowardsPlayer();
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
     }
 
     private void SummonMagicOrb()
     {
+        anim.SetTrigger("Attack");
         GameObject orb = Instantiate(magicOrbPrefab, firePoint.position, Quaternion.identity);
         HomingOrb homingOrbScript = orb.GetComponent<HomingOrb>();
 
@@ -50,8 +60,20 @@ public class MageEnemy : EnemyBase
 
     private void MoveTowardsPlayer()
     {
-        // Mage can optionally move towards the player if needed
         Vector2 direction = (player.position - transform.position).normalized;
-        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        Vector2 newPosition = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+
+        // เช็คว่าตำแหน่งใหม่แตกต่างจากตำแหน่งปัจจุบันหรือไม่
+        if (newPosition != (Vector2)transform.position)
+        {
+            anim.SetBool("isWalking", true); // เล่นแอนิเมชันเดิน
+        }
+        else
+        {
+            anim.SetBool("isWalking", false); // หยุดแอนิเมชันเดิน
+        }
+
+        transform.position = newPosition;
+
     }
 }

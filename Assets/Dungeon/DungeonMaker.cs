@@ -84,7 +84,7 @@ public class DungeonMaker : MonoBehaviour
     {
         GameObject BossRoom = Instantiate(BossRoomrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
         _player.transform.position = BossRoom.transform.position;
-        CloseUI();
+        Invoke("CloseUI", 1f);
     }
 
     public void CreateFirstRoom()

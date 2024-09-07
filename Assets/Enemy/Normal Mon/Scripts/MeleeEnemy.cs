@@ -16,7 +16,7 @@ public class MeleeEnemy : EnemyBase
     // Individual stats for the melee enemy
     public int meleeHealth = 100; // Health of the melee enemy
     public int meleeDamage = 10; // Damage dealt by the melee enemy
-    public float meleeSpeed = 5f; // Speed of the melee enemy
+    public float meleeSpeed = 1f; // Speed of the melee enemy
 
     protected override void Start()
     {
