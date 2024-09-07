@@ -242,8 +242,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootTable:
     list:
-    - itemData: {fileID: 11400000, guid: 624ba89551c6850429eacf7231fcc7ae, type: 2}
-      weight: 100
+    - itemData: {fileID: 11400000, guid: d12ffb448f6bb094cb78fe41c6b1c816, type: 2}
+      weight: 50
+    - itemData: {fileID: 11400000, guid: 36b515d4f18e87142a7ae913934a4a88, type: 2}
+      weight: 30
+    - itemData: {fileID: 11400000, guid: 16b13e164b5a2b64996542482339097a, type: 2}
+      weight: 30
+    - itemData: {fileID: 11400000, guid: 0572360c1af53164c80a2df5f65d2f3d, type: 2}
+      weight: 30
+    - itemData: {fileID: 11400000, guid: cfeb1c16479517a40b726e721764d2c2, type: 2}
+      weight: 15
+    - itemData: {fileID: 11400000, guid: 0349f41ea7e236c4da1543305f7ead66, type: 2}
+      weight: 15
+    - itemData: {fileID: 11400000, guid: e1e815ae0bf533e48b6e08a186bb78fd, type: 2}
+      weight: 4
+    - itemData: {fileID: 11400000, guid: e7234e19205014344a2a24c4d896550a, type: 2}
+      weight: 15
+    - itemData: {fileID: 11400000, guid: 0955dad2a0b871c42b4c43b5b81e4d63, type: 2}
+      weight: 1
+    - itemData: {fileID: 11400000, guid: 7ac502b27a0478240b685431a6e42d59, type: 2}
+      weight: 1
+    - itemData: {fileID: 11400000, guid: 5858f723fbd73f54cad76c19cae163fc, type: 2}
+      weight: 4
   itemHolder: {fileID: 0}
   CanOpen: 1
   detectionRadius: 1
