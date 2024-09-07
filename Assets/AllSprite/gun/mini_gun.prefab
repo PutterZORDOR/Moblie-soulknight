@@ -102,12 +102,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  Range: 0
+  Range: 5
   Detected: 0
-  weapon: {fileID: 0}
+  weapon: {fileID: 6196567433308760896}
   rotationSpeed: 5
   AttackPoint: {fileID: 0}
-  Force: 0
+  Force: 750
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
@@ -122,8 +122,8 @@ MonoBehaviour:
     m_Flags: 0
   attackRate: 0.2
   nextAttackTime: 0
-  Bullet: {fileID: 0}
-  SetBulletLifeTime: 0
+  Bullet: {fileID: 6379072185221663181, guid: 288a56f1e3598bc46aa542ed6ed21f33, type: 3}
+  SetBulletLifeTime: 5
   isInWeaponSlot: 0
 --- !u!61 &6855627457069137517
 BoxCollider2D:
