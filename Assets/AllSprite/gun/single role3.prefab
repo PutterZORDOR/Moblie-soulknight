@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3467315656446966103
+--- !u!1 &8364218688031570338
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6008734824914243690}
-  - component: {fileID: 1683497859680886431}
-  - component: {fileID: 4217400246874071392}
-  m_Layer: 8
-  m_Name: gun 1
+  - component: {fileID: 1128244342145571439}
+  - component: {fileID: 608036367020656223}
+  - component: {fileID: 7459638576947491405}
+  m_Layer: 0
+  m_Name: single role3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6008734824914243690
+--- !u!4 &1128244342145571439
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3467315656446966103}
+  m_GameObject: {fileID: 8364218688031570338}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1683497859680886431
+--- !u!212 &608036367020656223
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3467315656446966103}
+  m_GameObject: {fileID: 8364218688031570338}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,58 +77,30 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0dcf95e6025393c4e9ec03d40383836f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64cc1ec128e674341b53221f8b9016ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4217400246874071392
+--- !u!114 &7459638576947491405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3467315656446966103}
+  m_GameObject: {fileID: 8364218688031570338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16be5bd0930aac24d882fe94f5d8629d, type: 3}
+  m_Script: {fileID: 11500000, guid: 704cb5c688e703e459ec49d3203b6e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
-  Range: 5
-  Detected: 0
-  weapon: {fileID: 3467315656446966103}
-  rotationSpeed: 5
-  AttackPoint: {fileID: 5956658456095916509, guid: bdf93aadad01d8f4184cba620133b3a0, type: 3}
-  Force: 700
-  flipped: 0
-  characterTransform: {fileID: 1453499501085069286, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
-  joystickMoveScript: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
-  attackAction:
-    m_Name: Attack
-    m_Type: 2
-    m_ExpectedControlType: Button
-    m_Id: 42c8862c-f79b-4f1a-87d0-f8efed7f048c
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: cd789f52-5501-48ec-8b33-caab8d4861af
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Attack
-      m_Flags: 0
-    m_Flags: 0
-  attackRate: 0.8
-  nextAttackTime: 0
-  Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
-  SetBulletLifeTime: 5
-  isInWeaponSlot: 0
+  direction: {x: 0, y: 0, z: 0}
+  damage: 0
+  speed: 0
+  lifetime: 0

@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,28 +102,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  Range: 0
+  Range: 5
   Detected: 0
-  weapon: {fileID: 0}
+  weapon: {fileID: 7997673220192353492}
   rotationSpeed: 5
   AttackPoint: {fileID: 0}
-  Force: 0
+  Force: 1000
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
   attackAction:
     m_Name: Attack
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 2
+    m_ExpectedControlType: Button
     m_Id: 1d82d78f-5efc-40fb-bf0d-bca3e910b3e9
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 83ac7c59-900c-466b-9df0-cbff1e9a55e9
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Attack
+      m_Flags: 0
     m_Flags: 0
-  attackRate: 0.2
+  attackRate: 0.5
   nextAttackTime: 0
-  Bullet: {fileID: 0}
-  SetBulletLifeTime: 0
+  Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
+  SetBulletLifeTime: 5
   isInWeaponSlot: 0
 --- !u!61 &3761055818909386613
 BoxCollider2D:

@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -148,15 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  Range: 0
+  Range: 5
   Detected: 0
-  weapon: {fileID: 0}
+  weapon: {fileID: 7138686051416349053}
   rotationSpeed: 5
-  AttackPoint: {fileID: 0}
-  Force: 0
+  AttackPoint: {fileID: 5956658456095916509, guid: bdf93aadad01d8f4184cba620133b3a0, type: 3}
+  Force: 1000
   flipped: 0
-  characterTransform: {fileID: 0}
-  joystickMoveScript: {fileID: 0}
+  characterTransform: {fileID: 1453499501085069286, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
+  joystickMoveScript: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
   attackAction:
     m_Name: Attack
     m_Type: 0
@@ -166,10 +166,11 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  attackRate: 0.2
+  attackRate: 0.6
   nextAttackTime: 0
-  Bullet: {fileID: 0}
+  Bullet: {fileID: 8364218688031570338, guid: e9013285eecbabe4f86d25cab0885555, type: 3}
   fireRate: 0.1
   bulletsPerRound: 3
   burstDelay: 0.05
   isInWeaponSlot: 0
+  SetBulletLifeTime: 0
