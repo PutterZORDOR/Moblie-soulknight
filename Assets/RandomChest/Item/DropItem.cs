@@ -39,7 +39,7 @@ public class DropItem : MonoBehaviour
         textAtkSpeed = Pannel.transform.Find("textAtkSpeed_Weapon")?.GetComponentInChildren<TextMeshProUGUI>();
         text = UI_Getitem.GetComponentInChildren<TextMeshProUGUI>();
         GetButton.SetActive(false);
-        if (gameObject.name == "Pistol(Clone)")
+        if (gameObject.name == "gun 1(Clone)")
         {
             this.enabled = false;
             UI_Getitem.SetActive(false);
