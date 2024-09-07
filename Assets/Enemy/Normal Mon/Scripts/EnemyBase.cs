@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
@@ -9,6 +9,8 @@ public abstract class EnemyBase : MonoBehaviour
 
     public int maxHealth = 100; // Maximum health for the enemy
     protected int currentHealth; // Current health of the enemy
+
+    private bool facingRight = true; // ตัวแปรเพื่อเช็คว่าศัตรูกำลังหันหน้าไปทางขวาหรือไม่
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -28,6 +30,7 @@ public abstract class EnemyBase : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) <= detectionRange)
         {
             OnPlayerDetected();
+            FlipTowardsPlayer(); // เพิ่มการ Flip ตามทิศทางผู้เล่น
             playerDetected = true;
         }
         else
@@ -56,5 +59,20 @@ public abstract class EnemyBase : MonoBehaviour
     {
         Debug.Log($"{gameObject.name} defeated!");
         Destroy(gameObject); // Destroy the enemy game object
+    }
+
+    // ฟังก์ชันสำหรับ Flip ศัตรูไปทางผู้เล่น
+    protected void FlipTowardsPlayer()
+    {
+        // เช็คว่าผู้เล่นอยู่ทางซ้ายหรือทางขวาของศัตรู
+        if ((player.position.x < transform.position.x && facingRight) ||
+            (player.position.x > transform.position.x && !facingRight))
+        {
+            // พลิกตัวศัตรู
+            facingRight = !facingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1; // เปลี่ยนทิศทางการหันหน้า
+            transform.localScale = localScale;
+        }
     }
 }

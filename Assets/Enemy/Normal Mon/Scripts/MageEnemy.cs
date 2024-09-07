@@ -11,6 +11,7 @@ public class MageEnemy : EnemyBase
     public Animator anim;
 
     private float lastSummonTime;
+    private bool isAttacking = false; // ตัวแปรสำหรับเช็คสถานะการโจมตี
 
     protected override void Start()
     {
@@ -22,6 +23,15 @@ public class MageEnemy : EnemyBase
     protected override void Update()
     {
         base.Update();
+
+        // ถ้าโจมตีอยู่ ให้หยุดเคลื่อนไหว
+        if (isAttacking)
+        {
+            anim.SetBool("isWalking", false); // หยุดแอนิเมชันการเดินขณะโจมตี
+            return; // ออกจากฟังก์ชัน Update เพื่อหยุดการเคลื่อนไหว
+        }
+
+        // ตรวจสอบว่าเวลาที่จะเรียกใช้งาน Magic Orb ถึงหรือยัง
         if (Time.time >= lastSummonTime + summonCooldown)
         {
             SummonMagicOrb();
@@ -31,19 +41,23 @@ public class MageEnemy : EnemyBase
 
     protected override void OnPlayerDetected()
     {
-        if (playerDetected)
+        if (playerDetected && !isAttacking) // ถ้าผู้เล่นถูกตรวจจับและไม่ได้โจมตี
         {
-            MoveTowardsPlayer();
+            MoveTowardsPlayer(); // เคลื่อนที่ไปหาผู้เล่น
         }
         else
         {
-            anim.SetBool("isWalking", false);
+            anim.SetBool("isWalking", false); // หยุดการเคลื่อนไหวถ้าไม่เจอผู้เล่น
         }
     }
 
     private void SummonMagicOrb()
     {
-        anim.SetTrigger("Attack");
+        isAttacking = true; // กำลังโจมตีอยู่
+
+        anim.SetTrigger("Attack"); // เล่นแอนิเมชันโจมตี
+
+        // สร้างลูกไฟ
         GameObject orb = Instantiate(magicOrbPrefab, firePoint.position, Quaternion.identity);
         HomingOrb homingOrbScript = orb.GetComponent<HomingOrb>();
 
@@ -52,10 +66,16 @@ public class MageEnemy : EnemyBase
             homingOrbScript.SetTarget(player);
             homingOrbScript.SetSpeed(orbSpeed);
             homingOrbScript.SetDamage(orbDamage);
-            Destroy(orb, orbLifetime); // Destroy the orb after its lifetime ends
+            Destroy(orb, orbLifetime); // ทำลายลูกไฟหลังจากครบเวลา
         }
 
         Debug.Log("Mage summoned a homing magic orb!");
+    }
+
+    // ฟังก์ชันที่จะถูกเรียกเมื่อแอนิเมชันการโจมตีเสร็จสิ้น
+    public void OnAttackComplete()
+    {
+        isAttacking = false; // การโจมตีเสร็จสิ้นแล้ว
     }
 
     private void MoveTowardsPlayer()
@@ -74,6 +94,5 @@ public class MageEnemy : EnemyBase
         }
 
         transform.position = newPosition;
-
     }
 }
