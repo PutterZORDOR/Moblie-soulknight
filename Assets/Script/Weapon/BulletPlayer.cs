@@ -2,15 +2,32 @@ using UnityEngine;
 
 public class BulletPlayer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float BulletLifeTime;
+    Weapon weapon;
+    public int Damage { get; set; }
     void Start()
     {
-        
+        Destroy(gameObject, BulletLifeTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Enemy"))
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(Damage);
+                Debug.Log("Enemy take damage");
+                Destroy(gameObject);
+            }
+        }
+
+        if (other.CompareTag("Wall"))
+        {
+            Debug.Log("Smash");
+            Destroy(gameObject);
+        }
     }
+
 }
