@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+
 public abstract class Weapon : MonoBehaviour
 {
     public int Damage = 10;
-
     public float Range;
+
     [SerializeField] private bool Detected = false;
     private Vector3 Direction;
     public GameObject weapon;
@@ -21,6 +22,20 @@ public abstract class Weapon : MonoBehaviour
     public float attackRate = 0.2f;
     public float nextAttackTime = 0f;
 
+    protected virtual void Awake()
+    {
+        // Initialize references
+        joystickMoveScript = FindObjectOfType<JoystickMove>();
+        characterTransform = transform;
+
+        // Automatically find weapon and AttackPoint
+        InitializeWeapon();
+    }
+
+    public virtual void InitializeWeapon()
+    {
+        // Default implementation, can be overridden in derived classes
+    }
 
     private void OnEnable()
     {
@@ -31,7 +46,8 @@ public abstract class Weapon : MonoBehaviour
     {
         attackAction.Disable();
     }
-    void Update()
+
+    private void Update()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
@@ -94,6 +110,7 @@ public abstract class Weapon : MonoBehaviour
                 UnflipCharacter();
             }
         }
+
         if (attackAction.ReadValue<float>() > 0)
         {
             if (Time.time >= nextAttackTime)
@@ -111,10 +128,9 @@ public abstract class Weapon : MonoBehaviour
         if (characterTransform != null)
         {
             Vector3 scale = characterTransform.localScale;
-            // Flip to the left by setting x to -1 if it is currently 1
             if (scale.x < 0)
             {
-                scale.x = -1;
+                scale.x = 1;
                 characterTransform.localScale = scale;
             }
         }
@@ -125,10 +141,9 @@ public abstract class Weapon : MonoBehaviour
         if (characterTransform != null)
         {
             Vector3 scale = characterTransform.localScale;
-            // Unflip back to the right by setting x to 1 if it is currently -1
             if (scale.x > 0)
             {
-                scale.x = 1;
+                scale.x = -1;
                 characterTransform.localScale = scale;
             }
         }
@@ -136,7 +151,6 @@ public abstract class Weapon : MonoBehaviour
 
     private void CorrectCharacterFlip()
     {
-        // Ensure the character is facing the right direction based on its movement.
         joystickMoveScript.FlipCharacterBasedOnDirection();
     }
 

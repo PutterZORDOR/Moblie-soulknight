@@ -5,6 +5,7 @@ public class Gun : Weapon
     public GameObject Bullet;
     public float SetBulletLifeTime;
     public bool isInWeaponSlot = false;
+
     protected override void Attack()
     {
         Debug.Log("Attack method called");

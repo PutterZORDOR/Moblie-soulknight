@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6008734824914243690}
   - component: {fileID: 1683497859680886431}
+  - component: {fileID: 4217400246874071392}
   m_Layer: 0
   m_Name: gun 1
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,3 +88,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4217400246874071392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3467315656446966103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16be5bd0930aac24d882fe94f5d8629d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 10
+  Range: 0
+  Detected: 0
+  weapon: {fileID: 3467315656446966103}
+  rotationSpeed: 5
+  AttackPoint: {fileID: 0}
+  Force: 0
+  flipped: 0
+  characterTransform: {fileID: 0}
+  joystickMoveScript: {fileID: 0}
+  attackAction:
+    m_Name: Attack
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 42c8862c-f79b-4f1a-87d0-f8efed7f048c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  attackRate: 0.2
+  nextAttackTime: 0
+  Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
+  SetBulletLifeTime: 0
+  isInWeaponSlot: 0
