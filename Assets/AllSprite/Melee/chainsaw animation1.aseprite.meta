@@ -134,7 +134,7 @@ ScriptedImporter:
       y: 69
       width: 26
       height: 31
-    spriteID: b03d77322b99d684ab4635d9dfb46730
+    spriteID: 53a59c662a1aadd439e6901773ed4790
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -155,7 +155,7 @@ ScriptedImporter:
       y: 4
       width: 36
       height: 26
-    spriteID: 835fa16797197cb40892a0f71fcc6302
+    spriteID: 1f0b7a2fd3e00a7469157a6dd69ca787
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -176,7 +176,7 @@ ScriptedImporter:
       y: 38
       width: 36
       height: 23
-    spriteID: cf39ba3168c34de4597a81191452bb8f
+    spriteID: 059cbebfd3ca2bb448e6283b2e0b463a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -202,7 +202,7 @@ ScriptedImporter:
         y: 0
         width: 60
         height: 60
-      spriteId: b03d77322b99d684ab4635d9dfb46730
+      spriteId: 53a59c662a1aadd439e6901773ed4790
     - name: chainsaw animation1_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -211,7 +211,7 @@ ScriptedImporter:
         y: 0
         width: 60
         height: 60
-      spriteId: 835fa16797197cb40892a0f71fcc6302
+      spriteId: 1f0b7a2fd3e00a7469157a6dd69ca787
     - name: chainsaw animation1_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -220,7 +220,7 @@ ScriptedImporter:
         y: 0
         width: 60
         height: 60
-      spriteId: cf39ba3168c34de4597a81191452bb8f
+      spriteId: 059cbebfd3ca2bb448e6283b2e0b463a
     linkedCells: []
     parentIndex: -1
   platformSettings: []

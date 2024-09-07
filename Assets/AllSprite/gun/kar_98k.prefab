@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6028693558081511652}
   - component: {fileID: 3130465143144541861}
   - component: {fileID: 3761055818909386613}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: kar_98k
   m_TagString: Untagged
   m_Icon: {fileID: 0}

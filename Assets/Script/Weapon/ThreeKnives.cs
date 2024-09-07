@@ -18,7 +18,7 @@ public class ThreeKnives : Weapon
             Vector2 shootDirection = rotation * weapon.transform.right;
             knife.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
 
-            knife.GetComponent<Bullet>().BulletLifeTime = SetBulletLifeTime;
+            knife.GetComponent<Bullet>().lifetime = SetBulletLifeTime;
         }
     }
 }

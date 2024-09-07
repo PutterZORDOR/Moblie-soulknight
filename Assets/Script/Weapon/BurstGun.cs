@@ -8,6 +8,7 @@ public class BurstGun : Weapon
     public int bulletsPerRound = 3; // จำนวนกระสุนต่อรอบการโจมตี
     public float burstDelay = 0.05f; // หน่วงเวลาเล็กน้อยระหว่างการยิงแต่ละกระสุน
     public bool isInWeaponSlot = false;
+    public float SetBulletLifeTime;
     protected override void Attack()
     {
         if (Time.time >= nextFireTime)
@@ -24,6 +25,7 @@ public class BurstGun : Weapon
             GameObject BulletIns = Instantiate(Bullet, AttackPoint.position, weapon.transform.rotation);
             Vector2 shootDirection = weapon.transform.right;
             BulletIns.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
+            BulletIns.GetComponent<Bullet>().lifetime = SetBulletLifeTime;
             yield return new WaitForSeconds(burstDelay);
         }
     }
