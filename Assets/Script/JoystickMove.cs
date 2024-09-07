@@ -5,6 +5,7 @@ public class JoystickMove : MonoBehaviour
     public Joystick movementJoystick;
     public float playerSpeed = 5f;
     private Rigidbody2D rb;
+    private Animator PlayerAnim;
     public bool isRight = true;
 
     public Transform weaponTransform;
@@ -18,6 +19,7 @@ public class JoystickMove : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        PlayerAnim = GetComponent<Animator>(); // Initialize Animator
     }
 
     private void Update()
@@ -45,11 +47,15 @@ public class JoystickMove : MonoBehaviour
         if (direction.x > 0 && !isRight)
         {
             Flip();
+            PlayerAnim.SetBool("isLeft", true);
         }
         else if (direction.x < 0 && isRight)
         {
             Flip();
+            PlayerAnim.SetBool("isRight", true);
         }
+
+
     }
 
     private void Flip()
@@ -76,19 +82,11 @@ public class JoystickMove : MonoBehaviour
     {
         if (weaponTransform.gameObject.layer == LayerMask.NameToLayer("Gun"))
         {
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            foreach (GameObject enemy in enemies)
-            {
-                float distance = Vector2.Distance(transform.position, enemy.transform.position);
-                if (distance <= detectionRange)
-                {
-                    return true;
-                }
-            }
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, detectionRange, LayerMask.GetMask("Enemy"));
+            return hitColliders.Length > 0;
         }
         return false;
     }
-
 
     public void DisableFlip()
     {
@@ -102,7 +100,6 @@ public class JoystickMove : MonoBehaviour
 
     public void FlipCharacterBasedOnDirection()
     {
-        // Ensure the character faces the direction based on movement.
         FlipCharacter(movementJoystick.Direction);
     }
 
