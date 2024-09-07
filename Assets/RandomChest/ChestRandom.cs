@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ChestRandom : MonoBehaviour
 {
@@ -12,11 +13,13 @@ public class ChestRandom : MonoBehaviour
     public GameObject This_Item;
     public GameObject UI_Getitem;
     private Vector3 sizeItem;
+    public Animator anim;
     Weapon_Item item;
     DropItem drop;
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         playerLayer = LayerMask.GetMask("Player");
         itemHolder = transform.Find("Item_Holder");
         GetButton = transform.Find("Get_Button").gameObject;
@@ -37,12 +40,20 @@ public class ChestRandom : MonoBehaviour
         if (CanOpen)
         {
             Debug.Log("open");
+            anim.Play("OpenChest");
             CanOpen = false;
             UI_Getitem.SetActive(false);
             GetButton.SetActive(false);
-            ShowItem();
-            this.enabled = false;
+            StartCoroutine(WaitForAnimation());
         }
+    }
+    private IEnumerator WaitForAnimation()
+    {
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        yield return new WaitForSeconds(stateInfo.length);
+
+        ShowItem();
+        this.enabled = false;
     }
     bool IsPlayerInRange()
     {
@@ -71,7 +82,7 @@ public class ChestRandom : MonoBehaviour
         
 
         sizeItem = item.gamePrefab.transform.localScale;
-        This_Item.transform.localScale = sizeItem * 2.5f;
+        This_Item.transform.localScale = sizeItem *0.5f;
 
     }
     private void SetItemData()
