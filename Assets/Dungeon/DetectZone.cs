@@ -17,7 +17,10 @@ public class DetectZone : MonoBehaviour
     public Room _currentRoom;
     public bool CanSpawnEnermy = true;
     public bool CanDestroy;
-    public Collider2D colDoor;
+    public Collider2D colDoor1;
+    public Collider2D colDoor2;
+    public Collider2D colDoor3;
+    public Collider2D colDoor4;
 
     private void Start()
     {
@@ -46,29 +49,33 @@ public class DetectZone : MonoBehaviour
                     if (_currentRoom.door[i] != null)
                     {
                         Animator doorAnim = _currentRoom.door[i].GetComponentInChildren<Animator>();
-                        colDoor = _currentRoom.door[i].GetComponentInChildren<Collider2D>();
+                        Collider2D colDoor = _currentRoom.door[i].GetComponentInChildren<Collider2D>();
 
                         switch (i)
                         {
                             case 0:
                                 doorAnim1 = doorAnim;
+                                colDoor1 = colDoor;
                                 doorAnim1.Play("DoorClose");
-                                colDoor.enabled = true;
+                                colDoor1.enabled = true;
                                 break;
                             case 1:
                                 doorAnim2 = doorAnim;
+                                colDoor2 = colDoor;
                                 doorAnim2.Play("DoorClose");
-                                colDoor.enabled = true;
+                                colDoor2.enabled = true;
                                 break;
                             case 2:
                                 doorAnim3 = doorAnim;
+                                colDoor3 = colDoor;
                                 doorAnim3.Play("DoorClose");
-                                colDoor.enabled = true;
+                                colDoor3.enabled = true;
                                 break;
                             case 3:
                                 doorAnim4 = doorAnim;
+                                colDoor4 = colDoor;
                                 doorAnim4.Play("DoorClose");
-                                colDoor.enabled = true;
+                                colDoor4.enabled = true;
                                 break;
                         }
                     }
@@ -93,22 +100,22 @@ public class DetectZone : MonoBehaviour
                         case 0:
                             doorAnim1 = doorAnim;
                             doorAnim1.Play("DoorOpen");
-                            colDoor.enabled = false;
+                            colDoor1.enabled = false;
                             break;
                         case 1:
                             doorAnim2 = doorAnim;
                             doorAnim2.Play("DoorOpen");
-                            colDoor.enabled = false;
+                            colDoor2.enabled = false;
                             break;
                         case 2:
                             doorAnim3 = doorAnim;
                             doorAnim3.Play("DoorOpen");
-                            colDoor.enabled = false;
+                            colDoor3.enabled = false;
                             break;
                         case 3:
                             doorAnim4 = doorAnim;
                             doorAnim4.Play("DoorOpen");
-                            colDoor.enabled = false;
+                            colDoor4.enabled = false;
                             break;
                     }
                 }
