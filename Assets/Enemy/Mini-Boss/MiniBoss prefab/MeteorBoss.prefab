@@ -214,7 +214,7 @@ MonoBehaviour:
   - {fileID: 3705290102035354588, guid: 670cebd069ace0848bd70c4df09cb5a5, type: 3}
   - {fileID: 4458826238739980880, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
   meteorSpread: 5
-  magmaRadius: 10
+  magmaRadius: 20
   meteorShowerRadius: 8
   patternSwitchMinDuration: 5
   patternSwitchMaxDuration: 10

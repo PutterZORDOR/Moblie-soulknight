@@ -105,14 +105,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 10
   moveSpeed: 5
+  playerDetected: 0
   maxHealth: 100
   attackRange: 1.5
   shootRange: 5
   attackCooldown: 2
-  bulletPrefab: {fileID: 2821098894385701005, guid: a85eafc3e3868f94fbdfe38b25f0e4cb, type: 3}
+  bulletPrefab: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
   shootPoint: {fileID: 9106130898452684678}
   numberOfBullets: 5
   spreadAngle: 15
+  meleeDamage: 20
+  bulletSpeed: 10
+  bulletLifetime: 2
+  bulletDamage: 10
 --- !u!61 &2154010303749236497
 BoxCollider2D:
   m_ObjectHideFlags: 0

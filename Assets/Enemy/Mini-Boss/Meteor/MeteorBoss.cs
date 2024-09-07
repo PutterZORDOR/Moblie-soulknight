@@ -164,7 +164,7 @@ public class MeteorBoss : MiniBoss
         {
             GameObject magmaFloor = Instantiate(magmaFloorPrefab, transform.position, Quaternion.identity);
             // Set the scale of the magma floor to match the desired radius
-            magmaFloor.transform.localScale = new Vector3(magmaRadius, magmaRadius, 5f);
+            magmaFloor.transform.localScale = new Vector3(magmaRadius, magmaRadius, 9f);
 
             Destroy(magmaFloor, bulletLifetime); // Magma floor lasts for the duration of bulletLifetime
         }
