@@ -125,11 +125,14 @@ public abstract class Weapon : MonoBehaviour
     }
 
     protected abstract void Attack();
-
     private void FlipCharacter()
     {
         if (characterTransform != null)
         {
+            // หยุดอนิเมชั่นชั่วคราว
+            Animator animator = characterTransform.GetComponent<Animator>();
+            if (animator != null) animator.enabled = false;
+
             Vector3 scale = characterTransform.localScale;
             if (scale.x < 0)
             {
@@ -137,6 +140,9 @@ public abstract class Weapon : MonoBehaviour
                 characterTransform.localScale = scale;
                 weapon.transform.localScale = scale;
             }
+
+            // เปิดใช้งานอนิเมชั่นอีกครั้ง
+            if (animator != null) animator.enabled = true;
         }
     }
 
@@ -144,6 +150,9 @@ public abstract class Weapon : MonoBehaviour
     {
         if (characterTransform != null)
         {
+            Animator animator = characterTransform.GetComponent<Animator>();
+            if (animator != null) animator.enabled = false;
+
             Vector3 scale = characterTransform.localScale;
             if (scale.x > 0)
             {
@@ -151,6 +160,8 @@ public abstract class Weapon : MonoBehaviour
                 characterTransform.localScale = scale;
                 weapon.transform.localScale = scale;
             }
+
+            if (animator != null) animator.enabled = true;
         }
     }
 
