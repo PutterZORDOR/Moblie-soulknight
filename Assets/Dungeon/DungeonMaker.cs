@@ -66,11 +66,27 @@ public class DungeonMaker : MonoBehaviour
         GIF.SetActive(true);
         _LoadingText.Start();
         Level = DungeonSystem.instance.Level;
-        initialRoomCount = roomCount;
-        rooms = new Room[roomSize.x + 1,roomSize.y + 1];
-        CreateGrid();
-        CreateFirstRoom();
+        if (Level != 15)
+        {
+            initialRoomCount = roomCount;
+            rooms = new Room[roomSize.x + 1, roomSize.y + 1];
+            CreateGrid();
+            CreateFirstRoom();
+        }
+        else
+        {
+            CreateFinalBossRoom();
+        }
+        
     }
+
+    private void CreateFinalBossRoom()
+    {
+        GameObject BossRoom = Instantiate(BossRoomrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        _player.transform.position = BossRoom.transform.position;
+        CloseUI();
+    }
+
     public void CreateFirstRoom()
     {
         if(roomCount <= 0)
@@ -251,10 +267,6 @@ public class DungeonMaker : MonoBehaviour
         }else if((Level == 5 || Level == 10) && roomCount - 1 == 0)
         {
             CreateDetectionZone(rooms[pos.x, pos.y], DectectZoneMiniPrefab);
-        }
-        else if ((Level == 15) && roomCount - 1 == 0)
-        {
-            CreateDetectionZone(rooms[pos.x, pos.y], DectectZoneBossPrefab);
         }else if((randomRoom != 0 && randomRoom != 1) && roomCount - 1 == 0)
         {
             rooms[pos.x, pos.y].Portal = Instantiate(PortalPrefab, rooms[pos.x, pos.y].transform);

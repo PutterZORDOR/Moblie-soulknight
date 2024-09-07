@@ -24,6 +24,12 @@ public class DetectZoneAllBoss : MonoBehaviour
     public Animator doorAnim3;
     public Animator doorAnim4;
 
+    [Header("Spawn Final Boss Point")]
+    public Transform finalBoss;
+
+    [Header("Final Boss Door")]
+    public GameObject BossDoor;
+
     private int Level;
     public Room _currentRoom;
     public bool CanSpawnEnermy = true;
@@ -49,7 +55,7 @@ public class DetectZoneAllBoss : MonoBehaviour
             Vector3 detectZoneCenter = transform.position;
 
             float distance = Vector3.Distance(playerPosition, detectZoneCenter);
-            if (distance <= DungeonSystem.instance.detectionRadius && CanSpawnEnermy)
+            if (distance <= DungeonSystem.instance.detectionRadius && CanSpawnEnermy && Level != 15)
             {
                 CanDestroy = true;
                 for (int i = 0; i < _currentRoom.door.Count; i++)
@@ -84,20 +90,22 @@ public class DetectZoneAllBoss : MonoBehaviour
                         }
                     }
                 }
+            }else if(distance <= DungeonSystem.instance.detectionRadius && CanSpawnEnermy && Level == 15)
+            {
 
-                if (Level == 5 || Level == 10)
-                {
-                    DungeonSystem.instance.AllBossStatus = true;
-                    GameObject Boss = Instantiate(MiniBossPrefab, gameObject.transform.position, Quaternion.identity);
-                }
-                else if (Level == 15)
-                {
-                    DungeonSystem.instance.AllBossStatus = true;
-                    GameObject Boss = Instantiate(BossPrefab, gameObject.transform.position, Quaternion.identity);
-                }
-
-                CanSpawnEnermy = false;
             }
+            if (Level == 5 || Level == 10)
+            {
+                DungeonSystem.instance.AllBossStatus = true;
+                GameObject Boss = Instantiate(MiniBossPrefab, gameObject.transform.position, Quaternion.identity);
+            }
+            else if (Level == 15)
+            {
+                DungeonSystem.instance.AllBossStatus = true;
+                GameObject Boss = Instantiate(BossPrefab, finalBoss.position, Quaternion.identity);
+            }
+
+            CanSpawnEnermy = false;
         }
     }
     private void Update()
