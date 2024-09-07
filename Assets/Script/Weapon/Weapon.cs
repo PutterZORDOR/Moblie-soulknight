@@ -28,10 +28,12 @@ public abstract class Weapon : MonoBehaviour
 
     protected virtual void Awake()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        joystickMoveScript = player.GetComponent<JoystickMove>();
-        AttackPoint = player.transform.Find("Attack_Point");
-        characterTransform = player.transform;
+        // Initialize references
+        joystickMoveScript = FindObjectOfType<JoystickMove>();
+        characterTransform = transform;
+
+        // Automatically find weapon and AttackPoint
+        InitializeWeapon();
     }
 
     public virtual void InitializeWeapon()

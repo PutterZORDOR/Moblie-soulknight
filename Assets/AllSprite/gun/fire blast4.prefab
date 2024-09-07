@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5890501793799959783}
   - component: {fileID: 8717287098354028701}
-  - component: {fileID: 3299285140273019720}
   - component: {fileID: 5850012215420956887}
   - component: {fileID: -3564059657476252929}
+  - component: {fileID: 311825875312164113}
   m_Layer: 0
   m_Name: fire blast4
   m_TagString: Untagged
@@ -90,19 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3299285140273019720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6379072185221663181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee25934ec783bf049a0f8c416bb0c6ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BulletLifeTime: 0
 --- !u!50 &5850012215420956887
 Rigidbody2D:
   serializedVersion: 4
@@ -176,3 +163,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &311825875312164113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6379072185221663181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3125519f0e11c6446a5bd1c1576b097f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletLifeTime: 0
