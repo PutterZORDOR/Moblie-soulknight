@@ -21,6 +21,45 @@ public class MaguGenki : MiniBoss
     private int currentAttackPattern = 0;
     private bool isPatternCooldown = false;
 
+    private Animator anim;
+
+    protected override void Start()
+    {
+        base.Start();
+        moveSpeed = 2f;
+        damage = meleeDamage;
+
+        // Existing code...
+
+        // Add this line to get the Animator component
+        anim = GetComponent<Animator>();
+
+        // Start the attack pattern loop
+        StartCoroutine(SwitchAttackPatterns());
+    }
+
+
+    private void MoveTowardsPlayer()
+    {
+        if (player != null)
+        {
+            // Check if not attacking and should walk
+            if (!isPatternCooldown)
+            {
+                anim.SetBool("isWalking", true);
+                // Move towards the player
+                Vector2 direction = (player.position - transform.position).normalized;
+                transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
+
+                FlipTowardsPlayer(); // Ensure the boss is facing the player
+            }
+            else
+            {
+                anim.SetBool("isWalking", false); // Stop walking during attacks
+            }
+        }
+    }
+
     private void FlipTowardsPlayer()
     {
         if (player != null)
@@ -43,15 +82,25 @@ public class MaguGenki : MiniBoss
     }
 
 
-    protected override void Start()
+    private void Update()
     {
-        base.Start();
-        moveSpeed = 2f; // Adjust this value as needed
-        damage = meleeDamage; // Initial damage for melee attack
+        // If the boss is in cooldown, it should still be able to move toward the player
+        if (!anim.GetBool("isMelee") && !anim.GetBool("isRanged") && !anim.GetBool("isDashing"))
+        {
+            MoveTowardsPlayer(); // Keep moving unless performing a specific attack
+        }
 
-        // Start the attack pattern loop
-        StartCoroutine(SwitchAttackPatterns());
+        if (!isPatternCooldown && !anim.GetBool("isWalking") && !anim.GetBool("isMelee") && !anim.GetBool("isRanged") && !anim.GetBool("isDashing"))
+        {
+            anim.SetBool("isIdle", true); // Default to idle if not walking or attacking
+        }
+        else
+        {
+            anim.SetBool("isIdle", false); // Exit idle when performing other actions
+        }
     }
+
+
 
     protected override void ShootPlayer()
     {
@@ -79,51 +128,35 @@ public class MaguGenki : MiniBoss
     private void MeleeAttack()
     {
         Debug.Log($"{gameObject.name} is performing a melee attack.");
-        // Implement melee attack logic using the sword collider here
-        // Example: Apply melee damage to the player
+        anim.SetTrigger("isMelee");  // Trigger melee animation
+        anim.SetBool("isWalking", false); // Ensure the boss stops walking
     }
+
 
     private IEnumerator RangedAttack()
     {
         Debug.Log($"{gameObject.name} is performing a ranged attack.");
         damage = rangedDamage;
 
+        anim.SetTrigger("isRanged"); // Trigger ranged animation
+        anim.SetBool("isWalking", false); // Ensure the boss stops walking
+
         int slashCount = Random.Range(1, 4);
         for (int i = 0; i < slashCount; i++)
         {
-            // Calculate the direction to the player
             Vector2 direction = (player.position - transform.position).normalized;
-
-            // Calculate the rotation angle to face the player
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-            // Instantiate the sword slash projectile slightly in front of the boss
             Vector3 spawnPosition = transform.position + (Vector3)direction * 0.5f;
             GameObject swordSlash = Instantiate(swordSlashPrefab, spawnPosition, Quaternion.Euler(0, 0, angle));
 
-            // Get the Rigidbody2D component
             Rigidbody2D rb = swordSlash.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                // Apply the direction to the Rigidbody2D velocity
                 rb.velocity = direction * swordSlashSpeed;
-
-                // Debug logs to verify direction
-                Debug.Log($"Sword slash {i + 1} direction: {direction}");
-
-                // Draw a line in the Scene view for visualization
-                Debug.DrawLine(spawnPosition, player.position, Color.red, 2f);
-            }
-            else
-            {
-                Debug.LogError("Rigidbody2D component not found on swordSlashPrefab.");
             }
 
-            // Destroy the sword slash after its lifetime
             Destroy(swordSlash, swordSlashLifetime);
-
-            // Wait before firing the next slash
-            yield return new WaitForSeconds(0.5f); // Adjust the delay between slashes as needed
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
@@ -132,17 +165,19 @@ public class MaguGenki : MiniBoss
     private IEnumerator DashAttack()
     {
         Debug.Log($"{gameObject.name} is charging for a dash attack.");
-        damage = dashDamage; // Set damage for dash attack
+        damage = dashDamage;
 
-        yield return new WaitForSeconds(dashChargeTime); // Charge time before the dash
+        anim.SetTrigger("isDashing"); // Trigger dash animation
+        anim.SetBool("isWalking", false); // Ensure the boss stops walking
 
-        int dashCount = Random.Range(1, 4); // Randomly choose between 1 to 3 dashes
+        yield return new WaitForSeconds(dashChargeTime);
+
+        int dashCount = Random.Range(1, 4);
         for (int i = 0; i < dashCount; i++)
         {
-            FlipTowardsPlayer(); // Ensure the boss faces the player before each dash
-
+            FlipTowardsPlayer();
             Vector2 dashDirection = (player.position - transform.position).normalized;
-            float dashDuration = 0.5f; // Adjust the dash duration as needed
+            float dashDuration = 0.5f;
             float dashEndTime = Time.time + dashDuration;
 
             while (Time.time < dashEndTime)
@@ -151,9 +186,10 @@ public class MaguGenki : MiniBoss
                 yield return null;
             }
 
-            yield return new WaitForSeconds(0.5f); // Pause between each dash
+            yield return new WaitForSeconds(0.5f);
         }
     }
+
 
     private IEnumerator SwitchAttackPatterns()
     {
@@ -177,7 +213,15 @@ public class MaguGenki : MiniBoss
     {
         Debug.Log($"Cooldown for {cooldownDuration} seconds");
         isPatternCooldown = true;
+
+        // Allow the boss to move even during cooldown
+        anim.SetBool("isWalking", true); // Start walking during cooldown if not attacking
+
         yield return new WaitForSeconds(cooldownDuration);
         isPatternCooldown = false;
+
+        // Make sure the boss keeps moving after the cooldown ends
+        anim.SetBool("isWalking", true);
     }
+
 }

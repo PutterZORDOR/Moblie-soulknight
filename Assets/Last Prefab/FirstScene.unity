@@ -436,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[6].clip
       value: 
-      objectReference: {fileID: 8300000, guid: f419982c864c0c04aa355b55deaaf655, type: 3}
+      objectReference: {fileID: 8300000, guid: bf8b0d92e84357e48b3b4bee4170b031, type: 3}
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[6].name
       value: soundsniper
@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[7].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 8a5e3f657f1acde40bff0516e1117542, type: 3}
+      objectReference: {fileID: 8300000, guid: 21dec5465812a364e9cd19e2b586f13d, type: 3}
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[7].name
       value: soundm4
@@ -516,7 +516,7 @@ PrefabInstance:
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[16].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b90e289366bb28c42a114442b60c183f, type: 3}
+      objectReference: {fileID: 8300000, guid: b93449f59fa293949ab665664340d680, type: 3}
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[16].name
       value: soundmeteorwalk
@@ -524,7 +524,7 @@ PrefabInstance:
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[17].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b90e289366bb28c42a114442b60c183f, type: 3}
+      objectReference: {fileID: 8300000, guid: b93449f59fa293949ab665664340d680, type: 3}
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[17].name
       value: soundmeteorsummon
@@ -532,7 +532,7 @@ PrefabInstance:
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[18].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b90e289366bb28c42a114442b60c183f, type: 3}
+      objectReference: {fileID: 8300000, guid: b93449f59fa293949ab665664340d680, type: 3}
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[18].name
       value: soundghostsummon
@@ -556,7 +556,7 @@ PrefabInstance:
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[21].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b90e289366bb28c42a114442b60c183f, type: 3}
+      objectReference: {fileID: 8300000, guid: b93449f59fa293949ab665664340d680, type: 3}
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[21].name
       value: soundsagewalk
