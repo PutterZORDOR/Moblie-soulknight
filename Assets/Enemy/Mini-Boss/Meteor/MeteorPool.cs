@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class MeteorPool : MonoBehaviour
 {
     public GameObject prefab;
-    public int initialPoolSize = 10;
+    public int initialPoolSize = 30;
 
     private List<GameObject> pool = new List<GameObject>();
 
