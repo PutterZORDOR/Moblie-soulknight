@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Unequip
   - Equip
+  - Enemy
+  - Wall
+  - MiniBoss
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - UI
   - wall map
   - 'furniture map '
-  - 
+  - Gun
   - 
   - 
   - 

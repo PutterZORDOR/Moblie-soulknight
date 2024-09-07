@@ -23,7 +23,7 @@ public class ShortGun : Weapon
             Vector2 shootDirection = pelletRotation * weapon.transform.right;
             pellet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
 
-            pellet.GetComponent<Bullet>().BulletLifeTime = SetBulletLifeTime;
+            pellet.GetComponent<Bullet>().lifetime = SetBulletLifeTime;
         }
         Debug.Log("Shortgun shooting!");
     }
