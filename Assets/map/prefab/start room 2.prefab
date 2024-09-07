@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 356c3d6e0f13a23439e4246448462800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChestPrefab: {fileID: 1329706999431372983, guid: 3722a9bc19096d64daa3d96406ece345, type: 3}
+  ChestPrefab: {fileID: 3908443943704751625, guid: 3722a9bc19096d64daa3d96406ece345, type: 3}
 --- !u!1 &8165817223734734245
 GameObject:
   m_ObjectHideFlags: 0
