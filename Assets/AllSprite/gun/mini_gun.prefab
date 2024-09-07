@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1929340393027489943}
         m_TargetAssemblyTypeName: DropItem, Assembly-CSharp
         m_MethodName: MoveItemToHand
         m_Mode: 1
@@ -828,7 +828,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 94e5f007ef4fa004fa8adc50dcadc96e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -871,7 +871,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  attackRate: 1
+  attackRate: 0.3
   nextAttackTime: 0
   flipCooldown: 0.5
   Bullet: {fileID: 6379072185221663181, guid: 288a56f1e3598bc46aa542ed6ed21f33, type: 3}

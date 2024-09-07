@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dac824eed0957734484eb6819c98d656, type: 3}
-  m_Name: Kar 98
+  m_Name: M4
   m_EditorClassIdentifier: 
-  itemName: 
-  Damgae: 0
-  Mana: 0
-  AtkSpeed: 0
-  rarity: 0
-  weaponType: 0
-  gamePrefab: {fileID: 0}
+  itemName: M4
+  Damgae: 25
+  Mana: 3
+  AtkSpeed: 0.4
+  rarity: 1
+  weaponType: 6
+  gamePrefab: {fileID: 6085865404300625569, guid: 222a1f84d7547f946a68d654b6252f96, type: 3}

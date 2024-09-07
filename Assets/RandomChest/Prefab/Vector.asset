@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dac824eed0957734484eb6819c98d656, type: 3}
-  m_Name: Mini Gun
+  m_Name: Vector
   m_EditorClassIdentifier: 
-  itemName: 
-  Damgae: 0
-  Mana: 0
-  AtkSpeed: 0
-  rarity: 0
-  weaponType: 0
-  gamePrefab: {fileID: 0}
+  itemName: Vector
+  Damgae: 15
+  Mana: 1
+  AtkSpeed: 0.2
+  rarity: 3
+  weaponType: 7
+  gamePrefab: {fileID: 1524714321592265502, guid: a1518438d142cf14cba368ce07bd133f, type: 3}

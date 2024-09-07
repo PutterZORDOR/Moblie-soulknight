@@ -904,7 +904,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4929959506993799648}
         m_TargetAssemblyTypeName: DropItem, Assembly-CSharp
         m_MethodName: MoveItemToHand
         m_Mode: 1

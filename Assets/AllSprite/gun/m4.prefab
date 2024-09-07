@@ -855,7 +855,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 164013c6afcaaf14d8be8f04f556f481, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16be5bd0930aac24d882fe94f5d8629d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 35
+  Damage: 25
   Range: 5
   Detected: 0
   weapon: {fileID: 6085865404300625569}
@@ -952,7 +952,7 @@ MonoBehaviour:
       m_Action: Attack
       m_Flags: 0
     m_Flags: 0
-  attackRate: 0.2
+  attackRate: 0.4
   nextAttackTime: 0
   flipCooldown: 0.5
   Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2899438642012830409}
         m_TargetAssemblyTypeName: DropItem, Assembly-CSharp
         m_MethodName: MoveItemToHand
         m_Mode: 1

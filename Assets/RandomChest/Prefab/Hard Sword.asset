@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dac824eed0957734484eb6819c98d656, type: 3}
-  m_Name: Pistol Brust
+  m_Name: Hard Sword
   m_EditorClassIdentifier: 
-  itemName: 
-  Damgae: 0
-  Mana: 0
+  itemName: Hard Sword
+  Damgae: 50
+  Mana: 10
   AtkSpeed: 0
-  rarity: 0
+  rarity: 3
   weaponType: 0
-  gamePrefab: {fileID: 0}
+  gamePrefab: {fileID: 8369059684919336485, guid: c0c003d17e700d74c9806d5a3b7bc907, type: 3}
