@@ -167,9 +167,4 @@ public abstract class Weapon : MonoBehaviour
     {
         joystickMoveScript.FlipCharacterBasedOnDirection();
     }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(joystickMoveScript.transform.position, Range);
-    }
 }
