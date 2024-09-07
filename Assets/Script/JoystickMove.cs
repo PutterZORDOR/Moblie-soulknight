@@ -47,12 +47,10 @@ public class JoystickMove : MonoBehaviour
         if (direction.x > 0 && !isRight)
         {
             Flip();
-            PlayerAnim.SetBool("isLeft", true);
         }
         else if (direction.x < 0 && isRight)
         {
             Flip();
-            PlayerAnim.SetBool("isRight", true);
         }
 
 
