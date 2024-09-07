@@ -147,10 +147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc18a4a447f7bd4499690bfe48fb006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoxPrefab: {fileID: 4957448407083909431, guid: 54ceb3f525bd6164bb534ad2f87f5e5f, type: 3}
+  BoxPrefab: {fileID: 1657808019884504255, guid: 7edb9963814a0cd45a954cf237d18876, type: 3}
   MiniBossPrefab: {fileID: 730837125537142558, guid: 21320c9e1ae7f5b4882b330a90885035, type: 3}
   BossPrefab: {fileID: 100991997351817957, guid: bd9bf8af77a1ca04b841daa17fc19f54, type: 3}
-  Portal: {fileID: 4080475496823185882, guid: 5b2dd75f7112e4d438b1e085b03c9934, type: 3}
+  Portal: {fileID: 5222123816365125820, guid: 07924c433a5dbf2489c6656bd6e3b522, type: 3}
   EndPortal: {fileID: 5701824130104534751, guid: b8626e796962375419bdf630dd133743, type: 3}
   doorAnim1: {fileID: 0}
   doorAnim2: {fileID: 0}
@@ -159,3 +159,4 @@ MonoBehaviour:
   _currentRoom: {fileID: 0}
   CanSpawnEnermy: 1
   CanDestroy: 0
+  colDoor: {fileID: 0}
