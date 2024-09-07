@@ -381,6 +381,250 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: bf8bd3079ed480549ad887318bbc6112, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[0].name
+      value: soundstartbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5981dafccab09e94395ccfb5ec349845, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[1].name
+      value: soundshotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3aa59e0899933f14cb9335ba35b45e8b, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[2].name
+      value: soundscar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 017c5aeabc3d18f42b711cd45854edf0, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[3].name
+      value: soundlightsaber
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 822b88cb70a3ad54c9a742f3f95bd7b5, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[4].name
+      value: soundvectorgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 822b88cb70a3ad54c9a742f3f95bd7b5, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[5].name
+      value: soundhardword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f419982c864c0c04aa355b55deaaf655, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[6].name
+      value: soundsniper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a5e3f657f1acde40bff0516e1117542, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[7].name
+      value: soundm4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ebc64cfa2d248348ada3406dce04ce5, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[8].name
+      value: soundminigun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b950dd8d1a008614c9ec619ab77bb250, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[9].name
+      value: soundchainsaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d22040e9ee15da64a9610e55f2111fec, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[10].name
+      value: soundenemyattack
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d22040e9ee15da64a9610e55f2111fec, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[11].name
+      value: soundenemyattack
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb5b51deb133bbe45a7a8057eaaf523d, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[12].name
+      value: soundenemyattack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c051f409771d14e489331f24eaaf5633, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[13].name
+      value: soundbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea8c7409dbad68c46b130359da785644, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[14].name
+      value: soundmeteor1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08bb97cef313974409e1f817e375df9f, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[15].name
+      value: soundmeteor2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[16].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b90e289366bb28c42a114442b60c183f, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[16].name
+      value: soundmeteorwalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[17].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b90e289366bb28c42a114442b60c183f, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[17].name
+      value: soundmeteorsummon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[18].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b90e289366bb28c42a114442b60c183f, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[18].name
+      value: soundghostsummon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[19].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9daca5e3127a0bc429516fdbc50dff96, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[19].name
+      value: soundghostinvisible
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[20].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d980d02eb35920b49ba8c0b3ba9249a2, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[20].name
+      value: soundghost1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[21].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b90e289366bb28c42a114442b60c183f, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[21].name
+      value: soundsagewalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[22].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1becfbb68f9be114fa0af5852fc86379, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[22].name
+      value: soundsage1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[23].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d980d02eb35920b49ba8c0b3ba9249a2, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[23].name
+      value: soundsage2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[24].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 220af2de218bcee4ca48ed16172603e2, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[24].name
+      value: soundmagugenki1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[25].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b7397b635eb78748b706c82d77de56b, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[25].name
+      value: soundmagugenkitalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[26].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 63c723d3575da464fb21ecb3ceed2aee, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[26].name
+      value: soundmagugenki2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[27].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5da0938f33fe1944091b7aa0f430cf29, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: sfxSounds.Array.data[27].name
+      value: soundmagugenkiwalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: musicSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ad342d456234834d84f81dcbe36af1e, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: musicSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ad342d456234834d84f81dcbe36af1e, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: musicSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e170527844b735e488f05570ff45ef75, type: 3}
+    - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
+      propertyPath: musicSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7bea59168701e0446ae1562181393edf, type: 3}
     - target: {fileID: 7860814652817724357, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: m_Name
       value: Audio_Manager
@@ -398,6 +642,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 25922789415907061, guid: 3b285e111c99d4c4aa9adec0c5f65ee4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.552002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2748010316323712526, guid: 3b285e111c99d4c4aa9adec0c5f65ee4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.300049
+      objectReference: {fileID: 0}
     - target: {fileID: 3129201962511565170, guid: 3b285e111c99d4c4aa9adec0c5f65ee4, type: 3}
       propertyPath: m_Name
       value: Start_Menu
@@ -481,6 +733,10 @@ PrefabInstance:
     - target: {fileID: 3213074924808361680, guid: 3b285e111c99d4c4aa9adec0c5f65ee4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385765829348710456, guid: 3b285e111c99d4c4aa9adec0c5f65ee4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.551758
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
