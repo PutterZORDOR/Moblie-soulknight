@@ -49,65 +49,68 @@ public abstract class Weapon : MonoBehaviour
 
     private void Update()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length == 0)
+        if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
         {
-            Detected = false;
-            joystickMoveScript.EnableFlip();
-            CorrectCharacterFlip();  // Ensure the character faces the right direction when no enemy is detected
-            return;
-        }
-
-        GameObject closestEnemy = null;
-        float closestDistance = float.MaxValue;
-
-        foreach (GameObject enemy in enemies)
-        {
-            float distance = Vector2.Distance(joystickMoveScript.transform.position, enemy.transform.position);
-            if (distance < closestDistance)
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            if (enemies.Length == 0)
             {
-                closestEnemy = enemy;
-                closestDistance = distance;
+                Detected = false;
+                joystickMoveScript.EnableFlip();
+                CorrectCharacterFlip();  // Ensure the character faces the right direction when no enemy is detected
+                return;
             }
-        }
 
-        if (closestDistance <= Range)
-        {
-            Direction = closestEnemy.transform.position - (Vector3)transform.position;
-            Detected = true;
-            joystickMoveScript.DisableFlip();
-        }
-        else
-        {
-            Detected = false;
-            joystickMoveScript.EnableFlip();
-            CorrectCharacterFlip();  // Ensure correct orientation when leaving enemy range
-        }
+            GameObject closestEnemy = null;
+            float closestDistance = float.MaxValue;
 
-        if (Detected)
-        {
-            // Calculate direction from weapon to enemy
-            Vector3 direction = closestEnemy.transform.position - weapon.transform.position;
-            // Calculate the angle for rotation
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-            // Ensure that weapon rotates smoothly
-            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-            // Update angle for character flip
-            float currentAngle = weapon.transform.eulerAngles.z;
-            if (currentAngle > 180) currentAngle -= 360;
-
-            if (Mathf.Abs(currentAngle) > 90 && !flipped)
+            foreach (GameObject enemy in enemies)
             {
-                flipped = true;
-                FlipCharacter();
+                float distance = Vector2.Distance(joystickMoveScript.transform.position, enemy.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestEnemy = enemy;
+                    closestDistance = distance;
+                }
             }
-            else if (Mathf.Abs(currentAngle) <= 90 && flipped)
+
+            if (closestDistance <= Range)
             {
-                flipped = false;
-                UnflipCharacter();
+                Direction = closestEnemy.transform.position - (Vector3)transform.position;
+                Detected = true;
+                joystickMoveScript.DisableFlip();
+            }
+            else
+            {
+                Detected = false;
+                joystickMoveScript.EnableFlip();
+                CorrectCharacterFlip();  // Ensure correct orientation when leaving enemy range
+            }
+
+            if (Detected)
+            {
+                // Calculate direction from weapon to enemy
+                Vector3 direction = closestEnemy.transform.position - weapon.transform.position;
+                // Calculate the angle for rotation
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+                // Ensure that weapon rotates smoothly
+                Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+                // Update angle for character flip
+                float currentAngle = weapon.transform.eulerAngles.z;
+                if (currentAngle > 180) currentAngle -= 360;
+
+                if (Mathf.Abs(currentAngle) > 90 && !flipped)
+                {
+                    flipped = true;
+                    FlipCharacter();
+                }
+                else if (Mathf.Abs(currentAngle) <= 90 && flipped)
+                {
+                    flipped = false;
+                    UnflipCharacter();
+                }
             }
         }
 
@@ -132,6 +135,7 @@ public abstract class Weapon : MonoBehaviour
             {
                 scale.x = 1;
                 characterTransform.localScale = scale;
+                weapon.transform.localScale = scale;
             }
         }
     }
@@ -145,6 +149,7 @@ public abstract class Weapon : MonoBehaviour
             {
                 scale.x = -1;
                 characterTransform.localScale = scale;
+                weapon.transform.localScale = scale;
             }
         }
     }

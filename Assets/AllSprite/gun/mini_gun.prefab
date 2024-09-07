@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1903238212586210420}
   - component: {fileID: 4766975023624883704}
   - component: {fileID: 6855627457069137517}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mini_gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

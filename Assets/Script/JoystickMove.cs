@@ -64,24 +64,31 @@ public class JoystickMove : MonoBehaviour
     {
         if (!enemyDetected && direction != Vector2.zero)
         {
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            if (weaponTransform.gameObject.layer == LayerMask.NameToLayer("Gun"))
+            {
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            }
         }
     }
 
     private bool DetectEnemy()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemy in enemies)
+        if (weaponTransform.gameObject.layer == LayerMask.NameToLayer("Gun"))
         {
-            float distance = Vector2.Distance(transform.position, enemy.transform.position);
-            if (distance <= detectionRange)
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in enemies)
             {
-                return true;
+                float distance = Vector2.Distance(transform.position, enemy.transform.position);
+                if (distance <= detectionRange)
+                {
+                    return true;
+                }
             }
         }
         return false;
     }
+
 
     public void DisableFlip()
     {
