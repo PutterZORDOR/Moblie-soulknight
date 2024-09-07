@@ -22,6 +22,10 @@ public abstract class Weapon : MonoBehaviour
     public float attackRate = 0.2f;
     public float nextAttackTime = 0f;
 
+    // Flip cooldown variables
+    public float flipCooldown = 0.5f;  // Time between flips in seconds
+    private float lastFlipTime = 0f;    // Tracks when the last flip happened
+
     protected virtual void Awake()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -47,14 +51,22 @@ public abstract class Weapon : MonoBehaviour
 
     private void Update()
     {
+        if (Detected)
+        {
+            joystickMoveScript.DisableFlip();  // Disable character flipping from JoystickMove
+        }
+        else
+        {
+            joystickMoveScript.EnableFlip();   // Re-enable character flipping from JoystickMove if no enemy detected
+        }
+
         if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
             if (enemies.Length == 0)
             {
                 Detected = false;
-                joystickMoveScript.EnableFlip();
-                CorrectCharacterFlip();  // Ensure the character faces the right direction when no enemy is detected
+                CorrectCharacterFlip();
                 return;
             }
 
@@ -75,39 +87,39 @@ public abstract class Weapon : MonoBehaviour
             {
                 Direction = closestEnemy.transform.position - (Vector3)transform.position;
                 Detected = true;
-                joystickMoveScript.DisableFlip();
             }
             else
             {
                 Detected = false;
-                joystickMoveScript.EnableFlip();
-                CorrectCharacterFlip();  // Ensure correct orientation when leaving enemy range
+                CorrectCharacterFlip();
             }
 
             if (Detected)
             {
-                // Calculate direction from weapon to enemy
                 Vector3 direction = closestEnemy.transform.position - weapon.transform.position;
-                // Calculate the angle for rotation
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-                // Ensure that weapon rotates smoothly
                 Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
                 weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-                // Update angle for character flip
                 float currentAngle = weapon.transform.eulerAngles.z;
-                if (currentAngle > 180) currentAngle -= 360;
+                if (currentAngle > 180) currentAngle -= 360;  // Normalize the angle
 
-                if (Mathf.Abs(currentAngle) > 90 && !flipped)
+                // Flip only if cooldown has passed
+                if (Time.time - lastFlipTime > flipCooldown)
                 {
-                    flipped = true;
-                    FlipCharacter();
-                }
-                else if (Mathf.Abs(currentAngle) <= 90 && flipped)
-                {
-                    flipped = false;
-                    UnflipCharacter();
+                    if (Mathf.Abs(currentAngle) > 90 && !flipped)
+                    {
+                        flipped = true;
+                        FlipCharacter();
+                        lastFlipTime = Time.time;  // Update last flip time
+                    }
+                    else if (Mathf.Abs(currentAngle) <= 90 && flipped)
+                    {
+                        flipped = false;
+                        UnflipCharacter();
+                        lastFlipTime = Time.time;  // Update last flip time
+                    }
                 }
             }
         }
@@ -123,24 +135,17 @@ public abstract class Weapon : MonoBehaviour
     }
 
     protected abstract void Attack();
+
     private void FlipCharacter()
     {
         if (characterTransform != null)
         {
-            // หยุดอนิเมชั่นชั่วคราว
-            Animator animator = characterTransform.GetComponent<Animator>();
-            if (animator != null) animator.enabled = false;
-
             Vector3 scale = characterTransform.localScale;
             if (scale.x < 0)
             {
-                scale.x = 1;
+                scale.x = 2;
                 characterTransform.localScale = scale;
-                weapon.transform.localScale = scale;
             }
-
-            // เปิดใช้งานอนิเมชั่นอีกครั้ง
-            if (animator != null) animator.enabled = true;
         }
     }
 
@@ -148,18 +153,12 @@ public abstract class Weapon : MonoBehaviour
     {
         if (characterTransform != null)
         {
-            Animator animator = characterTransform.GetComponent<Animator>();
-            if (animator != null) animator.enabled = false;
-
             Vector3 scale = characterTransform.localScale;
             if (scale.x > 0)
             {
-                scale.x = -1;
+                scale.x = -2;
                 characterTransform.localScale = scale;
-                weapon.transform.localScale = scale;
             }
-
-            if (animator != null) animator.enabled = true;
         }
     }
 

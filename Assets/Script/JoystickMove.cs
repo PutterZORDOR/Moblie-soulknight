@@ -8,10 +8,6 @@ public class JoystickMove : MonoBehaviour
     private Animator PlayerAnim;
     public bool isRight = true;
 
-    public Transform weaponTransform;
-    public float detectionRange = 5f;
-
-    [SerializeField] private bool enemyDetected = false;
     [SerializeField] private bool flipEnabled = true;
 
     private Vector2 moveDirection;
@@ -19,22 +15,18 @@ public class JoystickMove : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        PlayerAnim = GetComponent<Animator>(); // Initialize Animator
+        PlayerAnim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        enemyDetected = DetectEnemy();
-
         moveDirection = movementJoystick.Direction;
         MoveCharacter(moveDirection);
 
-        if (!enemyDetected && flipEnabled)
+        if (flipEnabled)
         {
             FlipCharacter(moveDirection);
         }
-
-        RotateWeapon(moveDirection);
     }
 
     private void MoveCharacter(Vector2 direction)
@@ -46,44 +38,20 @@ public class JoystickMove : MonoBehaviour
     {
         if (direction.x > 0 && !isRight)
         {
-            Flip();
+            Flip(-2);  // Flip to the right
         }
         else if (direction.x < 0 && isRight)
         {
-            Flip();
+            Flip(2); // Flip to the left
         }
-
-
     }
 
-    private void Flip()
+    private void Flip(float newScaleX)
     {
         isRight = !isRight;
         Vector3 scale = transform.localScale;
-        scale.x *= -1;
+        scale.x = newScaleX;  // Set scale to 2 or -2
         transform.localScale = scale;
-    }
-
-    public void RotateWeapon(Vector2 direction)
-    {
-        if (!enemyDetected && direction != Vector2.zero)
-        {
-            if (weaponTransform.gameObject.layer == LayerMask.NameToLayer("Gun"))
-            {
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            }
-        }
-    }
-
-    private bool DetectEnemy()
-    {
-        if (weaponTransform.gameObject.layer == LayerMask.NameToLayer("Gun"))
-        {
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, detectionRange, LayerMask.GetMask("Enemy"));
-            return hitColliders.Length > 0;
-        }
-        return false;
     }
 
     public void DisableFlip()
@@ -99,11 +67,5 @@ public class JoystickMove : MonoBehaviour
     public void FlipCharacterBasedOnDirection()
     {
         FlipCharacter(movementJoystick.Direction);
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 }
