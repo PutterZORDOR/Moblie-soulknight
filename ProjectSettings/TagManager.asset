@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Unequip
-  - Equip
   - Enemy
   - Wall
   - MiniBoss
   - Boss
+  - Equipped
+  - UnEquipped
   layers:
   - Default
   - TransparentFX
@@ -20,7 +20,7 @@ TagManager:
   - wall map
   - 'furniture map '
   - Gun
-  - 
+  - Bullet
   - 
   - 
   - 

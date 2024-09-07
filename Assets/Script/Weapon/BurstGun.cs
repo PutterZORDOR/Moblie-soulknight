@@ -7,11 +7,10 @@ public class BurstGun : Weapon
     private float nextFireTime = 0f;
     public int bulletsPerRound = 3; // จำนวนกระสุนต่อรอบการโจมตี
     public float burstDelay = 0.05f; // หน่วงเวลาเล็กน้อยระหว่างการยิงแต่ละกระสุน
-    public bool isInWeaponSlot = false;
     public float SetBulletLifeTime;
     protected override void Attack()
     {
-        if (Time.time >= nextFireTime)
+        if (Time.time >= nextFireTime && isInWeaponSlot)
         {
             StartCoroutine(FireBurst());
             nextFireTime = Time.time + fireRate;
