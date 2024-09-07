@@ -88,28 +88,32 @@ public class DetectZoneAllBoss : MonoBehaviour
                                 colDoor.enabled = true;
                                 break;
                         }
+
+                        if (Level == 5 || Level == 10)
+                        {
+                            DungeonSystem.instance.AllBossStatus = true;
+                            GameObject Boss = Instantiate(MiniBossPrefab, gameObject.transform.position, Quaternion.identity);
+
+                            CanSpawnEnermy = false;
+                        }
                     }
                 }
-            }else if(distance <= DungeonSystem.instance.detectionRadius && CanSpawnEnermy && Level == 15)
+            }else if(distance <= DungeonSystem.instance.detectionRadius + 7.5f && CanSpawnEnermy && Level == 15)
             {
+                CanDestroy = true;
                 Animator doorAnim = BossDoor.GetComponentInChildren<Animator>();
                 Collider2D colDoor = BossDoor.GetComponent<Collider2D>();
                 colDoor.enabled = true;
                 doorAnim.Play("DoorClose");
-            }
 
-            if (Level == 5 || Level == 10)
-            {
-                DungeonSystem.instance.AllBossStatus = true;
-                GameObject Boss = Instantiate(MiniBossPrefab, gameObject.transform.position, Quaternion.identity);
-            }
-            else if (Level == 15)
-            {
-                DungeonSystem.instance.AllBossStatus = true;
-                GameObject Boss = Instantiate(BossPrefab, finalBoss.position, Quaternion.identity);
-            }
+                if (Level == 15)
+                {
+                    DungeonSystem.instance.AllBossStatus = true;
+                    GameObject Boss = Instantiate(BossPrefab, finalBoss.position, Quaternion.identity);
 
-            CanSpawnEnermy = false;
+                    CanSpawnEnermy = false;
+                }
+            }
         }
     }
     private void Update()
