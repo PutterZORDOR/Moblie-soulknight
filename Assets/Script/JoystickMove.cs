@@ -9,8 +9,10 @@ public class JoystickMove : MonoBehaviour
     public bool isRight = true;
 
     [SerializeField] private bool flipEnabled = true;
+    public Transform weaponTransform;
 
     private Vector2 moveDirection;
+    public bool enableRotateWeapon;
 
     private void Start()
     {
@@ -22,8 +24,10 @@ public class JoystickMove : MonoBehaviour
     {
         moveDirection = movementJoystick.Direction;
         MoveCharacter(moveDirection);
-
-        // Check if there is movement and update the Animator
+        if(enableRotateWeapon)
+        {
+            RotateWeapon(moveDirection);
+        }
         if (moveDirection != Vector2.zero)
         {
             PlayerAnim.SetBool("isMoving", true);
@@ -39,9 +43,18 @@ public class JoystickMove : MonoBehaviour
         }
     }
 
+
     private void MoveCharacter(Vector2 direction)
     {
         rb.velocity = new Vector2(direction.x * playerSpeed, direction.y * playerSpeed);
+    }
+    public void RotateWeapon(Vector2 direction)
+    {
+        if (direction != Vector2.zero)
+        {
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        }
     }
 
     public void FlipCharacter(Vector2 direction)

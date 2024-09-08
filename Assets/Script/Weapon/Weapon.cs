@@ -39,13 +39,15 @@ public abstract class Weapon : MonoBehaviour
         characterTransform = player.transform;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if(weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
+        {
+            joystickMoveScript.weaponTransform = weapon.transform;
+        }
+        else
+        {
+            joystickMoveScript.weaponTransform = null;
+        }
     }
-
-    public virtual void InitializeWeapon()
-    {
-        // Default implementation, can be overridden in derived classes
-    }
-
     private void OnEnable()
     {
         attackAction.Enable();
@@ -77,8 +79,6 @@ public abstract class Weapon : MonoBehaviour
             {
                 HandleSword();
             }
-
-            // การโจมตีสามารถทำได้ตลอดเวลา
             if (attackAction.ReadValue<float>() > 0)
             {
                 if (Time.time >= nextAttackTime)
@@ -92,11 +92,18 @@ public abstract class Weapon : MonoBehaviour
 
     private void HandleGun()
     {
+        if (joystickMoveScript == null)
+        {
+            Debug.LogError("JoystickMove script is not assigned!");
+            return;
+        }
+
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
         {
             Detected = false;
             CorrectCharacterFlip();
+            joystickMoveScript.enableRotateWeapon = true; // Ensure this line is executed
             return;
         }
 
@@ -122,10 +129,12 @@ public abstract class Weapon : MonoBehaviour
         {
             Detected = false;
             CorrectCharacterFlip();
+            joystickMoveScript.enableRotateWeapon = true; // Ensure this line is executed
         }
 
         if (Detected)
         {
+            joystickMoveScript.enableRotateWeapon = false;
             Vector3 direction = closestEnemy.transform.position - weapon.transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
@@ -151,6 +160,10 @@ public abstract class Weapon : MonoBehaviour
                     lastFlipTime = Time.time;  // Update last flip time
                 }
             }
+        }
+        else
+        {
+            joystickMoveScript.enableRotateWeapon = true; // Ensure this line is executed
         }
     }
 
@@ -190,16 +203,22 @@ public abstract class Weapon : MonoBehaviour
 
         if (Detected)
         {
-            // Flip based on the enemy's position relative to the player
-            if (Direction.x > 0 && flipped)
+            // Check cooldown before flipping
+            if (Time.time - lastFlipTime > flipCooldown)
             {
-                flipped = false;
-                UnflipCharacterS();
-            }
-            else if (Direction.x < 0 && !flipped)
-            {
-                flipped = true;
-                FlipCharacterS();
+                // Flip based on the enemy's position relative to the player
+                if (Direction.x > 0 && flipped)
+                {
+                    flipped = false;
+                    UnflipCharacterS();
+                    lastFlipTime = Time.time;  // Update last flip time
+                }
+                else if (Direction.x < 0 && !flipped)
+                {
+                    flipped = true;
+                    FlipCharacterS();
+                    lastFlipTime = Time.time;  // Update last flip time
+                }
             }
         }
     }
