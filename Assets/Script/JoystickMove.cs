@@ -41,7 +41,8 @@ public class JoystickMove : MonoBehaviour
         }
         if (enableRotateWeapon && weapon.isInWeaponSlot && weapon.gameObject.layer != LayerMask.NameToLayer("Sword"))
         {
-            RotateWeapon(moveDirection);
+            if(weapon.tag == "Equipped") 
+                RotateWeapon(moveDirection);
         }
     }
 

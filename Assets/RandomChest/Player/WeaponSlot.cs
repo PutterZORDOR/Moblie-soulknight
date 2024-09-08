@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+﻿using Unity.VisualScripting;
 using UnityEngine;
 
 public class WeaponSlot : MonoBehaviour
@@ -96,10 +96,21 @@ public class WeaponSlot : MonoBehaviour
 
             currentWeapon.transform.SetParent(null);
             currentWeapon.transform.position = transform.position + dropOffset;
-            if (currentWeapon.gameObject.layer != LayerMask.NameToLayer("Sword"))
+            if (currentWeapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
             {
-                currentWeapon.transform.rotation = Quaternion.Euler(0, 0, 45);
+                currentWeapon.transform.eulerAngles = new Vector3(0, 0, 45);
+                currentWeapon.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
+            else
+            {
+                currentWeapon.transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+            Vector3 scale = currentWeapon.transform.localScale;
+            if (scale.x < 0)
+            {
+                scale.x = Mathf.Abs(scale.x);
+            }
+            currentWeapon.transform.localScale = scale;
             drop.enabled = true;
             weapons[currentWeaponIndex] = null;
         }
@@ -109,9 +120,11 @@ public class WeaponSlot : MonoBehaviour
     {
         if (weapons[currentWeaponIndex] != null)
         {
-            SetWeaponSlotStatus(weapons[currentWeaponIndex], false); // Unset isInWeaponSlot
-            weapons[currentWeaponIndex].SetActive(false);
-            weapons[currentWeaponIndex].tag = "UnEquipped"; // Set current weapon to UnEquipped
+            if ((weapons[0] != null && weapons[1] == null) || (weapons[0] == null && weapons[1] != null))
+            {
+                SetWeaponSlotStatus(weapons[currentWeaponIndex], false);
+                weapons[currentWeaponIndex].SetActive(false);
+            }
         }
 
         bool weaponAdded = false;
@@ -126,18 +139,9 @@ public class WeaponSlot : MonoBehaviour
                 weapons[currentWeaponIndex].tag = "Equipped"; // Set new weapon to Equipped
                 GameObject weapon = weapons[currentWeaponIndex].gameObject;
                 spriteRenderer = weapon.GetComponent<SpriteRenderer>();
-                if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
-                {
                     joystickMoveScript.weaponTransform = weapon.transform;
                     joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
                     joystickMoveScript.spriteRenderer = spriteRenderer;
-                }
-                else if (weapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
-                {
-                    joystickMoveScript.weaponTransform = weapon.transform;
-                    joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
-                    joystickMoveScript.spriteRenderer = spriteRenderer;
-                }
 
                 weaponAdded = true;
                 break;
@@ -153,18 +157,9 @@ public class WeaponSlot : MonoBehaviour
             weapons[currentWeaponIndex].tag = "Equipped"; // Set new weapon to Equipped
             GameObject weapon = weapons[currentWeaponIndex].gameObject;
             spriteRenderer = weapon.GetComponent<SpriteRenderer>();
-            if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
-            {
-                joystickMoveScript.weaponTransform = weapon.transform;
-                joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
-                joystickMoveScript.spriteRenderer = spriteRenderer;
-            }
-            else if (weapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
-            {
-                joystickMoveScript.weaponTransform = weapon.transform;
-                joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
-                joystickMoveScript.spriteRenderer = spriteRenderer;
-            }
+            joystickMoveScript.weaponTransform = weapon.transform;
+            joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+            joystickMoveScript.spriteRenderer = spriteRenderer;
         }
     }
 
