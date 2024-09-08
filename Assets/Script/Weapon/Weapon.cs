@@ -45,12 +45,11 @@ public abstract class Weapon : MonoBehaviour
             joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
             joystickMoveScript.spriteRenderer = spriteRenderer;
         }
-        else
+        else if(weapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
         {
-            joystickMoveScript.enableRotateWeapon = false;
-            joystickMoveScript.weaponTransform = null;
+            joystickMoveScript.weaponTransform = weapon.transform;
             joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
-            joystickMoveScript.spriteRenderer = null;
+            joystickMoveScript.spriteRenderer = spriteRenderer;
         }
     }
     private void OnEnable()
@@ -178,6 +177,7 @@ public abstract class Weapon : MonoBehaviour
         if (enemies.Length == 0)
         {
             Detected = false;
+            joystickMoveScript.enableRotateWeapon = false;
             CorrectCharacterFlip();
             return;
         }
@@ -208,7 +208,7 @@ public abstract class Weapon : MonoBehaviour
 
         if (Detected)
         {
-            // Check cooldown before flipping
+            joystickMoveScript.enableRotateWeapon = false;
             if (Time.time - lastFlipTime > flipCooldown)
             {
                 // Flip based on the enemy's position relative to the player

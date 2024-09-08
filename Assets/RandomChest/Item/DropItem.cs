@@ -27,9 +27,12 @@ public class DropItem : MonoBehaviour
     public float AtkSpeed;
     public Type type_weapon;
     public Rarity raritys;
+
+    private GameObject player;
     void Start()
     {
         SetStatus();
+        player = GameObject.FindWithTag("Player");
         GetButton = transform.Find("Get_Button_Item").gameObject;
         UI_Getitem = transform.Find("UI_GetItem").gameObject;
         Description_pannel = transform.Find("Description_Weapon").gameObject;
@@ -137,13 +140,32 @@ public class DropItem : MonoBehaviour
 
     public void MoveItemToHand()
     {
-            UI_Getitem.SetActive(false);
-            Description_pannel.SetActive(false);
-            GetButton.SetActive(false);
-            weaponSlot.AddWeapon(gameObject);
-            gameObject.transform.SetParent(Hand_player.transform);
+        if(player.transform.localScale.x > 0)
+        {
+            Vector3 size = gameObject.transform.localScale;
+            size.x = gameObject.transform.localScale.x;
+            gameObject.transform.localScale = size;
+        }
+        else
+        {
+            Vector3 size = gameObject.transform.localScale;
+            size.x = gameObject.transform.localScale.x * -1;
+            gameObject.transform.localScale = size;
+        }
+        UI_Getitem.SetActive(false);
+        Description_pannel.SetActive(false);
+        GetButton.SetActive(false);
+        weaponSlot.AddWeapon(gameObject);
+        gameObject.transform.SetParent(Hand_player.transform);
+        if (type_weapon == Type.Sword)
+        {
+            gameObject.transform.position = new Vector3(Hand_player.transform.position.x, Hand_player.transform.position.y - 1, Hand_player.transform.position.z);
+        }
+        else
+        {
             gameObject.transform.localPosition = Vector3.zero;
-            this.enabled = false;
+        }
+        this.enabled = false;
         
     }
     void OnDrawGizmosSelected()

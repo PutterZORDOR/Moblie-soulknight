@@ -16,6 +16,7 @@ public class ChestRandom : MonoBehaviour
     public Animator anim;
     Weapon_Item item;
     DropItem drop;
+    GameObject player;
 
     private void Start()
     {
@@ -82,7 +83,7 @@ public class ChestRandom : MonoBehaviour
         
 
         sizeItem = item.gamePrefab.transform.localScale;
-        This_Item.transform.localScale = sizeItem;
+        This_Item.transform.localScale = sizeItem * 0.5f;
 
     }
     private void SetItemData()

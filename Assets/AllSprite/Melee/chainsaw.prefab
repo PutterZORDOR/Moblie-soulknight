@@ -186,7 +186,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1757948148642169967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,16 +471,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4496005166238093440}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.24215052, w: 0.97023875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.39, y: -0.46, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3934149541375187447}
   - {fileID: 6622471390270665974}
   - {fileID: 5832713607006830037}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6959034854261742742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -524,7 +524,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 9
   m_Sprite: {fileID: -1572045002144891592, guid: 7c562b15484a37f488b3c09d73cc956d, type: 3}
   m_Color: {r: 0.8810877, g: 0.6384834, b: 0.9622642, a: 1}
   m_FlipX: 1
