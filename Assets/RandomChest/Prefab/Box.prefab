@@ -242,16 +242,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootTable:
     list:
-    - itemData: {fileID: 11400000, guid: d12ffb448f6bb094cb78fe41c6b1c816, type: 2}
-      weight: 50
     - itemData: {fileID: 11400000, guid: 36b515d4f18e87142a7ae913934a4a88, type: 2}
-      weight: 30
+      weight: 50
     - itemData: {fileID: 11400000, guid: 16b13e164b5a2b64996542482339097a, type: 2}
       weight: 30
     - itemData: {fileID: 11400000, guid: 0572360c1af53164c80a2df5f65d2f3d, type: 2}
       weight: 30
     - itemData: {fileID: 11400000, guid: cfeb1c16479517a40b726e721764d2c2, type: 2}
-      weight: 15
+      weight: 30
     - itemData: {fileID: 11400000, guid: 0349f41ea7e236c4da1543305f7ead66, type: 2}
       weight: 15
     - itemData: {fileID: 11400000, guid: e1e815ae0bf533e48b6e08a186bb78fd, type: 2}
