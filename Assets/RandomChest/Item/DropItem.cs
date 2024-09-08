@@ -160,6 +160,7 @@ public class DropItem : MonoBehaviour
         if (type_weapon == Type.Sword)
         {
             gameObject.transform.position = new Vector3(Hand_player.transform.position.x, Hand_player.transform.position.y - 1, Hand_player.transform.position.z);
+            gameObject.transform.rotation = Quaternion.identity;
         }
         else
         {

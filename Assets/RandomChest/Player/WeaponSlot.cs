@@ -96,6 +96,10 @@ public class WeaponSlot : MonoBehaviour
 
             currentWeapon.transform.SetParent(null);
             currentWeapon.transform.position = transform.position + dropOffset;
+            if (currentWeapon.gameObject.layer != LayerMask.NameToLayer("Sword"))
+            {
+                currentWeapon.transform.rotation = Quaternion.Euler(0, 0, 45);
+            }
             drop.enabled = true;
             weapons[currentWeaponIndex] = null;
         }
