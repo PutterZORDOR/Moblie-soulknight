@@ -43,11 +43,13 @@ public abstract class Weapon : MonoBehaviour
         {
             joystickMoveScript.weaponTransform = weapon.transform;
             joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+            joystickMoveScript.spriteRenderer = spriteRenderer;
         }
         else
         {
             joystickMoveScript.weaponTransform = null;
             joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+            joystickMoveScript.spriteRenderer = null;
         }
     }
     private void OnEnable()

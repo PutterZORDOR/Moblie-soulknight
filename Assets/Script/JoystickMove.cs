@@ -14,6 +14,7 @@ public class JoystickMove : MonoBehaviour
 
     private Vector2 moveDirection;
     public bool enableRotateWeapon;
+    public SpriteRenderer spriteRenderer;
 
     private void Start()
     {
@@ -50,13 +51,31 @@ public class JoystickMove : MonoBehaviour
         rb.velocity = new Vector2(direction.x * playerSpeed, direction.y * playerSpeed);
     }
     public void RotateWeapon(Vector2 direction)
+{
+    if (direction != Vector2.zero)
     {
-        if (direction != Vector2.zero)
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Normalize the angle to be between -180 and 180 degrees
+        angle = Mathf.Repeat(angle + 360, 360);
+        if (angle > 180) angle -= 360;
+
+        // Check if the angle is within the desired range
+        if (Mathf.Abs(angle) <= 90)
         {
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            spriteRenderer.flipX = false;
+            spriteRenderer.flipY = false;
+            }
+        else if (Mathf.Abs(angle) > 90)
+            {
                 weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        }
+                spriteRenderer.flipX = true;
+                spriteRenderer.flipY = true;
+            }
     }
+}
+
 
     public void FlipCharacter(Vector2 direction)
     {
