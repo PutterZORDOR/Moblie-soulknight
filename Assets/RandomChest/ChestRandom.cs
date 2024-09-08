@@ -82,7 +82,7 @@ public class ChestRandom : MonoBehaviour
         
 
         sizeItem = item.gamePrefab.transform.localScale;
-        This_Item.transform.localScale = sizeItem *0.5f;
+        This_Item.transform.localScale = sizeItem;
 
     }
     private void SetItemData()

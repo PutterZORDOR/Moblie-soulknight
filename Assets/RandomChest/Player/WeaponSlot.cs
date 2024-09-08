@@ -15,6 +15,8 @@ public class WeaponSlot : MonoBehaviour
         GameObject item = Instantiate(First_item, Hand_player.transform);
         item.transform.SetParent(Hand_player.transform);
         item.transform.localPosition = Vector3.zero;
+        Vector3 size = item.transform.localScale;
+        item.transform.localScale = size * 2;
         weapons[currentWeaponIndex] = item;
 
         foreach (GameObject weapon in weapons)

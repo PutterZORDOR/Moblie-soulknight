@@ -47,6 +47,7 @@ public abstract class Weapon : MonoBehaviour
         }
         else
         {
+            joystickMoveScript.enableRotateWeapon = false;
             joystickMoveScript.weaponTransform = null;
             joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
             joystickMoveScript.spriteRenderer = null;
