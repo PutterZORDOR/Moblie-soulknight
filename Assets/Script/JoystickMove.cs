@@ -10,6 +10,7 @@ public class JoystickMove : MonoBehaviour
 
     [SerializeField] private bool flipEnabled = true;
     public Transform weaponTransform;
+    public Weapon weapon;
 
     private Vector2 moveDirection;
     public bool enableRotateWeapon;
@@ -24,7 +25,7 @@ public class JoystickMove : MonoBehaviour
     {
         moveDirection = movementJoystick.Direction;
         MoveCharacter(moveDirection);
-        if(enableRotateWeapon)
+        if(enableRotateWeapon && weapon.isInWeaponSlot)
         {
             RotateWeapon(moveDirection);
         }

@@ -42,10 +42,12 @@ public abstract class Weapon : MonoBehaviour
         if(weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
         {
             joystickMoveScript.weaponTransform = weapon.transform;
+            joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
         }
         else
         {
             joystickMoveScript.weaponTransform = null;
+            joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
         }
     }
     private void OnEnable()

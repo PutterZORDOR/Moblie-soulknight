@@ -1244,7 +1244,7 @@ MonoBehaviour:
   weapon: {fileID: 7138686051416349053}
   rotationSpeed: 5
   AttackPoint: {fileID: 5956658456095916509, guid: bdf93aadad01d8f4184cba620133b3a0, type: 3}
-  Force: 1000
+  Force: 35
   flipped: 0
   characterTransform: {fileID: 1453499501085069286, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
   joystickMoveScript: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
@@ -1273,7 +1273,6 @@ MonoBehaviour:
   fireRate: 0.1
   bulletsPerRound: 3
   burstDelay: 0.05
-  isInWeaponSlot: 0
   SetBulletLifeTime: 0
 --- !u!114 &3862058315520078546
 MonoBehaviour:

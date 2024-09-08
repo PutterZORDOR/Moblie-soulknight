@@ -1232,7 +1232,7 @@ MonoBehaviour:
   weapon: {fileID: 7997673220192353492}
   rotationSpeed: 5
   AttackPoint: {fileID: 0}
-  Force: 1000
+  Force: 30
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
@@ -1256,9 +1256,9 @@ MonoBehaviour:
   attackRate: 0.5
   nextAttackTime: 0
   flipCooldown: 0.5
+  isInWeaponSlot: 0
   Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
   SetBulletLifeTime: 5
-  isInWeaponSlot: 0
 --- !u!61 &3761055818909386613
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -931,7 +931,7 @@ MonoBehaviour:
   weapon: {fileID: 6085865404300625569}
   rotationSpeed: 5
   AttackPoint: {fileID: 5956658456095916509, guid: bdf93aadad01d8f4184cba620133b3a0, type: 3}
-  Force: 1150
+  Force: 35
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
@@ -955,9 +955,9 @@ MonoBehaviour:
   attackRate: 0.4
   nextAttackTime: 0
   flipCooldown: 0.5
+  isInWeaponSlot: 0
   Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
   SetBulletLifeTime: 5
-  isInWeaponSlot: 0
 --- !u!114 &2899438642012830409
 MonoBehaviour:
   m_ObjectHideFlags: 0
