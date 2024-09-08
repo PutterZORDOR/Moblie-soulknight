@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6706096374444324397}
   - component: {fileID: 6961029464221335313}
   - component: {fileID: 9080150339246642668}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textDmg_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5997303888445937272}
   - component: {fileID: 3914145364504942603}
   - component: {fileID: 1482744286076715182}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 4191475793433897728}
   - component: {fileID: 5424438630208946972}
   - component: {fileID: 6459070370221688024}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textAtkSpeed_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 2473258355713035534}
   - component: {fileID: 2861221199501405243}
   - component: {fileID: 3478296036589677162}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Pannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 8634690831576903886}
   - component: {fileID: 8199810813043122658}
   - component: {fileID: 2557132530686420508}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Description_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 6346083783099099279}
   - component: {fileID: 3965397473695407410}
   - component: {fileID: 8219998903297452782}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 445251133246907287}
   - component: {fileID: 1901924345596655978}
   - component: {fileID: 8718348198440650477}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textCost_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 6562714310550086870}
   - component: {fileID: 1325083371981066022}
   - component: {fileID: 2623775646188258563}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Get_Button_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ GameObject:
   - component: {fileID: 8746705962983150262}
   - component: {fileID: 31532643150155904}
   - component: {fileID: 6365229787959892407}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: swordsamurai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1141,6 +1141,7 @@ MonoBehaviour:
   attackRate: 0.6
   nextAttackTime: 0
   flipCooldown: 0.5
+  isInWeaponSlot: 0
 --- !u!95 &31532643150155904
 Animator:
   serializedVersion: 7
@@ -1207,7 +1208,7 @@ GameObject:
   - component: {fileID: 8114188244813641885}
   - component: {fileID: 1586867625983253236}
   - component: {fileID: 7774861197987436128}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1369,7 +1370,7 @@ GameObject:
   - component: {fileID: 8614426957615868102}
   - component: {fileID: 1912277658809768501}
   - component: {fileID: 3956219647777187533}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: UI_GetItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

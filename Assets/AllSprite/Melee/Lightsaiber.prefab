@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6017148806854799339}
   - component: {fileID: 7038647889259509124}
   - component: {fileID: 6350391749646414590}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 3579581966099513442}
   - component: {fileID: 6653658232416110200}
   - component: {fileID: 3470008392754706121}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 7548168092041990324}
   - component: {fileID: 6889884569214931112}
   - component: {fileID: 1764350409900151954}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Description_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 4068333367674896929}
   - component: {fileID: 5827147013772983676}
   - component: {fileID: 8464117864621814367}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Get_Button_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 2928061900567616522}
   - component: {fileID: 1846637435276538280}
   - component: {fileID: 1909615731635871349}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Pannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +591,7 @@ GameObject:
   - component: {fileID: 9002532559204706028}
   - component: {fileID: 6433188509384215007}
   - component: {fileID: 7299503839872547282}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textAtkSpeed_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 4437556969068121610}
   - component: {fileID: 5807883579953797647}
   - component: {fileID: 4075203833340542030}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 6635340998749696916}
   - component: {fileID: 4414405590156701714}
   - component: {fileID: -5339635461667007466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lightsaiber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1031,6 +1031,7 @@ MonoBehaviour:
   attackRate: 0.4
   nextAttackTime: 0
   flipCooldown: 0.5
+  isInWeaponSlot: 0
 --- !u!95 &4414405590156701714
 Animator:
   serializedVersion: 7
@@ -1096,7 +1097,7 @@ GameObject:
   - component: {fileID: 980383711840948768}
   - component: {fileID: 1739131983259258133}
   - component: {fileID: 6507891110719995844}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textCost_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1233,7 @@ GameObject:
   - component: {fileID: 858212841854554102}
   - component: {fileID: 5101460795252490960}
   - component: {fileID: 4926911016766080245}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textDmg_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1369,7 +1370,7 @@ GameObject:
   - component: {fileID: 1795957463658368968}
   - component: {fileID: 6505232159182733715}
   - component: {fileID: 4735237091806959930}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: UI_GetItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

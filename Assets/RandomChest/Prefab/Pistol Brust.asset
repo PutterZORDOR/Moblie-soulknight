@@ -16,6 +16,6 @@ MonoBehaviour:
   Damgae: 10
   Mana: 2
   AtkSpeed: 0.6
-  rarity: 1
+  rarity: 0
   weaponType: 6
   gamePrefab: {fileID: 7138686051416349053, guid: 2d6907e90751de545ae02a9ee2eb89fa, type: 3}

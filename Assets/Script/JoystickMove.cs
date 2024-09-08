@@ -63,6 +63,10 @@ public class JoystickMove : MonoBehaviour
         scale.x = newScaleX;  // Set scale to 2 or -2
         transform.localScale = scale;
     }
+    public Vector2 GetMovementDirection()
+    {
+        return moveDirection; // Return the current movement direction
+    }
 
     public void DisableFlip()
     {

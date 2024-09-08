@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6309118540127896199}
   - component: {fileID: 1351197838828930375}
   - component: {fileID: 2335566508810310765}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 6346822244307084857}
   - component: {fileID: 5378392877788165628}
   - component: {fileID: 8388984518268911906}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: UI_GetItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 569872228713521305}
   - component: {fileID: 6282925296376340210}
   - component: {fileID: 812387989131515851}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textCost_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 8230242841480618448}
   - component: {fileID: 8168719304756310395}
   - component: {fileID: 4794687803024566087}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 7667770563108155633}
   - component: {fileID: 310487370441170082}
   - component: {fileID: 8037136572912813465}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 6275681836616573511}
   - component: {fileID: 3721061274662965579}
   - component: {fileID: 5573682167570531664}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textAtkSpeed_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,7 @@ GameObject:
   - component: {fileID: 4474312855457890735}
   - component: {fileID: 8948792887400996416}
   - component: {fileID: 7466062286274308146}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Pannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 1449432462432387628}
   - component: {fileID: 8916967512634268461}
   - component: {fileID: 1727290174589436722}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: textDmg_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1031,7 +1031,7 @@ GameObject:
   - component: {fileID: 5603946552700698120}
   - component: {fileID: 6578389259393174868}
   - component: {fileID: 2052758854001848180}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Description_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 5377953090133710354}
   - component: {fileID: 3294387992857139065}
   - component: {fileID: 4935174418784266442}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hardsword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,6 +1303,7 @@ MonoBehaviour:
   attackRate: 0.8
   nextAttackTime: 0
   flipCooldown: 0.5
+  isInWeaponSlot: 0
 --- !u!95 &3294387992857139065
 Animator:
   serializedVersion: 7
@@ -1369,7 +1370,7 @@ GameObject:
   - component: {fileID: 6004735761344690675}
   - component: {fileID: 1655656407548621088}
   - component: {fileID: 8213585808489524331}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Get_Button_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}

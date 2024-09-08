@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public abstract class Weapon : MonoBehaviour
@@ -26,6 +27,8 @@ public abstract class Weapon : MonoBehaviour
     public float flipCooldown = 0.5f;  // Time between flips in seconds
     private float lastFlipTime = 0f;    // Tracks when the last flip happened
 
+    private SpriteRenderer spriteRenderer;
+
     public bool isInWeaponSlot = false;
 
     protected virtual void Awake()
@@ -34,6 +37,8 @@ public abstract class Weapon : MonoBehaviour
         joystickMoveScript = player.GetComponent<JoystickMove>();
         AttackPoint = player.transform.Find("Attack_Point");
         characterTransform = player.transform;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public virtual void InitializeWeapon()
@@ -66,68 +71,14 @@ public abstract class Weapon : MonoBehaviour
 
             if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
             {
-                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-                if (enemies.Length == 0)
-                {
-                    Detected = false;
-                    CorrectCharacterFlip();
-                    return;
-                }
-
-                GameObject closestEnemy = null;
-                float closestDistance = float.MaxValue;
-
-                foreach (GameObject enemy in enemies)
-                {
-                    float distance = Vector2.Distance(joystickMoveScript.transform.position, enemy.transform.position);
-                    if (distance < closestDistance)
-                    {
-                        closestEnemy = enemy;
-                        closestDistance = distance;
-                    }
-                }
-
-                if (closestDistance <= Range)
-                {
-                    Direction = closestEnemy.transform.position - (Vector3)transform.position;
-                    Detected = true;
-                }
-                else
-                {
-                    Detected = false;
-                    CorrectCharacterFlip();
-                }
-
-                if (Detected)
-                {
-                    Vector3 direction = closestEnemy.transform.position - weapon.transform.position;
-                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-                    Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-                    weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-                    float currentAngle = weapon.transform.eulerAngles.z;
-                    if (currentAngle > 180) currentAngle -= 360;  // Normalize the angle
-
-                    // Flip only if cooldown has passed
-                    if (Time.time - lastFlipTime > flipCooldown)
-                    {
-                        if (Mathf.Abs(currentAngle) > 90 && !flipped)
-                        {
-                            flipped = true;
-                            FlipCharacter();
-                            lastFlipTime = Time.time;  // Update last flip time
-                        }
-                        else if (Mathf.Abs(currentAngle) <= 90 && flipped)
-                        {
-                            flipped = false;
-                            UnflipCharacter();
-                            lastFlipTime = Time.time;  // Update last flip time
-                        }
-                    }
-                }
+                HandleGun();
+            }
+            else if (weapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
+            {
+                HandleSword();
             }
 
+            // การโจมตีสามารถทำได้ตลอดเวลา
             if (attackAction.ReadValue<float>() > 0)
             {
                 if (Time.time >= nextAttackTime)
@@ -135,6 +86,146 @@ public abstract class Weapon : MonoBehaviour
                     Attack();
                     nextAttackTime = Time.time + attackRate;
                 }
+            }
+        }
+    }
+
+    private void HandleGun()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemies.Length == 0)
+        {
+            Detected = false;
+            CorrectCharacterFlip();
+            return;
+        }
+
+        GameObject closestEnemy = null;
+        float closestDistance = float.MaxValue;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector2.Distance(joystickMoveScript.transform.position, enemy.transform.position);
+            if (distance < closestDistance)
+            {
+                closestEnemy = enemy;
+                closestDistance = distance;
+            }
+        }
+
+        if (closestDistance <= Range)
+        {
+            Direction = closestEnemy.transform.position - (Vector3)transform.position;
+            Detected = true;
+        }
+        else
+        {
+            Detected = false;
+            CorrectCharacterFlip();
+        }
+
+        if (Detected)
+        {
+            Vector3 direction = closestEnemy.transform.position - weapon.transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            float currentAngle = weapon.transform.eulerAngles.z;
+            if (currentAngle > 180) currentAngle -= 360;  // Normalize the angle
+
+            // Flip only if cooldown has passed
+            if (Time.time - lastFlipTime > flipCooldown)
+            {
+                if (Mathf.Abs(currentAngle) > 90 && !flipped)
+                {
+                    flipped = true;
+                    FlipCharacter();
+                    lastFlipTime = Time.time;  // Update last flip time
+                }
+                else if (Mathf.Abs(currentAngle) <= 90 && flipped)
+                {
+                    flipped = false;
+                    UnflipCharacter();
+                    lastFlipTime = Time.time;  // Update last flip time
+                }
+            }
+        }
+    }
+
+    private void HandleSword()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemies.Length == 0)
+        {
+            Detected = false;
+            CorrectCharacterFlip();
+            return;
+        }
+
+        GameObject closestEnemy = null;
+        float closestDistance = float.MaxValue;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector2.Distance(joystickMoveScript.transform.position, enemy.transform.position);
+            if (distance < closestDistance)
+            {
+                closestEnemy = enemy;
+                closestDistance = distance;
+            }
+        }
+
+        if (closestDistance <= Range)
+        {
+            Direction = closestEnemy.transform.position - (Vector3)transform.position;
+            Detected = true;
+        }
+        else
+        {
+            Detected = false;
+            CorrectCharacterFlip();
+        }
+
+        if (Detected)
+        {
+            // Flip based on the enemy's position relative to the player
+            if (Direction.x > 0 && flipped)
+            {
+                flipped = false;
+                UnflipCharacterS();
+            }
+            else if (Direction.x < 0 && !flipped)
+            {
+                flipped = true;
+                FlipCharacterS();
+            }
+        }
+    }
+
+    private void UnflipCharacterS()
+    {
+        if (characterTransform != null)
+        {
+            Vector3 scale = characterTransform.localScale;
+            if (scale.x > 0)
+            {
+                scale.x = -2;
+                characterTransform.localScale = scale;
+            }
+        }
+    }
+
+    private void FlipCharacterS()
+    {
+        if (characterTransform != null)
+        {
+            Vector3 scale = characterTransform.localScale;
+            if (scale.x < 0)
+            {
+                scale.x = 2;
+                characterTransform.localScale = scale;
             }
         }
     }
@@ -149,6 +240,8 @@ public abstract class Weapon : MonoBehaviour
             if (scale.x < 0)
             {
                 scale.x = 2;
+                spriteRenderer.flipX = true;
+                spriteRenderer.flipY = true;
                 characterTransform.localScale = scale;
             }
         }
@@ -162,6 +255,8 @@ public abstract class Weapon : MonoBehaviour
             if (scale.x > 0)
             {
                 scale.x = -2;
+                spriteRenderer.flipX = false;
+                spriteRenderer.flipY = false;
                 characterTransform.localScale = scale;
             }
         }
