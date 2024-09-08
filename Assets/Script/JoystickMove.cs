@@ -26,10 +26,6 @@ public class JoystickMove : MonoBehaviour
     {
         moveDirection = movementJoystick.Direction;
         MoveCharacter(moveDirection);
-        if(enableRotateWeapon && weapon.isInWeaponSlot)
-        {
-            RotateWeapon(moveDirection);
-        }
         if (moveDirection != Vector2.zero)
         {
             PlayerAnim.SetBool("isMoving", true);
@@ -42,6 +38,10 @@ public class JoystickMove : MonoBehaviour
         if (flipEnabled)
         {
             FlipCharacter(moveDirection);
+        }
+        if (enableRotateWeapon && weapon.isInWeaponSlot && weapon.gameObject.layer != LayerMask.NameToLayer("Sword"))
+        {
+            RotateWeapon(moveDirection);
         }
     }
 
