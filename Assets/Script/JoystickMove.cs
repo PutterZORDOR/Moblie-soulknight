@@ -23,6 +23,16 @@ public class JoystickMove : MonoBehaviour
         moveDirection = movementJoystick.Direction;
         MoveCharacter(moveDirection);
 
+        // Check if there is movement and update the Animator
+        if (moveDirection != Vector2.zero)
+        {
+            PlayerAnim.SetBool("isMoving", true);
+        }
+        else
+        {
+            PlayerAnim.SetBool("isMoving", false);
+        }
+
         if (flipEnabled)
         {
             FlipCharacter(moveDirection);
