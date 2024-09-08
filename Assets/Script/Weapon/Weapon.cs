@@ -39,18 +39,6 @@ public abstract class Weapon : MonoBehaviour
         characterTransform = player.transform;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if(weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
-        {
-            joystickMoveScript.weaponTransform = weapon.transform;
-            joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
-            joystickMoveScript.spriteRenderer = spriteRenderer;
-        }
-        else if(weapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
-        {
-            joystickMoveScript.weaponTransform = weapon.transform;
-            joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
-            joystickMoveScript.spriteRenderer = spriteRenderer;
-        }
     }
     private void OnEnable()
     {

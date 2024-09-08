@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 50
   Range: 5
-  Detected: 1
+  Detected: 0
   weapon: {fileID: 8369059684919336485}
   rotationSpeed: 5
   AttackPoint: {fileID: 0}

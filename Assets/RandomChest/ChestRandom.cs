@@ -79,6 +79,7 @@ public class ChestRandom : MonoBehaviour
         item = lootTable.GetRandom();
         This_Item = Instantiate(item.gamePrefab, itemHolder);
         drop = This_Item.GetComponent<DropItem>();
+        This_Item.tag = "UnEquipped";
         SetItemData();
         
 

@@ -6,11 +6,14 @@ public class WeaponSlot : MonoBehaviour
     public GameObject[] weapons = new GameObject[2];
     public GameObject First_item;
     private int currentWeaponIndex = 0;
+    public JoystickMove joystickMoveScript;
+    private SpriteRenderer spriteRenderer;
 
     public Vector3 dropOffset = new Vector3(0, 0, 1);
 
     void Start()
     {
+        joystickMoveScript = gameObject.GetComponent<JoystickMove>();
         GameObject Hand_player = GameObject.Find("Handle_Item");
         GameObject item = Instantiate(First_item, Hand_player.transform);
         item.transform.SetParent(Hand_player.transform);
@@ -33,6 +36,11 @@ public class WeaponSlot : MonoBehaviour
             weapons[0].SetActive(true);
             SetWeaponSlotStatus(weapons[0], true);
             weapons[0].tag = "Equipped"; // Set tag to Equipped for the first weapon
+            GameObject weapon = weapons[0].gameObject;
+            joystickMoveScript.weaponTransform = weapon.transform;
+            joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+            spriteRenderer = weapon.GetComponent<SpriteRenderer>();
+            joystickMoveScript.spriteRenderer = spriteRenderer;
         }
     }
 
@@ -59,6 +67,20 @@ public class WeaponSlot : MonoBehaviour
             weapons[currentWeaponIndex]?.SetActive(true);
             SetWeaponSlotStatus(weapons[currentWeaponIndex], true); // Add status to new weapon
             weapons[currentWeaponIndex].tag = "Equipped"; // Change tag to Equipped for new weapon
+            GameObject weapon = weapons[currentWeaponIndex].gameObject;
+            spriteRenderer = weapon.GetComponent<SpriteRenderer>();
+            if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
+            {
+                joystickMoveScript.weaponTransform = weapon.transform;
+                joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+                joystickMoveScript.spriteRenderer = spriteRenderer;
+            }
+            else if (weapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
+            {
+                joystickMoveScript.weaponTransform = weapon.transform;
+                joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+                joystickMoveScript.spriteRenderer = spriteRenderer;
+            }
         }
     }
 
@@ -98,6 +120,20 @@ public class WeaponSlot : MonoBehaviour
                 weapons[currentWeaponIndex].SetActive(true);
                 SetWeaponSlotStatus(weapons[currentWeaponIndex], true); // Set isInWeaponSlot
                 weapons[currentWeaponIndex].tag = "Equipped"; // Set new weapon to Equipped
+                GameObject weapon = weapons[currentWeaponIndex].gameObject;
+                spriteRenderer = weapon.GetComponent<SpriteRenderer>();
+                if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
+                {
+                    joystickMoveScript.weaponTransform = weapon.transform;
+                    joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+                    joystickMoveScript.spriteRenderer = spriteRenderer;
+                }
+                else if (weapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
+                {
+                    joystickMoveScript.weaponTransform = weapon.transform;
+                    joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+                    joystickMoveScript.spriteRenderer = spriteRenderer;
+                }
 
                 weaponAdded = true;
                 break;
@@ -111,6 +147,20 @@ public class WeaponSlot : MonoBehaviour
             weapons[currentWeaponIndex].SetActive(true);
             SetWeaponSlotStatus(weapons[currentWeaponIndex], true); // Set isInWeaponSlot
             weapons[currentWeaponIndex].tag = "Equipped"; // Set new weapon to Equipped
+            GameObject weapon = weapons[currentWeaponIndex].gameObject;
+            spriteRenderer = weapon.GetComponent<SpriteRenderer>();
+            if (weapon.gameObject.layer == LayerMask.NameToLayer("Gun"))
+            {
+                joystickMoveScript.weaponTransform = weapon.transform;
+                joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+                joystickMoveScript.spriteRenderer = spriteRenderer;
+            }
+            else if (weapon.gameObject.layer == LayerMask.NameToLayer("Sword"))
+            {
+                joystickMoveScript.weaponTransform = weapon.transform;
+                joystickMoveScript.weapon = weapon.GetComponent<Weapon>();
+                joystickMoveScript.spriteRenderer = spriteRenderer;
+            }
         }
     }
 
