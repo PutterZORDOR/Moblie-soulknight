@@ -374,7 +374,7 @@ MonoBehaviour:
   nextAttackTime: 0
   flipCooldown: 0.5
   isInWeaponSlot: 0
-  Bullet: {fileID: 0}
+  Bullet: {fileID: 8364218688031570338, guid: e9013285eecbabe4f86d25cab0885555, type: 3}
   SetBulletLifeTime: 0
 --- !u!61 &5896996993000095481
 BoxCollider2D:
