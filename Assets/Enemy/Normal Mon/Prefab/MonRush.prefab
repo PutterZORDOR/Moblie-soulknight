@@ -183,7 +183,7 @@ MonoBehaviour:
   dashRange: 4.27
   dashSpeed: 6
   dashDamage: 20
-  dashCooldown: 2.5
+  dashCooldown: 3.5
   rushHealth: 75
   rushSpeed: 2
 --- !u!95 &-5723497411529989276

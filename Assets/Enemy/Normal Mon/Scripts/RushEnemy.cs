@@ -48,6 +48,7 @@ public class RushEnemy : EnemyBase
         {
             if (Time.time >= lastDashTime + dashCooldown)
             {
+                animator.SetBool("isRunning", true);
                 StartDash();
                 lastDashTime = Time.time;
             }
@@ -73,7 +74,6 @@ public class RushEnemy : EnemyBase
     void StartDash()
     {
         col.isTrigger = true;
-        animator.SetBool("isRunning", true);
         isDashing = true;
         dashDirection = (player.position - transform.position).normalized;
     }
