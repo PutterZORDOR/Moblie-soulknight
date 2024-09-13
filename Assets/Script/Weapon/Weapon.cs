@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public abstract class Weapon : MonoBehaviour
 {
     public int Damage = 10;
+    public int Mana;
     public float Range;
 
     [SerializeField] private bool Detected = false;

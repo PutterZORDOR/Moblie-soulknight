@@ -9,7 +9,7 @@ public class Gun : Weapon
     {
         if (isInWeaponSlot)
         {
-            Debug.Log("Attack method called");
+            PlayerManager.instance.UseMana(Mana);
             GameObject BulletIns = Instantiate(Bullet, AttackPoint.position, weapon.transform.rotation);
             Vector2 shootDirection = weapon.transform.right;
             BulletIns.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force, ForceMode2D.Impulse);

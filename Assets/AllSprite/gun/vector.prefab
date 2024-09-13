@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 15
+  Mana: 1
   Range: 0
   Detected: 0
   weapon: {fileID: 1524714321592265502}

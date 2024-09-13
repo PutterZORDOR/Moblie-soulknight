@@ -979,6 +979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 35
+  Mana: 5
   Range: 5
   Detected: 0
   weapon: {fileID: 4496005166238093440}

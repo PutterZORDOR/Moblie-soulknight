@@ -15,6 +15,7 @@ public class Sword : Weapon
     {
         if (!isAttacking && isInWeaponSlot) 
         {
+            PlayerManager.instance.UseMana(Mana);
             isAttacking = true;
             SwordAnim.SetBool("isAttacking", true);
             StartCoroutine(ResetAttackBool());

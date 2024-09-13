@@ -15,6 +15,7 @@ public class ShortGun : Weapon
     {
         if (isInWeaponSlot)
         {
+            PlayerManager.instance.UseMana(Mana);
             for (int i = 0; i < pelletCount; i++)
             {
                 float angle = Random.Range(-spreadAngle, spreadAngle);
