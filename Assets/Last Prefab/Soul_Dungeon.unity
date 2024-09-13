@@ -1025,6 +1025,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   First_item: {fileID: 3467315656446966103, guid: 439ae012e29f83e44b0bc3f46adfeb1e, type: 3}
+  joystickMoveScript: {fileID: 0}
   dropOffset: {x: 0, y: 0, z: 1}
 --- !u!4 &1350745622 stripped
 Transform:

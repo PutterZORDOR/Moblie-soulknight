@@ -15,6 +15,10 @@ public class RushEnemy : EnemyBase
     public int rushHealth = 75; // Health of the rush enemy
     public float rushSpeed = 10f; // Base speed of the rush enemy
 
+    private Animator animator;
+    private bool isFacingRight = true;
+    private Collider2D col;
+
     protected override void Start()
     {
         base.Start();
@@ -24,6 +28,9 @@ public class RushEnemy : EnemyBase
         CircleCollider2D detectionCollider = gameObject.AddComponent<CircleCollider2D>();
         detectionCollider.isTrigger = true;
         detectionCollider.radius = detectionRange;
+
+        col = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
     }
 
     protected override void Update()
@@ -65,6 +72,8 @@ public class RushEnemy : EnemyBase
 
     void StartDash()
     {
+        col.isTrigger = true;
+        animator.SetBool("isRunning", true);
         isDashing = true;
         dashDirection = (player.position - transform.position).normalized;
     }
@@ -76,7 +85,11 @@ public class RushEnemy : EnemyBase
         // Check if the enemy has passed the player or needs to stop dashing
         if (Vector2.Distance(transform.position, player.position) > dashRange)
         {
+            col.isTrigger = false;
             isDashing = false;
+            animator.SetBool("isRunning", false);
+
+            MoveTowardsPlayer();
         }
     }
 
@@ -93,4 +106,18 @@ public class RushEnemy : EnemyBase
             }
         }
     }
+    private void OnDrawGizmos()
+    {
+        // Set the color for the detection range (yellow)
+        Gizmos.color = Color.yellow;
+        // Draw the detection range as a wire sphere
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+
+        // Set the color for the dash range (red)
+        Gizmos.color = Color.red;
+        // Draw the dash range as a wire sphere
+        Gizmos.DrawWireSphere(transform.position, dashRange);
+    }
 }
+
+

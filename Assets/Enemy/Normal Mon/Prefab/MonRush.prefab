@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1117238003983833152}
   - component: {fileID: 4600506285862611274}
   - component: {fileID: 3250982494008366433}
+  - component: {fileID: -5723497411529989276}
   m_Layer: 0
   m_Name: MonRush
   m_TagString: Enemy
@@ -78,13 +79,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9693594, g: 0, b: 1, a: 1}
-  m_FlipX: 0
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 1637409749019684722, guid: 6ee5e3d551d3425408bb509ca5a3036f, type: 3}
+  m_Color: {r: 0.83281416, g: 0.88101155, b: 0.8962264, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.92, y: 0.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -116,7 +117,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4600506285862611274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,7 +148,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -155,13 +156,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.92, y: 0.82}
+    newSize: {x: 0.92, y: 0.82}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.75, y: 0.65}
   m_EdgeRadius: 0
 --- !u!114 &3250982494008366433
 MonoBehaviour:
@@ -175,12 +176,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ce6280b7620514f89bdd9429277d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 10
+  detectionRange: 5
   moveSpeed: 0
+  playerDetected: 0
   maxHealth: 100
-  attackRange: 1.5
-  attackCooldown: 1
-  rushSpeedMultiplier: 1.2
+  dashRange: 4.27
+  dashSpeed: 6
+  dashDamage: 20
+  dashCooldown: 2.5
   rushHealth: 75
-  rushDamage: 15
-  rushSpeed: 7
+  rushSpeed: 2
+--- !u!95 &-5723497411529989276
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3705290102035354588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4485433bc90e9c94bb6d99f674b2ac85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
