@@ -180,7 +180,7 @@ MonoBehaviour:
   moveSpeed: 6
   playerDetected: 0
   maxHealth: 100
-  dashRange: 4
+  dashRange: 3
   dashSpeed: 8
   dashDamage: 20
   dashCooldown: 1

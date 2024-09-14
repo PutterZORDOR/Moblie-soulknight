@@ -13,7 +13,7 @@ public class ShortGun : Weapon
 
     protected override void Attack()
     {
-        if (isInWeaponSlot)
+        if (isInWeaponSlot && PlayerManager.instance.Mana >= Mana)
         {
             PlayerManager.instance.UseMana(Mana);
             for (int i = 0; i < pelletCount; i++)

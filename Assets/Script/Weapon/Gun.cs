@@ -7,7 +7,7 @@ public class Gun : Weapon
 
     protected override void Attack()
     {
-        if (isInWeaponSlot)
+        if (isInWeaponSlot && PlayerManager.instance.Mana >= Mana)
         {
             PlayerManager.instance.UseMana(Mana);
             GameObject BulletIns = Instantiate(Bullet, AttackPoint.position, weapon.transform.rotation);

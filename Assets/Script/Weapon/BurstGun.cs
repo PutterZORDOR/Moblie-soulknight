@@ -10,11 +10,14 @@ public class BurstGun : Weapon
     public float SetBulletLifeTime;
     protected override void Attack()
     {
-        PlayerManager.instance.UseMana(Mana);
-        if (Time.time >= nextFireTime && isInWeaponSlot)
+        if (isInWeaponSlot && PlayerManager.instance.Mana >= Mana)
         {
-            StartCoroutine(FireBurst());
-            nextFireTime = Time.time + fireRate;
+            PlayerManager.instance.UseMana(Mana);
+            if (Time.time >= nextFireTime)
+            {
+                StartCoroutine(FireBurst());
+                nextFireTime = Time.time + fireRate;
+            }
         }
     }
 

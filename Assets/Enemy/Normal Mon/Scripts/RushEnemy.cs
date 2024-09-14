@@ -100,13 +100,13 @@ public class RushEnemy : EnemyBase
         // เมื่อชนกำแพง (หรือวัตถุที่มี Layer "wall map")
         if (other.gameObject.layer == LayerMask.NameToLayer("wall map") && isDashing)
         {
+            Debug.Log("T");
             StopDash(); // หยุดการพุ่งเมื่อชนกำแพง
         }
     }
 
     private void StopDash()
     {
-        Debug.Log("T");
         col.isTrigger = false; // ปิดโหมด trigger เพื่อกลับมาเช็กการชนตามปกติ
         isDashing = false; // เปลี่ยนสถานะการพุ่ง
         animator.SetBool("isRunning", false); // หยุดแอนิเมชันการวิ่ง

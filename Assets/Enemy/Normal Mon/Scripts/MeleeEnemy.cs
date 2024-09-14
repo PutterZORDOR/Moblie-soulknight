@@ -17,8 +17,11 @@ public class MeleeEnemy : EnemyBase
 
     // Individual stats for the melee enemy
     public int meleeHealth = 100; // Health of the melee enemy
-    public int meleeDamage = 10; // Damage dealt by the melee enemy
+    public int meleeDamage; // Damage dealt by the melee enemy
     public float meleeSpeed = 1f; // Speed of the melee enemy
+
+    public Transform attackPoint;
+    public Vector2 attackSize = new Vector2(2f, 1f);
 
     public Animator anim;
 
@@ -111,33 +114,31 @@ public class MeleeEnemy : EnemyBase
 
     void AttackPlayer()
     {
-        // ตั้งค่าให้กำลังโจมตี
         isAttacking = true;
 
-        // Check if the player is within the attack range
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
-            // Implement your attack logic here
-            Debug.Log("Melee enemy attacks the player!");
-
-            // Assuming the player has a health system
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(meleeDamage);
-            }
-
             anim.SetTrigger("Attack"); // Play attack animation
         }
     }
 
-    // ฟังก์ชันนี้จะถูกเรียกเมื่อแอนิเมชันการโจมตีเสร็จสิ้น
     public void OnAttackComplete()
     {
-        isAttacking = false; // โจมตีเสร็จแล้ว ศัตรูสามารถเดินต่อได้
-        StartRetreat(); // เริ่มถอยหลังหลังจากโจมตีเสร็จสิ้น
+        isAttacking = false;
+        StartRetreat();
     }
+    public void SwingSword()
+    {
+        Collider2D[] hitPlayers = Physics2D.OverlapBoxAll(attackPoint.position, attackSize,0f);
 
+        foreach (Collider2D hit in hitPlayers)
+        {
+            if (hit.CompareTag("Player"))
+            {
+                PlayerManager.instance.TakeDamgeAll(meleeDamage);
+            }
+        }
+    }
 
     void StartRetreat()
     {
@@ -189,4 +190,13 @@ public class MeleeEnemy : EnemyBase
             playerInRange = false;
         }
     }
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(attackPoint.position, attackSize);
+    }
+
 }

@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7014654990146574766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,15 +194,22 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.315, y: 0}
-  - {x: 0.315, y: 0}
+  - {x: 0.10989067, y: 0.1785533}
+  - {x: 0.061228715, y: 0.1815531}
+  - {x: -0.038897008, y: 0.048671067}
+  - {x: -0.061133575, y: 0.026191602}
+  - {x: -0.06447757, y: -0.27940285}
+  - {x: 0.16618234, y: -0.27217478}
+  - {x: 0.21371055, y: 0.00020424835}
+  - {x: 0.18016316, y: 0.15044262}
+  - {x: 0.113300905, y: 0.18020657}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
