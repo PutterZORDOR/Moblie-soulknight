@@ -404,7 +404,7 @@ PrefabInstance:
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 3aa59e0899933f14cb9335ba35b45e8b, type: 3}
+      objectReference: {fileID: 8300000, guid: 21dec5465812a364e9cd19e2b586f13d, type: 3}
     - target: {fileID: 3134119830825116464, guid: e448c9b3b7bf1884ab265708f9616cd6, type: 3}
       propertyPath: sfxSounds.Array.data[2].name
       value: soundscar
