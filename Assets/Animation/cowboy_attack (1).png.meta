@@ -226,7 +226,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -264,7 +264,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1707,7 +1707,71 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cowboy_attack (1)_0: -96662600864641830
+      cowboy_attack (1)_1: 6335761485922746581
+      cowboy_attack (1)_10: 1151230827850405565
+      cowboy_attack (1)_11: -231966694908599983
+      cowboy_attack (1)_12: 7444788725260146274
+      cowboy_attack (1)_13: 3546665647670796316
+      cowboy_attack (1)_14: 8077263069708201447
+      cowboy_attack (1)_15: -8756440054247318617
+      cowboy_attack (1)_16: -5760112068405629025
+      cowboy_attack (1)_17: 5752773485799607958
+      cowboy_attack (1)_18: -864832726277981911
+      cowboy_attack (1)_19: 27347883560472009
+      cowboy_attack (1)_2: 2497357762103460190
+      cowboy_attack (1)_20: -3553178466054275874
+      cowboy_attack (1)_21: -5356907155256963736
+      cowboy_attack (1)_22: -1499057762972667428
+      cowboy_attack (1)_23: -4256392294769412499
+      cowboy_attack (1)_24: 1408899008607655010
+      cowboy_attack (1)_25: -5304729902034588262
+      cowboy_attack (1)_26: -4893379555931192832
+      cowboy_attack (1)_27: 2027890947247500493
+      cowboy_attack (1)_28: 6384938460556173078
+      cowboy_attack (1)_29: 7481560129280237398
+      cowboy_attack (1)_3: 6277942208395579939
+      cowboy_attack (1)_30: -8322669017210987239
+      cowboy_attack (1)_31: -527420361003536501
+      cowboy_attack (1)_32: -2243696684669308215
+      cowboy_attack (1)_33: 6987707393562491552
+      cowboy_attack (1)_34: -3260383315647425549
+      cowboy_attack (1)_35: -3912646157182469303
+      cowboy_attack (1)_36: -436401860248319861
+      cowboy_attack (1)_37: 8598280425359200162
+      cowboy_attack (1)_38: 2984390305103502866
+      cowboy_attack (1)_39: -388033515521147397
+      cowboy_attack (1)_4: -8616583172091553998
+      cowboy_attack (1)_40: 5106895956204981719
+      cowboy_attack (1)_41: 7406574960814081880
+      cowboy_attack (1)_42: -9073719995684529726
+      cowboy_attack (1)_43: 5875497019616802954
+      cowboy_attack (1)_44: -5746609138810819440
+      cowboy_attack (1)_45: -4875224352054693395
+      cowboy_attack (1)_46: -2764685366136708298
+      cowboy_attack (1)_47: -1380237305754264495
+      cowboy_attack (1)_48: 6496138754465805505
+      cowboy_attack (1)_49: 407030703045012399
+      cowboy_attack (1)_5: -2581835159337650431
+      cowboy_attack (1)_50: -8666111836904995621
+      cowboy_attack (1)_51: 433259569902012628
+      cowboy_attack (1)_52: -8884260123621051982
+      cowboy_attack (1)_53: -1699912264420419297
+      cowboy_attack (1)_54: 3489441107542645901
+      cowboy_attack (1)_55: 1295515734491282503
+      cowboy_attack (1)_56: 7892014180876627930
+      cowboy_attack (1)_57: 3832219962118983060
+      cowboy_attack (1)_58: 9005057098547343699
+      cowboy_attack (1)_59: 3631377876052451386
+      cowboy_attack (1)_6: -4087833869586889600
+      cowboy_attack (1)_60: 6336605575638374995
+      cowboy_attack (1)_61: 892265454465392947
+      cowboy_attack (1)_62: -1409974387553222545
+      cowboy_attack (1)_63: -6412840721916780480
+      cowboy_attack (1)_7: 8348308265444844153
+      cowboy_attack (1)_8: -2156492816766263389
+      cowboy_attack (1)_9: 896399205755345105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

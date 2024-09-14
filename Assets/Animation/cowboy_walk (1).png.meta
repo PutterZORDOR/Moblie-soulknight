@@ -154,7 +154,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -192,7 +192,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1107,7 +1107,47 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cowboy_walk (1)_0: -2055632547765348756
+      cowboy_walk (1)_1: 1474220826086946581
+      cowboy_walk (1)_10: -8740488868877321614
+      cowboy_walk (1)_11: 3036620082792468667
+      cowboy_walk (1)_12: 2360203231061475708
+      cowboy_walk (1)_13: -105181418024539854
+      cowboy_walk (1)_14: 5286834186622571357
+      cowboy_walk (1)_15: 8541621634854507862
+      cowboy_walk (1)_16: -4643065577707552864
+      cowboy_walk (1)_17: -8290820853638950046
+      cowboy_walk (1)_18: -6503731632578173251
+      cowboy_walk (1)_19: 9113935747365124477
+      cowboy_walk (1)_2: 593419924573594910
+      cowboy_walk (1)_20: -1240668512032420887
+      cowboy_walk (1)_21: 6425777207232006694
+      cowboy_walk (1)_22: -8302808468342238710
+      cowboy_walk (1)_23: -7826283899571828398
+      cowboy_walk (1)_24: 907498028432928986
+      cowboy_walk (1)_25: 2202524829703030548
+      cowboy_walk (1)_26: -1231167663651143231
+      cowboy_walk (1)_27: -178851097911881408
+      cowboy_walk (1)_28: -3420329541077156844
+      cowboy_walk (1)_29: -4533071175269801094
+      cowboy_walk (1)_3: 2266288140424568767
+      cowboy_walk (1)_30: 1487194711795419982
+      cowboy_walk (1)_31: 2282114699874291170
+      cowboy_walk (1)_32: -9196470314976795746
+      cowboy_walk (1)_33: -4963019145872440099
+      cowboy_walk (1)_34: 7384273824731111412
+      cowboy_walk (1)_35: -5521831215666638010
+      cowboy_walk (1)_36: -528289248282632803
+      cowboy_walk (1)_37: -6179862545937427277
+      cowboy_walk (1)_38: 3845921219471097462
+      cowboy_walk (1)_39: -4071573498694518223
+      cowboy_walk (1)_4: -7258801012085796417
+      cowboy_walk (1)_5: -34292827210927452
+      cowboy_walk (1)_6: 7862858007284926385
+      cowboy_walk (1)_7: 322374481254529961
+      cowboy_walk (1)_8: -6853810478742273450
+      cowboy_walk (1)_9: 2600525651999511213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
