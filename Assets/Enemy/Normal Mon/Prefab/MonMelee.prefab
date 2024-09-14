@@ -167,7 +167,7 @@ MonoBehaviour:
   meleeDamage: 2
   meleeSpeed: 3
   attackPoint: {fileID: 9220711078169241390}
-  attackSize: {x: 0.8, y: 1.5}
+  attackSize: {x: 1.16, y: 2.2}
   anim: {fileID: 0}
 --- !u!68 &4771535723266173834
 EdgeCollider2D:
@@ -242,7 +242,7 @@ Transform:
   m_GameObject: {fileID: 8245212827105084324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -0.028, z: 0}
+  m_LocalPosition: {x: 0.308, y: -0.004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

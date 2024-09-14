@@ -148,8 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enermyToSpawnIn:
-  - {fileID: 1503695624010099261, guid: 3d2e38d786c8e7d49b510b49d6882d06, type: 3}
-  - {fileID: 3105255753262154690, guid: 7b5ac8093f33a964fb9074f213942503, type: 3}
+  - {fileID: 5547985172521817706, guid: ec99e3c7fbb1c314f9f6b3dc2a0523c2, type: 3}
+  - {fileID: 1840128858529913066, guid: 1dc71297178dd1e4a824787c8679b692, type: 3}
+  - {fileID: 3705290102035354588, guid: 670cebd069ace0848bd70c4df09cb5a5, type: 3}
   _currentRoomSpawnAble: {fileID: 0}
   BoxPrefab: {fileID: 3908443943704751625, guid: 3722a9bc19096d64daa3d96406ece345, type: 3}
   doorAnim1: {fileID: 0}
@@ -159,4 +160,7 @@ MonoBehaviour:
   _currentRoom: {fileID: 0}
   CanSpawnEnermy: 1
   CanDestroy: 0
-  colDoor: {fileID: 0}
+  colDoor1: {fileID: 0}
+  colDoor2: {fileID: 0}
+  colDoor3: {fileID: 0}
+  colDoor4: {fileID: 0}

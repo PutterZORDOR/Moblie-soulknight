@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.24, y: 4.24, z: 4.24}
+  m_LocalScale: {x: 3.3405685, y: 3.3405685, z: 3.3405685}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4472038518681003984}
@@ -137,10 +137,10 @@ MonoBehaviour:
   maxHealth: 100
   magicOrbPrefab: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
   firePoint: {fileID: 4472038518681003984}
-  summonCooldown: 10
-  orbSpeed: 3.5
-  orbLifetime: 4
-  orbDamage: 20
+  summonCooldown: 5
+  orbSpeed: 2.5
+  orbLifetime: 2
+  orbDamage: 1
   anim: {fileID: 0}
 --- !u!95 &4292629217398957354
 Animator:
