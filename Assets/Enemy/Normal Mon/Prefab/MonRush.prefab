@@ -176,14 +176,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ce6280b7620514f89bdd9429277d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 5
-  moveSpeed: 0
+  detectionRange: 12
+  moveSpeed: 6
   playerDetected: 0
   maxHealth: 100
-  dashRange: 4.27
-  dashSpeed: 6
+  dashRange: 4
+  dashSpeed: 8
   dashDamage: 20
-  dashCooldown: 3.5
+  dashCooldown: 1
   rushHealth: 75
   rushSpeed: 2
 --- !u!95 &-5723497411529989276

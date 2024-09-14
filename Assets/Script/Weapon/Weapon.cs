@@ -25,7 +25,7 @@ public abstract class Weapon : MonoBehaviour
     public float nextAttackTime = 0f;
 
     // Flip cooldown variables
-    public float flipCooldown = 0.5f;  // Time between flips in seconds
+    public float flipCooldown = 2f;  // Time between flips in seconds
     private float lastFlipTime = 0f;    // Tracks when the last flip happened
 
     private SpriteRenderer spriteRenderer;
