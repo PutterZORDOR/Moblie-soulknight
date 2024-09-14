@@ -300,6 +300,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 111619617}
   m_SourcePrefab: {fileID: 100100000, guid: c51071b3096700b42b578311372da6ca, type: 3}
+--- !u!1001 &1084231278
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4458826238739980880, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_Name
+      value: MonShotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705376075224132547, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
 --- !u!1 &1446905913
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,75 +718,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1001 &1970777610
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2008532605058882909, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 15a6c5f03b1831543a22c921eda04037, type: 2}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477016294217835332, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711505672761894480, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 111619615}
-    - target: {fileID: 6711505672761894480, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: moveSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8122604826291875688, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
-      propertyPath: m_Name
-      value: MaguGenki
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 262f2b21ec80fc743bce077e02c0d386, type: 3}
 --- !u!1001 &2570405189104098194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -862,4 +850,4 @@ SceneRoots:
   - {fileID: 36832538}
   - {fileID: 3022729845572788100}
   - {fileID: 2570405189104098194}
-  - {fileID: 1970777610}
+  - {fileID: 1084231278}
