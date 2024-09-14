@@ -1,0 +1,1779 @@
+fileFormatVersion: 2
+guid: 85c0f2c38c4e35141b206f0ff952780f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -96662600864641830
+    second: cowboy_attack (1)_0
+  - first:
+      213: 6335761485922746581
+    second: cowboy_attack (1)_1
+  - first:
+      213: 2497357762103460190
+    second: cowboy_attack (1)_2
+  - first:
+      213: 6277942208395579939
+    second: cowboy_attack (1)_3
+  - first:
+      213: -8616583172091553998
+    second: cowboy_attack (1)_4
+  - first:
+      213: -2581835159337650431
+    second: cowboy_attack (1)_5
+  - first:
+      213: -4087833869586889600
+    second: cowboy_attack (1)_6
+  - first:
+      213: 8348308265444844153
+    second: cowboy_attack (1)_7
+  - first:
+      213: -2156492816766263389
+    second: cowboy_attack (1)_8
+  - first:
+      213: 896399205755345105
+    second: cowboy_attack (1)_9
+  - first:
+      213: 1151230827850405565
+    second: cowboy_attack (1)_10
+  - first:
+      213: -231966694908599983
+    second: cowboy_attack (1)_11
+  - first:
+      213: 7444788725260146274
+    second: cowboy_attack (1)_12
+  - first:
+      213: 3546665647670796316
+    second: cowboy_attack (1)_13
+  - first:
+      213: 8077263069708201447
+    second: cowboy_attack (1)_14
+  - first:
+      213: -8756440054247318617
+    second: cowboy_attack (1)_15
+  - first:
+      213: -5760112068405629025
+    second: cowboy_attack (1)_16
+  - first:
+      213: 5752773485799607958
+    second: cowboy_attack (1)_17
+  - first:
+      213: -864832726277981911
+    second: cowboy_attack (1)_18
+  - first:
+      213: 27347883560472009
+    second: cowboy_attack (1)_19
+  - first:
+      213: -3553178466054275874
+    second: cowboy_attack (1)_20
+  - first:
+      213: -5356907155256963736
+    second: cowboy_attack (1)_21
+  - first:
+      213: -1499057762972667428
+    second: cowboy_attack (1)_22
+  - first:
+      213: -4256392294769412499
+    second: cowboy_attack (1)_23
+  - first:
+      213: 1408899008607655010
+    second: cowboy_attack (1)_24
+  - first:
+      213: -5304729902034588262
+    second: cowboy_attack (1)_25
+  - first:
+      213: -4893379555931192832
+    second: cowboy_attack (1)_26
+  - first:
+      213: 2027890947247500493
+    second: cowboy_attack (1)_27
+  - first:
+      213: 6384938460556173078
+    second: cowboy_attack (1)_28
+  - first:
+      213: 7481560129280237398
+    second: cowboy_attack (1)_29
+  - first:
+      213: -8322669017210987239
+    second: cowboy_attack (1)_30
+  - first:
+      213: -527420361003536501
+    second: cowboy_attack (1)_31
+  - first:
+      213: -2243696684669308215
+    second: cowboy_attack (1)_32
+  - first:
+      213: 6987707393562491552
+    second: cowboy_attack (1)_33
+  - first:
+      213: -3260383315647425549
+    second: cowboy_attack (1)_34
+  - first:
+      213: -3912646157182469303
+    second: cowboy_attack (1)_35
+  - first:
+      213: -436401860248319861
+    second: cowboy_attack (1)_36
+  - first:
+      213: 8598280425359200162
+    second: cowboy_attack (1)_37
+  - first:
+      213: 2984390305103502866
+    second: cowboy_attack (1)_38
+  - first:
+      213: -388033515521147397
+    second: cowboy_attack (1)_39
+  - first:
+      213: 5106895956204981719
+    second: cowboy_attack (1)_40
+  - first:
+      213: 7406574960814081880
+    second: cowboy_attack (1)_41
+  - first:
+      213: -9073719995684529726
+    second: cowboy_attack (1)_42
+  - first:
+      213: 5875497019616802954
+    second: cowboy_attack (1)_43
+  - first:
+      213: -5746609138810819440
+    second: cowboy_attack (1)_44
+  - first:
+      213: -4875224352054693395
+    second: cowboy_attack (1)_45
+  - first:
+      213: -2764685366136708298
+    second: cowboy_attack (1)_46
+  - first:
+      213: -1380237305754264495
+    second: cowboy_attack (1)_47
+  - first:
+      213: 6496138754465805505
+    second: cowboy_attack (1)_48
+  - first:
+      213: 407030703045012399
+    second: cowboy_attack (1)_49
+  - first:
+      213: -8666111836904995621
+    second: cowboy_attack (1)_50
+  - first:
+      213: 433259569902012628
+    second: cowboy_attack (1)_51
+  - first:
+      213: -8884260123621051982
+    second: cowboy_attack (1)_52
+  - first:
+      213: -1699912264420419297
+    second: cowboy_attack (1)_53
+  - first:
+      213: 3489441107542645901
+    second: cowboy_attack (1)_54
+  - first:
+      213: 1295515734491282503
+    second: cowboy_attack (1)_55
+  - first:
+      213: 7892014180876627930
+    second: cowboy_attack (1)_56
+  - first:
+      213: 3832219962118983060
+    second: cowboy_attack (1)_57
+  - first:
+      213: 9005057098547343699
+    second: cowboy_attack (1)_58
+  - first:
+      213: 3631377876052451386
+    second: cowboy_attack (1)_59
+  - first:
+      213: 6336605575638374995
+    second: cowboy_attack (1)_60
+  - first:
+      213: 892265454465392947
+    second: cowboy_attack (1)_61
+  - first:
+      213: -1409974387553222545
+    second: cowboy_attack (1)_62
+  - first:
+      213: -6412840721916780480
+    second: cowboy_attack (1)_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cowboy_attack (1)_0
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1917
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcc56c60e598aef0800000000000000
+      internalID: -96662600864641830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1917
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0c60ec0852de750800000000000000
+      internalID: 6335761485922746581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_2
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1917
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51cd3f27a568a220800000000000000
+      internalID: 2497357762103460190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_3
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1917
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32299d33d2bbf1750800000000000000
+      internalID: 6277942208395579939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1917
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237dfd1f14fbb6880800000000000000
+      internalID: -8616583172091553998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 1917
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107b01b0a9a7b2cd0800000000000000
+      internalID: -2581835159337650431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 1917
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084867ef0c81547c0800000000000000
+      internalID: -4087833869586889600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1917
+        width: 41
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9722c4dd2262bd370800000000000000
+      internalID: 8348308265444844153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_8
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1661
+        width: 41
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af17ff65399212e0800000000000000
+      internalID: -2156492816766263389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_9
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1661
+        width: 42
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d85dfb0456a07c00800000000000000
+      internalID: 896399205755345105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_10
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1661
+        width: 45
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db69084a65ef9ff00800000000000000
+      internalID: 1151230827850405565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_11
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1661
+        width: 47
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151604e1583e7ccf0800000000000000
+      internalID: -231966694908599983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_12
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1661
+        width: 49
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266d6f4c6e3315760800000000000000
+      internalID: 7444788725260146274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1661
+        width: 48
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10af729d99483130800000000000000
+      internalID: 3546665647670796316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 1661
+        width: 46
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eda65b77f3381070800000000000000
+      internalID: 8077263069708201447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 1661
+        width: 44
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab169d0a20ea7680800000000000000
+      internalID: -8756440054247318617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_16
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1405
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9fed389798ff00b0800000000000000
+      internalID: -5760112068405629025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_17
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1405
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e0f5e7105f5df40800000000000000
+      internalID: 5752773485799607958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_18
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1405
+        width: 42
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9297110b73f7ff3f0800000000000000
+      internalID: -864832726277981911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_19
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1405
+        width: 42
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd0bf451c8216000800000000000000
+      internalID: 27347883560472009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_20
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1405
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc744bb20390bec0800000000000000
+      internalID: -3553178466054275874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_21
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1405
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d092c035178a5b0800000000000000
+      internalID: -5356907155256963736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1405
+        width: 44
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd1f83c28e6423be0800000000000000
+      internalID: -1499057762972667428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_23
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1405
+        width: 45
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d663f8d52c14ee4c0800000000000000
+      internalID: -4256392294769412499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_24
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1149
+        width: 46
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26495740f2a6d8310800000000000000
+      internalID: 1408899008607655010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_25
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1149
+        width: 47
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9de5df7240d166b0800000000000000
+      internalID: -5304729902034588262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_26
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1149
+        width: 47
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00200995839371cb0800000000000000
+      internalID: -4893379555931192832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_27
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1149
+        width: 46
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcceae18214842c10800000000000000
+      internalID: 2027890947247500493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_28
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1149
+        width: 46
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f1e2673bbdb9850800000000000000
+      internalID: 6384938460556173078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1149
+        width: 48
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f597f6c47d3d760800000000000000
+      internalID: 7481560129280237398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_30
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1149
+        width: 48
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d5dfdcf90ff7c80800000000000000
+      internalID: -8322669017210987239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_31
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 1149
+        width: 49
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f631fd9f93ea8f0800000000000000
+      internalID: -527420361003536501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_32
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 893
+        width: 49
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2709eb0c9ccd0e0800000000000000
+      internalID: -2243696684669308215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_33
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 893
+        width: 52
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aab9ab1ad259f060800000000000000
+      internalID: 6987707393562491552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_34
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 893
+        width: 53
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3993f06aac0c2d0800000000000000
+      internalID: -3260383315647425549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_35
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 893
+        width: 58
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b7755dc0d73b9c0800000000000000
+      internalID: -3912646157182469303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_36
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 893
+        width: 64
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88449cf1d691f9f0800000000000000
+      internalID: -436401860248319861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_37
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 893
+        width: 69
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2afcab0cd7a335770800000000000000
+      internalID: 8598280425359200162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_38
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 893
+        width: 73
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e50d6ab2faa6920800000000000000
+      internalID: 2984390305103502866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_39
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 893
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd7a62d29d6d9af0800000000000000
+      internalID: -388033515521147397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_40
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 637
+        width: 73
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd0a7e80d65fd640800000000000000
+      internalID: 5106895956204981719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_41
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 637
+        width: 64
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85740a56fa079c660800000000000000
+      internalID: 7406574960814081880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_42
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 637
+        width: 59
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c95dd11dbba31280800000000000000
+      internalID: -9073719995684529726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_43
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 637
+        width: 56
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88302dd865f98150800000000000000
+      internalID: 5875497019616802954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_44
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 637
+        width: 57
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cea226f61ff30b0800000000000000
+      internalID: -5746609138810819440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_45
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 637
+        width: 60
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de132772849b75cb0800000000000000
+      internalID: -4875224352054693395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_46
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 637
+        width: 62
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63363b3be4dd1a9d0800000000000000
+      internalID: -2764685366136708298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_47
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 637
+        width: 64
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c56c4bb7968dce0800000000000000
+      internalID: -1380237305754264495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_48
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 381
+        width: 64
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4359777cbe62a50800000000000000
+      internalID: 6496138754465805505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_49
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 381
+        width: 63
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fabeca3944016a500800000000000000
+      internalID: 407030703045012399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_50
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 381
+        width: 62
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd448790339cbb780800000000000000
+      internalID: -8666111836904995621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_51
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 381
+        width: 68
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d84c87884f330600800000000000000
+      internalID: 433259569902012628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_52
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 381
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b136670d74c4b480800000000000000
+      internalID: -8884260123621051982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_53
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 381
+        width: 67
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1914e15dc2b868e0800000000000000
+      internalID: -1699912264420419297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_54
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 381
+        width: 65
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c99bf033cfc6030800000000000000
+      internalID: 3489441107542645901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_55
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 381
+        width: 63
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c384352b89af110800000000000000
+      internalID: 1295515734491282503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_56
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 125
+        width: 61
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf2f757511168d60800000000000000
+      internalID: 7892014180876627930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_57
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 125
+        width: 69
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d434760c7ce2530800000000000000
+      internalID: 3832219962118983060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_58
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 125
+        width: 75
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351360568b368fc70800000000000000
+      internalID: 9005057098547343699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_59
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 125
+        width: 76
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30a15b30fe356230800000000000000
+      internalID: 3631377876052451386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_60
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 125
+        width: 77
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a5fa1c23520f750800000000000000
+      internalID: 6336605575638374995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_61
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 125
+        width: 77
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33123c214b6f16c00800000000000000
+      internalID: 892265454465392947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_62
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 125
+        width: 77
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f60cd7fc3c3ce6ce0800000000000000
+      internalID: -1409974387553222545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_attack (1)_63
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 125
+        width: 77
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040adf017530107a0800000000000000
+      internalID: -6412840721916780480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cowboy_attack (1)_0: -96662600864641830
+      cowboy_attack (1)_1: 6335761485922746581
+      cowboy_attack (1)_10: 1151230827850405565
+      cowboy_attack (1)_11: -231966694908599983
+      cowboy_attack (1)_12: 7444788725260146274
+      cowboy_attack (1)_13: 3546665647670796316
+      cowboy_attack (1)_14: 8077263069708201447
+      cowboy_attack (1)_15: -8756440054247318617
+      cowboy_attack (1)_16: -5760112068405629025
+      cowboy_attack (1)_17: 5752773485799607958
+      cowboy_attack (1)_18: -864832726277981911
+      cowboy_attack (1)_19: 27347883560472009
+      cowboy_attack (1)_2: 2497357762103460190
+      cowboy_attack (1)_20: -3553178466054275874
+      cowboy_attack (1)_21: -5356907155256963736
+      cowboy_attack (1)_22: -1499057762972667428
+      cowboy_attack (1)_23: -4256392294769412499
+      cowboy_attack (1)_24: 1408899008607655010
+      cowboy_attack (1)_25: -5304729902034588262
+      cowboy_attack (1)_26: -4893379555931192832
+      cowboy_attack (1)_27: 2027890947247500493
+      cowboy_attack (1)_28: 6384938460556173078
+      cowboy_attack (1)_29: 7481560129280237398
+      cowboy_attack (1)_3: 6277942208395579939
+      cowboy_attack (1)_30: -8322669017210987239
+      cowboy_attack (1)_31: -527420361003536501
+      cowboy_attack (1)_32: -2243696684669308215
+      cowboy_attack (1)_33: 6987707393562491552
+      cowboy_attack (1)_34: -3260383315647425549
+      cowboy_attack (1)_35: -3912646157182469303
+      cowboy_attack (1)_36: -436401860248319861
+      cowboy_attack (1)_37: 8598280425359200162
+      cowboy_attack (1)_38: 2984390305103502866
+      cowboy_attack (1)_39: -388033515521147397
+      cowboy_attack (1)_4: -8616583172091553998
+      cowboy_attack (1)_40: 5106895956204981719
+      cowboy_attack (1)_41: 7406574960814081880
+      cowboy_attack (1)_42: -9073719995684529726
+      cowboy_attack (1)_43: 5875497019616802954
+      cowboy_attack (1)_44: -5746609138810819440
+      cowboy_attack (1)_45: -4875224352054693395
+      cowboy_attack (1)_46: -2764685366136708298
+      cowboy_attack (1)_47: -1380237305754264495
+      cowboy_attack (1)_48: 6496138754465805505
+      cowboy_attack (1)_49: 407030703045012399
+      cowboy_attack (1)_5: -2581835159337650431
+      cowboy_attack (1)_50: -8666111836904995621
+      cowboy_attack (1)_51: 433259569902012628
+      cowboy_attack (1)_52: -8884260123621051982
+      cowboy_attack (1)_53: -1699912264420419297
+      cowboy_attack (1)_54: 3489441107542645901
+      cowboy_attack (1)_55: 1295515734491282503
+      cowboy_attack (1)_56: 7892014180876627930
+      cowboy_attack (1)_57: 3832219962118983060
+      cowboy_attack (1)_58: 9005057098547343699
+      cowboy_attack (1)_59: 3631377876052451386
+      cowboy_attack (1)_6: -4087833869586889600
+      cowboy_attack (1)_60: 6336605575638374995
+      cowboy_attack (1)_61: 892265454465392947
+      cowboy_attack (1)_62: -1409974387553222545
+      cowboy_attack (1)_63: -6412840721916780480
+      cowboy_attack (1)_7: 8348308265444844153
+      cowboy_attack (1)_8: -2156492816766263389
+      cowboy_attack (1)_9: 896399205755345105
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
