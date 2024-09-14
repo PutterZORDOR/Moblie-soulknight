@@ -37,13 +37,8 @@ public class HomingOrb : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage);
-            }
-
-            Destroy(gameObject); // Destroy the orb on hit
+            PlayerManager.instance.TakeDamgeAll(damage);
+            Destroy(gameObject);
         }
     }
 }

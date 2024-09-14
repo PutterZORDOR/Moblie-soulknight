@@ -57,7 +57,6 @@ public class MageEnemy : EnemyBase
 
         anim.SetTrigger("Attack"); // เล่นแอนิเมชันโจมตี
 
-        // สร้างลูกไฟ
         GameObject orb = Instantiate(magicOrbPrefab, firePoint.position, Quaternion.identity);
         HomingOrb homingOrbScript = orb.GetComponent<HomingOrb>();
 
@@ -68,8 +67,6 @@ public class MageEnemy : EnemyBase
             homingOrbScript.SetDamage(orbDamage);
             Destroy(orb, orbLifetime); // ทำลายลูกไฟหลังจากครบเวลา
         }
-
-        Debug.Log("Mage summoned a homing magic orb!");
     }
 
     // ฟังก์ชันที่จะถูกเรียกเมื่อแอนิเมชันการโจมตีเสร็จสิ้น

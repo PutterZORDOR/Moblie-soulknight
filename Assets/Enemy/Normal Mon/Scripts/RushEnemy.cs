@@ -5,7 +5,7 @@ public class RushEnemy : EnemyBase
 {
     public float dashRange = 5f; // Range within which the enemy will start dashing
     public float dashSpeed = 15f; // Speed of the dash
-    public int dashDamage = 20; // Damage dealt by the dash
+    public int dashDamage = 1; // Damage dealt by the dash
     public float dashCooldown = 1.5f; // Cooldown time between dashes
 
     private float lastDashTime;
@@ -17,7 +17,6 @@ public class RushEnemy : EnemyBase
     public float rushSpeed = 10f; // Base speed of the rush enemy
 
     private Animator animator;
-    private Collider2D col;
 
     protected override void Start()
     {
@@ -29,7 +28,6 @@ public class RushEnemy : EnemyBase
         detectionCollider.isTrigger = true;
         detectionCollider.radius = detectionRange;
 
-        col = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -72,7 +70,6 @@ public class RushEnemy : EnemyBase
 
     void StartDash()
     {
-        col.isTrigger = true;
         isDashing = true;
         animator.SetBool("isRunning", true); // เปลี่ยนแอนิเมชัน
         dashDirection = (player.position - transform.position).normalized; // กำหนดทิศทางพุ่ง
@@ -88,13 +85,7 @@ public class RushEnemy : EnemyBase
         // เมื่อชนผู้เล่นขณะพุ่ง
         if (other.CompareTag("Player") && isDashing)
         {
-            Debug.Log("Rush enemy dashes through the player!");
-
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(dashDamage);
-            }
+            PlayerManager.instance.TakeDamgeAll(dashDamage);
         }
 
         // เมื่อชนกำแพง (หรือวัตถุที่มี Layer "wall map")
@@ -107,7 +98,6 @@ public class RushEnemy : EnemyBase
 
     private void StopDash()
     {
-        col.isTrigger = false; // ปิดโหมด trigger เพื่อกลับมาเช็กการชนตามปกติ
         isDashing = false; // เปลี่ยนสถานะการพุ่ง
         animator.SetBool("isRunning", false); // หยุดแอนิเมชันการวิ่ง
     }
