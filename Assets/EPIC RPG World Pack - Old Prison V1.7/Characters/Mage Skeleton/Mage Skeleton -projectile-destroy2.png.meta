@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,10 +127,10 @@ TextureImporter:
         serializedVersion: 2
         x: 32
         y: 16
-        width: 28
-        height: 24
+        width: 29
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,9 +150,9 @@ TextureImporter:
         x: 124
         y: 16
         width: 29
-        height: 24
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,10 +171,10 @@ TextureImporter:
         serializedVersion: 2
         x: 217
         y: 15
-        width: 28
-        height: 26
+        width: 29
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: Mage Skeleton -projectile-destroy2_3
       rect:
         serializedVersion: 2
-        x: 310
+        x: 308
         y: 14
-        width: 117
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.43520486, y: 0.5000001}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -209,11 +209,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton -projectile-destroy2_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 15
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf31e86d18a1639489140b7c3be90acc
+      internalID: -1012215282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7532b61c67bff8e4588d5c40df6a37f7
     internalID: 0
     vertices: []
     indices: 
@@ -225,6 +247,7 @@ TextureImporter:
       Mage Skeleton -projectile-destroy2_1: 4854285435688384077
       Mage Skeleton -projectile-destroy2_2: -8454975183941934039
       Mage Skeleton -projectile-destroy2_3: -4489885893754214182
+      Mage Skeleton -projectile-destroy2_4: -1012215282
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

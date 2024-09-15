@@ -138,10 +138,11 @@ MonoBehaviour:
   magicOrbPrefab: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
   firePoint: {fileID: 4472038518681003984}
   summonCooldown: 5
-  orbSpeed: 2.5
+  orbSpeed: 4
   orbLifetime: 3
   orbDamage: 1
   anim: {fileID: 0}
+  stoppingDistance: 5
 --- !u!95 &4292629217398957354
 Animator:
   serializedVersion: 7
