@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5284517872732817099}
   - component: {fileID: 5412034724193787325}
   - component: {fileID: -4407127908986431225}
-  - component: {fileID: 4771535723266173834}
+  - component: {fileID: 320658432589061964}
   m_Layer: 0
   m_Name: MonMelee
   m_TagString: Enemy
@@ -171,8 +171,8 @@ MonoBehaviour:
   attackPoint: {fileID: 9220711078169241390}
   attackSize: {x: 1.16, y: 2.2}
   anim: {fileID: 0}
---- !u!68 &4771535723266173834
-EdgeCollider2D:
+--- !u!61 &320658432589061964
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -201,24 +201,22 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.11583813, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.73, y: 0.49}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.25517833, y: 0.49}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.12593961, y: 0.24367808}
-  - {x: 0.0712587, y: 0.18277445}
-  - {x: -0.020712916, y: 0.06827307}
-  - {x: -0.020925714, y: -0.2503498}
-  - {x: 0.22554174, y: -0.26159558}
-  - {x: 0.25107822, y: 0.1950297}
-  - {x: 0.13565595, y: 0.23651107}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &8245212827105084324
 GameObject:
   m_ObjectHideFlags: 0
