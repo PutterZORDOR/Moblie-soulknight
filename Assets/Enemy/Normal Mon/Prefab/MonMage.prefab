@@ -136,6 +136,8 @@ MonoBehaviour:
   playerDetected: 0
   maxHealth: 60
   currentHealth: 0
+  blinkTime: 0.2
+  blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
   magicOrbPrefab: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
   firePoint: {fileID: 4472038518681003984}
   summonCooldown: 5

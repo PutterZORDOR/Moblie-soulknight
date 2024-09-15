@@ -28,10 +28,6 @@ public class MeleeEnemy : EnemyBase
         base.Start();
         moveSpeed = meleeSpeed; // Set the move speed to the melee speed stat
         anim = GetComponent<Animator>();
-
-        CircleCollider2D detectionCollider = gameObject.AddComponent<CircleCollider2D>();
-        detectionCollider.isTrigger = true;
-        detectionCollider.radius = detectionRange;
     }
 
     protected override void Update()
@@ -58,14 +54,14 @@ public class MeleeEnemy : EnemyBase
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
             // เคลื่อนไปหาผู้เล่นถ้าอยู่นอกระยะโจมตี
-            if (distanceToPlayer > attackRange)
+            if (distanceToPlayer > attackRange & !isDie)
             {
                 MoveTowardsPlayer();
             }
             else
             {
                 // โจมตีผู้เล่นถ้าอยู่ในระยะและ cooldown ผ่านแล้ว
-                if (Time.time >= lastAttackTime + attackCooldown)
+                if (Time.time >= lastAttackTime + attackCooldown & !isDie)
                 {
                     AttackPlayer();
                     lastAttackTime = Time.time; // อัปเดตเวลาการโจมตีล่าสุด
@@ -87,7 +83,7 @@ public class MeleeEnemy : EnemyBase
     void MoveTowardsPlayer()
     {
         // Calculate the direction towards the player
-        if (!isAttack)
+        if (!isAttack & !isDie)
         {
             Vector2 direction = (player.position - transform.position).normalized;
 
@@ -139,16 +135,19 @@ public class MeleeEnemy : EnemyBase
 
     void StartRetreat()
     {
-        isRetreating = true;
-        retreatStartTime = Time.time;
+        if (!isDie)
+        {
+            isRetreating = true;
+            retreatStartTime = Time.time;
 
-        // คำนวณทิศทางถอยหลัง
-        retreatDirection = (transform.position - player.position).normalized;
+            // คำนวณทิศทางถอยหลัง
+            retreatDirection = (transform.position - player.position).normalized;
+        }
     }
 
     void Retreat()
     {
-        if (Time.time < retreatStartTime + retreatDuration)
+        if (Time.time < retreatStartTime + retreatDuration & !isDie) 
         {
             // เคลื่อนศัตรูในทิศทางถอยหลัง
             transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + retreatDirection * retreatDistance, moveSpeed * Time.deltaTime);
@@ -168,7 +167,14 @@ public class MeleeEnemy : EnemyBase
             }
         }
     }
-
+    protected override void OnDefeated()
+    {
+        anim.Play("MonMeleeDie");
+    }
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {

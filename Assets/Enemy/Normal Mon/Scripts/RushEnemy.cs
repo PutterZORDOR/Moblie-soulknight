@@ -16,18 +16,21 @@ public class RushEnemy : EnemyBase
     public int rushHealth = 75; // Health of the rush enemy
     public float rushSpeed = 10f; // Base speed of the rush enemy
 
-    private Animator animator;
+    private Animator anim;
 
     protected override void Start()
     {
         base.Start();
         moveSpeed = rushSpeed; // Set the move speed to the rush speed stat
-
-        CircleCollider2D detectionCollider = gameObject.AddComponent<CircleCollider2D>();
-        detectionCollider.isTrigger = true;
-        detectionCollider.radius = detectionRange;
-
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+    }
+    protected override void OnDefeated()
+    {
+        anim.Play("RushDie");
+    }
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     protected override void Update()
@@ -70,14 +73,25 @@ public class RushEnemy : EnemyBase
     void StartDash()
     {
         isDashing = true;
-        animator.SetBool("isRunning", true); // เปลี่ยนแอนิเมชัน
+        anim.SetBool("isRunning", true); // เปลี่ยนแอนิเมชัน
         dashDirection = (player.position - transform.position).normalized; // กำหนดทิศทางพุ่ง
+
+        isDash = true;
     }
 
     void Dash()
     {
         transform.position += (Vector3)dashDirection * dashSpeed * Time.deltaTime;
     }
+
+    private void StopDash()
+    {
+        isDashing = false; // เปลี่ยนสถานะการพุ่ง
+        anim.SetBool("isRunning", false); // หยุดแอนิเมชันการวิ่ง
+
+        isDash = false;
+    }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -95,11 +109,6 @@ public class RushEnemy : EnemyBase
         }
     }
 
-    private void StopDash()
-    {
-        isDashing = false; // เปลี่ยนสถานะการพุ่ง
-        animator.SetBool("isRunning", false); // หยุดแอนิเมชันการวิ่ง
-    }
 
     private void OnDrawGizmos()
     {

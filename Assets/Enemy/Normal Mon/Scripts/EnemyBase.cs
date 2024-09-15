@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
@@ -12,11 +13,17 @@ public abstract class EnemyBase : MonoBehaviour
 
     private bool facingRight = true; // ตัวแปรเพื่อเช็คว่าศัตรูกำลังหันหน้าไปทางขวาหรือไม่
     protected bool isDie;
+    private SpriteRenderer spriteRenderer;
+    public float blinkTime;
+    public Color blinkColor;
+
+    protected bool isDash;
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        spriteRenderer = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth; // Initialize current health
     }
 
@@ -31,7 +38,10 @@ public abstract class EnemyBase : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) <= detectionRange && !isDie)
         {
             OnPlayerDetected();
-            FlipTowardsPlayer(); // เพิ่มการ Flip ตามทิศทางผู้เล่น
+            if (!isDash)
+            {
+                FlipTowardsPlayer();
+            }
             playerDetected = true;
         }
         else
@@ -46,14 +56,24 @@ public abstract class EnemyBase : MonoBehaviour
     // Method to take damage
     public virtual void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        Debug.Log($"{gameObject.name} took {damage} damage!");
-
-        if (currentHealth <= 0)
+        if (!isDie)
         {
-            isDie = true;
-            OnDefeated();
+            currentHealth -= damage;
+            StartCoroutine(Timer());
+
+            if (currentHealth <= 0)
+            {
+                isDie = true;
+                DungeonSystem.instance.AllEnermyInRoom--;
+                OnDefeated();
+            }
         }
+    }
+    public IEnumerator Timer()
+    {
+        spriteRenderer.color = blinkColor;
+        yield return new WaitForSeconds(blinkTime);
+        spriteRenderer.color = Color.white;
     }
 
     // Method to handle when the enemy is defeated

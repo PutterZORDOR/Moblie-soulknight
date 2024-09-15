@@ -24,25 +24,25 @@ AnimationClip:
       value: {fileID: -6295830805671574964, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
     - time: 0.16666667
       value: {fileID: 994186309471565929, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 0.31666666
+    - time: 0.33333334
       value: {fileID: 328150674280356557, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 0.46666667
+    - time: 0.48333332
       value: {fileID: 4262069033772744745, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 0.6166667
+    - time: 0.6333333
       value: {fileID: 4055167669544556428, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 0.78333336
+    - time: 0.8
       value: {fileID: -7570003650300664271, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 0.9
+    - time: 0.93333334
       value: {fileID: 5644894401149652889, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 1.05
+    - time: 1.0833334
       value: {fileID: 8973816705139381475, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 1.2
+    - time: 1.2333333
       value: {fileID: 777639902761042573, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 1.3166667
+    - time: 1.35
       value: {fileID: -549851559145620401, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 1.45
+    - time: 1.5
       value: {fileID: 8757997275131318222, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
-    - time: 1.6166667
+    - time: 1.6666666
       value: {fileID: -8459198229350737773, guid: 944f4453755c61e478cd3e0cff8af1b5, type: 3}
     attribute: m_Sprite
     path: 
@@ -83,7 +83,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.6333333
+    m_StopTime: 1.6833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -103,7 +103,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.6166667
+  - time: 1.6666666
     functionName: DestroySelf
     data: 
     objectReferenceParameter: {fileID: 0}
