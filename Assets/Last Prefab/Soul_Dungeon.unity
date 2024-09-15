@@ -1203,16 +1203,56 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1678787808}
     - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: blinkTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: textArmor
       value: 
       objectReference: {fileID: 1471776548}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: TimeToRegen
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: UI_GameOver
       value: 
       objectReference: {fileID: 1797884579}
     - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: blinkColor.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: blinkColor.b
+      value: 0.15895337
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: blinkColor.g
+      value: 0.15895337
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: blinkColor.r
+      value: 0.7169812
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: ghostColor.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: ghostColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: ghostColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
+      propertyPath: ghostColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: invulnerabilityDuration
-      value: 2
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 3883695016999107642, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: m_LocalPosition.x

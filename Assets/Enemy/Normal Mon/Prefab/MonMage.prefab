@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3405685, y: 3.3405685, z: 3.3405685}
+  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4472038518681003984}
@@ -139,7 +139,7 @@ MonoBehaviour:
   firePoint: {fileID: 4472038518681003984}
   summonCooldown: 5
   orbSpeed: 2.5
-  orbLifetime: 2
+  orbLifetime: 3
   orbDamage: 1
   anim: {fileID: 0}
 --- !u!95 &4292629217398957354
@@ -194,7 +194,7 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
