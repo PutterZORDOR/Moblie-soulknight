@@ -1212,7 +1212,7 @@ PrefabInstance:
       objectReference: {fileID: 1797884579}
     - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: invulnerabilityDuration
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3883695016999107642, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: m_LocalPosition.x
