@@ -8,9 +8,10 @@ public abstract class EnemyBase : MonoBehaviour
     public bool playerDetected;
 
     public int maxHealth = 100; // Maximum health for the enemy
-    protected int currentHealth; // Current health of the enemy
+    [SerializeField]protected int currentHealth; // Current health of the enemy
 
     private bool facingRight = true; // ตัวแปรเพื่อเช็คว่าศัตรูกำลังหันหน้าไปทางขวาหรือไม่
+    protected bool isDie;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -27,7 +28,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected void DetectPlayer()
     {
-        if (Vector3.Distance(transform.position, player.position) <= detectionRange)
+        if (Vector3.Distance(transform.position, player.position) <= detectionRange && !isDie)
         {
             OnPlayerDetected();
             FlipTowardsPlayer(); // เพิ่มการ Flip ตามทิศทางผู้เล่น
@@ -50,6 +51,7 @@ public abstract class EnemyBase : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            isDie = true;
             OnDefeated();
         }
     }
@@ -58,7 +60,7 @@ public abstract class EnemyBase : MonoBehaviour
     protected virtual void OnDefeated()
     {
         Debug.Log($"{gameObject.name} defeated!");
-        Destroy(gameObject); // Destroy the enemy game object
+        Destroy(gameObject);
     }
 
     // ฟังก์ชันสำหรับ Flip ศัตรูไปทางผู้เล่น

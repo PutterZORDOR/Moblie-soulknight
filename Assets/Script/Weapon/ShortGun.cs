@@ -26,6 +26,7 @@ public class ShortGun : Weapon
                 pellet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
 
                 pellet.GetComponent<BulletPlayer>().BulletLifeTime = SetBulletLifeTime;
+                pellet.GetComponent<BulletPlayer>().Damage = Damage;
             }
         }
     }

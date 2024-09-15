@@ -39,6 +39,13 @@ public class PlayerManager : MonoBehaviour
     [Header("UI GameOver")]
     public GameObject UI_GameOver;
 
+    [Header("Player TakeDamge")]
+    private SpriteRenderer spriteRenderer;
+    public float blinkTime;
+    public Color blinkColor;
+    public Color ghostColor;
+    private GameObject player;
+
     private void Awake()
     {
         if (instance == null)
@@ -53,6 +60,8 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        spriteRenderer = player.GetComponent<SpriteRenderer>();
         InitializeStats();
     }
 
@@ -107,8 +116,12 @@ public class PlayerManager : MonoBehaviour
     private IEnumerator InvulnerabilityTimer()
     {
         isInvulnerable = true;
+        spriteRenderer.color = blinkColor;
+        yield return new WaitForSeconds(blinkTime);
+        spriteRenderer.color = ghostColor;
         yield return new WaitForSeconds(invulnerabilityDuration);
         isInvulnerable = false;
+        spriteRenderer.color = Color.white;
     }
 
     public void TakeDamageHp(int damage)

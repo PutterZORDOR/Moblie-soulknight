@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class MageEnemy : EnemyBase
 {
@@ -9,6 +10,7 @@ public class MageEnemy : EnemyBase
     public float orbLifetime = 10f; // Lifetime of the orb
     public int orbDamage = 30;
     public Animator anim;
+    public float stoppingDistance = 3f;
 
     private float lastSummonTime;
     private bool isAttacking = false; // ตัวแปรสำหรับเช็คสถานะการโจมตี
@@ -32,11 +34,19 @@ public class MageEnemy : EnemyBase
         }
 
         // ตรวจสอบว่าเวลาที่จะเรียกใช้งาน Magic Orb ถึงหรือยัง
-        if (Time.time >= lastSummonTime + summonCooldown)
+        if (Time.time >= lastSummonTime + summonCooldown & !isDie)
         {
             SummonMagicOrb();
             lastSummonTime = Time.time;
         }
+    }
+    protected override void OnDefeated()
+    {
+        anim.Play("MonMageDie");
+    }
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     protected override void OnPlayerDetected()
@@ -59,16 +69,27 @@ public class MageEnemy : EnemyBase
 
         GameObject orb = Instantiate(magicOrbPrefab, firePoint.position, Quaternion.identity);
         HomingOrb homingOrbScript = orb.GetComponent<HomingOrb>();
+        Animator anims = orb.GetComponent<Animator>();
 
         if (homingOrbScript != null)
         {
             homingOrbScript.SetTarget(player);
             homingOrbScript.SetSpeed(orbSpeed);
             homingOrbScript.SetDamage(orbDamage);
-            Destroy(orb, orbLifetime); // ทำลายลูกไฟหลังจากครบเวลา
+            if (orb != null)
+            {
+                StartCoroutine(DestroyAfterDelay(orbLifetime, anims));
+            }
         }
     }
-
+    private IEnumerator DestroyAfterDelay(float delay, Animator anim)
+    {
+        yield return new WaitForSeconds(delay);
+        if (anim != null && anim.gameObject != null)
+        {
+            anim.Play("DestroyOrb");
+        }
+    }
     // ฟังก์ชันที่จะถูกเรียกเมื่อแอนิเมชันการโจมตีเสร็จสิ้น
     public void OnAttackComplete()
     {
@@ -77,19 +98,19 @@ public class MageEnemy : EnemyBase
 
     private void MoveTowardsPlayer()
     {
-        Vector2 direction = (player.position - transform.position).normalized;
-        Vector2 newPosition = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // เช็คว่าตำแหน่งใหม่แตกต่างจากตำแหน่งปัจจุบันหรือไม่
-        if (newPosition != (Vector2)transform.position)
+        if (distanceToPlayer > stoppingDistance)
         {
-            anim.SetBool("isWalking", true); // เล่นแอนิเมชันเดิน
+            Vector2 direction = (player.position - transform.position).normalized;
+            Vector2 newPosition = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            anim.SetBool("isWalking", true);
+            transform.position = newPosition;
         }
         else
         {
-            anim.SetBool("isWalking", false); // หยุดแอนิเมชันเดิน
+            // Stop the walking animation when close enough
+            anim.SetBool("isWalking", false);
         }
-
-        transform.position = newPosition;
     }
 }
