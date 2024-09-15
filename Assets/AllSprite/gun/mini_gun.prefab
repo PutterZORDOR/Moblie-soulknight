@@ -614,14 +614,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16be5bd0930aac24d882fe94f5d8629d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 15
+  Damage: 25
   Mana: 2
   Range: 5
   Detected: 0
   weapon: {fileID: 6196567433308760896}
   rotationSpeed: 5
   AttackPoint: {fileID: 0}
-  Force: 35
+  Force: 14
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
@@ -642,7 +642,7 @@ MonoBehaviour:
       m_Action: Attack
       m_Flags: 0
     m_Flags: 0
-  attackRate: 0.3
+  attackRate: 0.5
   nextAttackTime: 0
   flipCooldown: 0.5
   isInWeaponSlot: 0

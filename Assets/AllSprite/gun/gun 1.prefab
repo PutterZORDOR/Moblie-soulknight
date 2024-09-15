@@ -478,14 +478,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16be5bd0930aac24d882fe94f5d8629d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20
+  Damage: 15
   Mana: 0
   Range: 10
   Detected: 0
   weapon: {fileID: 3467315656446966103}
   rotationSpeed: 5
   AttackPoint: {fileID: 0}
-  Force: 25
+  Force: 16
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}

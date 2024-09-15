@@ -1063,7 +1063,7 @@ MonoBehaviour:
   weapon: {fileID: 7997673220192353492}
   rotationSpeed: 5
   AttackPoint: {fileID: 0}
-  Force: 30
+  Force: 16
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
@@ -1084,7 +1084,7 @@ MonoBehaviour:
       m_Action: Attack
       m_Flags: 0
     m_Flags: 0
-  attackRate: 0.5
+  attackRate: 0.6
   nextAttackTime: 0
   flipCooldown: 0.5
   isInWeaponSlot: 0

@@ -344,13 +344,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 15
-  Mana: 1
-  Range: 0
+  Mana: 3
+  Range: 5
   Detected: 0
   weapon: {fileID: 1524714321592265502}
   rotationSpeed: 5
   AttackPoint: {fileID: 0}
-  Force: 45
+  Force: 12
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
@@ -376,7 +376,7 @@ MonoBehaviour:
   flipCooldown: 0.5
   isInWeaponSlot: 0
   Bullet: {fileID: 8364218688031570338, guid: e9013285eecbabe4f86d25cab0885555, type: 3}
-  SetBulletLifeTime: 0
+  SetBulletLifeTime: 5
 --- !u!61 &5896996993000095481
 BoxCollider2D:
   m_ObjectHideFlags: 0

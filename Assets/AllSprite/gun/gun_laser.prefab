@@ -1238,14 +1238,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4abd270a2f6520b49ad136dcffda13ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 20
   Mana: 2
   Range: 5
   Detected: 0
   weapon: {fileID: 7138686051416349053}
   rotationSpeed: 5
   AttackPoint: {fileID: 5956658456095916509, guid: bdf93aadad01d8f4184cba620133b3a0, type: 3}
-  Force: 35
+  Force: 450
   flipped: 0
   characterTransform: {fileID: 1453499501085069286, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
   joystickMoveScript: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   Bullet: {fileID: 8364218688031570338, guid: e9013285eecbabe4f86d25cab0885555, type: 3}
   fireRate: 0.1
   bulletsPerRound: 3
-  burstDelay: 0.05
+  burstDelay: 0.15
   SetBulletLifeTime: 0
 --- !u!114 &3862058315520078546
 MonoBehaviour:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Vector
   Damgae: 15
-  Mana: 1
+  Mana: 3
   AtkSpeed: 0.2
   rarity: 3
   weaponType: 7

@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Kar 98
   Damgae: 35
   Mana: 3
-  AtkSpeed: 0.5
+  AtkSpeed: 0.6
   rarity: 1
   weaponType: 7
   gamePrefab: {fileID: 7997673220192353492, guid: 2eded67f9955b424da9807ded05fe0f0, type: 3}

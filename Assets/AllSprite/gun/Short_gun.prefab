@@ -423,14 +423,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7964b8a395410ac488e3f14a7f5c3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20
-  Mana: 5
-  Range: 0
+  Damage: 30
+  Mana: 3
+  Range: 5
   Detected: 0
   weapon: {fileID: 1262102958910336170}
   rotationSpeed: 5
   AttackPoint: {fileID: 5956658456095916509, guid: bdf93aadad01d8f4184cba620133b3a0, type: 3}
-  Force: 30
+  Force: 340
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
@@ -451,14 +451,14 @@ MonoBehaviour:
       m_Action: Attack
       m_Flags: 0
     m_Flags: 0
-  attackRate: 0.6
+  attackRate: 1.2
   nextAttackTime: 0
   flipCooldown: 0.5
   isInWeaponSlot: 0
   pelletCount: 4
   spreadAngle: 15
   Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
-  SetBulletLifeTime: 0
+  SetBulletLifeTime: 5
 --- !u!114 &4775555053678166769
 MonoBehaviour:
   m_ObjectHideFlags: 0

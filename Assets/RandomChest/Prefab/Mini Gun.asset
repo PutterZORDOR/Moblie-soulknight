@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mini Gun
   m_EditorClassIdentifier: 
   itemName: Mini Gun
-  Damgae: 15
+  Damgae: 25
   Mana: 2
-  AtkSpeed: 0.3
+  AtkSpeed: 0.5
   rarity: 1
   weaponType: 7
   gamePrefab: {fileID: 6196567433308760896, guid: bd18858b96c836f4aa124c436c6a4a95, type: 3}

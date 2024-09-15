@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Shot Gun
   m_EditorClassIdentifier: 
   itemName: Shot Gun
-  Damgae: 20
-  Mana: 5
-  AtkSpeed: 0.6
+  Damgae: 30
+  Mana: 3
+  AtkSpeed: 1.2
   rarity: 2
   weaponType: 5
   gamePrefab: {fileID: 1262102958910336170, guid: 99694bda7c94c634fab455ff55a1d0b9, type: 3}
