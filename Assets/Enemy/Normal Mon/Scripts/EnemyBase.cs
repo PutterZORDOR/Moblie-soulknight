@@ -11,7 +11,7 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField]protected int currentHealth; // Current health of the enemy
 
     private bool facingRight = true; // ตัวแปรเพื่อเช็คว่าศัตรูกำลังหันหน้าไปทางขวาหรือไม่
-    private bool isDie;
+    protected bool isDie;
 
     // Start is called before the first frame update
     protected virtual void Start()

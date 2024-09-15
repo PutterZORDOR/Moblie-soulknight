@@ -34,7 +34,7 @@ public class MageEnemy : EnemyBase
         }
 
         // ตรวจสอบว่าเวลาที่จะเรียกใช้งาน Magic Orb ถึงหรือยัง
-        if (Time.time >= lastSummonTime + summonCooldown)
+        if (Time.time >= lastSummonTime + summonCooldown & !isDie)
         {
             SummonMagicOrb();
             lastSummonTime = Time.time;
