@@ -134,7 +134,8 @@ MonoBehaviour:
   detectionRange: 10
   moveSpeed: 2
   playerDetected: 0
-  maxHealth: 100
+  maxHealth: 60
+  currentHealth: 0
   magicOrbPrefab: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
   firePoint: {fileID: 4472038518681003984}
   summonCooldown: 5

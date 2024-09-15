@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public abstract class Weapon : MonoBehaviour
 {
-    public int Damage = 10;
+    public int Damage;
     public int Mana;
     public float Range;
 

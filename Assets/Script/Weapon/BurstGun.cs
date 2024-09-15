@@ -29,6 +29,7 @@ public class BurstGun : Weapon
             Vector2 shootDirection = weapon.transform.right;
             BulletIns.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
             BulletIns.GetComponent<BulletPlayer>().BulletLifeTime = SetBulletLifeTime;
+            BulletIns.GetComponent<BulletPlayer>().Damage = Damage;
             yield return new WaitForSeconds(burstDelay);
         }
     }

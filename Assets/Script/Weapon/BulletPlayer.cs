@@ -14,7 +14,7 @@ public class BulletPlayer : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
+            EnemyBase enemy = other.GetComponent<EnemyBase>();
             if (enemy != null)
             {
                 enemy.TakeDamage(Damage);
@@ -23,9 +23,8 @@ public class BulletPlayer : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Wall"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("wall map"))
         {
-            Debug.Log("Smash");
             Destroy(gameObject);
         }
     }

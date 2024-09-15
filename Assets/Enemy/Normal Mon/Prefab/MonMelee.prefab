@@ -156,14 +156,14 @@ MonoBehaviour:
   detectionRange: 10
   moveSpeed: 2
   playerDetected: 0
-  maxHealth: 100
+  maxHealth: 60
+  currentHealth: 0
   attackRange: 1.5
   attackCooldown: 3.2
   retreatDuration: 1
   retreatDistance: 5
   isAttack: 0
   isRetreating: 0
-  meleeHealth: 60
   meleeDamage: 2
   meleeSpeed: 3
   attackPoint: {fileID: 9220711078169241390}

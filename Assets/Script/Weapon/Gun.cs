@@ -14,6 +14,7 @@ public class Gun : Weapon
             Vector2 shootDirection = weapon.transform.right;
             BulletIns.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force, ForceMode2D.Impulse);
             BulletIns.GetComponent<BulletPlayer>().BulletLifeTime = SetBulletLifeTime;
+            BulletIns.GetComponent<BulletPlayer>().Damage = Damage;
         }
     }
 }

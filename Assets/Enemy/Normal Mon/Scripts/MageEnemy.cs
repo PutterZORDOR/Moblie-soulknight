@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class MageEnemy : EnemyBase
 {
@@ -39,6 +40,14 @@ public class MageEnemy : EnemyBase
             lastSummonTime = Time.time;
         }
     }
+    protected override void OnDefeated()
+    {
+        anim.Play("MonMageDie");
+    }
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
 
     protected override void OnPlayerDetected()
     {
@@ -60,16 +69,27 @@ public class MageEnemy : EnemyBase
 
         GameObject orb = Instantiate(magicOrbPrefab, firePoint.position, Quaternion.identity);
         HomingOrb homingOrbScript = orb.GetComponent<HomingOrb>();
+        Animator anims = orb.GetComponent<Animator>();
 
         if (homingOrbScript != null)
         {
             homingOrbScript.SetTarget(player);
             homingOrbScript.SetSpeed(orbSpeed);
             homingOrbScript.SetDamage(orbDamage);
-            Destroy(orb, orbLifetime); // ทำลายลูกไฟหลังจากครบเวลา
+            if (orb != null)
+            {
+                StartCoroutine(DestroyAfterDelay(orbLifetime, anims));
+            }
         }
     }
-
+    private IEnumerator DestroyAfterDelay(float delay, Animator anim)
+    {
+        yield return new WaitForSeconds(delay);
+        if (anim != null && anim.gameObject != null)
+        {
+            anim.Play("DestroyOrb");
+        }
+    }
     // ฟังก์ชันที่จะถูกเรียกเมื่อแอนิเมชันการโจมตีเสร็จสิ้น
     public void OnAttackComplete()
     {

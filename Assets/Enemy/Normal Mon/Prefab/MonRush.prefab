@@ -179,7 +179,8 @@ MonoBehaviour:
   detectionRange: 12
   moveSpeed: 6
   playerDetected: 0
-  maxHealth: 100
+  maxHealth: 60
+  currentHealth: 0
   dashRange: 5
   dashSpeed: 6
   dashDamage: 1

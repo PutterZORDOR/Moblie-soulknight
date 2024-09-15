@@ -22,7 +22,6 @@ public class RushEnemy : EnemyBase
     {
         base.Start();
         moveSpeed = rushSpeed; // Set the move speed to the rush speed stat
-        currentHealth = rushHealth; // Set the initial health to the rush health stat
 
         CircleCollider2D detectionCollider = gameObject.AddComponent<CircleCollider2D>();
         detectionCollider.isTrigger = true;

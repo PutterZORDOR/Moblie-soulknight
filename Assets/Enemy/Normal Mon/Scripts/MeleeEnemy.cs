@@ -15,8 +15,6 @@ public class MeleeEnemy : EnemyBase
     private Vector2 retreatDirection;
     private bool playerInRange = false;
 
-    // Individual stats for the melee enemy
-    public int meleeHealth = 100; // Health of the melee enemy
     public int meleeDamage; // Damage dealt by the melee enemy
     public float meleeSpeed = 1f; // Speed of the melee enemy
 
@@ -29,7 +27,6 @@ public class MeleeEnemy : EnemyBase
     {
         base.Start();
         moveSpeed = meleeSpeed; // Set the move speed to the melee speed stat
-        currentHealth = meleeHealth; // Set the initial health to the melee health stat
         anim = GetComponent<Animator>();
 
         CircleCollider2D detectionCollider = gameObject.AddComponent<CircleCollider2D>();
