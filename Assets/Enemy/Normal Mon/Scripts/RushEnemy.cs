@@ -92,17 +92,15 @@ public class RushEnemy : EnemyBase
         isDash = false;
     }
 
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // เมื่อชนผู้เล่นขณะพุ่ง
-        if (other.CompareTag("Player") && isDashing)
+        if (collision.gameObject.CompareTag("Player") && isDashing)
         {
             PlayerManager.instance.TakeDamgeAll(dashDamage);
         }
 
         // เมื่อชนกำแพง (หรือวัตถุที่มี Layer "wall map")
-        if (other.gameObject.layer == LayerMask.NameToLayer("wall map") && isDashing)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("wall map") && isDashing)
         {
             Debug.Log("T");
             StopDash(); // หยุดการพุ่งเมื่อชนกำแพง

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4600506285862611274}
   - component: {fileID: 3250982494008366433}
   - component: {fileID: -5723497411529989276}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MonRush
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   dashRange: 5
   dashSpeed: 6
   dashDamage: 1
-  dashCooldown: 2.3
+  dashCooldown: 4
   rushHealth: 75
   rushSpeed: 2
 --- !u!95 &-5723497411529989276

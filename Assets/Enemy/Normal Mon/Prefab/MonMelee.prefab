@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5412034724193787325}
   - component: {fileID: -4407127908986431225}
   - component: {fileID: 320658432589061964}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MonMelee
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5547985172521817706}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -226,7 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9220711078169241390}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AtkArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}

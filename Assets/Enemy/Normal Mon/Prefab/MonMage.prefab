@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7014654990146574766}
   - component: {fileID: 4292629217398957354}
   - component: {fileID: 5802827810032574186}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MonMage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840128858529913066}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4472038518681003984}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shootpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
