@@ -20,6 +20,7 @@ public class MageEnemy : EnemyBase
         base.Start();
         anim = GetComponent<Animator>();
         moveSpeed = 1.5f; // Mage moves slower but has powerful magic attacks
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
     }
 
     protected override void Update()

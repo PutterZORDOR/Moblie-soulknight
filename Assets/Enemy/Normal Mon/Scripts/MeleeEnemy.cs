@@ -28,6 +28,7 @@ public class MeleeEnemy : EnemyBase
         base.Start();
         moveSpeed = meleeSpeed; // Set the move speed to the melee speed stat
         anim = GetComponent<Animator>();
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
     }
 
     protected override void Update()
