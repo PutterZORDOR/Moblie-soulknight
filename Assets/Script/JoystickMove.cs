@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class JoystickMove : MonoBehaviour
 {
@@ -16,10 +18,20 @@ public class JoystickMove : MonoBehaviour
     public bool enableRotateWeapon;
     public SpriteRenderer spriteRenderer;
 
+    public bool canDash = true;
+    public bool isDashing;
+    public float dashingPower = 24f;
+    public float dashingTime = 0.5f;
+    public float dashingCooldown = 1f;
+
+    public InputAction DashButton;
+    [SerializeField] private TrailRenderer tr;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         PlayerAnim = GetComponent<Animator>();
+
+        DashButton.Enable();
     }
 
     private void Update()
@@ -44,8 +56,25 @@ public class JoystickMove : MonoBehaviour
             if(weapon.tag == "Equipped") 
                 RotateWeapon(moveDirection);
         }
+
+        if (isDashing)
+        {
+            return;
+        }
+
+        if (DashButton.triggered && canDash)
+        {
+            StartCoroutine(Dash());
+        }
     }
 
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            return; 
+        }
+    }
 
     private void MoveCharacter(Vector2 direction)
     {
@@ -116,4 +145,24 @@ public class JoystickMove : MonoBehaviour
     {
         FlipCharacter(movementJoystick.Direction);
     }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        Vector2 dashDirection = moveDirection.normalized;
+        rb.velocity = dashDirection * dashingPower;
+
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
+
 }
