@@ -37,13 +37,15 @@ public class RushEnemy : EnemyBase
     {
         base.Update();
 
-        // ตรวจสอบว่าอยู่ในช่วงพุ่งหรือไม่
         if (isDashing)
         {
-            Dash(); // เรียกฟังก์ชัน Dash ในทุกเฟรมเมื่อพุ่ง
+            Dash();
+        }
+        else
+        {
+            MoveTowardsPlayer(); // เดินตามปกติเมื่อไม่ได้พุ่ง
         }
 
-        // Check if the player is within the detection range
         if (Vector2.Distance(transform.position, player.position) <= dashRange && !isDashing)
         {
             if (Time.time >= lastDashTime + dashCooldown)
@@ -51,10 +53,6 @@ public class RushEnemy : EnemyBase
                 StartDash();
                 lastDashTime = Time.time;
             }
-        }
-        else
-        {
-            MoveTowardsPlayer();
         }
     }
 
@@ -72,6 +70,7 @@ public class RushEnemy : EnemyBase
 
     void StartDash()
     {
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, false);
         isDashing = true;
         anim.SetBool("isRunning", true); // เปลี่ยนแอนิเมชัน
         dashDirection = (player.position - transform.position).normalized; // กำหนดทิศทางพุ่ง
@@ -96,18 +95,17 @@ public class RushEnemy : EnemyBase
     {
         if (collision.gameObject.CompareTag("Player") && isDashing)
         {
+            Debug.Log("T");
             PlayerManager.instance.TakeDamgeAll(dashDamage);
+            Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
         }
 
-        // เมื่อชนกำแพง (หรือวัตถุที่มี Layer "wall map")
         if (collision.gameObject.layer == LayerMask.NameToLayer("wall map") && isDashing)
         {
-            Debug.Log("T");
-            StopDash(); // หยุดการพุ่งเมื่อชนกำแพง
+            Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+            StopDash();
         }
     }
-
-
     private void OnDrawGizmos()
     {
         // Set the color for the detection range (yellow)

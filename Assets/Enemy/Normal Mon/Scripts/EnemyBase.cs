@@ -17,25 +17,28 @@ public abstract class EnemyBase : MonoBehaviour
     public float blinkTime;
     public Color blinkColor;
 
+    protected Collider2D col_Player;
+    protected Collider2D col_Enemy;
+
     protected bool isDash;
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player")?.transform; // ใช้ ?. เพื่อป้องกันการเรียก position เมื่อ player เป็น null
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth; // Initialize current health
-    }
 
-    // Update is called once per frame
-    protected virtual void Update()
-    {
-        DetectPlayer();
+        col_Enemy = GetComponent<Collider2D>();
+        if (player != null)
+        {
+            col_Player = player.GetComponent<Collider2D>();
+        }
     }
 
     protected void DetectPlayer()
     {
-        if (Vector3.Distance(transform.position, player.position) <= detectionRange && !isDie)
+        if (player != null && Vector3.Distance(transform.position, player.position) <= detectionRange && !isDie)
         {
             OnPlayerDetected();
             if (!isDash)
@@ -50,6 +53,12 @@ public abstract class EnemyBase : MonoBehaviour
         }
     }
 
+
+    // Update is called once per frame
+    protected virtual void Update()
+    {
+        DetectPlayer();
+    }
     // Method to be overridden in child classes for specific behaviors
     protected abstract void OnPlayerDetected();
 

@@ -198,8 +198,8 @@ public class PlayerManager : MonoBehaviour
     private void Die()
     {
         Time.timeScale = 0f;
-        GameOverManager.instance.UpdateText();
         UI_GameOver.SetActive(true);
+        GameOverManager.instance.UpdateText();
     }
 
     private void UpdateUIHp()
