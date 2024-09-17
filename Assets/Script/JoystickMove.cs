@@ -37,7 +37,10 @@ public class JoystickMove : MonoBehaviour
     private void Update()
     {
         moveDirection = movementJoystick.Direction;
-        MoveCharacter(moveDirection);
+        if (!isDashing)
+        {
+            MoveCharacter(moveDirection);
+        }
         if (moveDirection != Vector2.zero)
         {
             PlayerAnim.SetBool("isMoving", true);
@@ -152,7 +155,9 @@ public class JoystickMove : MonoBehaviour
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        Vector2 dashDirection = moveDirection.normalized;
+
+        Vector2 dashDirection = moveDirection != Vector2.zero ? moveDirection.normalized : (isRight ? Vector2.right : Vector2.left);
+
         rb.velocity = dashDirection * dashingPower;
 
         tr.emitting = true;
