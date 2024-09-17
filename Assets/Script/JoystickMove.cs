@@ -53,7 +53,7 @@ public class JoystickMove : MonoBehaviour
         }
         if (enableRotateWeapon && weapon.isInWeaponSlot && weapon.gameObject.layer != LayerMask.NameToLayer("Sword"))
         {
-            if(weapon.tag == "Equipped") 
+            if (weapon.tag == "Equipped")
                 RotateWeapon(moveDirection);
         }
 
@@ -72,7 +72,12 @@ public class JoystickMove : MonoBehaviour
     {
         if (isDashing)
         {
-            return; 
+            return;
+        }
+
+        if (!isDashing)
+        {
+            MoveCharacter(moveDirection);
         }
     }
 
@@ -81,30 +86,30 @@ public class JoystickMove : MonoBehaviour
         rb.velocity = new Vector2(direction.x * playerSpeed, direction.y * playerSpeed);
     }
     public void RotateWeapon(Vector2 direction)
-{
-    if (direction != Vector2.zero)
     {
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // Normalize the angle to be between -180 and 180 degrees
-        angle = Mathf.Repeat(angle + 360, 360);
-        if (angle > 180) angle -= 360;
-
-        // Check if the angle is within the desired range
-        if (Mathf.Abs(angle) <= 90)
+        if (direction != Vector2.zero)
         {
-            weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            spriteRenderer.flipX = false;
-            spriteRenderer.flipY = false;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            // Normalize the angle to be between -180 and 180 degrees
+            angle = Mathf.Repeat(angle + 360, 360);
+            if (angle > 180) angle -= 360;
+
+            // Check if the angle is within the desired range
+            if (Mathf.Abs(angle) <= 90)
+            {
+                weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                spriteRenderer.flipX = false;
+                spriteRenderer.flipY = false;
             }
-        else if (Mathf.Abs(angle) > 90)
+            else if (Mathf.Abs(angle) > 90)
             {
                 weaponTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
                 spriteRenderer.flipX = true;
                 spriteRenderer.flipY = true;
             }
+        }
     }
-}
 
 
     public void FlipCharacter(Vector2 direction)
