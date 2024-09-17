@@ -45,6 +45,7 @@ public class PlayerManager : MonoBehaviour
     public Color blinkColor;
     public Color ghostColor;
     private GameObject player;
+    public JoystickMove joy;
 
     private void Awake()
     {
@@ -61,6 +62,7 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        joy = player.GetComponent<JoystickMove>();
         spriteRenderer = player.GetComponent<SpriteRenderer>();
         InitializeStats();
     }
@@ -99,18 +101,21 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamgeAll(int damage)
     {
-        if (isInvulnerable) return;  
+        if (isInvulnerable) return;
 
-        if (Armor > 0)
+        if (!joy.isDashing)
         {
-            TakeArmorDamage(damage);
-        }
-        else
-        {
-            TakeDamageHp(damage);
-        }
+            if (Armor > 0)
+            {
+                TakeArmorDamage(damage);
+            }
+            else
+            {
+                TakeDamageHp(damage);
+            }
 
-        StartCoroutine(InvulnerabilityTimer());
+            StartCoroutine(InvulnerabilityTimer());
+        }
     }
 
     private IEnumerator InvulnerabilityTimer()
