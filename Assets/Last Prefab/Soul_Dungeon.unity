@@ -440,12 +440,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1350745628}
     - target: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
+      propertyPath: dashingTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
       propertyPath: playerSpeed
-      value: 8
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
       propertyPath: dashingPower
-      value: 70
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
+      propertyPath: dashingCooldown
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7832216242069718047, guid: ec11f7914f6fbe9428d66b10751ad65d, type: 3}
       propertyPath: weaponTransform
@@ -856,7 +864,8 @@ PrefabInstance:
       propertyPath: TrackerSettings.BindingMode
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8434438637545544729, guid: dcfddc2e8c06b114eb833437e8833ac6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
