@@ -41,7 +41,7 @@ public class JoystickMove : MonoBehaviour
         {
             MoveCharacter(moveDirection);
         }
-        if (moveDirection != Vector2.zero)
+        if (moveDirection != Vector2.zero && !isDashing)
         {
             PlayerAnim.SetBool("isMoving", true);
         }

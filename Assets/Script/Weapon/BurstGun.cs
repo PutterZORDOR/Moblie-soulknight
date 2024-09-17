@@ -10,7 +10,7 @@ public class BurstGun : Weapon
     public float SetBulletLifeTime;
     protected override void Attack()
     {
-        if (isInWeaponSlot && PlayerManager.instance.Mana >= Mana)
+        if (isInWeaponSlot && PlayerManager.instance.Mana >= Mana && !joystickMoveScript.isDashing)
         {
             PlayerManager.instance.UseMana(Mana);
             if (Time.time >= nextFireTime)
