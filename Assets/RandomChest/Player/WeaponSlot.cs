@@ -1,5 +1,6 @@
 ﻿using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WeaponSlot : MonoBehaviour
 {
@@ -44,15 +45,7 @@ public class WeaponSlot : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SwitchWeapon();
-        }
-    }
-
-    void SwitchWeapon()
+    public void SwitchWeapon()
     {
         int nextWeaponIndex = (currentWeaponIndex + 1) % weapons.Length;
 
