@@ -13,7 +13,7 @@ public class Sword : Weapon
 
     protected override void Attack()
     {
-        if (!isAttacking && isInWeaponSlot && PlayerManager.instance.Mana >= Mana) 
+        if (!isAttacking && isInWeaponSlot && PlayerManager.instance.Mana >= Mana && !joystickMoveScript.isDashing) 
         {
             PlayerManager.instance.UseMana(Mana);
             isAttacking = true;
