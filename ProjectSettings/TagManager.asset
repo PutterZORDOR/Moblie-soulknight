@@ -10,6 +10,7 @@ TagManager:
   - Boss
   - Equipped
   - UnEquipped
+  - Light
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Bullet
   - Sword
   - Enemy
-  - 
+  - Mini Map
   - 
   - 
   - 
