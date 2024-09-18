@@ -26,7 +26,8 @@ public class RushEnemy : EnemyBase
     }
     protected override void OnDefeated()
     {
-        anim.Play("RushDie");
+        gameObject.tag = "Untagged";
+        anim.Play("MonRush_Die");
     }
     public void DestroySelf()
     {
@@ -37,7 +38,7 @@ public class RushEnemy : EnemyBase
     {
         base.Update();
 
-        if (isDashing)
+        if (isDashing & !isDie)
         {
             Dash();
         }
@@ -46,7 +47,7 @@ public class RushEnemy : EnemyBase
             MoveTowardsPlayer(); // เดินตามปกติเมื่อไม่ได้พุ่ง
         }
 
-        if (Vector2.Distance(transform.position, player.position) <= dashRange && !isDashing)
+        if (Vector2.Distance(transform.position, player.position) <= dashRange && !isDashing & !isDie)
         {
             if (Time.time >= lastDashTime + dashCooldown)
             {
@@ -63,9 +64,11 @@ public class RushEnemy : EnemyBase
 
     void MoveTowardsPlayer()
     {
-        // Normal movement towards the player
-        Vector2 direction = (player.position - transform.position).normalized;
-        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        if (!isDie)
+        {
+            Vector2 direction = (player.position - transform.position).normalized;
+            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        }
     }
 
     void StartDash()
@@ -93,14 +96,14 @@ public class RushEnemy : EnemyBase
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && isDashing)
+        if (collision.gameObject.CompareTag("Player") && isDashing & !isDie)
         {
             Debug.Log("T");
             PlayerManager.instance.TakeDamgeAll(dashDamage);
             Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
         }
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("wall map") && isDashing)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("wall map") && isDashing & !isDie)
         {
             Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
             StopDash();

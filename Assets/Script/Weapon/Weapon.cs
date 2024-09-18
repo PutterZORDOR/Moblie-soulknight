@@ -87,7 +87,6 @@ public abstract class Weapon : MonoBehaviour
     {
         if (joystickMoveScript == null)
         {
-            Debug.LogError("JoystickMove script is not assigned!");
             return;
         }
 

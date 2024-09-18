@@ -170,6 +170,7 @@ public class MeleeEnemy : EnemyBase
     }
     protected override void OnDefeated()
     {
+        gameObject.tag = "Untagged";
         anim.Play("MonMeleeDie");
     }
     public void DestroySelf()

@@ -43,6 +43,7 @@ public class MageEnemy : EnemyBase
     }
     protected override void OnDefeated()
     {
+        gameObject.tag = "Untagged";
         anim.Play("MonMageDie");
     }
     public void DestroySelf()
