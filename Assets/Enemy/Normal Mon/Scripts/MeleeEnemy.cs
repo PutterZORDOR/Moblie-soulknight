@@ -15,6 +15,12 @@ public class MeleeEnemy : EnemyBase
     private Vector2 retreatDirection;
     private bool playerInRange = false;
 
+    [Header("Setting Retreating")]
+    public float retreatDurationMin = 0.5f; // Minimum retreat duration
+    public float retreatDurationMax = 2f; // Maximum retreat duration
+    public float retreatDistanceMin = 1f; // Minimum retreat distance
+    public float retreatDistanceMax = 3f; // Maximum retreat distance
+
     public int meleeDamage; // Damage dealt by the melee enemy
     public float meleeSpeed = 1f; // Speed of the melee enemy
 
@@ -141,33 +147,41 @@ public class MeleeEnemy : EnemyBase
             isRetreating = true;
             retreatStartTime = Time.time;
 
-            // คำนวณทิศทางถอยหลัง
+            // Randomize retreat duration and distance
+            float randomRetreatDuration = Random.Range(retreatDurationMin, retreatDurationMax);
+            float randomRetreatDistance = Random.Range(retreatDistanceMin, retreatDistanceMax);
+
+            // Calculate retreat direction
             retreatDirection = (transform.position - player.position).normalized;
+
+            // Set retreat distance and duration
+            retreatDuration = randomRetreatDuration;
+            retreatDistance = randomRetreatDistance;
         }
     }
-
     void Retreat()
     {
-        if (Time.time < retreatStartTime + retreatDuration & !isDie) 
+        if (Time.time < retreatStartTime + retreatDuration && !isDie)
         {
-            // เคลื่อนศัตรูในทิศทางถอยหลัง
+            // Move the enemy in the retreat direction
             transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + retreatDirection * retreatDistance, moveSpeed * Time.deltaTime);
-            anim.SetBool("isWalking", true); // เล่น animation เดินขณะถอย
+            anim.SetBool("isWalking", true); // Play walking animation while retreating
         }
         else
         {
-            // หยุดถอยหลังเมื่อเวลาหมด
+            // Stop retreating when time is up
             isRetreating = false;
 
-            anim.SetBool("isWalking", false); // หยุด animation เดินเมื่อการถอยสิ้นสุด
+            anim.SetBool("isWalking", false); // Stop walking animation when retreat ends
 
-            // ตรวจสอบว่าผู้เล่นยังอยู่ในระยะตรวจจับหรือไม่
+            // Check if the player is still in detection range
             if (Vector2.Distance(transform.position, player.position) <= detectionRange)
             {
-                playerInRange = true; // เริ่มตรวจจับและโจมตีใหม่หากผู้เล่นยังอยู่ในระยะ
+                playerInRange = true; // Resume detection and attack if the player is still in range
             }
         }
     }
+
     protected override void OnDefeated()
     {
         gameObject.tag = "Untagged";
