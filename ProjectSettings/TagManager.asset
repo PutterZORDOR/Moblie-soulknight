@@ -11,6 +11,8 @@ TagManager:
   - Equipped
   - UnEquipped
   - Light
+  - Room
+  - Player Icon
   layers:
   - Default
   - TransparentFX

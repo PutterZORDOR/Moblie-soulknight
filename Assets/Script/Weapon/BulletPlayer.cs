@@ -3,7 +3,6 @@ using UnityEngine;
 public class BulletPlayer : MonoBehaviour
 {
     public float BulletLifeTime;
-    Weapon weapon;
     public int Damage { get; set; }
     void Start()
     {
