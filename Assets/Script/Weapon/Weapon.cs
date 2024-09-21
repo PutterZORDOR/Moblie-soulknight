@@ -13,8 +13,8 @@ public abstract class Weapon : MonoBehaviour
     public GameObject weapon;
     public float rotationSpeed = 5f;
 
-    [SerializeField] public Transform AttackPoint;
-    [SerializeField] public float Force;
+    public Transform AttackPoint;
+    public float Force;
 
     [SerializeField] private bool flipped = false;
     public Transform characterTransform;
@@ -36,7 +36,6 @@ public abstract class Weapon : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         joystickMoveScript = player.GetComponent<JoystickMove>();
-        AttackPoint = player.transform.Find("Attack_Point");
         characterTransform = player.transform;
 
         spriteRenderer = GetComponent<SpriteRenderer>();

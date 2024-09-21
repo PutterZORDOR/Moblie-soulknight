@@ -10,11 +10,20 @@ public class Gun : Weapon
         if (isInWeaponSlot && PlayerManager.instance.Mana >= Mana && !joystickMoveScript.isDashing)
         {
             PlayerManager.instance.UseMana(Mana);
-            GameObject BulletIns = Instantiate(Bullet, AttackPoint.position, weapon.transform.rotation);
             Vector2 shootDirection = weapon.transform.right;
-            BulletIns.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force, ForceMode2D.Impulse);
-            BulletIns.GetComponent<BulletPlayer>().BulletLifeTime = SetBulletLifeTime;
-            BulletIns.GetComponent<BulletPlayer>().Damage = Damage;
+            foreach (GameObject bullet in Bullet_Manager_Pool.instance.normal)
+            {
+                if (!bullet.activeSelf)
+                {
+                    bullet.transform.position = AttackPoint.position;
+                    bullet.transform.rotation = weapon.transform.rotation;
+                    bullet.SetActive(true);
+                    bullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force, ForceMode2D.Impulse);
+                    bullet.GetComponent<BulletPlayer>().BulletLifeTime = SetBulletLifeTime;
+                    bullet.GetComponent<BulletPlayer>().Damage = Damage;
+                    break;
+                }
+            }
         }
     }
 }
