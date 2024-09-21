@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.900675, y: 3.9079702, z: 0}
-  m_LocalScale: {x: 2.65, y: 2.65, z: 2.65}
+  m_LocalScale: {x: 1.9099998, y: 1.9099998, z: 1.9099998}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9106130898452684678}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_Sprite: {fileID: -96662600864641830, guid: 85c0f2c38c4e35141b206f0ff952780f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,20 +105,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 10
-  moveSpeed: 3
+  moveSpeed: 2
   playerDetected: 0
+  minCoin: 0
+  maxCoin: 0
+  minMana: 0
+  maxMana: 0
   maxHealth: 100
+  currentHealth: 0
+  blinkTime: 0
+  blinkColor: {r: 1, g: 1, b: 1, a: 0}
   attackRange: 1.5
   shootRange: 5
-  attackCooldown: 2
+  attackCooldown: 1.2
   bulletPrefab: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
   shootPoint: {fileID: 9106130898452684678}
-  numberOfBullets: 5
+  numberOfBullets: 7
   spreadAngle: 15
   meleeDamage: 20
-  bulletSpeed: 10
+  bulletSpeed: 8
   bulletLifetime: 2
   bulletDamage: 10
+  anim: {fileID: 0}
+  stoppingDistance: 5
 --- !u!50 &3674465549540764520
 Rigidbody2D:
   serializedVersion: 4

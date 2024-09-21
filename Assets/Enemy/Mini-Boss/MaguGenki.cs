@@ -138,10 +138,12 @@ public class MaguGenki : MiniBoss
         Debug.Log($"{gameObject.name} is performing a ranged attack.");
         damage = rangedDamage;
 
+        int slashCount = Random.Range(1, 4); // Random number of slashes
+        anim.SetInteger("slashCount", slashCount); // Set the count of slashes for the animation
+
         anim.SetTrigger("isRanged"); // Trigger ranged animation
         anim.SetBool("isWalking", false); // Ensure the boss stops walking
 
-        int slashCount = Random.Range(1, 4);
         for (int i = 0; i < slashCount; i++)
         {
             Vector2 direction = (player.position - transform.position).normalized;
@@ -156,9 +158,14 @@ public class MaguGenki : MiniBoss
             }
 
             Destroy(swordSlash, swordSlashLifetime);
-            yield return new WaitForSeconds(0.5f);
+
+            // Trigger animation for each slash
+            anim.SetTrigger("isRanged");
+
+            yield return new WaitForSeconds(0.5f); // Wait before the next slash
         }
     }
+
 
 
 
