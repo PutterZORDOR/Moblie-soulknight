@@ -1,0 +1,447 @@
+fileFormatVersion: 2
+guid: 14631adb94904a0448d91fd2d264ca77
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5898198210127078325
+    second: GhostInvi_0
+  - first:
+      213: -5160219479956544909
+    second: GhostInvi_1
+  - first:
+      213: 2279252673264617637
+    second: GhostInvi_2
+  - first:
+      213: -76944284739097951
+    second: GhostInvi_3
+  - first:
+      213: 7250468798651625718
+    second: GhostInvi_4
+  - first:
+      213: -4197027331504952546
+    second: GhostInvi_5
+  - first:
+      213: -3259946838974932796
+    second: GhostInvi_6
+  - first:
+      213: -5029331323564959320
+    second: GhostInvi_7
+  - first:
+      213: -1729523430530732040
+    second: GhostInvi_8
+  - first:
+      213: 4088137326328561424
+    second: GhostInvi_9
+  - first:
+      213: -5184254058670591425
+    second: GhostInvi_10
+  - first:
+      213: 747655388528217159
+    second: GhostInvi_11
+  - first:
+      213: -3994891508117785603
+    second: GhostInvi_12
+  - first:
+      213: -134592400909807754
+    second: GhostInvi_13
+  - first:
+      213: -2076008510662664776
+    second: GhostInvi_14
+  - first:
+      213: -2943318345425239696
+    second: GhostInvi_15
+  - first:
+      213: -7179789903637950762
+    second: GhostInvi_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GhostInvi_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1270
+        width: 551
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b32879a50c9ad150800000000000000
+      internalID: 5898198210127078325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_1
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1282
+        width: 572
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372a32619b73368b0800000000000000
+      internalID: -5160219479956544909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_2
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 1366
+        width: 562
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a80c47fa3881af10800000000000000
+      internalID: 2279252673264617637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_3
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 723
+        width: 566
+        height: 421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa21a8a493aeeef0800000000000000
+      internalID: -76944284739097951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_4
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 756
+        width: 428
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0feae25f6de9460800000000000000
+      internalID: 7250468798651625718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_5
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 829
+        width: 263
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1baa09f0e921c5c0800000000000000
+      internalID: -4197027331504952546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 254
+        width: 362
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a95a29cec9343ab0800000000000000
+      internalID: -5029331323564959320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_8
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 308
+        width: 201
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff20847a9f7ff7e0800000000000000
+      internalID: -1729523430530732040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_10
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 338
+        width: 154
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32ff87a664dd08b0800000000000000
+      internalID: -5184254058670591425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_14
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 346
+        width: 121
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd934b32498033e0800000000000000
+      internalID: -2076008510662664776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_15
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 368
+        width: 55
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071c9082f8b3727d0800000000000000
+      internalID: -2943318345425239696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostInvi_6
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 381
+        width: 65
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f20ec6abc8b6749b93376b063e0a1d
+      internalID: -3259946838974932796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c61951939471d0a44a61c53db84f5652
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GhostInvi_0: 5898198210127078325
+      GhostInvi_1: -5160219479956544909
+      GhostInvi_10: -5184254058670591425
+      GhostInvi_11: 747655388528217159
+      GhostInvi_12: -3994891508117785603
+      GhostInvi_13: -134592400909807754
+      GhostInvi_14: -2076008510662664776
+      GhostInvi_15: -2943318345425239696
+      GhostInvi_16: -7179789903637950762
+      GhostInvi_2: 2279252673264617637
+      GhostInvi_3: -76944284739097951
+      GhostInvi_4: 7250468798651625718
+      GhostInvi_5: -4197027331504952546
+      GhostInvi_6: -3259946838974932796
+      GhostInvi_7: -5029331323564959320
+      GhostInvi_8: -1729523430530732040
+      GhostInvi_9: 4088137326328561424
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
