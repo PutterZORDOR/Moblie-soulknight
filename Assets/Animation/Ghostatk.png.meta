@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: 02da82749764aa24ba1e67659d23b84d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8070405215567208175
+    second: Ghostatk_0
+  - first:
+      213: 5474458989677440549
+    second: Ghostatk_1
+  - first:
+      213: -2180296247339731375
+    second: Ghostatk_2
+  - first:
+      213: 5133383758889062462
+    second: Ghostatk_3
+  - first:
+      213: -4600764057923175301
+    second: Ghostatk_4
+  - first:
+      213: 7494004618662558697
+    second: Ghostatk_5
+  - first:
+      213: 249097009824834377
+    second: Ghostatk_6
+  - first:
+      213: 4064638119401702471
+    second: Ghostatk_7
+  - first:
+      213: -7910518799303242350
+    second: Ghostatk_8
+  - first:
+      213: 6317317722563896444
+    second: Ghostatk_9
+  - first:
+      213: 6300069772423586133
+    second: Ghostatk_10
+  - first:
+      213: -4486120571064122198
+    second: Ghostatk_11
+  - first:
+      213: 753891849055449261
+    second: Ghostatk_12
+  - first:
+      213: -931372294050287088
+    second: Ghostatk_13
+  - first:
+      213: 1886625643580834005
+    second: Ghostatk_14
+  - first:
+      213: 6742647159098703477
+    second: Ghostatk_15
+  - first:
+      213: 3294362335121588727
+    second: Ghostatk_16
+  - first:
+      213: 997218806896195436
+    second: Ghostatk_17
+  - first:
+      213: -8869019816062392437
+    second: Ghostatk_18
+  - first:
+      213: 7439784303171262037
+    second: Ghostatk_19
+  - first:
+      213: 3482210442620965311
+    second: Ghostatk_20
+  - first:
+      213: 8621835864111790747
+    second: Ghostatk_21
+  - first:
+      213: -4169932996508425063
+    second: Ghostatk_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ghostatk_0
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1427
+        width: 161
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feed753e8c6dfff60800000000000000
+      internalID: 8070405215567208175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghostatk_1
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1292
+        width: 287
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52eea29327f29fb40800000000000000
+      internalID: 5474458989677440549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghostatk_2
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1036
+        width: 386
+        height: 834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156b2306d180eb1e0800000000000000
+      internalID: -2180296247339731375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghostatk_3
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 753
+        width: 544
+        height: 1176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e309754b4517d3740800000000000000
+      internalID: 5133383758889062462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghostatk_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 282
+        width: 386
+        height: 861
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7cba18177dc620c0800000000000000
+      internalID: -4600764057923175301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghostatk_5
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 251
+        width: 419
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ebb488ee7d000860800000000000000
+      internalID: 7494004618662558697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghostatk_6
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 256
+        width: 324
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943a8312968f47300800000000000000
+      internalID: 249097009824834377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghostatk_7
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 282
+        width: 163
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744437f85de786830800000000000000
+      internalID: 4064638119401702471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a95dee5f7f6591e45b1e39916ed5b848
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ghostatk_0: 8070405215567208175
+      Ghostatk_1: 5474458989677440549
+      Ghostatk_10: 6300069772423586133
+      Ghostatk_11: -4486120571064122198
+      Ghostatk_12: 753891849055449261
+      Ghostatk_13: -931372294050287088
+      Ghostatk_14: 1886625643580834005
+      Ghostatk_15: 6742647159098703477
+      Ghostatk_16: 3294362335121588727
+      Ghostatk_17: 997218806896195436
+      Ghostatk_18: -8869019816062392437
+      Ghostatk_19: 7439784303171262037
+      Ghostatk_2: -2180296247339731375
+      Ghostatk_20: 3482210442620965311
+      Ghostatk_21: 8621835864111790747
+      Ghostatk_22: -4169932996508425063
+      Ghostatk_23: -2106120706
+      Ghostatk_3: 5133383758889062462
+      Ghostatk_4: -4600764057923175301
+      Ghostatk_5: 7494004618662558697
+      Ghostatk_6: 249097009824834377
+      Ghostatk_7: 4064638119401702471
+      Ghostatk_8: -7910518799303242350
+      Ghostatk_9: 6317317722563896444
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
