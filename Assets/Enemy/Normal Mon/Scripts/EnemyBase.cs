@@ -80,8 +80,7 @@ public abstract class EnemyBase : MonoBehaviour
             if (currentHealth <= 0)
             {
                 isDie = true;
-                Mana_Manager manaManager = GameObject.FindGameObjectWithTag("Mana Pool").GetComponent<Mana_Manager>();
-                foreach(GameObject mana in manaManager.ManaPool)
+                foreach(GameObject mana in Mana_Manager.instance.ManaPool)
                 {
                     if (!mana.activeSelf)
                     {

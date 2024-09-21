@@ -33,7 +33,6 @@ public class HomingOrb : MonoBehaviour
             Vector2 direction = (target.position - transform.position).normalized;
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
-            // Optionally rotate towards player if needed
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         }
@@ -50,6 +49,7 @@ public class HomingOrb : MonoBehaviour
     }
     public void DestroyOrb()
     {
-        Destroy(gameObject);
+        Stop = false;
+        gameObject.SetActive(false);
     }
 }

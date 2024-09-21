@@ -6,7 +6,8 @@ public class BulletPlayer : MonoBehaviour
     public int Damage { get; set; }
     void Start()
     {
-        Destroy(gameObject, BulletLifeTime);
+        CancelInvoke("DisableBullet");
+        Invoke("DisableBullet", BulletLifeTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -17,15 +18,19 @@ public class BulletPlayer : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(Damage);
-                Debug.Log("Enemy take damage");
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
 
         if (other.gameObject.layer == LayerMask.NameToLayer("wall map"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
+    }
+
+    void DisableBullet()
+    {
+        gameObject.SetActive(false);
     }
 
 }

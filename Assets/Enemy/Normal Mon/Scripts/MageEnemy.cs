@@ -15,6 +15,8 @@ public class MageEnemy : EnemyBase
     private float lastSummonTime;
     private bool isAttacking = false; // ตัวแปรสำหรับเช็คสถานะการโจมตี
 
+    Animator anims;
+
     protected override void Start()
     {
         base.Start();
@@ -69,20 +71,21 @@ public class MageEnemy : EnemyBase
 
         anim.SetTrigger("Attack"); // เล่นแอนิเมชันโจมตี
 
-        GameObject orb = Instantiate(magicOrbPrefab, firePoint.position, Quaternion.identity);
-        HomingOrb homingOrbScript = orb.GetComponent<HomingOrb>();
-        Animator anims = orb.GetComponent<Animator>();
-
-        if (homingOrbScript != null)
+        foreach (GameObject orb in Bullet_Manager_Pool.instance.Orb)
         {
-            homingOrbScript.SetTarget(player);
-            homingOrbScript.SetSpeed(orbSpeed);
-            homingOrbScript.SetDamage(orbDamage);
-            if (orb != null)
+            if (!orb.activeSelf)
             {
-                StartCoroutine(DestroyAfterDelay(orbLifetime, anims));
+                HomingOrb homingOrbScript = orb.GetComponent<HomingOrb>();
+                anims = orb.GetComponent<Animator>();
+                homingOrbScript.SetTarget(player);
+                homingOrbScript.SetSpeed(orbSpeed);
+                homingOrbScript.SetDamage(orbDamage);
+                orb.transform.position = firePoint.transform.position;
+                orb.SetActive(true);
+                break;
             }
         }
+        StartCoroutine(DestroyAfterDelay(orbLifetime, anims));
     }
     private IEnumerator DestroyAfterDelay(float delay, Animator anim)
     {
