@@ -13,6 +13,7 @@ TagManager:
   - Light
   - Room
   - Player Icon
+  - Mana Pool
   layers:
   - Default
   - TransparentFX
