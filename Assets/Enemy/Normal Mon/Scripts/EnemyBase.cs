@@ -8,6 +8,13 @@ public abstract class EnemyBase : MonoBehaviour
     public float moveSpeed;
     public bool playerDetected;
 
+    [Header("Setting Mana And Coin")]
+    public int minCoin;
+    public int maxCoin;
+    public int minMana;
+    public int maxMana;
+
+    [Space(25)]
     public int maxHealth = 100; // Maximum health for the enemy
     [SerializeField]protected int currentHealth; // Current health of the enemy
 
@@ -21,12 +28,6 @@ public abstract class EnemyBase : MonoBehaviour
     protected Collider2D col_Enemy;
 
     protected bool isDash;
-
-    [Header("Setting Mana And Coin")]
-    public int minCoin;
-    public int maxCoin;
-    public int minMana;
-    public int maxMana;
 
     // Start is called before the first frame update
     protected virtual void Start()

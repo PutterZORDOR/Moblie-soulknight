@@ -134,6 +134,10 @@ MonoBehaviour:
   detectionRange: 10
   moveSpeed: 2
   playerDetected: 0
+  minCoin: 3
+  maxCoin: 6
+  minMana: 5
+  maxMana: 10
   maxHealth: 60
   currentHealth: 0
   blinkTime: 0.2
