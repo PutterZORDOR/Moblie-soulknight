@@ -274,6 +274,7 @@ Transform:
   - {fileID: 1196917706564142562}
   - {fileID: 1302626847606028752}
   - {fileID: 6049263901472581251}
+  - {fileID: 1097747373505809853}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2168010318195766498
@@ -349,7 +350,7 @@ MonoBehaviour:
   Detected: 0
   weapon: {fileID: 1524714321592265502}
   rotationSpeed: 5
-  AttackPoint: {fileID: 0}
+  AttackPoint: {fileID: 1097747373505809853}
   Force: 12
   flipped: 0
   characterTransform: {fileID: 0}
@@ -635,6 +636,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &4063636360700762172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097747373505809853}
+  m_Layer: 8
+  m_Name: AtkPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1097747373505809853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063636360700762172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.258, y: 0.016, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3276537601885045712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4212401851676261804
 GameObject:
   m_ObjectHideFlags: 0

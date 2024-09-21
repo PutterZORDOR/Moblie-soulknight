@@ -987,6 +987,7 @@ Transform:
   - {fileID: 7860162617773286841}
   - {fileID: 6357553317375395024}
   - {fileID: 6739820208586840370}
+  - {fileID: 5452998424212148908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6028693558081511652
@@ -1062,7 +1063,7 @@ MonoBehaviour:
   Detected: 0
   weapon: {fileID: 7997673220192353492}
   rotationSpeed: 5
-  AttackPoint: {fileID: 0}
+  AttackPoint: {fileID: 5452998424212148908}
   Force: 16
   flipped: 0
   characterTransform: {fileID: 0}
@@ -1440,3 +1441,34 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &8935099738870307152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5452998424212148908}
+  m_Layer: 8
+  m_Name: AtkPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5452998424212148908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8935099738870307152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.146, y: 0.039, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7257929711561043280}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
