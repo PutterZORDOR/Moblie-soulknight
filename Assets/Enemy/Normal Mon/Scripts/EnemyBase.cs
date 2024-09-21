@@ -22,6 +22,12 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected bool isDash;
 
+    [Header("Setting Mana And Coin")]
+    public int minCoin;
+    public int maxCoin;
+    public int minMana;
+    public int maxMana;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -78,6 +84,9 @@ public abstract class EnemyBase : MonoBehaviour
                 {
                     if (!mana.activeSelf)
                     {
+                        Mana ManaComponent = mana.GetComponent<Mana>();
+                        ManaComponent.SetCoin(Random.Range(minCoin,maxCoin + 1));
+                        ManaComponent.SetMana(Random.Range(minMana,maxMana + 1));
                         mana.transform.position = transform.position;
                         mana.SetActive(true);
                         break;
