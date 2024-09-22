@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class MageEnemy : EnemyBase
@@ -78,7 +79,10 @@ public class MageEnemy : EnemyBase
         yield return new WaitForSeconds(0.8f);
         icon.SetActive(false);
         anim.SetTrigger("Attack");
+    }
 
+    public void ShootOrb()
+    {
         foreach (GameObject orb in Bullet_Manager_Pool.instance.Orb)
         {
             if (!orb.activeSelf)
@@ -96,6 +100,7 @@ public class MageEnemy : EnemyBase
         }
         StartCoroutine(DestroyAfterDelay(orbLifetime, anims));
     }
+
     private IEnumerator DestroyAfterDelay(float delay, Animator anim)
     {
         yield return new WaitForSeconds(delay);

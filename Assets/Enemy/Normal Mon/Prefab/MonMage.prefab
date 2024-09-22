@@ -233,7 +233,7 @@ MonoBehaviour:
   blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
   magicOrbPrefab: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
   firePoint: {fileID: 4472038518681003984}
-  summonCooldown: 3.5
+  summonCooldown: 4.5
   orbSpeed: 3.5
   orbLifetime: 3
   orbDamage: 1
@@ -333,7 +333,7 @@ Transform:
   m_GameObject: {fileID: 2029617698400606037}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.179, y: -0.062, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
