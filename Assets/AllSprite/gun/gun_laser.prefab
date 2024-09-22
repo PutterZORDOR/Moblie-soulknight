@@ -1275,7 +1275,7 @@ MonoBehaviour:
   fireRate: 0.1
   bulletsPerRound: 3
   burstDelay: 0.15
-  SetBulletLifeTime: 0
+  SetBulletLifeTime: 5
 --- !u!114 &3862058315520078546
 MonoBehaviour:
   m_ObjectHideFlags: 0

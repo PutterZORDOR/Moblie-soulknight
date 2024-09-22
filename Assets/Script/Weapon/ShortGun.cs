@@ -20,7 +20,6 @@ public class ShortGun : Weapon
             {
                 float angle = Random.Range(-spreadAngle, spreadAngle);
                 Quaternion pelletRotation = Quaternion.Euler(0, 0, angle);
-                float spreadFactor = i / (float)pelletCount;
                 Vector2 shootDirection = pelletRotation * weapon.transform.right;
                 foreach (GameObject bullet in Bullet_Manager_Pool.instance.blast)
                 {

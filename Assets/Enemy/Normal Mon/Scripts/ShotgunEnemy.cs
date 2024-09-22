@@ -25,9 +25,6 @@ public class ShotgunMon : EnemyBase
     protected override void Start()
     {
         base.Start();
-        CircleCollider2D detectionCollider = gameObject.AddComponent<CircleCollider2D>();
-        detectionCollider.isTrigger = true;
-        detectionCollider.radius = detectionRange;
         anim = GetComponent<Animator>();
     }
 
