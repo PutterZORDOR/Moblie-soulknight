@@ -431,7 +431,7 @@ MonoBehaviour:
   weapon: {fileID: 1262102958910336170}
   rotationSpeed: 5
   AttackPoint: {fileID: 1582629860261705845}
-  Force: 340
+  Force: 18
   flipped: 0
   characterTransform: {fileID: 0}
   joystickMoveScript: {fileID: 0}
