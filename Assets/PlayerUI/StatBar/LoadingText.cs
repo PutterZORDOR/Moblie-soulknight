@@ -6,15 +6,18 @@ using UnityEngine.UI;
 public class LoadingText : MonoBehaviour
 {
     public TextMeshProUGUI loadingText;
+    public GameObject image;
+    public GameObject back_Ground;
     public float changeInterval = 0.8f;
+    Animator anim;
 
     public void Start()
     {
-        if (loadingText != null)
-        {
+            anim = back_Ground.GetComponent<Animator>();
+            image.SetActive(true);
+            back_Ground.SetActive(true);
             loadingText.gameObject.SetActive(true);
             StartCoroutine(UpdateLoadingText());
-        }
     }
 
     IEnumerator UpdateLoadingText()
@@ -40,6 +43,8 @@ public class LoadingText : MonoBehaviour
             StopAllCoroutines();
             loadingText.text = "Load";
             loadingText.gameObject.SetActive(false);
+            image.SetActive(false);
+            anim.SetTrigger("Close");
         }
     }
 }
