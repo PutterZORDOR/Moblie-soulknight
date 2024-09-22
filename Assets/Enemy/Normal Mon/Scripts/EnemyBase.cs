@@ -8,6 +8,9 @@ public abstract class EnemyBase : MonoBehaviour
     public float moveSpeed;
     public bool playerDetected;
 
+    [Header("Angry Icon")]
+    public GameObject icon;
+
     [Header("Setting Mana And Coin")]
     public int minCoin;
     public int maxCoin;

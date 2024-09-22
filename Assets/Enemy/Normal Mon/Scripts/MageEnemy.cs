@@ -68,9 +68,16 @@ public class MageEnemy : EnemyBase
 
     private void SummonMagicOrb()
     {
-        isAttacking = true; // กำลังโจมตีอยู่
-
-        anim.SetTrigger("Attack"); // เล่นแอนิเมชันโจมตี
+        isAttacking = true;
+        anim.SetBool("isWalking", false);
+        icon.SetActive(true);
+        StartCoroutine(DelayBeforeAttack());
+    }
+    private IEnumerator DelayBeforeAttack()
+    {
+        yield return new WaitForSeconds(0.8f);
+        icon.SetActive(false);
+        anim.SetTrigger("Attack");
 
         foreach (GameObject orb in Bullet_Manager_Pool.instance.Orb)
         {
