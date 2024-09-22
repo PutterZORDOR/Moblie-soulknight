@@ -21,12 +21,20 @@ public class ShortGun : Weapon
                 float angle = Random.Range(-spreadAngle, spreadAngle);
                 Quaternion pelletRotation = Quaternion.Euler(0, 0, angle);
                 float spreadFactor = i / (float)pelletCount;
-                GameObject pellet = Instantiate(Bullet, AttackPoint.position, weapon.transform.rotation);
                 Vector2 shootDirection = pelletRotation * weapon.transform.right;
-                pellet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force);
-
-                pellet.GetComponent<BulletPlayer>().BulletLifeTime = SetBulletLifeTime;
-                pellet.GetComponent<BulletPlayer>().Damage = Damage;
+                foreach (GameObject bullet in Bullet_Manager_Pool.instance.blast)
+                {
+                    if (!bullet.activeSelf)
+                    {
+                        bullet.transform.position = AttackPoint.position;
+                        bullet.transform.rotation = weapon.transform.rotation;
+                        bullet.SetActive(true);
+                        bullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force, ForceMode2D.Impulse);
+                        bullet.GetComponent<BulletPlayer>().BulletLifeTime = SetBulletLifeTime;
+                        bullet.GetComponent<BulletPlayer>().Damage = Damage;
+                        break;
+                    }
+                }
             }
         }
     }
