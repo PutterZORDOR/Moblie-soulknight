@@ -164,7 +164,6 @@ public class DungeonMaker : MonoBehaviour
     public void CloseUI()
     {
         _LoadingText.StopLoading();
-        GIF.SetActive(false);
     }
     public void CheckRoom(Room _room)
     {

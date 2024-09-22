@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 120872115130368154}
+  - component: {fileID: 9106829813810150999}
   m_Layer: 0
   m_Name: Bullet_Manager_Pool
   m_TagString: Untagged
@@ -31,3 +32,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9106829813810150999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645025690195410255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e92866c4a39df3247ab2e76b7df0b7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal_Bullet: {fileID: 6932975794759495541, guid: 35e3bdb71ae8a434f85a80490d49afe3, type: 3}
+  single_Bullet: {fileID: 8364218688031570338, guid: e9013285eecbabe4f86d25cab0885555, type: 3}
+  blast_Fire: {fileID: 6379072185221663181, guid: 288a56f1e3598bc46aa542ed6ed21f33, type: 3}
+  normal: []
+  single: []
+  blast: []
+  enemy_Bullet: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
+  enemy_Orb: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
+  enemy_B: []
+  Orb: []
+  num_Bullet: 7
+  num_Bullet_Enemy: 15
