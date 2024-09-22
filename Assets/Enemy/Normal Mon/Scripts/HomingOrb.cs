@@ -5,6 +5,7 @@ public class HomingOrb : MonoBehaviour
     private Transform target;
     private float speed;
     private int damage;
+    private float slows;
     private Animator anim;
     private bool Stop;
 
@@ -13,7 +14,10 @@ public class HomingOrb : MonoBehaviour
         target = player;
         anim = GetComponent<Animator>();
     }
-
+    public void SetDebuff(float slow)
+    {
+        slows = slow;
+    }
     public void SetSpeed(float orbSpeed)
     {
         speed = orbSpeed;
@@ -42,6 +46,8 @@ public class HomingOrb : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            JoystickMove move = other.GetComponent<JoystickMove>();
+            move.Debuff_Slow(slows);
             PlayerManager.instance.TakeDamgeAll(damage);
             Stop = true;
             anim.Play("DestroyOrb");

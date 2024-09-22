@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea57572ef19ebe949b613fdb892db4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 10
-  moveSpeed: 2
+  detectionRange: 11
+  moveSpeed: 1
   playerDetected: 0
   minCoin: 3
   maxCoin: 6
@@ -144,12 +144,13 @@ MonoBehaviour:
   blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
   magicOrbPrefab: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
   firePoint: {fileID: 4472038518681003984}
-  summonCooldown: 5
-  orbSpeed: 4
+  summonCooldown: 3.5
+  orbSpeed: 3.5
   orbLifetime: 3
   orbDamage: 1
   anim: {fileID: 0}
   stoppingDistance: 5
+  DebuffTime: 4
 --- !u!95 &4292629217398957354
 Animator:
   serializedVersion: 7

@@ -174,7 +174,7 @@ MonoBehaviour:
   retreatDurationMax: 2
   retreatDistanceMin: 1.5
   retreatDistanceMax: 3
-  meleeDamage: 2
+  meleeDamage: 3
   meleeSpeed: 3
   attackPoint: {fileID: 9220711078169241390}
   attackSize: {x: 1.16, y: 2.2}

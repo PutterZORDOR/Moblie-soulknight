@@ -34,6 +34,7 @@ public abstract class Weapon : MonoBehaviour
 
     protected virtual void Awake()
     {
+        flipCooldown = 1f;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         joystickMoveScript = player.GetComponent<JoystickMove>();
         characterTransform = player.transform;

@@ -189,7 +189,7 @@ MonoBehaviour:
   blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
   dashRange: 5
   dashSpeed: 6
-  dashDamage: 1
+  dashDamage: 2
   dashCooldown: 5
   rushHealth: 75
   rushSpeed: 2

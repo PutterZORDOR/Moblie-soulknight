@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -13,12 +14,16 @@ public class Bullet : MonoBehaviour
         damage = dmg;
         speed = spd;
         lifetime = life;
-        Destroy(gameObject, lifetime); // Destroy the bullet after its lifetime expires
+        CancelInvoke("DisableBullet");
+        Invoke("DisableBullet", lifetime);
+    }
+    void DisableBullet()
+    {
+        gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        // Move the bullet in the set direction
         transform.position += direction * speed * Time.deltaTime;
     }
 
@@ -26,15 +31,13 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Find the PlayerHealth component and apply damage
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage); // Use the damage value from the bullet
-            }
+            PlayerManager.instance.TakeDamgeAll(damage);
+            gameObject.SetActive(false);
+        }
 
-            Debug.Log("Bullet hit the player!");
-            Destroy(gameObject); // Destroy the bullet upon hitting the player
+        if (other.gameObject.layer == LayerMask.NameToLayer("wall map"))
+        {
+            gameObject.SetActive(false);
         }
     }
 }
