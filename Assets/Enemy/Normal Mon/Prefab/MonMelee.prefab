@@ -254,6 +254,7 @@ MonoBehaviour:
   blinkTime: 0.2
   blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
   attackRange: 1.5
+  secondaryDetectionRange: 3
   attackCooldown: 3.2
   retreatDuration: 1
   retreatDistance: 5

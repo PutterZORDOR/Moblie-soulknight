@@ -3,6 +3,7 @@
 public class MeleeEnemy : EnemyBase
 {
     public float attackRange = 1.5f; // Range within which the enemy can attack
+    public float secondaryDetectionRange = 5f; // Range within which icon will show
     public float attackCooldown = 2f; // Cooldown time between attacks
     public float retreatDuration = 1f; // Time for retreating after a missed attack
     public float retreatDistance = 2f; // Distance to retreat after a missed attack
@@ -55,20 +56,28 @@ public class MeleeEnemy : EnemyBase
             return;
         }
 
-        // ตรวจสอบว่าผู้เล่นอยู่ในระยะการตรวจจับหรือไม่
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        // ตรวจสอบว่าผู้เล่นอยู่ในระยะวงที่สองหรือไม่
+        if (distanceToPlayer <= secondaryDetectionRange && !isDie)
+        {
+            icon.SetActive(true);
+        }
+        else
+        {
+            icon.SetActive(false);
+        }
+
         if (playerInRange)
         {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
             // เคลื่อนไปหาผู้เล่นถ้าอยู่นอกระยะโจมตี
-            if (distanceToPlayer > attackRange & !isDie)
+            if (distanceToPlayer > attackRange && !isDie)
             {
                 MoveTowardsPlayer();
             }
             else
             {
-                // โจมตีผู้เล่นถ้าอยู่ในระยะและ cooldown ผ่านแล้ว
-                if (Time.time >= lastAttackTime + attackCooldown & !isDie)
+                if (Time.time >= lastAttackTime + attackCooldown && !isDie)
                 {
                     AttackPlayer();
                     lastAttackTime = Time.time; // อัปเดตเวลาการโจมตีล่าสุด
@@ -81,7 +90,6 @@ public class MeleeEnemy : EnemyBase
         }
     }
 
-
     protected override void OnPlayerDetected()
     {
         playerInRange = true;
@@ -90,10 +98,8 @@ public class MeleeEnemy : EnemyBase
     void MoveTowardsPlayer()
     {
         // Calculate the direction towards the player
-        if (!isAttack & !isDie)
+        if (!isAttack && !isDie)
         {
-            Vector2 direction = (player.position - transform.position).normalized;
-
             // Calculate new position
             Vector2 newPosition = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
 
@@ -115,7 +121,8 @@ public class MeleeEnemy : EnemyBase
     void AttackPlayer()
     {
         isAttacking = true;
-
+        icon.SetActive(false);
+        anim.SetBool("isWalking", false);
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
             anim.SetTrigger("Attack"); // Play attack animation
@@ -127,9 +134,10 @@ public class MeleeEnemy : EnemyBase
         isAttacking = false;
         StartRetreat();
     }
+
     public void SwingSword()
     {
-        Collider2D[] hitPlayers = Physics2D.OverlapBoxAll(attackPoint.position, attackSize,0f);
+        Collider2D[] hitPlayers = Physics2D.OverlapBoxAll(attackPoint.position, attackSize, 0f);
 
         foreach (Collider2D hit in hitPlayers)
         {
@@ -159,6 +167,7 @@ public class MeleeEnemy : EnemyBase
             retreatDistance = randomRetreatDistance;
         }
     }
+
     void Retreat()
     {
         if (Time.time < retreatStartTime + retreatDuration && !isDie)
@@ -187,6 +196,7 @@ public class MeleeEnemy : EnemyBase
         gameObject.tag = "Untagged";
         anim.Play("MonMeleeDie");
     }
+
     public void DestroySelf()
     {
         Destroy(gameObject);
@@ -196,7 +206,6 @@ public class MeleeEnemy : EnemyBase
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player detected!");
             playerInRange = true;
         }
     }
@@ -205,10 +214,10 @@ public class MeleeEnemy : EnemyBase
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player left detection range!");
             playerInRange = false;
         }
     }
+
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
@@ -216,6 +225,12 @@ public class MeleeEnemy : EnemyBase
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackPoint.position, attackSize);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, secondaryDetectionRange);
     }
 
 }
