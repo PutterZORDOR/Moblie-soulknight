@@ -75,8 +75,15 @@ public class ShotgunMon : EnemyBase
     private void ShootPlayer()
     {
         isAttacking = true;
-        anim.SetTrigger("Attack"); // Trigger shoot animation
-        anim.SetBool("isWalking", false); // Stop walking during attack
+        anim.SetBool("isWalking", false);
+        icon.SetActive(true);
+        StartCoroutine(DelayBeforeAttack());
+    }
+    private IEnumerator DelayBeforeAttack()
+    {
+        yield return new WaitForSeconds(1f);
+        icon.SetActive(false);
+        anim.SetTrigger("Attack");
     }
     public void isShooting()
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class RushEnemy : EnemyBase
@@ -73,14 +74,19 @@ public class RushEnemy : EnemyBase
 
     void StartDash()
     {
+        icon.SetActive(true);
+        StartCoroutine(DelayBeforeAttack());
+    }
+    private IEnumerator DelayBeforeAttack()
+    {
+        yield return new WaitForSeconds(1f);
+        icon.SetActive(false);
         Physics2D.IgnoreCollision(col_Player, col_Enemy, false);
         isDashing = true;
-        anim.SetBool("isRunning", true); // เปลี่ยนแอนิเมชัน
-        dashDirection = (player.position - transform.position).normalized; // กำหนดทิศทางพุ่ง
-
+        anim.SetBool("isRunning", true);
+        dashDirection = (player.position - transform.position).normalized;
         isDash = true;
     }
-
     void Dash()
     {
         transform.position += (Vector3)dashDirection * dashSpeed * Time.deltaTime;

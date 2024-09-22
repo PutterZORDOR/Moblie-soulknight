@@ -151,7 +151,7 @@ MonoBehaviour:
   - {fileID: 5547985172521817706, guid: ec99e3c7fbb1c314f9f6b3dc2a0523c2, type: 3}
   - {fileID: 1840128858529913066, guid: 1dc71297178dd1e4a824787c8679b692, type: 3}
   - {fileID: 3705290102035354588, guid: 670cebd069ace0848bd70c4df09cb5a5, type: 3}
-  - {fileID: 4458826238739980880, guid: 5566c46127b2d704aaea5d88524b214d, type: 3}
+  - {fileID: 3126621491096810190, guid: 5c3bb7528abccd4488d7155c44e38806, type: 3}
   _currentRoomSpawnAble: {fileID: 0}
   BoxPrefab: {fileID: 3908443943704751625, guid: 3722a9bc19096d64daa3d96406ece345, type: 3}
   doorAnim1: {fileID: 0}

@@ -76,7 +76,7 @@ public class MageEnemy : EnemyBase
     }
     private IEnumerator DelayBeforeAttack()
     {
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1f);
         icon.SetActive(false);
         anim.SetTrigger("Attack");
     }
