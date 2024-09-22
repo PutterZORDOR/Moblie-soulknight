@@ -11,6 +11,7 @@ public class MageEnemy : EnemyBase
     public int orbDamage = 30;
     public Animator anim;
     public float stoppingDistance = 3f;
+    public float DebuffTime;
 
     private float lastSummonTime;
     private bool isAttacking = false; // ตัวแปรสำหรับเช็คสถานะการโจมตี
@@ -80,6 +81,7 @@ public class MageEnemy : EnemyBase
                 homingOrbScript.SetTarget(player);
                 homingOrbScript.SetSpeed(orbSpeed);
                 homingOrbScript.SetDamage(orbDamage);
+                homingOrbScript.SetDebuff(DebuffTime);
                 orb.transform.position = firePoint.transform.position;
                 orb.SetActive(true);
                 break;

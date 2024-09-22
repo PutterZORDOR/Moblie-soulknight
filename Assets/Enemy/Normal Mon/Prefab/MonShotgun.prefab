@@ -104,28 +104,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c496ce9acd1f749a3477fed5438822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 10
-  moveSpeed: 2
+  detectionRange: 7
+  moveSpeed: 1
   playerDetected: 0
-  minCoin: 0
-  maxCoin: 0
-  minMana: 0
-  maxMana: 0
+  minCoin: 3
+  maxCoin: 6
+  minMana: 5
+  maxMana: 10
   maxHealth: 100
   currentHealth: 0
-  blinkTime: 0
-  blinkColor: {r: 1, g: 1, b: 1, a: 0}
-  attackRange: 1.5
+  blinkTime: 0.2
+  blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
   shootRange: 5
-  attackCooldown: 1.2
+  attackCooldown: 2.5
   bulletPrefab: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
   shootPoint: {fileID: 9106130898452684678}
   numberOfBullets: 7
-  spreadAngle: 15
+  spreadAngle: 25
   meleeDamage: 20
-  bulletSpeed: 8
-  bulletLifetime: 2
-  bulletDamage: 10
+  bulletSpeed: 4.7
+  bulletLifetime: 3
+  bulletDamage: 2
   anim: {fileID: 0}
   stoppingDistance: 5
   attackDelay: 1
@@ -246,7 +245,7 @@ Transform:
   m_GameObject: {fileID: 4770380559945225504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.08, z: 0}
+  m_LocalPosition: {x: 0.288, y: 0.161, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

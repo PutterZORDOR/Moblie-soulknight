@@ -24,13 +24,18 @@ public class JoystickMove : MonoBehaviour
     public float dashingTime = 0.5f;
     public float dashingCooldown = 1f;
 
+    private Coroutine slowCoroutine = null;
+    private float originalSpeed;
+    private float originalDashingPower;
+
     public InputAction DashButton;
     [SerializeField] private TrailRenderer tr;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         PlayerAnim = GetComponent<Animator>();
-
+        originalSpeed = playerSpeed;
+        originalDashingPower = dashingPower;
         DashButton.Enable();
     }
 
@@ -153,7 +158,26 @@ public class JoystickMove : MonoBehaviour
     {
         FlipCharacter(movementJoystick.Direction);
     }
+    public void Debuff_Slow(float delay)
+    {
+        if (slowCoroutine != null)
+        {
+            StopCoroutine(slowCoroutine);
+        }
+        slowCoroutine = StartCoroutine(SlowEffect(delay));
+    }
+    private IEnumerator SlowEffect(float delay)
+    {
+        playerSpeed = originalSpeed * 0.5f;
+        dashingPower = originalDashingPower * 0.5f;
 
+        yield return new WaitForSeconds(delay);
+
+        playerSpeed = originalSpeed;
+        dashingPower = originalDashingPower;
+
+        slowCoroutine = null;
+    }
     private IEnumerator Dash()
     {
         canDash = false;
