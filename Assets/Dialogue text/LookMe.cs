@@ -7,6 +7,9 @@ public class LookMe : MonoBehaviour
     [Header("Speed Camera")]
     public Vector3 speedCam;
 
+    [Header("Move Down From Transform")]
+    public float posy;
+
     public static LookMe instance;
     private Vector3 originalDamping;
     private Vector3 originaloffset;
@@ -27,6 +30,8 @@ public class LookMe : MonoBehaviour
     public void MoveTo(Transform pos) 
     { 
         cam = GameObject.FindAnyObjectByType<CinemachineCamera>();
+        Vector3 VecPos = new Vector3 (pos.position.x, pos.position.y - posy, pos.position.z);
+        pos.position = VecPos;
         cam.Target.TrackingTarget = pos;
         camFollow = cam.GetComponent<CinemachineFollow>();
         if (camFollow != null)

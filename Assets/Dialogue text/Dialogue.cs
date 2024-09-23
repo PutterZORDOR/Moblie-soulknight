@@ -19,6 +19,7 @@ public class Dialogue : MonoBehaviour
     public static Dialogue instance;
     public TextMeshProUGUI text;
     public float textSpeed;
+    GameObject p;
 
     private int index;
     private string[] currentLine;
@@ -39,6 +40,10 @@ public class Dialogue : MonoBehaviour
         {
             dialogueDictionary[room.roomName] = room;
         }
+    }
+    private void Start()
+    {
+        p = GameObject.FindGameObjectWithTag("Interaction");
     }
     void Update()
     {
@@ -82,13 +87,13 @@ public class Dialogue : MonoBehaviour
         else
         {
             dialogue.SetActive(false);
+            p.SetActive(true);
             LookMe.instance.BackToPlayer();
         }
     }
 
     public void SetDialogue(string roomName)
     {
-        dialogue.SetActive(true);
         if (dialogueDictionary.TryGetValue(roomName, out RoomDialogue selectedRoom))
         {
             currentLine = selectedRoom.lines;
