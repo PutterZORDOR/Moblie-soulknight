@@ -20,6 +20,8 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI text;
     public float textSpeed;
     GameObject p;
+    GameObject players;
+    JoystickMove move;
 
     private int index;
     private string[] currentLine;
@@ -44,6 +46,9 @@ public class Dialogue : MonoBehaviour
     private void Start()
     {
         p = GameObject.FindGameObjectWithTag("Interaction");
+        players = GameObject.FindGameObjectWithTag("Player");
+        move = players.GetComponent<JoystickMove>();
+        
     }
     void Update()
     {
@@ -87,6 +92,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             dialogue.SetActive(false);
+            move.isStopped = false;
             p.SetActive(true);
             LookMe.instance.BackToPlayer();
         }

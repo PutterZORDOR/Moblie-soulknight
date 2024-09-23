@@ -27,6 +27,7 @@ public class JoystickMove : MonoBehaviour
     private Coroutine slowCoroutine = null;
     private float originalSpeed;
     private float originalDashingPower;
+    public bool isStopped = false;
 
     public InputAction DashButton;
     [SerializeField] private TrailRenderer tr;
@@ -41,7 +42,14 @@ public class JoystickMove : MonoBehaviour
 
     private void Update()
     {
-        moveDirection = movementJoystick.Direction;
+        if (isStopped)
+        {
+            moveDirection = Vector2.zero;
+        }
+        else
+        {
+            moveDirection = movementJoystick.Direction;
+        }
         if (!isDashing)
         {
             MoveCharacter(moveDirection);
