@@ -45,6 +45,7 @@ public class Dialogue : MonoBehaviour
     }
     private void Start()
     {
+        dialogue.SetActive(true);
         p = GameObject.FindGameObjectWithTag("Interaction");
         players = GameObject.FindGameObjectWithTag("Player");
         move = players.GetComponent<JoystickMove>();

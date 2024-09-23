@@ -14,7 +14,6 @@ public class LoadingText : MonoBehaviour
     public void Start()
     {
             anim = back_Ground.GetComponent<Animator>();
-            anim.Play("Idel");
             image.SetActive(true);
             back_Ground.SetActive(true);
             loadingText.gameObject.SetActive(true);
@@ -45,7 +44,7 @@ public class LoadingText : MonoBehaviour
             loadingText.text = "Load";
             loadingText.gameObject.SetActive(false);
             image.SetActive(false);
-            anim.SetTrigger("Close");
+            anim.SetTrigger("End");
         }
     }
 }

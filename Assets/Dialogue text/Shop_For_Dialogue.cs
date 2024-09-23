@@ -7,7 +7,6 @@ public class Shop_For_Dialogue : MonoBehaviour
     private void Start()
     {
         d = GameObject.FindGameObjectWithTag("Dialogue");
-        d.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
