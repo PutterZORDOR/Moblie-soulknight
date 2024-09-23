@@ -209,8 +209,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 10
   moveSpeed: 2
+  playerDetected: 0
+  icon: {fileID: 0}
+  minCoin: 0
+  maxCoin: 0
+  minMana: 0
+  maxMana: 0
   maxHealth: 100
-  bulletPrefab: {fileID: 2821098894385701005, guid: a85eafc3e3868f94fbdfe38b25f0e4cb, type: 3}
+  currentHealth: 0
+  blinkTime: 0
+  blinkColor: {r: 0, g: 0, b: 0, a: 0}
+  bulletPrefab: {fileID: 7690261343936255321, guid: 59b9ebd472c14f347985e566db1f27d4, type: 3}
   firePoint: {fileID: 2434191171773510143}
   bulletSpeed: 50
   fireCooldown: 7
