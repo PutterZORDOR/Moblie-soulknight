@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8df378a2a09e5944bf9661ea658b5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 278777355326806679}
   rooms:
   - roomName: Shop Room
     lines:

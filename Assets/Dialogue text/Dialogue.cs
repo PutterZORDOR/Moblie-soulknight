@@ -12,6 +12,9 @@ public class RoomDialogue
 
 public class Dialogue : MonoBehaviour
 {
+    [Header("Dialogue Pannel")]
+    public GameObject dialogue;
+
     public List<RoomDialogue> rooms = new List<RoomDialogue>();
     public static Dialogue instance;
     public TextMeshProUGUI text;
@@ -37,12 +40,6 @@ public class Dialogue : MonoBehaviour
             dialogueDictionary[room.roomName] = room;
         }
     }
-
-    void Start()
-    {
-        SetDialogue("Shop Room");
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.G))
@@ -84,12 +81,14 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            dialogue.SetActive(false);
+            LookMe.instance.BackToPlayer();
         }
     }
 
     public void SetDialogue(string roomName)
     {
+        dialogue.SetActive(true);
         if (dialogueDictionary.TryGetValue(roomName, out RoomDialogue selectedRoom))
         {
             currentLine = selectedRoom.lines;

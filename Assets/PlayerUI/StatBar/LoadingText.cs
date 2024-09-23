@@ -14,6 +14,7 @@ public class LoadingText : MonoBehaviour
     public void Start()
     {
             anim = back_Ground.GetComponent<Animator>();
+            anim.Play("Idel");
             image.SetActive(true);
             back_Ground.SetActive(true);
             loadingText.gameObject.SetActive(true);
