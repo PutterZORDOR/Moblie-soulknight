@@ -104,8 +104,8 @@ public class RushEnemy : EnemyBase
     {
         if (collision.gameObject.CompareTag("Player") && isDashing & !isDie)
         {
-            Debug.Log("T");
             PlayerManager.instance.TakeDamgeAll(dashDamage);
+            PlayerManager.instance.StartBleeding(2);
             Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
         }
 

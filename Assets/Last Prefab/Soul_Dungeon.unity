@@ -2209,10 +2209,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3765876408605724693, guid: 3c92d42c2232ff041a5c36824eb8c5b7, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6608212960351354449, guid: 3c92d42c2232ff041a5c36824eb8c5b7, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6564045609642135919, guid: a39b276c5810126489cdae66a053944a, type: 3}
+    - target: {fileID: 7706231958646335577, guid: 3c92d42c2232ff041a5c36824eb8c5b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 124
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

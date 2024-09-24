@@ -61,3 +61,10 @@ MonoBehaviour:
   RegenInterval: 1
   invulnerabilityDuration: 1
   UI_GameOver: {fileID: 0}
+  blinkTime: 0
+  blinkColor: {r: 0, g: 0, b: 0, a: 0}
+  ghostColor: {r: 0, g: 0, b: 0, a: 0}
+  joy: {fileID: 0}
+  delayBetweenDamage: 1.5
+  decreaseBleeding: 0
+  damgeMulti: 1

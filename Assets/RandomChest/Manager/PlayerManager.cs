@@ -47,6 +47,13 @@ public class PlayerManager : MonoBehaviour
     private GameObject player;
     public JoystickMove joy;
 
+    [Header("Bleed delay")]
+    public float delayBetweenDamage;
+    public bool decreaseBleeding;
+
+    [Header("Boost Damge")]
+    public int damgeMulti;
+
     private void Awake()
     {
         if (instance == null)
@@ -153,6 +160,18 @@ public class PlayerManager : MonoBehaviour
         ArmorBar.fillAmount = (float)Armor / MaxArmor;
         UpdateUIArmor();
     }
+    public void DecreaseMaxHealth(int amount)
+    {
+        MaxHealth -= amount;
+
+        if (Health > MaxHealth)
+        {
+            Health = MaxHealth;
+        }
+
+        HpBar.fillAmount = (float)Health / MaxHealth;
+        UpdateUIHp();
+    }
 
     public void UseMana(int amount)
     {
@@ -205,6 +224,36 @@ public class PlayerManager : MonoBehaviour
         Time.timeScale = 0f;
         UI_GameOver.SetActive(true);
         GameOverManager.instance.UpdateText();
+    }
+    private Coroutine bleedCoroutine;
+
+    public void StartBleeding(int totalDamage)
+    {
+        if (bleedCoroutine != null)
+        {
+            StopCoroutine(bleedCoroutine);
+        }
+
+        bleedCoroutine = StartCoroutine(Bleed(totalDamage));
+    }
+
+    private IEnumerator Bleed(float totalDamage)
+    {
+        float remainingDamage = totalDamage;
+        if (decreaseBleeding)
+        {
+            remainingDamage = remainingDamage * 0.5f;
+        }
+
+        while (remainingDamage > 0)
+        {
+            TakeDamgeAll(1);
+            remainingDamage--;
+
+            yield return new WaitForSeconds(delayBetweenDamage);
+        }
+
+        bleedCoroutine = null;
     }
 
     private void UpdateUIHp()
