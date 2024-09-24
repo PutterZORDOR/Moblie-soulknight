@@ -2205,6 +2205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_GIF
       objectReference: {fileID: 0}
+    - target: {fileID: 1253949549505384780, guid: 3c92d42c2232ff041a5c36824eb8c5b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6608212960351354449, guid: 3c92d42c2232ff041a5c36824eb8c5b7, type: 3}
       propertyPath: m_Sprite
       value: 

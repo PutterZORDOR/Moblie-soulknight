@@ -20,7 +20,6 @@ public class DungeonMaker : MonoBehaviour
 
     [Header("UI GIF")]
     public GameObject GIF;
-    public LoadingText _LoadingText;
 
     [Header("Detect Drop Weapon")]
     public DetectDropWeapon Detect_Drop_Weapon;
@@ -66,7 +65,8 @@ public class DungeonMaker : MonoBehaviour
         RangeFromWall = DungeonSystem.instance.RangeCentertoWall;
     _player = GameObject.FindGameObjectWithTag("Player");
         GIF.SetActive(true);
-        _LoadingText.Start();
+        Dialogue.instance.dialogue.SetActive(true);
+        LoadingText.instance.Start();
         Level = DungeonSystem.instance.Level;
         if (Level != 15)
         {
@@ -163,7 +163,8 @@ public class DungeonMaker : MonoBehaviour
     }
     public void CloseUI()
     {
-        _LoadingText.StopLoading();
+        Dialogue.instance.dialogue.SetActive(false);
+        LoadingText.instance.StopLoading();
     }
     public void CheckRoom(Room _room)
     {
