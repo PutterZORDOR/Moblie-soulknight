@@ -255,6 +255,21 @@ public class PlayerManager : MonoBehaviour
 
         bleedCoroutine = null;
     }
+    public void IncreaseMaxHealth(int amount)
+    {
+        MaxHealth += amount;
+        Health = Mathf.Min(Health, MaxHealth);
+        HpBar.fillAmount = (float)Health / MaxHealth;
+        UpdateUIHp();
+    }
+    public void IncreaseMaxArmor(int amount)
+    {
+        MaxArmor += amount;
+        Armor = Mathf.Min(Armor, MaxArmor);
+        ArmorBar.fillAmount = (float)Armor / MaxArmor;
+        UpdateUIArmor();
+    }
+
 
     private void UpdateUIHp()
     {

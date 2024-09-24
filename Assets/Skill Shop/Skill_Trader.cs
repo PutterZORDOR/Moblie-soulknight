@@ -66,10 +66,9 @@ public class Skill_Trader : MonoBehaviour
     }
     public void Buy()
     {
-        if (CanBuy /*ราคาเลือด*/)
+        if (CanBuy && PlayerManager.instance.MaxHealth > current_price)
         {
-            Debug.Log("Buy");
-            //เสียเลือด
+            PlayerManager.instance.DecreaseMaxHealth(current_price);
             CanBuy = false;
             UI_Buy.SetActive(false);
             Description.SetActive(false);
@@ -84,6 +83,14 @@ public class Skill_Trader : MonoBehaviour
                 {
                     
                 }
+                else if (item.Type == Type_Skill.IncreaseSpeedAndDash)
+                {
+
+                }
+                else if (item.Type == Type_Skill.IncreaseArmor)
+                {
+
+                }
             }
             This_Item.SetActive(false);
             this.enabled = false;
@@ -97,18 +104,7 @@ public class Skill_Trader : MonoBehaviour
     {
         if (item != null)
         {
-            if (item.Type == Type_Skill.BoostDmg)
-            {
-                text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#7CFC00>{item.skillname}</color>";
-                textSkill.text = $"<sprite name=\"Coin\"> ";
-            }
-            else if (item.Type == Type_Skill.DecreaseDebuff)
-            {
-                text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#76D7C4>{item.skillname}</color>";
-                textSkill.text = $"<sprite name=\"Coin\"> ";
-            }
-
-            if(item.Type == Type_Skill.DecreaseDebuff)
+            if (item.Type == Type_Skill.DecreaseDebuff)
             {
                 current_price = Price_Life + 1;
             }
@@ -116,6 +112,9 @@ public class Skill_Trader : MonoBehaviour
             {
                 current_price = Price_Life;
             }
+
+            text.text = $"<sprite name=\"Coin\"> {current_price.ToString()} <color=#7CFC00>{item.skillname}</color>";
+            textSkill.text = $"{item.Description}";
         }
         This_Item = Instantiate(item.gamePrefab, transform);
         sizeItem = item.gamePrefab.transform.localScale;
