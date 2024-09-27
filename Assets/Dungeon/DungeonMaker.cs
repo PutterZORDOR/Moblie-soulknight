@@ -17,7 +17,6 @@ public class DungeonMaker : MonoBehaviour
     public Room startRoom;
     [SerializeField] bool CanShop;
     [SerializeField] bool CanChest;
-    [SerializeField]private bool SkillRoomCreated = false;
 
     [Header("UI GIF")]
     public GameObject GIF;
@@ -281,6 +280,12 @@ public class DungeonMaker : MonoBehaviour
     {
         int randomRoom;
 
+        if (roomCount == 6 && (Level == 6 || Level == 14))
+        {
+            randomRoom = 2;
+            return randomRoom;
+        }
+
         if (roomCount == 3)
         {
             randomRoom = 0;
@@ -291,10 +296,10 @@ public class DungeonMaker : MonoBehaviour
         }
         else
         {
-            randomRoom = Random.Range(0, RoomsPrefab.Length);
+            randomRoom = Random.Range(3, RoomsPrefab.Length);
         }
 
-        if ((randomRoom == 0 && CanChest) || (randomRoom == 1 && CanShop) || (randomRoom == 2 && SkillRoomCreated))
+        if ((randomRoom == 0 && CanChest) || (randomRoom == 1 && CanShop))
         {
             randomRoom = Random.Range(3, RoomsPrefab.Length);
         }
@@ -306,17 +311,6 @@ public class DungeonMaker : MonoBehaviour
         else if (randomRoom == 1 && !CanShop)
         {
             CanShop = true; 
-        }
-        else if (randomRoom == 2 && !SkillRoomCreated)
-        {
-            if (DungeonSystem.instance.Level >= 7)
-            {
-                SkillRoomCreated = true;
-            }
-            else
-            {
-                randomRoom = Random.Range(3, RoomsPrefab.Length);
-            }
         }
 
         return randomRoom;

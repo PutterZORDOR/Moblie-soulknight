@@ -112,6 +112,10 @@ public class PlayerManager : MonoBehaviour
         Health = MaxHealth;
         Armor = MaxArmor;
         Mana = MaxMana;
+
+        UpdateUIHp();
+        UpdateUIArmor();
+        UpdateUIMana();
     }
 
     public void TakeDamgeAll(int damage)
