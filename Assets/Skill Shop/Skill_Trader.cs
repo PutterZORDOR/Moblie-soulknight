@@ -77,19 +77,21 @@ public class Skill_Trader : MonoBehaviour
             {
                 if (item.Type == Type_Skill.BoostDmg)
                 {
-                    
+                    PlayerManager.instance.damgeMulti = 2;
                 }
                 else if (item.Type == Type_Skill.DecreaseDebuff)
                 {
-                    
+                    PlayerManager.instance.decreaseBleeding = true;
                 }
                 else if (item.Type == Type_Skill.IncreaseSpeedAndDash)
                 {
-
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    JoystickMove joy = player.GetComponent<JoystickMove>();
+                    joy.IncreaseSpeed(2f);
                 }
                 else if (item.Type == Type_Skill.IncreaseArmor)
                 {
-
+                    PlayerManager.instance.IncreaseMaxArmor(3);
                 }
             }
             This_Item.SetActive(false);

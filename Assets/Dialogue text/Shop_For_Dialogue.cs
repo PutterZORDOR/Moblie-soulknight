@@ -12,15 +12,26 @@ public class Shop_For_Dialogue : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            JoystickMove joy = collision.GetComponent<JoystickMove>();
-            joy.isStopped = true;
-            GameObject p = GameObject.FindGameObjectWithTag("Interaction");
-            p.SetActive(false);
-            d.SetActive(true); 
-            LookMe.instance.MoveTo(gameObject.transform);
-            Dialogue.instance.SetDialogue("Shop Room");
-            Collider2D col = gameObject.GetComponent<Collider2D>();
-            col.enabled = false;
+            if (DungeonSystem.instance.shop_count == 0 || DungeonSystem.instance.Level == 15)
+            {
+                JoystickMove joy = collision.GetComponent<JoystickMove>();
+                joy.isStopped = true;
+                GameObject p = GameObject.FindGameObjectWithTag("Interaction");
+                p.SetActive(false);
+                d.SetActive(true);
+                LookMe.instance.MoveTo(gameObject.transform);
+                if (DungeonSystem.instance.shop_count == 0)
+                {
+                    Dialogue.instance.SetDialogue("Shop Room");
+                }
+                else if (DungeonSystem.instance.Level == 15)
+                {
+                    Dialogue.instance.SetDialogue("Shop15 Room");
+                }
+                Collider2D col = gameObject.GetComponent<Collider2D>();
+                col.enabled = false;
+                DungeonSystem.instance.shop_count++;
+            }
         }
     }
 }
