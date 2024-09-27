@@ -15,4 +15,5 @@ MonoBehaviour:
   skillname: Decrease Debuff
   Type: 1
   Description: 
-  gamePrefab: {fileID: 0}
+  gamePrefab: {fileID: 3375889423146284629, guid: 225460dc13ab8ba418df4f910936a4ac, type: 3}
+  sprite: {fileID: -486178441, guid: 934ea946207cd514ebeea8cb74a9f71c, type: 3}

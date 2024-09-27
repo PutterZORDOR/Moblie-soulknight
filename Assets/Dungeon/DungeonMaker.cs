@@ -263,7 +263,7 @@ public class DungeonMaker : MonoBehaviour
             rooms[pos.x, pos.y].AssignGameObject(EndRoomPrefab);
         }
 
-        if ((randomRoom != 0 && randomRoom != 1) && roomCount -1 != 0)
+        if ((randomRoom != 0 && randomRoom != 1 && randomRoom != 2) && roomCount -1 != 0)
         {
             CreateDetectionZone(rooms[pos.x, pos.y], DectectZonePrefab);
             CreateSpawnEnermy(rooms[pos.x, pos.y]);

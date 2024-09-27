@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -299,8 +300,17 @@ public class PlayerManager : MonoBehaviour
             if (skills[i] == null)
             {
                 skills[i] = newSkill;
+                UpdateSkillUI(i);
                 return;
             }
+        }
+    }
+
+    private void UpdateSkillUI(int slot)
+    {
+        if (skills[slot] != null)
+        {
+            skill_1.sprite = skills[slot];
         }
     }
 }
