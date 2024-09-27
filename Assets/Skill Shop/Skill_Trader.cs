@@ -26,7 +26,23 @@ public class Skill_Trader : MonoBehaviour
     public TextMeshProUGUI textSkill;
     void Start()
     {
-        item = lootTable.GetRandom();
+        bool added = false;
+
+        while (!added)
+        {
+            item = lootTable.GetRandom();
+
+            added = true;
+
+            foreach (Sprite sprite in PlayerManager.instance.skills)
+            {
+                if (item.sprite == sprite)
+                {
+                    added = false;
+                    break;
+                }
+            }
+        }
         playerLayer = LayerMask.GetMask("Player");
         GetButton = transform.Find("Get_Button").gameObject;
         Description = transform.Find("Description_Skill").gameObject;
@@ -69,6 +85,7 @@ public class Skill_Trader : MonoBehaviour
         if (CanBuy && PlayerManager.instance.MaxHealth > current_price)
         {
             PlayerManager.instance.DecreaseMaxHealth(current_price);
+            PlayerManager.instance.AddSkill(item.sprite);
             CanBuy = false;
             UI_Buy.SetActive(false);
             Description.SetActive(false);

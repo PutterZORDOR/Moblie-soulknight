@@ -54,6 +54,13 @@ public class PlayerManager : MonoBehaviour
     [Header("Boost Damge")]
     public int damgeMulti;
 
+    [Header("List My Skill")]
+    public Sprite[] skills = new Sprite[2];
+
+    [Header("Skill Player")]
+    public Image skill_1;
+    public Image skill_2;
+
     private void Awake()
     {
         if (instance == null)
@@ -284,5 +291,16 @@ public class PlayerManager : MonoBehaviour
     private void UpdateUIMana()
     {
         textMana.text = $"{Mana}/{MaxMana}";
+    }
+    public void AddSkill(Sprite newSkill)
+    {
+        for (int i = 0; i < skills.Length; i++)
+        {
+            if (skills[i] == null)
+            {
+                skills[i] = newSkill;
+                return;
+            }
+        }
     }
 }

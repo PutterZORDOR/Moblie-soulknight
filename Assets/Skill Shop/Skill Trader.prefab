@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2092329031717517308}
+  - component: {fileID: 1757004790688790274}
   m_Layer: 0
   m_Name: Skill Trader
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   - {fileID: 3117021027140308255}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1757004790688790274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271876561092406188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b90ac8e0d05db43b0c4c35e77ee13c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  d: {fileID: 0}
 --- !u!1 &1247083335395591654
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,11 +299,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootTable:
     list:
-    - itemData: {fileID: 0}
+    - itemData: {fileID: 11400000, guid: 3853f2d52355966458d2d1a548d74ada, type: 2}
       weight: 0
-    - itemData: {fileID: 0}
+    - itemData: {fileID: 11400000, guid: 0183f3955f3a22b418e81923cad2d5c8, type: 2}
       weight: 0
-    - itemData: {fileID: 0}
+    - itemData: {fileID: 11400000, guid: 3903c8744c8182b46b053e9515d489f2, type: 2}
+      weight: 0
+    - itemData: {fileID: 11400000, guid: 7ef221ae516f61244935d09441741b22, type: 2}
       weight: 0
   Price_Life: 1
   CanBuy: 1
