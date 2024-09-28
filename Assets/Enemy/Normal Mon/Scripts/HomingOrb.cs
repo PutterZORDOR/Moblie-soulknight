@@ -49,6 +49,7 @@ public class HomingOrb : MonoBehaviour
             JoystickMove move = other.GetComponent<JoystickMove>();
             move.Debuff_Slow(slows);
             PlayerManager.instance.TakeDamgeAll(damage);
+            PlayerManager.instance.ApplyDebuff("Slowness", Mathf.FloorToInt(slows));
             Stop = true;
             anim.Play("DestroyOrb");
         }

@@ -3,10 +3,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using Unity.VisualScripting;
+using System.Collections.Generic;
+using UnityEditor;
+
+[System.Serializable]
+public class All_Debuff
+{
+    public string Debuff_name;
+    public Sprite sprite;
+}
 
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
+    private Coroutine debuffCoroutine1;
+    private Coroutine debuffCoroutine2;
     public int Health;
     public int Armor;
     public int Mana;
@@ -49,7 +61,7 @@ public class PlayerManager : MonoBehaviour
     public JoystickMove joy;
 
     [Header("Bleed delay")]
-    public float delayBetweenDamage;
+    [SerializeField] float delayBleeding;
     public bool decreaseBleeding;
 
     [Header("Boost Damge")]
@@ -62,6 +74,16 @@ public class PlayerManager : MonoBehaviour
     public Image skill_1;
     public Image skill_2;
 
+    [Header("Debuff List")]
+    public List<All_Debuff> Debuffs = new List<All_Debuff>();
+    private Dictionary<string, Sprite> debuff_storage = new Dictionary<string, Sprite>();
+
+    [Header("Debuff Slot")]
+    public Image debuff_1;
+    public Image debuff_2;
+    public TextMeshProUGUI text_debuff_1;
+    public TextMeshProUGUI text_debuff_2;
+
     private void Awake()
     {
         if (instance == null)
@@ -71,6 +93,11 @@ public class PlayerManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+
+        foreach (var Debuff in Debuffs)
+        {
+            debuff_storage[Debuff.Debuff_name] = Debuff.sprite;
         }
     }
 
@@ -84,23 +111,6 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            TakeDamgeAll(1);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            UseMana(10);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            RecoverMana(10);
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Heal(1);
-        }
-
         if (Time.time - lastDamageTime >= TimeToRegen && regenCoroutine == null)
         {
             regenCoroutine = StartCoroutine(RegenerateArmor());
@@ -239,30 +249,31 @@ public class PlayerManager : MonoBehaviour
     }
     private Coroutine bleedCoroutine;
 
-    public void StartBleeding(int totalDamage)
+    public void StartBleeding(int totalDamage,int timer)
     {
         if (bleedCoroutine != null)
         {
             StopCoroutine(bleedCoroutine);
         }
 
-        bleedCoroutine = StartCoroutine(Bleed(totalDamage));
+        bleedCoroutine = StartCoroutine(Bleed(totalDamage,timer));
     }
 
-    private IEnumerator Bleed(float totalDamage)
+    private IEnumerator Bleed(float totalDamage,int timer)
     {
         float remainingDamage = totalDamage;
         if (decreaseBleeding)
         {
             remainingDamage = remainingDamage * 0.5f;
         }
+        delayBleeding = (timer * remainingDamage) - timer;
 
         while (remainingDamage > 0)
         {
             TakeDamgeAll(1);
             remainingDamage--;
 
-            yield return new WaitForSeconds(delayBetweenDamage);
+            yield return new WaitForSeconds(timer);
         }
 
         bleedCoroutine = null;
@@ -309,7 +320,6 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
-
     private void UpdateSkillUI(int slot)
     {
         if (skills[slot] != null)
@@ -317,4 +327,73 @@ public class PlayerManager : MonoBehaviour
             skill_1.sprite = skills[slot];
         }
     }
+    public Sprite GetDebuffSprite(string debuffName)
+    {
+        if (debuff_storage.TryGetValue(debuffName, out Sprite sprite))
+        {
+            return sprite;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    public void ApplyDebuff(string debuffName, int timer)
+    {
+        Sprite debuffSprite = GetDebuffSprite(debuffName);
+        if (debuffSprite != null)
+        {
+            if (debuff_1.sprite == null)
+            {
+                if (debuffCoroutine1 != null)
+                {
+                    StopCoroutine(debuffCoroutine1);
+                }
+                debuffCoroutine1 = StartCoroutine(DebuffCountdown(debuff_1, text_debuff_1, debuffName, timer));
+            }
+            else if (debuff_2.sprite == null)
+            {
+                if (debuffCoroutine2 != null)
+                {
+                    StopCoroutine(debuffCoroutine2);
+                }
+                debuffCoroutine2 = StartCoroutine(DebuffCountdown(debuff_2, text_debuff_2, debuffName, timer));
+            }
+        }
+    }
+
+    private IEnumerator DebuffCountdown(Image debuffIcon, TextMeshProUGUI debuffText, string debuffName, int timer)
+    {
+        float countdownTime = debuffName == "Bleeding" ? delayBleeding : timer;
+        debuffText.text = countdownTime.ToString("F0");
+
+        while (countdownTime > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            countdownTime--;
+            debuffText.text = countdownTime.ToString("F0");
+        }
+
+        RemoveDebuff(debuffIcon, debuffText);
+    }
+    private void RemoveDebuff(Image debuffIcon, TextMeshProUGUI debuffText)
+    {
+        if (debuff_2.sprite != null && debuffIcon == debuff_1)
+        {
+            debuff_1.sprite = debuff_2.sprite;
+            if (text_debuff_2 != null)
+            {
+                debuffText.text = text_debuff_2.text;
+            }
+            debuff_2.sprite = null;
+            text_debuff_2.text = "";
+        }
+        else
+        {
+            debuffIcon.sprite = null;
+            debuffText.text = "";
+        }
+    }
+
+
 }
