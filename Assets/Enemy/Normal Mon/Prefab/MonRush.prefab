@@ -279,7 +279,8 @@ MonoBehaviour:
   baseColor: {r: 0, g: 0, b: 0, a: 0}
   dashRange: 5
   dashSpeed: 6
-  bleedDamage: 4
+  dashDamage: 1
+  bleedDamage: 2
   timeBetweenBleed: 2
   dashCooldown: 5
   rushHealth: 75

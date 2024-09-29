@@ -6,6 +6,7 @@ public class RushEnemy : EnemyBase
 {
     public float dashRange = 5f; // Range within which the enemy will start dashing
     public float dashSpeed = 15f; // Speed of the dash
+    public int dashDamage;
     public int bleedDamage; // Damage dealt by the dash
     public int timeBetweenBleed;
     public float dashCooldown = 1.5f; // Cooldown time between dashes
@@ -106,9 +107,11 @@ public class RushEnemy : EnemyBase
     {
         if (collision.gameObject.CompareTag("Player") && isDashing & !isDie)
         {
+            PlayerManager.instance.TakeDamgeAll(dashDamage);
             PlayerManager.instance.StartBleeding(bleedDamage,timeBetweenBleed);
             PlayerManager.instance.ApplyDebuff("Bleeding",timeBetweenBleed);
             Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+            Dash();
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("wall map") && isDashing & !isDie)
