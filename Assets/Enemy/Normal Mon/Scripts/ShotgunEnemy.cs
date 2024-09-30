@@ -26,6 +26,7 @@ public class ShotgunMon : EnemyBase
     {
         base.Start();
         anim = GetComponent<Animator>();
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
     }
 
     protected override void Update()
