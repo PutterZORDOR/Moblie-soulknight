@@ -17,6 +17,7 @@ public class SniperEnemy : EnemyBase
     private bool isMovingRandomly = false;
     private float originSpeed;
     private bool isAttack;
+    private Vector2 currentDirection; // เพิ่มตัวแปรเพื่อเก็บทิศทางปัจจุบัน
 
     protected override void Start()
     {
@@ -24,6 +25,9 @@ public class SniperEnemy : EnemyBase
         originSpeed = moveSpeed;
         anim = GetComponent<Animator>();
         Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+
+        // เริ่มต้นทิศทางการเดินแบบสุ่ม
+        currentDirection = Random.insideUnitCircle.normalized;
     }
 
     protected override void Update()
@@ -67,6 +71,7 @@ public class SniperEnemy : EnemyBase
             }
         }
     }
+
     public void waitForMove()
     {
         moveSpeed = originSpeed;
@@ -80,8 +85,8 @@ public class SniperEnemy : EnemyBase
         anim.SetBool("IsMoving", true);
 
         // Pick a random direction
-        Vector2 randomDirection = Random.insideUnitCircle.normalized * randomMoveDistance;
-        Vector2 targetPosition = (Vector2)transform.position + randomDirection;
+        currentDirection = Random.insideUnitCircle.normalized * randomMoveDistance;
+        Vector2 targetPosition = (Vector2)transform.position + currentDirection;
 
         float moveDuration = 2f; // Time spent moving randomly
         float elapsedTime = 0f;
@@ -116,6 +121,7 @@ public class SniperEnemy : EnemyBase
     {
         anim.SetBool("IsMoving", true);
         Vector2 direction = (player.position - transform.position).normalized;
+        currentDirection = direction;
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
     }
 
@@ -129,8 +135,42 @@ public class SniperEnemy : EnemyBase
         gameObject.tag = "Untagged";
         anim.Play("Sniper_Die");
     }
+
     public void DestroySelf()
     {
         Destroy(gameObject);
+    }
+
+    // ตรวจจับการชนกับกำแพง
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            // เปลี่ยนทิศทางการเดินเมื่อชนกำแพง
+            currentDirection = -currentDirection;
+
+            // ตรวจสอบว่าติดกำแพงอีกครั้งไหม ถ้าติดให้สุ่มทิศทางใหม่
+            if (Physics2D.Raycast(transform.position, currentDirection, 1f, LayerMask.GetMask("Wall")))
+            {
+                currentDirection = Random.insideUnitCircle.normalized;
+            }
+
+            // อัปเดตการเคลื่อนที่
+            StartCoroutine(MoveInNewDirection());
+        }
+    }
+
+    // เคลื่อนที่ไปในทิศทางใหม่
+    private IEnumerator MoveInNewDirection()
+    {
+        float moveDuration = 2f; // กำหนดเวลาเคลื่อนที่
+        float elapsedTime = 0f;
+
+        while (elapsedTime < moveDuration)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + currentDirection, moveSpeed * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 }
