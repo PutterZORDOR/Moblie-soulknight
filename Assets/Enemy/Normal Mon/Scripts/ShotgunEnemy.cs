@@ -10,7 +10,6 @@ public class ShotgunMon : EnemyBase
     public Transform shootPoint; // Point from where bullets are shot
     public int numberOfBullets = 5; // Number of bullets per shot
     public float spreadAngle = 15f; // Spread angle for shotgun effect
-    public float meleeDamage = 20f; // Melee damage
     public float bulletSpeed = 10f; // Bullet speed
     public float bulletLifetime = 2f; // Bullet lifetime
     public int bulletDamage = 10; // Bullet damage
@@ -25,10 +24,28 @@ public class ShotgunMon : EnemyBase
     protected override void Start()
     {
         base.Start();
-        anim = GetComponent<Animator>();
-        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+        ResetShotgunEnemy();
     }
 
+    private void ResetShotgunEnemy()
+    {
+        anim = GetComponent<Animator>();
+
+        playerInRange = false;
+        isAttacking = false;
+        isDie = false;
+        lastAttackTime = 0f;
+
+        anim.SetBool("isWalking", false);
+        anim.ResetTrigger("Attack");
+        anim.Play("MonShotgunIdle");
+
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+
+        icon.SetActive(false);
+        gameObject.tag = "Enemy";
+        currentHealth = maxHealth;
+    }
     protected override void Update()
     {
         base.Update();

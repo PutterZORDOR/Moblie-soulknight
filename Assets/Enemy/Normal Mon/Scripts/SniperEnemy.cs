@@ -22,14 +22,31 @@ public class SniperEnemy : EnemyBase
     protected override void Start()
     {
         base.Start();
-        originSpeed = moveSpeed;
-        anim = GetComponent<Animator>();
-        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
-
-        // เริ่มต้นทิศทางการเดินแบบสุ่ม
-        currentDirection = Random.insideUnitCircle.normalized;
+        ResetSniperEnemy();
     }
 
+    private void ResetSniperEnemy()
+    {
+        originSpeed = moveSpeed;
+        anim = GetComponent<Animator>();
+
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+        currentDirection = Random.insideUnitCircle.normalized;
+
+        isAttack = false;
+        isMovingRandomly = false;
+        isDie = false;
+        lastFireTime = 0f;
+
+        icon.SetActive(false);
+
+        anim.SetBool("IsMoving", false);
+        anim.ResetTrigger("Attack");
+        anim.Play("Sniper_Idle");
+
+        gameObject.tag = "Enemy";
+        currentHealth = maxHealth;
+    }
     protected override void Update()
     {
         base.Update();
@@ -138,7 +155,7 @@ public class SniperEnemy : EnemyBase
 
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // ตรวจจับการชนกับกำแพง

@@ -15,27 +15,44 @@ public class RushEnemy : EnemyBase
     private bool isDashing = false;
     private Vector2 dashDirection;
 
-    // Individual stats for the rush enemy
-    public int rushHealth = 75; // Health of the rush enemy
-    public float rushSpeed = 10f; // Base speed of the rush enemy
+    public float rushSpeed = 10f;
 
     private Animator anim;
 
     protected override void Start()
     {
         base.Start();
-        moveSpeed = rushSpeed; // Set the move speed to the rush speed stat
+        ResetRushEnemy();
+    }
+
+    private void ResetRushEnemy()
+    {
+        moveSpeed = rushSpeed;
+        isDash = false;
+
+        isDashing = false;
+        isDie = false;
+        lastDashTime = 0f;
+
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+
         anim = GetComponent<Animator>();
+        anim.SetBool("isRunning", false);
+        anim.Play("MonRush_Walk");
+
+        icon.SetActive(false);
+        gameObject.tag = "Enemy";
+        currentHealth = maxHealth;
     }
     protected override void OnDefeated()
     {
-        Physics2D.IgnoreCollision(col_Player, col_Enemy, false);
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
         gameObject.tag = "Untagged";
         anim.Play("MonRush_Die");
     }
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     protected override void Update()

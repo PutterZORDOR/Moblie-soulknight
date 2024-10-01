@@ -22,9 +22,25 @@ public class MageEnemy : EnemyBase
     protected override void Start()
     {
         base.Start();
+        ResetMageEnemy();
+    }
+
+    private void ResetMageEnemy()
+    {
         anim = GetComponent<Animator>();
-        moveSpeed = 1.5f; // Mage moves slower but has powerful magic attacks
+        anim.SetBool("isWalking", false);
+        anim.ResetTrigger("Attack");
+        anim.Play("MonMageIdle");
+
+        isAttacking = false;
+        isDie = false;
+        lastSummonTime = 0f;
+
+        icon.SetActive(false);
         Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+
+        gameObject.tag = "Enemy";
+        currentHealth = maxHealth;
     }
 
     protected override void Update()
@@ -52,7 +68,7 @@ public class MageEnemy : EnemyBase
     }
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     protected override void OnPlayerDetected()

@@ -33,9 +33,18 @@ public class MeleeEnemy : EnemyBase
     protected override void Start()
     {
         base.Start();
-        moveSpeed = meleeSpeed; // Set the move speed to the melee speed stat
         anim = GetComponent<Animator>();
-        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
+
+        anim.SetBool("isWalking", false);
+        anim.ResetTrigger("Attack");
+
+        isDie = false;
+        isAttack = false;
+        isAttacking = false;
+        isRetreating = false;
+        playerInRange = false;
+        lastAttackTime = Time.time - attackCooldown;
+
     }
 
     protected override void Update()
@@ -52,7 +61,7 @@ public class MeleeEnemy : EnemyBase
         // หยุดการเคลื่อนไหวระหว่างการโจมตี
         if (isAttacking)
         {
-            anim.SetBool("isWalking", false); // หยุด animation เดิน
+            anim.SetBool("isWalking", false);
             return;
         }
 
@@ -199,7 +208,8 @@ public class MeleeEnemy : EnemyBase
 
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        anim.Play("MonMeleeIdel");
+        gameObject.SetActive(false);
     }
     private void OnDrawGizmosSelected()
     {

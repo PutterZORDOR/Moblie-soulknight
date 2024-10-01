@@ -22,7 +22,7 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField]protected int currentHealth; // Current health of the enemy
 
     private bool facingRight = true; // ตัวแปรเพื่อเช็คว่าศัตรูกำลังหันหน้าไปทางขวาหรือไม่
-    protected bool isDie;
+    [SerializeField]protected bool isDie;
     private SpriteRenderer spriteRenderer;
     public float blinkTime;
     public Color blinkColor;
@@ -40,12 +40,14 @@ public abstract class EnemyBase : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         baseColor = spriteRenderer.color;
         currentHealth = maxHealth; // Initialize current health
+        gameObject.tag = "Enemy";
 
         col_Enemy = GetComponent<Collider2D>();
         if (player != null)
         {
             col_Player = player.GetComponent<Collider2D>();
         }
+        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
     }
 
     protected void DetectPlayer()
@@ -112,8 +114,7 @@ public abstract class EnemyBase : MonoBehaviour
     // Method to handle when the enemy is defeated
     protected virtual void OnDefeated()
     {
-        Debug.Log($"{gameObject.name} defeated!");
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // ฟังก์ชันสำหรับ Flip ศัตรูไปทางผู้เล่น

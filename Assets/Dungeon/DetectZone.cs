@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class DetectZone : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _enermyToSpawnIn;
     [SerializeField] private Collider2D _currentRoomSpawnAble;
 
     [Header("BoxPrefab")]
@@ -80,7 +79,7 @@ public class DetectZone : MonoBehaviour
                         }
                     }
                 }
-                EnermySpawnManager.instance.SpawnEnermy(_currentRoomSpawnAble, _enermyToSpawnIn);
+                EnermySpawnManager.instance.SpawnEnermy(_currentRoomSpawnAble);
                 CanSpawnEnermy = false;
             }
         }
