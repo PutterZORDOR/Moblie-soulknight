@@ -253,6 +253,7 @@ MonoBehaviour:
   currentHealth: 0
   blinkTime: 0.2
   blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
+  baseColor: {r: 0, g: 0, b: 0, a: 0}
   attackRange: 1.5
   secondaryDetectionRange: 3
   attackCooldown: 3.2
@@ -260,10 +261,10 @@ MonoBehaviour:
   retreatDistance: 5
   isAttack: 0
   isRetreating: 0
-  retreatDurationMin: 1
-  retreatDurationMax: 2
-  retreatDistanceMin: 1.5
-  retreatDistanceMax: 3
+  retreatDurationMin: 1.5
+  retreatDurationMax: 3
+  retreatDistanceMin: 2.5
+  retreatDistanceMax: 4
   meleeDamage: 3
   meleeSpeed: 3
   attackPoint: {fileID: 9220711078169241390}

@@ -2,10 +2,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
+using Unity.VisualScripting;
+using System.Collections.Generic;
+using UnityEditor;
+
+[System.Serializable]
+public class All_Debuff
+{
+    public string Debuff_name;
+    public Sprite sprite;
+}
 
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
+    private Coroutine debuffCoroutine1;
+    private Coroutine debuffCoroutine2;
     public int Health;
     public int Armor;
     public int Mana;
@@ -48,11 +61,28 @@ public class PlayerManager : MonoBehaviour
     public JoystickMove joy;
 
     [Header("Bleed delay")]
-    public float delayBetweenDamage;
+    [SerializeField] float delayBleeding;
     public bool decreaseBleeding;
 
     [Header("Boost Damge")]
     public int damgeMulti;
+
+    [Header("List My Skill")]
+    public Sprite[] skills = new Sprite[2];
+
+    [Header("Skill Player")]
+    public Image skill_1;
+    public Image skill_2;
+
+    [Header("Debuff List")]
+    public List<All_Debuff> Debuffs = new List<All_Debuff>();
+    private Dictionary<string, Sprite> debuff_storage = new Dictionary<string, Sprite>();
+
+    [Header("Debuff Slot")]
+    public Image debuff_1;
+    public Image debuff_2;
+    public TextMeshProUGUI text_debuff_1;
+    public TextMeshProUGUI text_debuff_2;
 
     private void Awake()
     {
@@ -64,6 +94,11 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        foreach (var Debuff in Debuffs)
+        {
+            debuff_storage[Debuff.Debuff_name] = Debuff.sprite;
+        }
     }
 
     private void Start()
@@ -72,27 +107,17 @@ public class PlayerManager : MonoBehaviour
         joy = player.GetComponent<JoystickMove>();
         spriteRenderer = player.GetComponent<SpriteRenderer>();
         InitializeStats();
+
+        skill_1.gameObject.SetActive(false);
+        skill_2.gameObject.SetActive(false);
+        debuff_1.gameObject.SetActive(false);
+        debuff_2.gameObject.SetActive(false);
+        text_debuff_1.gameObject.SetActive(false);
+        text_debuff_2.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            TakeDamgeAll(1);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            UseMana(10);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            RecoverMana(10);
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Heal(1);
-        }
-
         if (Time.time - lastDamageTime >= TimeToRegen && regenCoroutine == null)
         {
             regenCoroutine = StartCoroutine(RegenerateArmor());
@@ -104,6 +129,10 @@ public class PlayerManager : MonoBehaviour
         Health = MaxHealth;
         Armor = MaxArmor;
         Mana = MaxMana;
+
+        UpdateUIHp();
+        UpdateUIArmor();
+        UpdateUIMana();
     }
 
     public void TakeDamgeAll(int damage)
@@ -227,30 +256,32 @@ public class PlayerManager : MonoBehaviour
     }
     private Coroutine bleedCoroutine;
 
-    public void StartBleeding(int totalDamage)
+    public void StartBleeding(int totalDamage,int timer)
     {
         if (bleedCoroutine != null)
         {
             StopCoroutine(bleedCoroutine);
         }
 
-        bleedCoroutine = StartCoroutine(Bleed(totalDamage));
+        bleedCoroutine = StartCoroutine(Bleed(totalDamage,timer));
     }
 
-    private IEnumerator Bleed(float totalDamage)
+    private IEnumerator Bleed(float totalDamage,int timer)
     {
         float remainingDamage = totalDamage;
         if (decreaseBleeding)
         {
             remainingDamage = remainingDamage * 0.5f;
         }
+        delayBleeding = timer * remainingDamage;
 
         while (remainingDamage > 0)
         {
+            yield return new WaitForSeconds(timer);
+
             TakeDamgeAll(1);
             remainingDamage--;
 
-            yield return new WaitForSeconds(delayBetweenDamage);
         }
 
         bleedCoroutine = null;
@@ -284,5 +315,137 @@ public class PlayerManager : MonoBehaviour
     private void UpdateUIMana()
     {
         textMana.text = $"{Mana}/{MaxMana}";
+    }
+    public void AddSkill(Sprite newSkill)
+    {
+        for (int i = 0; i < skills.Length; i++)
+        {
+            if (skills[i] == null)
+            {
+                skills[i] = newSkill;
+                UpdateSkillUI(i);
+                return;
+            }
+        }
+    }
+    private void UpdateSkillUI(int slot)
+    {
+        if (skills[slot] != null)
+        {
+            if (slot == 0)
+            {
+                skill_1.sprite = skills[slot];
+                skill_1.gameObject.SetActive(true);
+            }
+            else if (slot == 1)
+            {
+                skill_2.sprite = skills[slot];
+                skill_2.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            if (slot == 0)
+            {
+                skill_1.gameObject.SetActive(false);
+            }
+            else if (slot == 1)
+            {
+                skill_2.gameObject.SetActive(false);
+            }
+        }
+    }
+    public Sprite GetDebuffSprite(string debuffName)
+    {
+        if (debuff_storage.TryGetValue(debuffName, out Sprite sprite))
+        {
+            return sprite;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    public void ApplyDebuff(string debuffName, int timer)
+    {
+        Sprite debuffSprite = GetDebuffSprite(debuffName);
+        if (debuffSprite != null)
+        {
+            if (debuff_1.sprite == null || debuff_1.sprite == debuffSprite) 
+            {
+                debuff_1.sprite = debuffSprite;
+                debuff_1.gameObject.SetActive(true);
+                text_debuff_1.gameObject.SetActive(true);
+                if (debuffCoroutine1 != null)
+                {
+                    StopCoroutine(debuffCoroutine1);
+                }
+                debuffCoroutine1 = StartCoroutine(DebuffCountdown(debuff_1, text_debuff_1, debuffName, timer));
+            }
+            else if (debuff_2.sprite == null || debuff_2.sprite == debuffSprite)
+            {
+                debuff_2.sprite = debuffSprite;
+                debuff_2.gameObject.SetActive(true);
+                text_debuff_2.gameObject.SetActive(true);
+                if (debuffCoroutine2 != null)
+                {
+                    StopCoroutine(debuffCoroutine2);
+                }
+                debuffCoroutine2 = StartCoroutine(DebuffCountdown(debuff_2, text_debuff_2, debuffName, timer));
+            }
+        }
+    }
+
+    private IEnumerator DebuffCountdown(Image debuffIcon, TextMeshProUGUI debuffText, string debuffName, int timer)
+    {
+        float countdownTime = debuffName == "Bleeding" ? delayBleeding : timer;
+        debuffText.text = $"{countdownTime.ToString("F0")}s";
+
+        while (countdownTime > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            countdownTime--;
+            debuffText.text = $"{countdownTime.ToString("F0")}s";
+        }
+
+        RemoveDebuff(debuffIcon, debuffText, debuffName);
+    }
+    private void RemoveDebuff(Image debuffIcon, TextMeshProUGUI debuffText, string name)
+    {
+        if (debuff_2.sprite != null && debuffIcon == debuff_1)
+        {
+            debuff_1.sprite = debuff_2.sprite;
+            debuff_1.gameObject.SetActive(true);
+            text_debuff_1.gameObject.SetActive(true);
+            if (text_debuff_2 != null)
+            {
+                text_debuff_1.text = text_debuff_2.text;
+            }
+
+            if (debuffCoroutine2 != null)
+            {
+                StopCoroutine(debuffCoroutine2);
+            }
+            debuffCoroutine1 = StartCoroutine(DebuffCountdown(debuff_1, text_debuff_1, name, GetRemainingDebuffTime(text_debuff_2.text)));
+            debuff_2.sprite = null;
+            debuff_2.gameObject.SetActive(false);
+            text_debuff_2.text = "";
+            text_debuff_2.gameObject.SetActive(false);
+        }
+        else
+        {
+            debuffIcon.sprite = null;
+            debuffIcon.gameObject.SetActive(false);
+            debuffText.text = "";
+            debuffText.gameObject.SetActive(false);
+        }
+    }
+    private int GetRemainingDebuffTime(string debuffText)
+    {
+        if (int.TryParse(debuffText.Replace("s", ""), out int remainingTime))
+        {
+            return remainingTime;
+        }
+        return 0;
     }
 }

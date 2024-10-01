@@ -15,4 +15,5 @@ MonoBehaviour:
   skillname: Increase Armor
   Type: 2
   Description: 
-  gamePrefab: {fileID: 0}
+  gamePrefab: {fileID: 4416036054926412491, guid: 143dc9406c5b90941a525a28f5824446, type: 3}
+  sprite: {fileID: 8852513585067451540, guid: f4d7a60828b4cf54cb1dbe5c0d816504, type: 3}

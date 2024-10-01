@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class Shop_For_Dialogue : MonoBehaviour
+public class Skill_For_Dialogue : MonoBehaviour
 {
     public GameObject d;
     private void Start()
@@ -12,26 +11,22 @@ public class Shop_For_Dialogue : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (DungeonSystem.instance.shop_count == 0 || DungeonSystem.instance.Level == 15)
-            {
                 JoystickMove joy = collision.GetComponent<JoystickMove>();
                 joy.isStopped = true;
                 GameObject p = GameObject.FindGameObjectWithTag("Interaction");
                 p.SetActive(false);
                 d.SetActive(true);
                 LookMe.instance.MoveTo(gameObject.transform);
-                if (DungeonSystem.instance.shop_count == 0)
+                if (DungeonSystem.instance.Level == 15)
                 {
-                    Dialogue.instance.SetDialogue("Shop Room");
+                    Dialogue.instance.SetDialogue("Skill15 Room");
                 }
-                else if (DungeonSystem.instance.Level == 15)
+                else
                 {
-                    Dialogue.instance.SetDialogue("Shop15 Room");
+                    Dialogue.instance.SetDialogue("Skill Room");
                 }
                 Collider2D col = gameObject.GetComponent<Collider2D>();
                 col.enabled = false;
-                DungeonSystem.instance.shop_count++;
-            }
         }
     }
 }

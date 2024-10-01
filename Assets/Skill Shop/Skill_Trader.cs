@@ -26,7 +26,23 @@ public class Skill_Trader : MonoBehaviour
     public TextMeshProUGUI textSkill;
     void Start()
     {
-        item = lootTable.GetRandom();
+        bool added = false;
+
+        while (!added)
+        {
+            item = lootTable.GetRandom();
+
+            added = true;
+
+            foreach (Sprite sprite in PlayerManager.instance.skills)
+            {
+                if (item.sprite == sprite)
+                {
+                    added = false;
+                    break;
+                }
+            }
+        }
         playerLayer = LayerMask.GetMask("Player");
         GetButton = transform.Find("Get_Button").gameObject;
         Description = transform.Find("Description_Skill").gameObject;
@@ -69,6 +85,7 @@ public class Skill_Trader : MonoBehaviour
         if (CanBuy && PlayerManager.instance.MaxHealth > current_price)
         {
             PlayerManager.instance.DecreaseMaxHealth(current_price);
+            PlayerManager.instance.AddSkill(item.sprite);
             CanBuy = false;
             UI_Buy.SetActive(false);
             Description.SetActive(false);
@@ -77,19 +94,21 @@ public class Skill_Trader : MonoBehaviour
             {
                 if (item.Type == Type_Skill.BoostDmg)
                 {
-                    
+                    PlayerManager.instance.damgeMulti = 2;
                 }
                 else if (item.Type == Type_Skill.DecreaseDebuff)
                 {
-                    
+                    PlayerManager.instance.decreaseBleeding = true;
                 }
                 else if (item.Type == Type_Skill.IncreaseSpeedAndDash)
                 {
-
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    JoystickMove joy = player.GetComponent<JoystickMove>();
+                    joy.IncreaseSpeed(2f);
                 }
                 else if (item.Type == Type_Skill.IncreaseArmor)
                 {
-
+                    PlayerManager.instance.IncreaseMaxArmor(3);
                 }
             }
             This_Item.SetActive(false);

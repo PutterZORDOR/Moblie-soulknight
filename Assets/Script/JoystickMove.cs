@@ -96,6 +96,11 @@ public class JoystickMove : MonoBehaviour
             MoveCharacter(moveDirection);
         }
     }
+    public void IncreaseSpeed(float speed)
+    {
+        playerSpeed = playerSpeed * speed;
+        dashingPower = dashingPower * speed;
+    }
 
     private void MoveCharacter(Vector2 direction)
     {

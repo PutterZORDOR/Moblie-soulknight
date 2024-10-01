@@ -262,7 +262,7 @@ public class DungeonMaker : MonoBehaviour
             rooms[pos.x, pos.y].AssignGameObject(EndRoomPrefab);
         }
 
-        if ((randomRoom != 0 && randomRoom != 1) && roomCount -1 != 0)
+        if ((randomRoom != 0 && randomRoom != 1 && randomRoom != 2) && roomCount -1 != 0)
         {
             CreateDetectionZone(rooms[pos.x, pos.y], DectectZonePrefab);
             CreateSpawnEnermy(rooms[pos.x, pos.y]);
@@ -280,6 +280,12 @@ public class DungeonMaker : MonoBehaviour
     {
         int randomRoom;
 
+        if (roomCount == 6 && (Level == 6 || Level == 14))
+        {
+            randomRoom = 2;
+            return randomRoom;
+        }
+
         if (roomCount == 3)
         {
             randomRoom = 0;
@@ -290,20 +296,21 @@ public class DungeonMaker : MonoBehaviour
         }
         else
         {
-            randomRoom = Random.Range(0, RoomsPrefab.Length);
+            randomRoom = Random.Range(3, RoomsPrefab.Length);
         }
 
         if ((randomRoom == 0 && CanChest) || (randomRoom == 1 && CanShop))
         {
-            randomRoom = Random.Range(2, RoomsPrefab.Length);
+            randomRoom = Random.Range(3, RoomsPrefab.Length);
         }
+
         if (randomRoom == 0 && !CanChest)
         {
-            CanChest = true;
+            CanChest = true; 
         }
-        if (randomRoom == 1 && !CanShop)
+        else if (randomRoom == 1 && !CanShop)
         {
-            CanShop = true;
+            CanShop = true; 
         }
 
         return randomRoom;

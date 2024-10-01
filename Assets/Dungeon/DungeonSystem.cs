@@ -21,4 +21,7 @@ public class DungeonSystem : MonoBehaviour
     public int Level = 1;
     public float detectionRadius = 5.0f;
     public bool AllBossStatus;
+
+    [Header("Dialogue")]
+    public int shop_count;
 }

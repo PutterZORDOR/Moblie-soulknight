@@ -11,5 +11,9 @@ public class All_Skill : ScriptableObject
 
     [Header("Game Prefab")]
     public GameObject gamePrefab;
+
+    [Header("Sprite")]
+    public Sprite sprite;
+
 }
 public enum Type_Skill { BoostDmg, DecreaseDebuff, IncreaseArmor, IncreaseSpeedAndDash}

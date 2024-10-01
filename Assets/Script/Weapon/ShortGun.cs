@@ -30,7 +30,7 @@ public class ShortGun : Weapon
                         bullet.SetActive(true);
                         bullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * Force, ForceMode2D.Impulse);
                         bullet.GetComponent<BulletPlayer>().BulletLifeTime = SetBulletLifeTime;
-                        bullet.GetComponent<BulletPlayer>().Damage = Damage;
+                        bullet.GetComponent<BulletPlayer>().Damage = Damage * PlayerManager.instance.damgeMulti;
                         break;
                     }
                 }

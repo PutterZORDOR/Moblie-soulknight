@@ -15,4 +15,5 @@ MonoBehaviour:
   skillname: Boost Damge
   Type: 0
   Description: 
-  gamePrefab: {fileID: 0}
+  gamePrefab: {fileID: 4801196792981433, guid: 2e86d21031697404593c20ed5a150c0d, type: 3}
+  sprite: {fileID: 6937817954938267909, guid: 764a1b00c4b69bd4ca82d56e685e38e7, type: 3}
