@@ -34,7 +34,10 @@ public class MeleeEnemy : EnemyBase
     {
         base.Start();
         anim = GetComponent<Animator>();
-
+    }
+    void Initialize()
+    {
+        anim.Play("MonMeleeIdel");
         anim.SetBool("isWalking", false);
         anim.ResetTrigger("Attack");
 
@@ -43,14 +46,21 @@ public class MeleeEnemy : EnemyBase
         isAttacking = false;
         isRetreating = false;
         playerInRange = false;
+        icon.SetActive(false);
         lastAttackTime = Time.time - attackCooldown;
 
+        gameObject.tag = "Enemy";
+        currentHealth = maxHealth;
     }
 
     protected override void Update()
     {
         base.Update();
-
+        if(isFirstActivation)
+        {
+            Initialize();
+            isFirstActivation = false;
+        }
         // ตรวจสอบว่ากำลังถอยหรือไม่
         if (isRetreating)
         {
@@ -208,7 +218,7 @@ public class MeleeEnemy : EnemyBase
 
     public void DestroySelf()
     {
-        anim.Play("MonMeleeIdel");
+        isFirstActivation = true;
         gameObject.SetActive(false);
     }
     private void OnDrawGizmosSelected()

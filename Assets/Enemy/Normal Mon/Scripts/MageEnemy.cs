@@ -22,12 +22,11 @@ public class MageEnemy : EnemyBase
     protected override void Start()
     {
         base.Start();
-        ResetMageEnemy();
+        anim = GetComponent<Animator>();
     }
 
     private void ResetMageEnemy()
     {
-        anim = GetComponent<Animator>();
         anim.SetBool("isWalking", false);
         anim.ResetTrigger("Attack");
         anim.Play("MonMageIdle");
@@ -37,14 +36,17 @@ public class MageEnemy : EnemyBase
         lastSummonTime = 0f;
 
         icon.SetActive(false);
-        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
-
         gameObject.tag = "Enemy";
         currentHealth = maxHealth;
     }
 
     protected override void Update()
     {
+        if (isFirstActivation)
+        {
+            ResetMageEnemy();
+            isFirstActivation = false;
+        }
         base.Update();
 
         // ถ้าโจมตีอยู่ ให้หยุดเคลื่อนไหว
@@ -68,6 +70,7 @@ public class MageEnemy : EnemyBase
     }
     public void DestroySelf()
     {
+        isFirstActivation = true;
         gameObject.SetActive(false);
     }
 

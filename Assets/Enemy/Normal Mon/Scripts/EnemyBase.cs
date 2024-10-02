@@ -23,6 +23,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     private bool facingRight = true; // ตัวแปรเพื่อเช็คว่าศัตรูกำลังหันหน้าไปทางขวาหรือไม่
     [SerializeField]protected bool isDie;
+    [SerializeField]protected bool isFirstActivation = true;
     private SpriteRenderer spriteRenderer;
     public float blinkTime;
     public Color blinkColor;

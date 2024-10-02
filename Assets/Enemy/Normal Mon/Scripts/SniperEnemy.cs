@@ -22,15 +22,12 @@ public class SniperEnemy : EnemyBase
     protected override void Start()
     {
         base.Start();
-        ResetSniperEnemy();
+        anim = GetComponent<Animator>();
     }
 
     private void ResetSniperEnemy()
     {
         originSpeed = moveSpeed;
-        anim = GetComponent<Animator>();
-
-        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
         currentDirection = Random.insideUnitCircle.normalized;
 
         isAttack = false;
@@ -38,18 +35,22 @@ public class SniperEnemy : EnemyBase
         isDie = false;
         lastFireTime = 0f;
 
-        icon.SetActive(false);
-
         anim.SetBool("IsMoving", false);
         anim.ResetTrigger("Attack");
         anim.Play("Sniper_Idle");
 
+        icon.SetActive(false);
         gameObject.tag = "Enemy";
         currentHealth = maxHealth;
     }
     protected override void Update()
     {
         base.Update();
+        if (isFirstActivation)
+        {
+            ResetSniperEnemy();
+            isFirstActivation = false;
+        }
         if (Time.time >= lastFireTime + fireCooldown && !isMovingRandomly)
         {
             icon.SetActive(true);
@@ -155,6 +156,7 @@ public class SniperEnemy : EnemyBase
 
     public void DestroySelf()
     {
+        isFirstActivation = true;
         gameObject.SetActive(false);
     }
 

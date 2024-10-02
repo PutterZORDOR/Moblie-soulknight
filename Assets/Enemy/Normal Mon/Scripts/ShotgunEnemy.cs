@@ -24,13 +24,11 @@ public class ShotgunMon : EnemyBase
     protected override void Start()
     {
         base.Start();
-        ResetShotgunEnemy();
+        anim = GetComponent<Animator>();
     }
 
     private void ResetShotgunEnemy()
     {
-        anim = GetComponent<Animator>();
-
         playerInRange = false;
         isAttacking = false;
         isDie = false;
@@ -40,8 +38,6 @@ public class ShotgunMon : EnemyBase
         anim.ResetTrigger("Attack");
         anim.Play("MonShotgunIdle");
 
-        Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
-
         icon.SetActive(false);
         gameObject.tag = "Enemy";
         currentHealth = maxHealth;
@@ -49,8 +45,12 @@ public class ShotgunMon : EnemyBase
     protected override void Update()
     {
         base.Update();
+        if (isFirstActivation)
+        {
+            ResetShotgunEnemy();
+            isFirstActivation = false;
+        }
 
-        // If not attacking, handle movement and attack logic
         if (!isAttacking)
         {
             HandleMovementAndAttack();
@@ -139,6 +139,12 @@ public class ShotgunMon : EnemyBase
         {
             anim.SetBool("isWalking", false);
         }
+    }
+    protected override void OnDefeated()
+    {
+        gameObject.tag = "Untagged";
+        isFirstActivation = true;
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

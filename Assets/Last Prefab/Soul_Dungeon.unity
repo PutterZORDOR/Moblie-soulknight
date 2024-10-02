@@ -1621,6 +1621,26 @@ PrefabInstance:
       value: SpawnManager
       objectReference: {fileID: 0}
     - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: Mage_Enemy
+      value: 
+      objectReference: {fileID: 1840128858529913066, guid: 1dc71297178dd1e4a824787c8679b692, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: Rush_Enemy
+      value: 
+      objectReference: {fileID: 3705290102035354588, guid: 670cebd069ace0848bd70c4df09cb5a5, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: Melee_Enemy
+      value: 
+      objectReference: {fileID: 5547985172521817706, guid: ec99e3c7fbb1c314f9f6b3dc2a0523c2, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: Sniper_Enemy
+      value: 
+      objectReference: {fileID: 7594277926353293614, guid: 2a5fb30537311604ca9b7f877259be9f, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: Shotgun_Enemy
+      value: 
+      objectReference: {fileID: 3126621491096810190, guid: 5c3bb7528abccd4488d7155c44e38806, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
       propertyPath: maxEnermyInRoom
       value: 4
       objectReference: {fileID: 0}
@@ -1632,6 +1652,30 @@ PrefabInstance:
       propertyPath: layerNotSpawn.m_Bits
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: _enermyToSpawnIn.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: '_enermyToSpawnIn.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5547985172521817706, guid: ec99e3c7fbb1c314f9f6b3dc2a0523c2, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: '_enermyToSpawnIn.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1840128858529913066, guid: 1dc71297178dd1e4a824787c8679b692, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: '_enermyToSpawnIn.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3705290102035354588, guid: 670cebd069ace0848bd70c4df09cb5a5, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: '_enermyToSpawnIn.Array.data[3]'
+      value: 
+      objectReference: {fileID: 3126621491096810190, guid: 5c3bb7528abccd4488d7155c44e38806, type: 3}
+    - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
+      propertyPath: '_enermyToSpawnIn.Array.data[4]'
+      value: 
+      objectReference: {fileID: 7594277926353293614, guid: 2a5fb30537311604ca9b7f877259be9f, type: 3}
     - target: {fileID: 9172321802012276611, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24403429

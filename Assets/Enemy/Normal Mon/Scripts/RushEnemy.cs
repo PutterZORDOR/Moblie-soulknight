@@ -22,7 +22,7 @@ public class RushEnemy : EnemyBase
     protected override void Start()
     {
         base.Start();
-        ResetRushEnemy();
+        anim = GetComponent<Animator>();
     }
 
     private void ResetRushEnemy()
@@ -36,7 +36,6 @@ public class RushEnemy : EnemyBase
 
         Physics2D.IgnoreCollision(col_Player, col_Enemy, true);
 
-        anim = GetComponent<Animator>();
         anim.SetBool("isRunning", false);
         anim.Play("MonRush_Walk");
 
@@ -58,6 +57,11 @@ public class RushEnemy : EnemyBase
     protected override void Update()
     {
         base.Update();
+        if (isFirstActivation)
+        {
+            ResetRushEnemy();
+            isFirstActivation = false;
+        }
 
         if (isDashing & !isDie)
         {
