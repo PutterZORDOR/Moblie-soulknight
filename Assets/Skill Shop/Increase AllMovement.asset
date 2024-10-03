@@ -15,5 +15,5 @@ MonoBehaviour:
   skillname: Increase All Movement
   Type: 3
   Description: 
-  gamePrefab: {fileID: 6548775999429726745, guid: 254734816b51f1a45b42a318485d5046, type: 3}
-  sprite: {fileID: 5061126367479491160, guid: 0f62d5c563344f44887da0bc97931003, type: 3}
+  gamePrefab: {fileID: 5907361267517083598, guid: 1f599b19a6edf51449e33eace3eddfa4, type: 3}
+  sprite: {fileID: -8966643095438776406, guid: 6c05e80534c22b34e963a3827641589f, type: 3}
