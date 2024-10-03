@@ -1642,11 +1642,11 @@ PrefabInstance:
       objectReference: {fileID: 3126621491096810190, guid: 5c3bb7528abccd4488d7155c44e38806, type: 3}
     - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
       propertyPath: maxEnermyInRoom
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
       propertyPath: minEnermyInRoom
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1790140656282420255, guid: 65b03342029c24e45b37db4ede606fed, type: 3}
       propertyPath: layerNotSpawn.m_Bits
