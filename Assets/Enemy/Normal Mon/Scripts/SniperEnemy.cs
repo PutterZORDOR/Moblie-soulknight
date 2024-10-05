@@ -22,6 +22,7 @@ public class SniperEnemy : EnemyBase
     protected override void Start()
     {
         base.Start();
+        fireCooldown = Random.Range(6.5f, 9.5f);
         anim = GetComponent<Animator>();
     }
 

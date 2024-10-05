@@ -33,6 +33,7 @@ public class MeleeEnemy : EnemyBase
     protected override void Start()
     {
         base.Start();
+        attackCooldown = Random.Range(3.2f, 4.5f);
         anim = GetComponent<Animator>();
     }
     void Initialize()

@@ -24,6 +24,7 @@ public class ShotgunMon : EnemyBase
     protected override void Start()
     {
         base.Start();
+        attackCooldown = Random.Range(2.5f, 4f);
         anim = GetComponent<Animator>();
     }
 
