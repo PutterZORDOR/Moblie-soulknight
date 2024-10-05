@@ -143,7 +143,10 @@ public class ShotgunMon : EnemyBase
     protected override void OnDefeated()
     {
         gameObject.tag = "Untagged";
-        spriteRenderer.color = baseColor;
+        anim.Play("MonShotgunDie");
+    }
+    public void DestroySelf()
+    {
         isFirstActivation = true;
         gameObject.SetActive(false);
     }

@@ -233,15 +233,17 @@ MonoBehaviour:
   maxMana: 10
   maxHealth: 100
   currentHealth: 0
+  isDie: 0
+  isFirstActivation: 1
   blinkTime: 0.2
   blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
+  baseColor: {r: 0, g: 0, b: 0, a: 0}
   shootRange: 5
   attackCooldown: 2.5
   bulletPrefab: {fileID: 6339998769515747643, guid: ee8c2edfefcb7b540ae4b487b2199cf4, type: 3}
   shootPoint: {fileID: 914250939269084009}
   numberOfBullets: 7
   spreadAngle: 25
-  meleeDamage: 20
   bulletSpeed: 4.7
   bulletLifetime: 3
   bulletDamage: 2

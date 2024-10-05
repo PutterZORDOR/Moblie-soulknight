@@ -1,0 +1,934 @@
+fileFormatVersion: 2
+guid: 3dd8d801f3b2153419a920395b278ee9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -289932814588229569
+    second: cowboy_Die_0
+  - first:
+      213: -9073066393714211433
+    second: cowboy_Die_1
+  - first:
+      213: 2343835482244781855
+    second: cowboy_Die_2
+  - first:
+      213: 4631562440130189818
+    second: cowboy_Die_3
+  - first:
+      213: -5901441296366653126
+    second: cowboy_Die_4
+  - first:
+      213: -4980121812754399904
+    second: cowboy_Die_5
+  - first:
+      213: 7577225090689933751
+    second: cowboy_Die_6
+  - first:
+      213: 1661033189660373562
+    second: cowboy_Die_7
+  - first:
+      213: 2520727461475873892
+    second: cowboy_Die_8
+  - first:
+      213: 4376713118240897646
+    second: cowboy_Die_9
+  - first:
+      213: 8958683860643442021
+    second: cowboy_Die_10
+  - first:
+      213: 5337890075669736638
+    second: cowboy_Die_11
+  - first:
+      213: -1980460088103302497
+    second: cowboy_Die_12
+  - first:
+      213: -6655057311649801633
+    second: cowboy_Die_13
+  - first:
+      213: 5080064704690280981
+    second: cowboy_Die_14
+  - first:
+      213: -3638576715956056976
+    second: cowboy_Die_15
+  - first:
+      213: 3246864631490250382
+    second: cowboy_Die_16
+  - first:
+      213: 3819130551307637642
+    second: cowboy_Die_17
+  - first:
+      213: -6001042626110739166
+    second: cowboy_Die_18
+  - first:
+      213: -770690962343341013
+    second: cowboy_Die_19
+  - first:
+      213: -2963188220636625991
+    second: cowboy_Die_20
+  - first:
+      213: 7811533142936982996
+    second: cowboy_Die_21
+  - first:
+      213: -9122290147467407647
+    second: cowboy_Die_22
+  - first:
+      213: 2418734230329319755
+    second: cowboy_Die_23
+  - first:
+      213: 7915598090797778309
+    second: cowboy_Die_24
+  - first:
+      213: -3938614562774741653
+    second: cowboy_Die_25
+  - first:
+      213: 2267061215839559111
+    second: cowboy_Die_26
+  - first:
+      213: -6682908180082326260
+    second: cowboy_Die_27
+  - first:
+      213: -7990394036814964719
+    second: cowboy_Die_28
+  - first:
+      213: 265033265898438594
+    second: cowboy_Die_29
+  - first:
+      213: 4168779598481268641
+    second: cowboy_Die_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cowboy_Die_0
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1917
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f384db924a3f9fbf0800000000000000
+      internalID: -289932814588229569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_1
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1919
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7954123af2ef51280800000000000000
+      internalID: -9073066393714211433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_2
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1919
+        width: 46
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f171823f3f9f68020800000000000000
+      internalID: 2343835482244781855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_3
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 1919
+        width: 45
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9500f008d964040800000000000000
+      internalID: 4631562440130189818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_4
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1918
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a31be3b786ed91ea0800000000000000
+      internalID: -5901441296366653126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_5
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1918
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d799cd89d03eab0800000000000000
+      internalID: -4980121812754399904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_6
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 1918
+        width: 41
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b120c9f216b72960800000000000000
+      internalID: 7577225090689933751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_7
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 1918
+        width: 41
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3237dda2ec2d0710800000000000000
+      internalID: 1661033189660373562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1661
+        width: 40
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46477d4554c6bf220800000000000000
+      internalID: 2520727461475873892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_9
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1661
+        width: 41
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a7a8864653dbc30800000000000000
+      internalID: 4376713118240897646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_10
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1661
+        width: 40
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d6da09183a35c70800000000000000
+      internalID: 8958683860643442021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_11
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1660
+        width: 41
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebca0621ebef31a40800000000000000
+      internalID: 5337890075669736638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_12
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 1658
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9a83c4fa0ef384e0800000000000000
+      internalID: -1980460088103302497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_13
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 1657
+        width: 46
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a5f3392ac74a3a0800000000000000
+      internalID: -6655057311649801633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_14
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 1656
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a501ffee3008640800000000000000
+      internalID: 5080064704690280981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_15
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1656
+        width: 51
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c8e6d31cd218dc0800000000000000
+      internalID: -3638576715956056976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_16
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1401
+        width: 54
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8681c10e2e2f0d20800000000000000
+      internalID: 3246864631490250382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_17
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1401
+        width: 57
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8398857007400530800000000000000
+      internalID: 3819130551307637642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_18
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1400
+        width: 60
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d21b4c68308bca0800000000000000
+      internalID: -6001042626110739166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_19
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1398
+        width: 62
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24dbed27a4fd45f0800000000000000
+      internalID: -770690962343341013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_20
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1396
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b305525304a0e6d0800000000000000
+      internalID: -2963188220636625991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_21
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1395
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d513f79104286c60800000000000000
+      internalID: 7811533142936982996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_22
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1393
+        width: 75
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eec82e517d176180800000000000000
+      internalID: -9122290147467407647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_23
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1392
+        width: 78
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b416bdca7f1119120800000000000000
+      internalID: 2418734230329319755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_24
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1135
+        width: 79
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58503c2668ad9dd60800000000000000
+      internalID: 7915598090797778309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_25
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1135
+        width: 81
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d81ae3cea3759c0800000000000000
+      internalID: -3938614562774741653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_26
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1135
+        width: 82
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd9e261a28367f10800000000000000
+      internalID: 2267061215839559111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_27
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1135
+        width: 84
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0504a3fa6a8143a0800000000000000
+      internalID: -6682908180082326260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_28
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1134
+        width: 84
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1189e3c55fa6c1190800000000000000
+      internalID: -7990394036814964719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_29
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1134
+        width: 84
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfb983e9569da300800000000000000
+      internalID: 265033265898438594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowboy_Die_30
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1134
+        width: 84
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af1f5a25fa7ad930800000000000000
+      internalID: 4168779598481268641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cowboy_Die_0: -289932814588229569
+      cowboy_Die_1: -9073066393714211433
+      cowboy_Die_10: 8958683860643442021
+      cowboy_Die_11: 5337890075669736638
+      cowboy_Die_12: -1980460088103302497
+      cowboy_Die_13: -6655057311649801633
+      cowboy_Die_14: 5080064704690280981
+      cowboy_Die_15: -3638576715956056976
+      cowboy_Die_16: 3246864631490250382
+      cowboy_Die_17: 3819130551307637642
+      cowboy_Die_18: -6001042626110739166
+      cowboy_Die_19: -770690962343341013
+      cowboy_Die_2: 2343835482244781855
+      cowboy_Die_20: -2963188220636625991
+      cowboy_Die_21: 7811533142936982996
+      cowboy_Die_22: -9122290147467407647
+      cowboy_Die_23: 2418734230329319755
+      cowboy_Die_24: 7915598090797778309
+      cowboy_Die_25: -3938614562774741653
+      cowboy_Die_26: 2267061215839559111
+      cowboy_Die_27: -6682908180082326260
+      cowboy_Die_28: -7990394036814964719
+      cowboy_Die_29: 265033265898438594
+      cowboy_Die_3: 4631562440130189818
+      cowboy_Die_30: 4168779598481268641
+      cowboy_Die_4: -5901441296366653126
+      cowboy_Die_5: -4980121812754399904
+      cowboy_Die_6: 7577225090689933751
+      cowboy_Die_7: 1661033189660373562
+      cowboy_Die_8: 2520727461475873892
+      cowboy_Die_9: 4376713118240897646
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

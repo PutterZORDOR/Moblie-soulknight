@@ -1525,11 +1525,11 @@ PrefabInstance:
     - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: Debuffs.Array.data[0].sprite
       value: 
-      objectReference: {fileID: -486178441, guid: 934ea946207cd514ebeea8cb74a9f71c, type: 3}
+      objectReference: {fileID: 5559816845255458102, guid: 4e655fe5477dfd64ca25bdf52056750d, type: 3}
     - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: Debuffs.Array.data[1].sprite
       value: 
-      objectReference: {fileID: -5523804885387466720, guid: 0f62d5c563344f44887da0bc97931003, type: 3}
+      objectReference: {fileID: -1586536987483746111, guid: b44837085b05f1441b48237b9b58c551, type: 3}
     - target: {fileID: 628020507124580351, guid: 7a56eeeff72cfe642814079e72034b6e, type: 3}
       propertyPath: Debuffs.Array.data[0].Debuff_name
       value: Slowness
