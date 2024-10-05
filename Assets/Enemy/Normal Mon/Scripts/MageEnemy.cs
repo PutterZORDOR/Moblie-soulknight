@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class MageEnemy : EnemyBase
@@ -23,6 +22,7 @@ public class MageEnemy : EnemyBase
     {
         base.Start();
         anim = GetComponent<Animator>();
+        summonCooldown = Random.Range(4.5f, 5.5f);
     }
 
     private void ResetMageEnemy()
