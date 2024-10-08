@@ -306,6 +306,8 @@ MonoBehaviour:
   maxMana: 0
   maxHealth: 100
   currentHealth: 0
+  isDie: 0
+  isFirstActivation: 1
   blinkTime: 0.2
   blinkColor: {r: 0.7176471, g: 0.16078432, b: 0.16078432, a: 0.5882353}
   baseColor: {r: 0, g: 0, b: 0, a: 0}
@@ -316,7 +318,7 @@ MonoBehaviour:
   fireCooldown: 7
   bulletDamage: 25
   bulletLifetime: 2
-  shootingRange: 10
+  shootingRange: 20
   randomMoveDistance: 5
 --- !u!95 &4370306816612306560
 Animator:
