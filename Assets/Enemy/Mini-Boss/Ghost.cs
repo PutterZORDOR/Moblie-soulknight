@@ -26,6 +26,15 @@ public class Ghost : MiniBoss
 
         // Start summoning enemies
         StartCoroutine(SummonRandomEnemies());
+
+        health = 300f;
+        maxHealth = 300f;
+
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = health;
+        }
     }
 
     protected override void Update()

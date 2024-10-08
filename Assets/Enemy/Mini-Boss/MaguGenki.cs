@@ -29,13 +29,20 @@ public class MaguGenki : MiniBoss
         moveSpeed = 2f;
         damage = meleeDamage;
 
-        // Existing code...
-
         // Add this line to get the Animator component
         anim = GetComponent<Animator>();
 
         // Start the attack pattern loop
         StartCoroutine(SwitchAttackPatterns());
+
+        health = 300f;
+        maxHealth = 300f;
+
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = health;
+        }
     }
 
 

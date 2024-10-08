@@ -13,10 +13,10 @@ public abstract class MiniBoss : MonoBehaviour
     public float bulletLifetime = 5f;
     public float fireRate = 3f;
     public float health = 200f;
+    public float maxHealth = 200f; // Added max health
     public float damage;
-    public GameObject healthBarPrefab; // Assign this in the Inspector
-    private GameObject healthBarInstance;
-    private Slider healthSlider;
+
+    public Slider healthSlider; // Reference the UI slider for health
 
     protected float lastAttackTime;  // Changed to protected
     protected float lastFireTime;
@@ -25,7 +25,12 @@ public abstract class MiniBoss : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        // Set up health bar, etc.
+        // Set the slider to the max health at the start
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = health;
+        }
     }
 
     protected virtual void Update()
@@ -48,7 +53,11 @@ public abstract class MiniBoss : MonoBehaviour
             lastFireTime = Time.time;
         }
 
-        // Update health bar, etc.
+        // Update health bar value based on current health
+        if (healthSlider != null)
+        {
+            healthSlider.value = health;
+        }
     }
 
     protected void MoveTowardsPlayer()

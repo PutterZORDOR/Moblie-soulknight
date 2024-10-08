@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5521857682547779241}
   - component: {fileID: 5536284797029913603}
   - component: {fileID: 9123981005586675190}
+  - component: {fileID: 4054169999160925280}
   m_Layer: 0
   m_Name: MiniGhost
   m_TagString: Enemy
@@ -182,9 +183,32 @@ MonoBehaviour:
   bulletLifetime: 5
   fireRate: 3
   health: 200
+  maxHealth: 200
   damage: 2
-  healthBarPrefab: {fileID: 0}
+  healthSlider: {fileID: 0}
   minPatternDuration: 3
   maxPatternDuration: 8
   invisibilityDuration: 2
   scratchRange: 3
+--- !u!95 &4054169999160925280
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140720950727736593}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3b7f83db3a67ec4388c35062387f2cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
