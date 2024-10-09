@@ -60,6 +60,7 @@ public class RushEnemy : EnemyBase
         if (isFirstActivation)
         {
             ResetRushEnemy();
+            Debug.Log("T");
             isFirstActivation = false;
         }
 
