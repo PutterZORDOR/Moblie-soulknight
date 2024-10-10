@@ -20,13 +20,14 @@ public class MageEnemy : EnemyBase
 
     protected override void Start()
     {
+
+    }
+
+    public override void ResetStat()
+    {
         base.Start();
         anim = GetComponent<Animator>();
         summonCooldown = Random.Range(4.5f, 5.5f);
-    }
-
-    private void ResetMageEnemy()
-    {
         anim.SetBool("isWalking", false);
         anim.ResetTrigger("Attack");
         anim.Play("MonMageIdle");
@@ -42,11 +43,6 @@ public class MageEnemy : EnemyBase
 
     protected override void Update()
     {
-        if (isFirstActivation)
-        {
-            ResetMageEnemy();
-            isFirstActivation = false;
-        }
         base.Update();
 
         // ถ้าโจมตีอยู่ ให้หยุดเคลื่อนไหว

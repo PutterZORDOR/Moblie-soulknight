@@ -76,6 +76,7 @@ public abstract class EnemyBase : MonoBehaviour
     }
     // Method to be overridden in child classes for specific behaviors
     protected abstract void OnPlayerDetected();
+    public abstract void ResetStat();
 
     // Method to take damage
     public virtual void TakeDamage(int damage)

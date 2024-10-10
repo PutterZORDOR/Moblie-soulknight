@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class RushEnemy : EnemyBase
@@ -21,12 +20,13 @@ public class RushEnemy : EnemyBase
 
     protected override void Start()
     {
+        
+    }
+    public override void ResetStat()
+    {
         base.Start();
         anim = GetComponent<Animator>();
-    }
-
-    private void ResetRushEnemy()
-    {
+        dashCooldown = Random.Range(1.5f,2.3f);
         moveSpeed = rushSpeed;
         isDash = false;
 
@@ -57,13 +57,6 @@ public class RushEnemy : EnemyBase
     protected override void Update()
     {
         base.Update();
-        if (isFirstActivation)
-        {
-            ResetRushEnemy();
-            Debug.Log("T");
-            isFirstActivation = false;
-        }
-
         if (isDashing & !isDie)
         {
             Dash();

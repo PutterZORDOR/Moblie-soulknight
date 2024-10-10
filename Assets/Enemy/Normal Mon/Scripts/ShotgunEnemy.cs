@@ -23,13 +23,14 @@ public class ShotgunMon : EnemyBase
 
     protected override void Start()
     {
+
+    }
+
+    public override void ResetStat()
+    {
         base.Start();
         attackCooldown = Random.Range(2.5f, 4f);
         anim = GetComponent<Animator>();
-    }
-
-    private void ResetShotgunEnemy()
-    {
         playerInRange = false;
         isAttacking = false;
         isDie = false;
@@ -46,12 +47,6 @@ public class ShotgunMon : EnemyBase
     protected override void Update()
     {
         base.Update();
-        if (isFirstActivation)
-        {
-            ResetShotgunEnemy();
-            isFirstActivation = false;
-        }
-
         if (!isAttacking)
         {
             HandleMovementAndAttack();

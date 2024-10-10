@@ -32,12 +32,13 @@ public class MeleeEnemy : EnemyBase
 
     protected override void Start()
     {
+
+    }
+    public override void ResetStat()
+    {
         base.Start();
         attackCooldown = Random.Range(3.2f, 4.5f);
         anim = GetComponent<Animator>();
-    }
-    void Initialize()
-    {
         anim.Play("MonMeleeIdel");
         anim.SetBool("isWalking", false);
         anim.ResetTrigger("Attack");
@@ -57,12 +58,6 @@ public class MeleeEnemy : EnemyBase
     protected override void Update()
     {
         base.Update();
-        if(isFirstActivation)
-        {
-            Initialize();
-            isFirstActivation = false;
-        }
-        // ตรวจสอบว่ากำลังถอยหรือไม่
         if (isRetreating)
         {
             Retreat(); // เรียกฟังก์ชัน Retreat ภายใน Update

@@ -73,7 +73,9 @@ public class EnermySpawnManager : MonoBehaviour
                 Vector2 spawnPosition = GetRandomSpawnPosition(spawnAbleAreaCollider);
                 enermyShouldSpawn.transform.position = spawnPosition;
                 enermyShouldSpawn.transform.rotation = Quaternion.identity; 
-                enermyShouldSpawn.SetActive(true); 
+                enermyShouldSpawn.SetActive(true);
+                EnemyBase component = enermyShouldSpawn.GetComponent<EnemyBase>();
+                component.ResetStat();
             }
         }
     }

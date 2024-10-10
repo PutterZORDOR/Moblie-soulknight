@@ -21,13 +21,13 @@ public class SniperEnemy : EnemyBase
 
     protected override void Start()
     {
+
+    }
+    public override void ResetStat()
+    {
         base.Start();
         fireCooldown = Random.Range(6.5f, 9.5f);
         anim = GetComponent<Animator>();
-    }
-
-    private void ResetSniperEnemy()
-    {
         originSpeed = moveSpeed;
         currentDirection = Random.insideUnitCircle.normalized;
 
@@ -47,11 +47,6 @@ public class SniperEnemy : EnemyBase
     protected override void Update()
     {
         base.Update();
-        if (isFirstActivation)
-        {
-            ResetSniperEnemy();
-            isFirstActivation = false;
-        }
         if (Time.time >= lastFireTime + fireCooldown && !isMovingRandomly)
         {
             icon.SetActive(true);
